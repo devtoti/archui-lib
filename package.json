@@ -1,0 +1,90 @@
+{
+  "name": "@devtoti/archui-lib",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A modern React component library with Tailwind CSS",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/index.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:lib": "vite build --mode library",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^4.1.1",
+    "@eslint/js": "^9.33.0",
+    "@storybook/addon-a11y": "^9.1.4",
+    "@storybook/addon-docs": "^9.1.4",
+    "@storybook/addon-onboarding": "^9.1.4",
+    "@storybook/addon-themes": "^9.1.4",
+    "@storybook/addon-vitest": "^9.1.4",
+    "@storybook/react-vite": "^9.1.4",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@tailwindcss/vite": "^4.1.13",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react-swc": "^4.0.0",
+    "@vitest/browser": "3.2.4",
+    "@vitest/coverage-v8": "3.2.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-storybook": "^9.1.4",
+    "globals": "^16.3.0",
+    "jsdom": "^26.1.0",
+    "playwright": "^1.55.0",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "radix-ui": "^1.4.3",
+    "storybook": "^9.1.4",
+    "tailwindcss": "^4.1.12",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^7.1.2",
+    "vitest": "^3.2.4"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "tailwind",
+    "typescript"
+  ],
+  "author": "Antonio Ruiz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devtoti/archui-lib.git"
+  }
+}
