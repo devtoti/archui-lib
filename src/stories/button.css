@@ -28,3 +28,8 @@
   padding: 12px 24px;
   font-size: 16px;
 }
+
+html.dark .storybook-button--primary {
+  background-color: #23265b;
+  color: white;
+}

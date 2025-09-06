@@ -10,9 +10,9 @@ const buttonVariants = cva(
     variants: {
       intent: {
         primary:
-          "bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-900 dark:hover:bg-blue-600",
+          "bg-red-600 text-white hover:bg-blue-700 dark:bg-blue-900 dark:hover:bg-blue-600",
         secondary:
-          "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-600",
+          "bg-yellow-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-600",
       },
       size: {
         sm: "text-sm",
@@ -40,11 +40,9 @@ export const TailwindButton: React.FC<TailwindButtonProps> = ({
   label,
   ...props
 }) => {
+
   return (
-    <button
-      className={twMerge(buttonVariants({ intent, size }), className)}
-      {...props}
-    >
+    <button className={twMerge(buttonVariants({ intent, size }), className)} {...props}>
       {label}
     </button>
   );

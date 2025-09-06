@@ -5,4 +5,8 @@ export default {
     './.storybook/**/*.{js,jsx,ts,tsx}',
   ],
   darkMode: 'class',
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 };
