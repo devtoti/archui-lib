@@ -1,7 +1,6 @@
 import type { Preview } from '@storybook/react-vite';
-import '../src/index.css';
-
 import { withThemeByClassName } from "@storybook/addon-themes";
+import '../src/index.css';
 
 const preview: Preview = {
   decorators: [
@@ -11,7 +10,7 @@ const preview: Preview = {
         dark: 'dark',
       },
       defaultTheme: 'light',
-    })
+    }),
   ],
   parameters: {
     controls: {

@@ -11,19 +11,19 @@ npm install @devtoti/archui-lib
 ## Usage
 
 ```tsx
-import { TailwindButton } from '@devtoti/archui-lib';
+import { Button } from '@devtoti/archui-lib';
 import '@devoti/archui-lib/styles';
 
 function App() {
   return (
-    <TailwindButton intent="primary" size="md" label="Click me" />
+    <Button intent="primary" size="md" label="Click me" />
   );
 }
 ```
 
 ## Components
 
-### TailwindButton
+### Button
 
 A customizable button component with multiple variants.
 
