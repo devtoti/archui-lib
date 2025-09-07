@@ -1,6 +1,6 @@
 {
   "name": "@devtoti/archui-lib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "A modern React component library with Tailwind CSS",
   "main": "./dist/index.js",
