@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declarationDir": "./dist"
+  },
+  "include": [
+    "src/components/**/*",
+    "src/hooks/**/*",
+    "src/contexts/**/*",
+    "src/lib.ts"
+  ],
+  "exclude": [
+    "src/**/*.stories.*",
+    "src/**/*.test.*",
+    "src/**/*.spec.*",
+    "src/setupTests.ts",
+    "src/main.tsx",
+    "src/vite-env.d.ts",
+    "src/App.tsx",
+    "src/stories/**/*",
+    "src/assets/**/*",
+    "src/*.css"
+  ]
+}

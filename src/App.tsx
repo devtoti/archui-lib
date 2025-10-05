@@ -1,10 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useTheme } from "./hooks/useTheme";
+import { Button } from "./components/Button/Button";
+import type { Theme } from "./contexts/ThemeContext";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [theme, setTheme] = useState<Theme>("doric");
+  return (
+    <ThemeProvider theme={theme} setTheme={setTheme}>
+      <AppContent theme={theme} setTheme={setTheme} />
+    </ThemeProvider>
+  );
+}
+
+function AppContent({
+  theme,
+  setTheme,
+}: {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+}) {
+  const [count, setCount] = useState(0);
+  const { theme: archuiTheme } = useTheme();
 
   return (
     <>
@@ -16,7 +36,24 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>
+        Current theme: {theme}/{archuiTheme}
+      </h1>
+      <h2>ArchUI Theme: {archuiTheme}</h2>
+      <div className="flex flex-row gap-4 justify-center items-center w-full">
+        <Button
+          intent="primary"
+          size="lg"
+          label="Ionic Theme"
+          onClick={() => setTheme("ionic")}
+        />
+        <Button
+          intent="primary"
+          size="lg"
+          label="Doric Theme"
+          onClick={() => setTheme("doric")}
+        />
+      </div>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -29,7 +66,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
