@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
       plugins: [react(), tailwindcss()],
       build: {
         lib: {
-          entry: resolve(__dirname, 'src/index.ts'),
+          entry: resolve(__dirname, 'src/lib.ts'),
           name: 'ArchUILib',
           fileName: 'index',
           formats: ['es']
@@ -33,7 +33,11 @@ export default defineConfig(({ mode }) => {
               'react-dom': 'ReactDOM'
             }
           }
-        }
+        },
+        // Ensure CSS is extracted
+        cssCodeSplit: false,
+        // Don't clean the dist folder to preserve declaration files
+        emptyOutDir: false
       }
     };
   }

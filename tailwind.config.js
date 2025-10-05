@@ -7,6 +7,11 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        'barlow': ['Barlow', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+        'roboto-mono': ['Roboto Mono', 'monospace'],
+      },
       colors: {
         primary: {
           DEFAULT: 'var(--color-primary)',

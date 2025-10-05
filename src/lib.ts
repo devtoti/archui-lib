@@ -7,6 +7,3 @@ export { useTheme } from './hooks/useTheme';
 
 // Export contexts and types
 export { type Theme } from './contexts/ThemeContext';
-
-// Export styles
-import './index.css';

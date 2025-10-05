@@ -25,9 +25,9 @@ const buttonVariants = cva(
           "bg-secondary text-gray-800 hover:cursor-pointer hover:bg-secondary-hover",
       },
       size: {
-        sm: "text-sm",
-        md: "text-base",
-        lg: "text-lg",
+        sm: "arc-body-1 text-sm",
+        md: "arc-body-1 text-base",
+        lg: "arc-body-1 text-lg",
       },
     },
     defaultVariants: {

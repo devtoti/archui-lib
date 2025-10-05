@@ -20,7 +20,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:lib": "vite build --mode library",
+    "build:lib": "tsc -p tsconfig.lib.json && node scripts/generate-declarations.js && node scripts/build-css.js && vite build --mode library",
+    "build:types": "tsc -p tsconfig.lib.json && node scripts/generate-declarations.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",

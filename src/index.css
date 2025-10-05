@@ -1,9 +1,10 @@
 @import "tailwindcss";
+@import "./tokens.css";
+@import "./fonts.css";
 @custom-variant doric (&:where(.doric, .doric *));
 @custom-variant ionic (&:where(.ionic, .ionic *));
 @custom-variant corinthian (&:where(.corinthian, .corinthian *));
 @custom-variant dark (&:where(.dark, .dark *));
-@import "./tokens.css";
 @custom-variant hover (&:hover);
 
 :root {
