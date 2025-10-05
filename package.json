@@ -11,7 +11,10 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./styles": "./dist/index.css"
+    "./styles": "./dist/index.css",
+    "./styles/index.css": "./dist/index.css",
+    "./styles/tokens.css": "./dist/tokens.css",
+    "./styles/fonts.css": "./dist/fonts.css"
   },
   "files": [
     "dist",
