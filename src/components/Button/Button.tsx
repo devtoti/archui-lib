@@ -1,8 +1,8 @@
 import React from "react";
-import type { ButtonHTMLAttributes } from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as Slot from "@radix-ui/react-slot";
+import type { ButtonProps } from "../../types/components/Button.types";
 
 /**
  * @author: @devtoti
@@ -37,13 +37,8 @@ const buttonVariants = cva(
   }
 );
 
-export interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  label?: React.ReactNode;
-  children?: React.ReactNode;
-  asChild?: boolean;
-}
+// Export the buttonVariants for use in types
+export { buttonVariants };
 
 export const Button: React.FC<ButtonProps> = ({
   className,

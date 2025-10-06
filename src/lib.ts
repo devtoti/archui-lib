@@ -8,6 +8,3 @@ export { useTheme } from './hooks/useTheme';
 // Export types
 export type { ButtonProps, ButtonVariantProps } from './types/components/Button.types';
 export type { Theme, ThemeContextType } from './contexts/ThemeContext';
-
-// Export styles
-import './index.css';

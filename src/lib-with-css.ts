@@ -9,5 +9,5 @@ export { useTheme } from './hooks/useTheme';
 export type { ButtonProps, ButtonVariantProps } from './types/components/Button.types';
 export type { Theme, ThemeContextType } from './contexts/ThemeContext';
 
-// Export styles
+// Import styles (this will be bundled by Vite)
 import './index.css';
