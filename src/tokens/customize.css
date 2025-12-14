@@ -1,0 +1,36 @@
+/**
+ * Customize Theme Accent Colors
+ * 
+ * Import this file after the main styles to override accent colors.
+ * 
+ * Usage in your app:
+ *   import '@devtoti/archui-lib/styles';
+ *   import '@devtoti/archui-lib/styles/customize';
+ * 
+ * Or in your CSS:
+ *   @import '@devtoti/archui-lib/styles';
+ *   @import '@devtoti/archui-lib/styles/customize';
+ * 
+ * Then uncomment and customize the values below.
+ */
+
+/* Ionic Theme - Override accent colors */
+.ionic {
+  /* --ionic-accent-primary: #3E63DD; */
+  /* --ionic-accent-dark: #3A5BC7; */
+  /* --ionic-accent-light: #D2DEFF; */
+}
+
+/* Corinthian Theme - Override accent colors */
+.corinthian {
+  /* --corinthian-accent-primary: #29A383; */
+  /* --corinthian-accent-dark: #208368; */
+  /* --corinthian-accent-light: #C3E9D7; */
+}
+
+/* Doric Theme - Override accent colors */
+.doric {
+  /* --doric-accent-primary: #F76B15; */
+  /* --doric-accent-dark: #CC4E00; */
+  /* --doric-accent-light: #FFD19A; */
+}

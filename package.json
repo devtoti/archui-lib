@@ -11,7 +11,8 @@
       "import": "./dist/index.js",
       "types": "./dist/lib.d.ts"
     },
-    "./styles": "./dist/index.css"
+    "./styles": "./dist/index.css",
+    "./styles/customize": "./dist/tokens/customize.css"
   },
   "files": [
     "dist",
