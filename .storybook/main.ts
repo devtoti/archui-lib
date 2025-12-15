@@ -29,6 +29,9 @@ const config: StorybookConfig = {
     "name": "@storybook/react-vite",
     "options": {}
   },
+  "docs": {
+    docsMode: false,
+  },
   viteFinal: async (config) => {
     config.css = {
       postcss: {

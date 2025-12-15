@@ -5,8 +5,8 @@ import type { ButtonHTMLAttributes } from "react";
  * Defines the visual variants available for the Button component
  */
 export interface ButtonVariantProps {
-  /** Visual intent of the button */
-  intent?: "primary" | "secondary";
+  /** Visual variant of the button */
+  variant?: "primary" | "secondary" | "tertiary";
   /** Size of the button */
   size?: "sm" | "md" | "lg";
 }

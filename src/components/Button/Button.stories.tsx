@@ -8,14 +8,23 @@ import "../../index.css";
 const meta = {
   title: "Button",
   component: Button,
+  tags: ["autodocs"],
   parameters: {
     layout: "centered",
+    docs: {
+      subtitle:
+        "The main element made for custom user interaction. The Button component supports multiple Component states, animations, icons, and styles.",
+      description: {
+        component:
+          "The `Button` component can be thought of as a stylized wrapper to be used with custom methods and third-party libraries. It does not easily interfere with external logic, since all its content remains within its own scope.\n\nIdeally, the `Button` component can be used along with the `LinkItem` component for internal and external navigation. For additional examples, please refer to our practical usage section.",
+      },
+    },
   },
   argTypes: {
-    intent: {
+    variant: {
       control: "select",
-      options: ["primary", "secondary"],
-      description: "Intent variant",
+      options: ["primary", "secondary", "tertiary"],
+      description: "Button variant",
     },
     size: {
       control: "select",
@@ -37,7 +46,7 @@ const meta = {
   },
   args: {
     onClick: fn(),
-    intent: "primary",
+    variant: "primary",
     size: "md",
     label: "Button",
   },
@@ -83,6 +92,19 @@ export const CorinthianTheme: Story = {
       <ThemeProvider theme="corinthian" setTheme={() => {}}>
         <Button {...args} />
       </ThemeProvider>
+    );
+  },
+};
+export const DocsPreview: Story = {
+  render: (args) => {
+    return (
+      <div className="flex flex-row gap-4 space-x-4 space-y-4">
+        <ThemeProvider theme="corinthian" setTheme={() => {}}>
+          <Button {...args} variant="primary" label="Primary" />
+          <Button {...args} variant="secondary" label="Secondary" />
+          <Button {...args} variant="tertiary" label="Tertiary" />
+        </ThemeProvider>
+      </div>
     );
   },
 };

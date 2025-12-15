@@ -18,11 +18,13 @@ const buttonVariants = cva(
   "px-4 py-2 rounded font-semibold transition-colors",
   {
     variants: {
-      intent: {
+      variant: {
         primary:
           "bg-[var(--bg-primary)] text-gray-500 hover:cursor-pointer hover:bg-primary-hover",
         secondary:
           "bg-[var(--bg-secondary)] text-gray-800 hover:cursor-pointer hover:bg-secondary-hover",
+        tertiary:
+          "bg-transparent border border-gray-300 text-gray-700 hover:cursor-pointer hover:bg-gray-50",
       },
       size: {
         sm: "text-sm",
@@ -31,7 +33,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      intent: "primary",
+      variant: "primary",
       size: "md",
     },
   }
@@ -42,7 +44,7 @@ export { buttonVariants };
 
 export const Button: React.FC<ButtonProps> = ({
   className,
-  intent,
+  variant,
   size,
   label,
   children,
@@ -64,7 +66,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <Button
-      className={twMerge(buttonVariants({ intent, size }), className)}
+      className={twMerge(buttonVariants({ variant, size }), className)}
       style={mergedStyle}
       {...props}
     >

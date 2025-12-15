@@ -1,0 +1,35 @@
+import { Meta, Title, Subtitle, Description, Primary, ArgTypes, ColorPalette, Controls, Markdown, Source, Stories } from '@storybook/addon-docs/blocks';
+import { VariantsList } from './VariantsList';
+import { DynamicSource } from './DynamicSource';
+ 
+{/*
+  * 👇 The isTemplate property is required to tell Storybook that this is a template
+  * See https://storybook.js.org/docs/api/doc-blocks/doc-block-meta
+  * to learn how to use
+*/}
+ 
+<Meta isTemplate />
+ 
+<Title />
+<Subtitle/>
+
+<DynamicSource />
+<Primary />
+
+## Usage
+
+<Description />
+## Variants
+
+<VariantsList />
+
+## Examples
+
+<Stories includePrimary={false} />
+
+## API
+
+The component accepts the following inputs (props):
+
+<ArgTypes />
+<ColorPalette />

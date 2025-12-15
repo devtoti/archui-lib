@@ -34,8 +34,17 @@ type CalloutStoryArgs = React.ComponentProps<typeof Callout> & {
 const meta = {
   title: "Example/Callout",
   component: Callout,
+  tags: ["autodocs"],
   parameters: {
     layout: "centered",
+    docs: {
+      subtitle:
+        "Highlight specific pieces of content statically. Used for getting the user’s attention and providing immediate feedback, based on the action that is currently taking place. It distinguishes itself from the Alert component, since this is a non-intrusive message that does not restrict user action when triggered.",
+      description: {
+        component:
+          "Supports a customizable top-left icon, headings, and any text length. Each `Callout` includes a default fade-in-out animation that can be disabled if a variable `animate=none` is provided. Make sure to leverage the `Callout` designs by wrapping your components inside a `ThemeProvider` and playing around with the `order` style that better suits your needs.",
+      },
+    },
   },
   argTypes: {
     variant: {
@@ -100,6 +109,11 @@ export const Default: Story = {
 };
 
 export const AllThemes: Story = {
+  parameters: {
+    docs: {
+      disable: true,
+    },
+  },
   render: ({ showIcon, ...args }) => {
     const icon = showIcon ? <IconArch /> : undefined;
     return (
@@ -119,6 +133,11 @@ export const AllThemes: Story = {
 };
 
 export const DoricTheme: Story = {
+  parameters: {
+    docs: {
+      disable: true,
+    },
+  },
   render: ({ showIcon, ...args }) => {
     const icon = showIcon ? <IconArch /> : undefined;
     return (
@@ -130,6 +149,11 @@ export const DoricTheme: Story = {
 };
 
 export const IonicTheme: Story = {
+  parameters: {
+    docs: {
+      disable: true,
+    },
+  },
   render: ({ showIcon, ...args }) => {
     const icon = showIcon ? <IconArch /> : undefined;
     return (
@@ -141,6 +165,11 @@ export const IonicTheme: Story = {
 };
 
 export const CorinthianTheme: Story = {
+  parameters: {
+    docs: {
+      disable: true,
+    },
+  },
   render: ({ showIcon, ...args }) => {
     const icon = showIcon ? <IconArch /> : undefined;
     return (
