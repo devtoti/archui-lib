@@ -20,9 +20,9 @@ const buttonVariants = cva(
     variants: {
       intent: {
         primary:
-          "bg-primary text-white hover:cursor-pointer hover:bg-primary-hover",
+          "bg-[var(--bg-primary)] text-gray-500 hover:cursor-pointer hover:bg-primary-hover",
         secondary:
-          "bg-secondary text-gray-800 hover:cursor-pointer hover:bg-secondary-hover",
+          "bg-[var(--bg-secondary)] text-gray-800 hover:cursor-pointer hover:bg-secondary-hover",
       },
       size: {
         sm: "text-sm",
@@ -47,14 +47,25 @@ export const Button: React.FC<ButtonProps> = ({
   label,
   children,
   asChild = false,
+  backgroundColor,
+  labelColor,
+  style,
   ...props
 }) => {
   const Button = asChild ? Slot.Root : "button";
   const content = children || label;
 
+  // Merge custom colors with existing style prop
+  const mergedStyle: React.CSSProperties = {
+    ...style,
+    ...(backgroundColor && { backgroundColor }),
+    ...(labelColor && { color: labelColor }),
+  };
+
   return (
     <Button
       className={twMerge(buttonVariants({ intent, size }), className)}
+      style={mergedStyle}
       {...props}
     >
       {content}

@@ -24,4 +24,8 @@ export interface ButtonProps
   children?: React.ReactNode;
   /** Render as a different element using Radix Slot */
   asChild?: boolean;
+  /** Custom background color for the button */
+  backgroundColor?: string;
+  /** Custom text color for the button label */
+  labelColor?: string;
 }

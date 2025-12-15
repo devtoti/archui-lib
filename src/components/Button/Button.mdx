@@ -1,0 +1,49 @@
+import {
+  Meta,
+  Canvas,
+  Controls,
+  Stories,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import ButtonMeta, {
+  AllThemes,
+  DoricTheme,
+  IonicTheme,
+  CorinthianTheme,
+} from "./Button.stories";
+
+<Meta of={ButtonMeta} />
+
+# Button
+
+The main element made for custom user interaction. The Button component supports multiple component states, animations, icons, and styles.
+
+```jsx dark
+import { Button } from "@devtoti/archui-lib";
+
+<Button intent="primary" size="md" onClick={handleClick}>
+  Download archUI
+</Button>;
+```
+
+<Canvas of={DoricTheme} withToolbar />
+
+## Usage
+
+The `Button` component can be thought of as a stylized wrapper to be used with custom methods and third-party libraries. It does not easily interfere with external logic, since all its content remains within its own scope.
+
+Ideally, the `Button` component can be used along with other components for internal and external navigation. For additional examples, please refer to our practical usage section.
+
+## Variants
+
+- primary
+- secondary
+- tertiary
+
+## Examples
+
+<Story of={DoricTheme} />
+
+## API
+
+<Controls of={DoricTheme} />

@@ -6,12 +6,11 @@ import { ThemeProvider } from "../ThemeProvider";
 import "../../index.css";
 
 const meta = {
-  title: "Example/Button",
+  title: "Button",
   component: Button,
   parameters: {
     layout: "centered",
   },
-  tags: ["autodocs"],
   argTypes: {
     intent: {
       control: "select",
@@ -26,6 +25,14 @@ const meta = {
     label: {
       control: "text",
       description: "Text content",
+    },
+    backgroundColor: {
+      control: { type: "color" },
+      description: "Custom background color for the button",
+    },
+    labelColor: {
+      control: { type: "color" },
+      description: "Custom text color for the button label",
     },
   },
   args: {
@@ -44,13 +51,13 @@ export const AllThemes: Story = {
     return (
       <div className="flex flex-row gap-4 space-x-4 space-y-4">
         <ThemeProvider theme="doric" setTheme={() => {}}>
-          <Button {...args} label="Doric Button"/>
+          <Button {...args} label="Doric Button" />
         </ThemeProvider>
         <ThemeProvider theme="ionic" setTheme={() => {}}>
-          <Button {...args} label="Ionic Button"/>
+          <Button {...args} label="Ionic Button" />
         </ThemeProvider>
         <ThemeProvider theme="corinthian" setTheme={() => {}}>
-          <Button {...args} label="Corinthian Button"/>
+          <Button {...args} label="Corinthian Button" />
         </ThemeProvider>
       </div>
     );
@@ -67,13 +74,7 @@ export const DoricTheme: Story = {
 };
 
 export const IonicTheme: Story = {
-  render: (args) => {
-    return (
-      <ThemeProvider theme="ionic" setTheme={() => {}}>
-        <Button {...args} />
-      </ThemeProvider>
-    );
-  },
+  render: (args) => <Button {...args} />,
 };
 
 export const CorinthianTheme: Story = {
