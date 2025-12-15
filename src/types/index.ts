@@ -1,5 +1,6 @@
 // Component types
 export type { ButtonProps, ButtonVariantProps } from './components/Button.types';
+export type { CalloutProps, CalloutVariantProps } from './components/Callout.types';
 
 // Context types
 export type { Theme, ThemeContextType } from '../contexts/ThemeContext';
