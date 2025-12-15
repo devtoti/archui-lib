@@ -15,7 +15,7 @@ import type { CalloutProps } from "../../types/components/Callout.types";
  */
 
 const calloutVariants = cva(
-  "flex items-center gap-2 min-h-1 shadow-sm rounded-tr-[var(--rd-sm)] rounded-br-[var(--rd-sm)] color-[var(--txt-primary)] py-2 pl-[var(--pd-sm)] pr-[var(--pd-sm)] bg-[var(--bg-secondary)] border-[color:var(--brd-accent)] border-l-[length:var(--stroke-extra-bold)] border-solid",
+  "flex items-center gap-2 min-h-1 shadow-sm rounded-tr-[var(--rd-sm)] rounded-br-[var(--rd-sm)] color-[var(--txt-primary)] py-2 pl-[var(--pd-sm)] pr-[var(--pd-sm)] bg-[var(--bg-secondary)] border-[color:var(--brd-accent)] border-l-[length:var(--stroke-extra-bold)] border-solid max-w-96",
   {
     variants: {
       variant: {

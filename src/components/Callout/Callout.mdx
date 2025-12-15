@@ -1,0 +1,54 @@
+import {
+  Meta,
+  Canvas,
+  Controls,
+  Stories,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import CalloutMeta, {
+  Default,
+  AllThemes,
+  DoricTheme,
+  IonicTheme,
+  CorinthianTheme,
+  AllVariants,
+  AllSizes,
+} from "./Callout.stories";
+
+<Meta of={CalloutMeta} />
+
+# Callout
+
+The main element made for displaying important messages and notifications. The Callout component supports multiple component states, variants, icons, and styles.
+
+```jsx dark
+import { Callout } from "@devtoti/archui-lib";
+
+<Callout variant="info" size="md" title="Information" icon={<IconInfo />}>
+  This is an informational message
+</Callout>;
+```
+
+<Canvas of={AllThemes} withToolbar />
+
+## Usage
+
+The `Callout` component can be thought of as a stylized wrapper to be used for displaying alerts, notifications, and important information. It does not easily interfere with external logic, since all its content remains within its own scope.
+
+Ideally, the `Callout` component can be used along with other components for displaying contextual information and user feedback. For additional examples, please refer to our practical usage section.
+
+## Variants
+
+- success
+- info
+- warning
+- error
+- neutral
+
+## Examples
+
+<Story of={AllVariants} />
+
+## API
+
+<Controls of={DoricTheme} />
