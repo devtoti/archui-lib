@@ -6,7 +6,7 @@ import type { ButtonHTMLAttributes } from "react";
  */
 export interface ButtonVariantProps {
   /** Visual variant of the button */
-  variant?: "primary" | "secondary" | "tertiary";
+  variant?: "primary" | "secondary" | "tertiary" | "ghost";
   /** Size of the button */
   size?: "sm" | "md" | "lg";
 }

@@ -1,8 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { fn } from "storybook/test";
+import { useState } from "react";
 
 import { Button } from "./Button";
 import { ThemeProvider } from "../ThemeProvider";
+import { ThemeSwitcher } from "../ThemeSwitcher";
+import type { Theme } from "../../contexts/ThemeContext";
 import "../../index.css";
 
 const meta = {
@@ -23,7 +26,7 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["primary", "secondary", "tertiary"],
+      options: ["primary", "secondary", "tertiary", "ghost"],
       description: "Button variant",
     },
     size: {
@@ -73,6 +76,11 @@ export const AllThemes: Story = {
   },
 };
 export const DoricTheme: Story = {
+  parameters: {
+    docs: {
+      disable: true,
+    },
+  },
   render: (args) => {
     return (
       <ThemeProvider theme="doric" setTheme={() => {}}>
@@ -83,10 +91,20 @@ export const DoricTheme: Story = {
 };
 
 export const IonicTheme: Story = {
+  parameters: {
+    docs: {
+      disable: true,
+    },
+  },
   render: (args) => <Button {...args} />,
 };
 
 export const CorinthianTheme: Story = {
+  parameters: {
+    docs: {
+      disable: true,
+    },
+  },
   render: (args) => {
     return (
       <ThemeProvider theme="corinthian" setTheme={() => {}}>
@@ -98,13 +116,12 @@ export const CorinthianTheme: Story = {
 export const DocsPreview: Story = {
   render: (args) => {
     return (
-      <div className="flex flex-row gap-4 space-x-4 space-y-4">
-        <ThemeProvider theme="corinthian" setTheme={() => {}}>
-          <Button {...args} variant="primary" label="Primary" />
-          <Button {...args} variant="secondary" label="Secondary" />
-          <Button {...args} variant="tertiary" label="Tertiary" />
-        </ThemeProvider>
-      </div>
+      <ThemeSwitcher theme="doric">
+        <Button {...args} size="sm" variant="primary" label="Primary" />
+        <Button {...args} size="sm" variant="secondary" label="Secondary" />
+        <Button {...args} size="sm" variant="tertiary" label="Tertiary" />
+        <Button {...args} size="sm" variant="ghost" label="Ghost" />
+      </ThemeSwitcher>
     );
   },
 };

@@ -1,7 +1,7 @@
 .ionic {
-  --ionic-accent-primary: var(--indigo-9);
-  --ionic-accent-dark: var(--indigo-11);
-  --ionic-accent-light: var(--indigo-5);
+  --ionic-accent-primary: var(--blue-10);
+  --ionic-accent-dark: var(--blue-11);
+  --ionic-accent-light: var(--blue-6);
 
   /* Background */
   --bg-primary: var(--gray-1);

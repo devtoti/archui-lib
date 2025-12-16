@@ -10,6 +10,7 @@ import {
   BiBuildingHouse as IconArch,
 } from "react-icons/bi";
 import "../../index.css";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 // Helper function to get icon based on variant
 const getIconByVariant = (variant?: string) => {
@@ -32,7 +33,7 @@ type CalloutStoryArgs = React.ComponentProps<typeof Callout> & {
 };
 
 const meta = {
-  title: "Example/Callout",
+  title: "Callout",
   component: Callout,
   tags: ["autodocs"],
   parameters: {
@@ -183,7 +184,7 @@ export const CorinthianTheme: Story = {
 export const AllVariants: Story = {
   render: ({ showIcon, ...args }) => {
     return (
-      <ThemeProvider theme="ionic" setTheme={() => {}}>
+      <ThemeSwitcher theme="doric">
         <div className="flex flex-col gap-4">
           <Callout
             {...args}
@@ -221,7 +222,7 @@ export const AllVariants: Story = {
             icon={showIcon ? <IconNeutral /> : undefined}
           />
         </div>
-      </ThemeProvider>
+      </ThemeSwitcher>
     );
   },
 };
@@ -230,7 +231,7 @@ export const AllSizes: Story = {
   render: ({ showIcon, ...args }) => {
     const icon = showIcon ? getIconByVariant(args.variant) : undefined;
     return (
-      <ThemeProvider theme="ionic" setTheme={() => {}}>
+      <ThemeSwitcher theme="doric">
         <div className="flex flex-col gap-4">
           <Callout
             {...args}
@@ -254,7 +255,7 @@ export const AllSizes: Story = {
             icon={icon}
           />
         </div>
-      </ThemeProvider>
+      </ThemeSwitcher>
     );
   },
 };

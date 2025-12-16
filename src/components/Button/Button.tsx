@@ -15,16 +15,18 @@ import type { ButtonProps } from "../../types/components/Button.types";
  */
 
 const buttonVariants = cva(
-  "px-4 py-2 rounded font-semibold transition-colors",
+  "px-4 py-2 rounded-[var(--rd-sm)] font-normal transition-colors hover:cursor-pointer",
   {
     variants: {
       variant: {
         primary:
-          "bg-[var(--bg-primary)] text-gray-500 hover:cursor-pointer hover:bg-primary-hover",
+          "bg-[var(--bg-accent)] border-[var(--brd-accent)] text-[var(--txt-light)]",
         secondary:
-          "bg-[var(--bg-secondary)] text-gray-800 hover:cursor-pointer hover:bg-secondary-hover",
+          "bg-[var(--bg-accent-light)] border-[var(--brd-accent-dark)] border-[length:var(--stroke-regular)] text-[var(--txt-accent)]",
         tertiary:
-          "bg-transparent border border-gray-300 text-gray-700 hover:cursor-pointer hover:bg-gray-50",
+          "bg-[var(--bg-primary)] border-transparent text-[var(--txt-accent)]",
+        ghost:
+          "bg-trasnparent rounded-none border-b-[length:var(--stroke-regular)] text-[var(--txt-accent)]",
       },
       size: {
         sm: "text-sm",
@@ -38,9 +40,6 @@ const buttonVariants = cva(
     },
   }
 );
-
-// Export the buttonVariants for use in types
-export { buttonVariants };
 
 export const Button: React.FC<ButtonProps> = ({
   className,

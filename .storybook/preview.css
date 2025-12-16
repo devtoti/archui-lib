@@ -1,0 +1,33 @@
+/* Custom Storybook preview background styles */
+
+/* Change the preview canvas background */
+.sb-show-main {
+  background-color: var(--preview-bg, #D4E0F5) !important;
+}
+
+/* Alternative: Target the preview container directly */
+#storybook-preview-iframe,
+.sb-main-padded {
+  background-color: var(--preview-bg, #D4E0F5) !important;
+}
+
+/* Change background for individual stories */
+.sb-story {
+  background-color: transparent;
+}
+
+/* Add custom background patterns or gradients */
+.sb-show-main {
+  /* Example: Gradient background */
+  /* background: linear-gradient(135deg, #D4E0F5 0%, #E0E7FF 100%) !important; */
+  
+  /* Example: Pattern overlay */
+  /* background-image: 
+    linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px; */
+}
+
