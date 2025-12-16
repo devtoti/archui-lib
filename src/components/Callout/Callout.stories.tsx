@@ -40,10 +40,50 @@ const meta = {
     layout: "centered",
     docs: {
       subtitle:
-        "Highlight specific pieces of content statically. Used for getting the user’s attention and providing immediate feedback, based on the action that is currently taking place. It distinguishes itself from the Alert component, since this is a non-intrusive message that does not restrict user action when triggered.",
+        "Highlight specific pieces of content statically. Used for getting the user's attention and providing immediate feedback, based on the action that is currently taking place. It distinguishes itself from the Alert component, since this is a non-intrusive message that does not restrict user action when triggered.",
       description: {
         component:
           "Supports a customizable top-left icon, headings, and any text length. Each `Callout` includes a default fade-in-out animation that can be disabled if a variable `animate=none` is provided. Make sure to leverage the `Callout` designs by wrapping your components inside a `ThemeProvider` and playing around with the `order` style that better suits your needs.",
+      },
+      colorPalette: {
+        colors: [
+          {
+            title: "Success Variant",
+            colors: [
+              { name: "Icon Color", value: "#30A46C" },
+              { name: "Background", value: "#E9FFF0" },
+              { name: "Text", value: "#0D854B" },
+              { name: "Border", value: "#62A379" },
+            ],
+          },
+          {
+            title: "Info Variant",
+            colors: [
+              { name: "Icon Color", value: "#0090FF" },
+              { name: "Background", value: "#EAF7FF" },
+              { name: "Text", value: "#09558F" },
+              { name: "Border", value: "#8ABADD" },
+            ],
+          },
+          {
+            title: "Warning Variant",
+            colors: [
+              { name: "Icon Color", value: "#B78001" },
+              { name: "Background", value: "#FFFEF2" },
+              { name: "Text", value: "#997012" },
+              { name: "Border", value: "#BEAA44" },
+            ],
+          },
+          {
+            title: "Error Variant",
+            colors: [
+              { name: "Icon Color", value: "#E5484D" },
+              { name: "Background", value: "#FFEDED" },
+              { name: "Text", value: "#BF3539" },
+              { name: "Border", value: "#B26466" },
+            ],
+          },
+        ],
       },
     },
   },

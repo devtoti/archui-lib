@@ -1,4 +1,5 @@
 .ionic {
+  font-family: 'Noto Sans', system-ui, -apple-system, sans-serif;
   --ionic-accent-primary: var(--blue-10);
   --ionic-accent-dark: var(--blue-11);
   --ionic-accent-light: var(--blue-6);

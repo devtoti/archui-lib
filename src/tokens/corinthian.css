@@ -1,4 +1,5 @@
 .corinthian {
+  font-family: 'Lato', system-ui, -apple-system, sans-serif;
   --corinthian-accent-primary: var(--jade-9);
   --corinthian-accent-dark: var(--jade-11);
   --corinthian-accent-light: var(--jade-5);
