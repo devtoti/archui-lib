@@ -124,7 +124,7 @@ const meta = {
     variant: "success",
     size: "md",
     label:
-      "This is an ArchUI alert component. Use alerts to communicate important information to your users. Alerts are designed to capture attention and provide clear, actionable feedback about system status, user actions, or important notifications that require immediate awareness.",
+      "ArchUI Alert: Use these alerts to communicate information or feedback to users when something requires their attention or action.",
     showIcon: true,
   },
 } satisfies Meta<AlertStoryArgs>;
@@ -147,29 +147,29 @@ export const AllVariants: Story = {
   render: ({ showIcon, ...args }) => {
     return (
       <ThemeSwitcher theme="doric">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-row gap-4">
           <Alert
             {...args}
             variant="success"
-            label="Operation completed successfully. Your changes have been saved and all systems are functioning normally. You can continue working without any interruptions."
+            label="Operation successful. Your changes have been saved and systems are functioning."
             icon={showIcon ? <IconSuccess /> : undefined}
           />
           <Alert
             {...args}
             variant="info"
-            label="Keep in mind, your session will expire in 10 minutes due to inactivity. Please save your work to avoid losing any unsaved changes. You can extend your session by clicking the refresh button."
+            label="Your session will expire soon. Save your work or refresh to keep working."
             icon={showIcon ? <IconInfo /> : undefined}
           />
           <Alert
             {...args}
             variant="warning"
-            label="Password is weak and may be vulnerable to security threats. Consider using a stronger password with a combination of uppercase and lowercase letters, numbers, and special characters to better secure your account."
+            label="Weak password. Use a stronger password for better security."
             icon={showIcon ? <IconWarning /> : undefined}
           />
           <Alert
             {...args}
             variant="error"
-            label="Something went wrong while processing your request. Please check your network connection and try again. If the problem persists, contact our support team for assistance with error code ERR-2024."
+            label="An error occurred processing your request. Please try again or contact support."
             icon={showIcon ? <IconError /> : undefined}
           />
         </div>
@@ -183,23 +183,23 @@ export const AllSizes: Story = {
     const icon = showIcon ? getIconByVariant(args.variant) : undefined;
     return (
       <ThemeSwitcher theme="doric">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-row gap-4">
           <Alert
             {...args}
             size="sm"
-            label="This small alert notifies users of minor updates or changes that don't require immediate action but are worth being aware of. Perfect for subtle notifications and status updates."
+            label="This small alert notifies users of minor changes or updates."
             icon={icon}
           />
           <Alert
             {...args}
             size="md"
-            label="This medium alert highlights information requiring attention and should be reviewed by users. It's ideal for important updates, policy changes, or system notifications that need user awareness."
+            label="This medium alert highlights information requiring user attention."
             icon={icon}
           />
           <Alert
             {...args}
             size="lg"
-            label="This large alert emphasizes critical actions or important updates that demand immediate user attention. Use this size for urgent notifications, security warnings, or time-sensitive information that cannot be ignored."
+            label="This large alert emphasizes urgent actions or important updates."
             icon={icon}
           />
         </div>

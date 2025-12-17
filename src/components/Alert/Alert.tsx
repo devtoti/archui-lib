@@ -15,7 +15,7 @@ import type { AlertProps } from "../../types/components/Alert.types";
  */
 
 const alertVariants = cva(
-  "max-w-80 flex items-start gap-[var(--sp-md)] shadow-sm rounded-tr-[var(--rd-sm)] rounded-[var(--rd-sm)] color-[var(--txt-primary)] py-[var(--pd-sm)] px-[var(--pd-lg)] bg-[var(--bg-primary)] border-[color:var(--brd-accent)] border-solid border-[length:var(--stroke-regular)] shadow-2",
+  "max-w-80 h-min flex items-start gap-[var(--sp-md)] shadow-sm rounded-tr-[var(--rd-sm)] rounded-[var(--rd-sm)] color-[var(--txt-primary)] py-[var(--pd-sm)] px-[var(--pd-lg)] bg-[var(--bg-primary)] border-[color:var(--brd-accent)] border-solid border-[length:var(--stroke-regular)] shadow-2",
   {
     variants: {
       variant: {
