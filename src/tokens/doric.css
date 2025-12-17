@@ -38,25 +38,25 @@
   --sem-bg-success: var(--grass-1);
   --sem-bg-info: var(--cyan-1);
   --sem-bg-warning: var(--yellow-1);
-  --sem-bg-danger: var(--red-1);
+  --sem-bg-error: var(--red-1);
 
   /* Semantic Icons */
   --sem-icons-success: #30A46C;
   --sem-icons-info: #0090FF;
   --sem-icons-warning: #B78001;
-  --sem-icons-danger: #E5484D;
+  --sem-icons-error: #E5484D;
 
   /* Semantic Text */
   --sem-txt-success: #0D854B;
   --sem-txt-info: #09558F;
   --sem-txt-warning: #997012;
-  --sem-txt-danger: #BF3539;
+  --sem-txt-error: #BF3539;
 
   /* Semantic Border */
   --sem-brd-success: #62A379;
   --sem-brd-info: #8ABADD;
   --sem-brd-warning: #BEAA44;
-  --sem-brd-danger: #B26466;
+  --sem-brd-error: #B26466;
 
   /* Brand */
   --brand-primary: #AD3E28;

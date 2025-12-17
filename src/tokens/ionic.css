@@ -39,25 +39,25 @@
   --sem-bg-success: #E9FFF0;
   --sem-bg-info: #EAF7FF;
   --sem-bg-warning: #FFFEF2;
-  --sem-bg-danger: #FFEDED;
+  --sem-bg-error: #FFEDED;
 
   /* Semantic Icons */
   --sem-icons-success: #30A46C;
   --sem-icons-info: #0090FF;
   --sem-icons-warning: #B78001;
-  --sem-icons-danger: #E5484D;
+  --sem-icons-error: #E5484D;
 
   /* Semantic Text */
   --sem-txt-success: #0D854B;
   --sem-txt-info: #09558F;
   --sem-txt-warning: #997012;
-  --sem-txt-danger: #BF3539;
+  --sem-txt-error: #BF3539;
 
   /* Semantic Border */
   --sem-brd-success: #62A379;
   --sem-brd-info: #8ABADD;
   --sem-brd-warning: #BEAA44;
-  --sem-brd-danger: #B26466;
+  --sem-brd-error: #B26466;
 
   /* Brand */
   --brand-primary: #FFBF49;

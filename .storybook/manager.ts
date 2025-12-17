@@ -1,11 +1,8 @@
 import { addons } from 'storybook/manager-api';
-import { lightTheme } from './themes';
+import archUITheme from './themes/archUITheme.js';
+import archUIThemeDark from './themes/archUIThemeDark.js';
 
-// Set the Storybook manager UI theme
-// The theme will be toggled via the addon-themes toolbar control
-// This sets the default/initial theme
 addons.setConfig({
-  theme: lightTheme,
+  theme: archUITheme,
   enableShortcuts: true,
 });
-

@@ -13,17 +13,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-a11y",
     "@storybook/addon-vitest",
-    {
-      name: "@storybook/addon-themes",
-      options: {
-        // Enable theme switching in the toolbar
-        defaultTheme: 'light',
-        themes: {
-          light: '',
-          dark: 'dark',
-        },
-      },
-    }
+    "@storybook/addon-themes"
   ],
   "framework": {
     "name": "@storybook/react-vite",

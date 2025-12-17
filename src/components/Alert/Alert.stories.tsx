@@ -1,13 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Callout } from "./Callout";
-import { ThemeProvider } from "../ThemeProvider";
+import { Alert } from "./Alert";
 import {
   BiBulb as IconInfo,
   BiErrorAlt as IconError,
   BiCheckCircle as IconSuccess,
-  BiBell as IconNeutral,
   BiCommentError as IconWarning,
-  BiBuildingHouse as IconArch,
 } from "react-icons/bi";
 import "../../index.css";
 import { ThemeSwitcher } from "../ThemeSwitcher";
@@ -24,28 +21,28 @@ const getIconByVariant = (variant?: string) => {
     case "error":
       return <IconError />;
     default:
-      return <IconNeutral />;
+      return <IconInfo />;
   }
 };
 
-type CalloutStoryArgs = React.ComponentProps<typeof Callout> & {
+type AlertStoryArgs = React.ComponentProps<typeof Alert> & {
   showIcon?: boolean;
 };
 
 const meta = {
-  title: "Callout",
-  component: Callout,
+  title: "Alert",
+  component: Alert,
   tags: ["autodocs"],
   parameters: {
     layout: "centered",
     docs: {
       subtitle:
-        "Highlight specific pieces of content statically. Used for getting the user's attention and providing immediate feedback, based on the action that is currently taking place. It distinguishes itself from the Alert component, since this is a non-intrusive message that does not restrict user action when triggered.",
+        "Display important messages and notifications to users. The Alert component is used to communicate critical information, warnings, errors, or success states that require immediate user attention.",
       description: {
         component:
-          "Supports a customizable top-left icon, headings, and any text length. Each `Callout` includes a default fade-in-out animation that can be disabled if a variable `animate=none` is provided. Make sure to leverage the `Callout` designs by wrapping your components inside a `ThemeProvider` and playing around with the `order` style that better suits your needs.",
+          "The `Alert` component provides a visually distinct way to display important messages. It supports multiple variants (success, info, warning, error), customizable icons, and content. Each alert includes semantic color coding to help users quickly understand the message type. Make sure to leverage the Alert designs by wrapping your components inside a `ThemeProvider` to apply the appropriate theme styling.",
       },
-      artwork: "/icons/models/callout.svg",
+      artwork: "/icons/models/alert.svg",
       colorPalette: {
         colors: [
           {
@@ -91,25 +88,21 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["success", "info", "warning", "error", "neutral"],
-      description: "Variant type",
+      options: ["success", "info", "warning", "error"],
+      description: "Alert variant type",
     },
     size: {
       control: "select",
       options: ["sm", "md", "lg"],
       description: "Size variant",
     },
-    title: {
-      control: "text",
-      description: "Callout title",
-    },
     label: {
       control: "text",
-      description: "Text content (alternative to children)",
+      description: "Alert text content (alternative to children)",
     },
     children: {
       control: "text",
-      description: "Callout content (preferred over label)",
+      description: "Alert content (preferred over label)",
     },
     icon: {
       control: false,
@@ -128,96 +121,24 @@ const meta = {
     },
   },
   args: {
-    variant: "neutral",
+    variant: "success",
     size: "md",
-    title: "Callout Title",
-    label: "This is a callout message",
+    label:
+      "This is an ArchUI alert component. Use alerts to communicate important information to your users. Alerts are designed to capture attention and provide clear, actionable feedback about system status, user actions, or important notifications that require immediate awareness.",
     showIcon: true,
   },
-} satisfies Meta<CalloutStoryArgs>;
+} satisfies Meta<AlertStoryArgs>;
 
 export default meta;
-type Story = StoryObj<CalloutStoryArgs>;
+type Story = StoryObj<AlertStoryArgs>;
 
 export const Default: Story = {
   render: ({ showIcon, ...args }) => {
     const icon = showIcon ? getIconByVariant(args.variant) : undefined;
     return (
       <ThemeSwitcher theme="ionic">
-        <Callout {...args} icon={icon} />
+        <Alert {...args} icon={icon} />
       </ThemeSwitcher>
-    );
-  },
-};
-
-export const AllThemes: Story = {
-  parameters: {
-    docs: {
-      disable: true,
-    },
-  },
-  render: ({ showIcon, ...args }) => {
-    const icon = showIcon ? <IconArch /> : undefined;
-    return (
-      <div className="flex flex-col gap-4">
-        <ThemeProvider theme="doric" setTheme={() => {}}>
-          <Callout {...args} title="Doric Callout" icon={icon} />
-        </ThemeProvider>
-        <ThemeProvider theme="corinthian" setTheme={() => {}}>
-          <Callout {...args} title="Corinthian Callout" icon={icon} />
-        </ThemeProvider>
-        <ThemeProvider theme="ionic" setTheme={() => {}}>
-          <Callout {...args} title="Ionic Callout" icon={icon} />
-        </ThemeProvider>
-      </div>
-    );
-  },
-};
-
-export const DoricTheme: Story = {
-  parameters: {
-    docs: {
-      disable: true,
-    },
-  },
-  render: ({ showIcon, ...args }) => {
-    const icon = showIcon ? <IconArch /> : undefined;
-    return (
-      <ThemeProvider theme="doric" setTheme={() => {}}>
-        <Callout {...args} icon={icon} />
-      </ThemeProvider>
-    );
-  },
-};
-
-export const IonicTheme: Story = {
-  parameters: {
-    docs: {
-      disable: true,
-    },
-  },
-  render: ({ showIcon, ...args }) => {
-    const icon = showIcon ? <IconArch /> : undefined;
-    return (
-      <ThemeProvider theme="ionic" setTheme={() => {}}>
-        <Callout {...args} icon={icon} />
-      </ThemeProvider>
-    );
-  },
-};
-
-export const CorinthianTheme: Story = {
-  parameters: {
-    docs: {
-      disable: true,
-    },
-  },
-  render: ({ showIcon, ...args }) => {
-    const icon = showIcon ? <IconArch /> : undefined;
-    return (
-      <ThemeProvider theme="corinthian" setTheme={() => {}}>
-        <Callout {...args} icon={icon} />
-      </ThemeProvider>
     );
   },
 };
@@ -227,40 +148,29 @@ export const AllVariants: Story = {
     return (
       <ThemeSwitcher theme="doric">
         <div className="flex flex-col gap-4">
-          <Callout
+          <Alert
             {...args}
             variant="success"
-            title="Success"
-            label="This is a success message"
+            label="Operation completed successfully. Your changes have been saved and all systems are functioning normally. You can continue working without any interruptions."
             icon={showIcon ? <IconSuccess /> : undefined}
           />
-          <Callout
+          <Alert
             {...args}
             variant="info"
-            title="Info"
-            label="This is an info message"
+            label="Keep in mind, your session will expire in 10 minutes due to inactivity. Please save your work to avoid losing any unsaved changes. You can extend your session by clicking the refresh button."
             icon={showIcon ? <IconInfo /> : undefined}
           />
-          <Callout
+          <Alert
             {...args}
             variant="warning"
-            title="Warning"
-            label="This is a warning message"
+            label="Password is weak and may be vulnerable to security threats. Consider using a stronger password with a combination of uppercase and lowercase letters, numbers, and special characters to better secure your account."
             icon={showIcon ? <IconWarning /> : undefined}
           />
-          <Callout
+          <Alert
             {...args}
             variant="error"
-            title="Error"
-            label="This is an error message"
+            label="Something went wrong while processing your request. Please check your network connection and try again. If the problem persists, contact our support team for assistance with error code ERR-2024."
             icon={showIcon ? <IconError /> : undefined}
-          />
-          <Callout
-            {...args}
-            variant="neutral"
-            title="Neutral"
-            label="This is a neutral message"
-            icon={showIcon ? <IconNeutral /> : undefined}
           />
         </div>
       </ThemeSwitcher>
@@ -274,25 +184,22 @@ export const AllSizes: Story = {
     return (
       <ThemeSwitcher theme="doric">
         <div className="flex flex-col gap-4">
-          <Callout
+          <Alert
             {...args}
             size="sm"
-            title="Small"
-            label="Small callout message"
+            label="This small alert notifies users of minor updates or changes that don't require immediate action but are worth being aware of. Perfect for subtle notifications and status updates."
             icon={icon}
           />
-          <Callout
+          <Alert
             {...args}
             size="md"
-            title="Medium"
-            label="Medium callout message"
+            label="This medium alert highlights information requiring attention and should be reviewed by users. It's ideal for important updates, policy changes, or system notifications that need user awareness."
             icon={icon}
           />
-          <Callout
+          <Alert
             {...args}
             size="lg"
-            title="Large"
-            label="Large callout message"
+            label="This large alert emphasizes critical actions or important updates that demand immediate user attention. Use this size for urgent notifications, security warnings, or time-sensitive information that cannot be ignored."
             icon={icon}
           />
         </div>

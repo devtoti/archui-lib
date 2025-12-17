@@ -1,25 +1,26 @@
-/* Custom Storybook preview background styles */
+/*
+Custom Storybook preview background styles
 
-/* Change the preview canvas background */
+Change the preview canvas background
 .sb-show-main {
-  background-color: var(--preview-bg, #ccd6e7) !important;
-  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M3.25 10h13.5M10 3.25v13.5'  stroke-linecap='square' stroke-width='1' stroke='%23b2c4dbff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>") !important;
+  background-color: var(--preview-bg, #F2F7FF) !important;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(0.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M3.25 10h13.5M10 3.25v13.5'  stroke-linecap='square' stroke-width='1' stroke='%23b2c4dbd8' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>") !important;
   background-repeat: repeat !important;
   background-size: auto !important;
   background-position: 0 0 !important;
 }
 
-/* Alternative: Target the preview container directly */
+Alternative: Target the preview container directly
 #storybook-preview-iframe,
 .sb-main-padded {
-  background-color: var(--preview-bg, #ccd6e7) !important;
-  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M3.25 10h13.5M10 3.25v13.5'  stroke-linecap='square' stroke-width='1' stroke='%23b2c4dbff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>") !important;
+  background-color: var(--preview-bg, #F2F7FF) !important;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(0.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M3.25 10h13.5M10 3.25v13.5'  stroke-linecap='square' stroke-width='1' stroke='%23b2c4dbd8' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>") !important;
   background-repeat: repeat !important;
   background-size: auto !important;
   background-position: 0 0 !important;
 }
 
-/* Change background for individual stories */
+Change background for individual stories
 .sb-story {
   background-color: transparent;
 }
@@ -38,3 +39,6 @@
   padding: 8px;
 }
  */
+*/
+/*/\*\*/ End of Selection */
+```

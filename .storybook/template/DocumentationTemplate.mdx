@@ -2,6 +2,7 @@ import { Meta, Title, Subtitle, Description, Primary, ArgTypes, ColorPalette, Co
 import { VariantsList } from './VariantsList';
 import { DynamicSource } from './DynamicSource';
 import { ColorPaletteList } from './ColorPaletteList';
+import { ComponentArtwork } from './ComponentArtwork';
  
 {/*
   * 👇 The isTemplate property is required to tell Storybook that this is a template
@@ -13,6 +14,8 @@ import { ColorPaletteList } from './ColorPaletteList';
  
 <Title />
 <Subtitle/>
+
+<ComponentArtwork />
 
 <DynamicSource />
 <Primary />
@@ -26,7 +29,7 @@ import { ColorPaletteList } from './ColorPaletteList';
 
 ## Examples
 
-<Stories includePrimary={false} />
+<Stories includePrimary={false} data-toc-ignore="true" />
 
 ## API
 

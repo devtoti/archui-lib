@@ -2,11 +2,11 @@ import React from "react";
 import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as Slot from "@radix-ui/react-slot";
-import type { CalloutProps } from "../../types/components/Callout.types";
+import type { AlertProps } from "../../types/components/Alert.types";
 
 /**
  * @author: @devtoti
- * @description: Callout
+ * @description: Alert
  * @version: 1.0.0
  * @license: MIT
  * @date: 2025-09-07
@@ -14,16 +14,18 @@ import type { CalloutProps } from "../../types/components/Callout.types";
  * @github: https://github.com/devtoti/archui-lib
  */
 
-const calloutVariants = cva(
-  "flex items-center gap-2 min-h-1 shadow-sm rounded-tr-[var(--rd-sm)] rounded-br-[var(--rd-sm)] color-[var(--txt-primary)] py-2 pl-[var(--pd-sm)] pr-[var(--pd-sm)] bg-[var(--bg-secondary)] border-[color:var(--brd-accent)] border-l-[length:var(--stroke-extra-bold)] border-solid max-w-96",
+const alertVariants = cva(
+  "max-w-80 flex items-start gap-[var(--sp-md)] shadow-sm rounded-tr-[var(--rd-sm)] rounded-[var(--rd-sm)] color-[var(--txt-primary)] py-[var(--pd-sm)] px-[var(--pd-lg)] bg-[var(--bg-primary)] border-[color:var(--brd-accent)] border-solid border-[length:var(--stroke-regular)] shadow-2",
   {
     variants: {
       variant: {
-        success: "[border-left-color:var(--sem-icons-success)]",
-        info: "[border-left-color:var(--sem-icons-info)]",
-        warning: "[border-left-color:var(--sem-icons-warning)]",
-        error: "[border-left-color:var(--sem-icons-error)]",
-        neutral: "[border-left-color:var(--brd-primary)]",
+        success:
+          "border-[color:var(--sem-icons-success)] bg-[var(--sem-bg-success)] text-[color:var(--sem-txt-success)]",
+        info: "border-[color:var(--sem-icons-info)] bg-[var(--sem-bg-info)] text-[color:var(--sem-txt-info)]",
+        warning:
+          "border-[color:var(--sem-icons-warning)] bg-[var(--sem-bg-warning)] text-[color:var(--sem-txt-warning)]",
+        error:
+          "border-[color:var(--sem-icons-error)] bg-[var(--sem-bg-error)] text-[color:var(--sem-txt-error)]",
       },
       size: {
         sm: "text-sm",
@@ -32,7 +34,7 @@ const calloutVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "neutral",
+      variant: "success",
       size: "md",
     },
   }
@@ -56,25 +58,24 @@ const getIconColorStyle = (variant?: string): React.CSSProperties => {
 
 // Export variants for library consumers
 // eslint-disable-next-line react-refresh/only-export-components
-export { calloutVariants };
+export { alertVariants };
 
-export const Callout: React.FC<CalloutProps> = ({
+export const Alert: React.FC<AlertProps> = ({
   className,
   variant,
   size,
   label = "default label",
-  title,
   asChild = false,
   icon,
   children,
   ...props
 }) => {
-  const CalloutComponent = asChild ? Slot.Root : "div";
+  const AlertComponent = asChild ? Slot.Root : "div";
   const content = children || label;
 
   return (
-    <CalloutComponent
-      className={twMerge(calloutVariants({ variant, size }), className)}
+    <AlertComponent
+      className={twMerge(alertVariants({ variant, size }), className)}
       {...props}
     >
       {icon && (
@@ -85,8 +86,7 @@ export const Callout: React.FC<CalloutProps> = ({
           {icon}
         </span>
       )}
-      <h4 className="font-medium inline">{title}:</h4>
-      <p className="inline"> {content}</p>
-    </CalloutComponent>
+      <p className="inline">{content}</p>
+    </AlertComponent>
   );
 };

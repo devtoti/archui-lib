@@ -1,0 +1,134 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# Welcome to archUI
+
+<div style={{ 
+  marginTop: '2rem',
+  marginBottom: '2rem',
+  padding: '2rem',
+  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
+  borderRadius: '8px',
+  border: '1px solid var(--brd-primary, #e2e8f0)'
+}}>
+
+**archUI** is a modern, accessible React component library built with TypeScript and Tailwind CSS. Inspired by classical architecture, archUI provides three distinct design themes—Doric, Ionic, and Corinthian—each with its own visual identity and design language.
+
+</div>
+
+## Features
+
+### 🎨 Three Beautiful Themes
+
+archUI comes with three carefully crafted themes inspired by classical architecture:
+
+- **Doric**: Bold and robust, featuring warm orange accents
+- **Ionic**: Elegant and refined, with calming blue tones
+- **Corinthian**: Sophisticated and modern, using fresh jade colors
+
+Each theme includes a complete design system with custom typography, colors, spacing, and component styles.
+
+### ⚡ Built for Performance
+
+- **Lightweight**: Minimal dependencies, optimized bundle size
+- **TypeScript**: Full type safety and excellent developer experience
+- **Tailwind CSS**: Utility-first styling with custom design tokens
+- **Tree-shakeable**: Import only what you need
+
+### ♿ Accessible by Default
+
+- Built on **Radix UI** primitives for accessibility
+- WCAG compliant components
+- Keyboard navigation support
+- Screen reader friendly
+
+### 🎯 Developer Experience
+
+- **Storybook documentation**: Interactive component playground
+- **TypeScript support**: Full type definitions included
+- **Customizable**: Easy theming and customization
+- **Well-documented**: Comprehensive API documentation
+
+## Getting Started
+
+### Installation
+
+```bash
+npm install @devtoti/archui-lib
+```
+
+### Basic Usage
+
+```tsx
+import { Button } from "@devtoti/archui-lib";
+import "@devtoti/archui-lib/styles";
+
+function App() {
+  return (
+    <Button variant="primary" size="md">
+      Click me
+    </Button>
+  );
+}
+```
+
+### Using Themes
+
+Wrap your application with a `ThemeProvider` to apply one of the three themes:
+
+```tsx
+import { ThemeProvider } from "@devtoti/archui-lib";
+
+function App() {
+  return (
+    <ThemeProvider theme="ionic" setTheme={() => {}}>
+      {/* Your app components */}
+    </ThemeProvider>
+  );
+}
+```
+
+## Component Library
+
+archUI provides a growing collection of components:
+
+- **Button**: Interactive buttons with multiple variants and sizes
+- **Callout**: Highlight important information with contextual messaging
+- **Switch**: Toggle controls for on/off states
+- **More coming soon...**
+
+Each component is fully documented with examples, API reference, and usage guidelines.
+
+## Design Philosophy
+
+archUI is inspired by classical architecture principles:
+
+- **Proportion**: Balanced spacing and sizing
+- **Harmony**: Consistent design language across components
+- **Clarity**: Clear visual hierarchy and communication
+- **Elegance**: Refined aesthetics that stand the test of time
+
+## Resources
+
+- **GitHub**: [github.com/devtoti/archui-lib](https://github.com/devtoti/archui-lib)
+- **NPM**: [npmjs.com/package/@devtoti/archui-lib](https://www.npmjs.com/package/@devtoti/archui-lib)
+- **Documentation**: Browse the component library in this Storybook
+
+## License
+
+MIT © [Antonio Ruiz](https://devtoti.com)
+
+---
+
+<div style={{ 
+  marginTop: '3rem',
+  padding: '1.5rem',
+  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
+  borderRadius: '8px',
+  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
+}}>
+
+**Ready to get started?** Explore the components in the sidebar to see what archUI can do for your project.
+
+</div>
