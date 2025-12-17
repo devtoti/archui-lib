@@ -15,17 +15,17 @@ import type { AlertProps } from "../../types/components/Alert.types";
  */
 
 const alertVariants = cva(
-  "max-w-80 h-min flex items-start gap-[var(--sp-md)] shadow-sm rounded-tr-[var(--rd-sm)] rounded-[var(--rd-sm)] color-[var(--txt-primary)] py-[var(--pd-sm)] px-[var(--pd-lg)] bg-[var(--bg-primary)] border-[color:var(--brd-accent)] border-solid border-[length:var(--stroke-regular)] shadow-2",
+  "max-w-80 h-min flex items-start gap-arch-md shadow-sm rounded-tr-arch-rd-sm rounded-arch-rd-sm text-arch-primary p-arch-sm bg-arch-surface-primary border-arch-contour-accent border-solid border-[length:var(--stroke-regular)] shadow-arch-dark",
   {
     variants: {
       variant: {
         success:
-          "border-[color:var(--sem-icons-success)] bg-[var(--sem-bg-success)] text-[color:var(--sem-txt-success)]",
-        info: "border-[color:var(--sem-icons-info)] bg-[var(--sem-bg-info)] text-[color:var(--sem-txt-info)]",
+          "border-arch-sem-brd-success bg-arch-sem-srfc-success text-arch-sem-chars-success",
+        info: "border-arch-sem-brd-info bg-arch-sem-srfc-info text-arch-sem-chars-info",
         warning:
-          "border-[color:var(--sem-icons-warning)] bg-[var(--sem-bg-warning)] text-[color:var(--sem-txt-warning)]",
+          "border-arch-sem-brd-warning bg-arch-sem-srfc-warning text-arch-sem-chars-warning",
         error:
-          "border-[color:var(--sem-icons-error)] bg-[var(--sem-bg-error)] text-[color:var(--sem-txt-error)]",
+          "border-arch-sem-brd-error bg-arch-sem-srfc-error text-arch-sem-chars-error",
       },
       size: {
         sm: "text-sm",
@@ -40,19 +40,19 @@ const alertVariants = cva(
   }
 );
 
-// Utility to return icon color style based on variant
-const getIconColorStyle = (variant?: string): React.CSSProperties => {
+// Utility to return icon color class based on variant
+const getIconColorClass = (variant?: string): string => {
   switch (variant) {
     case "success":
-      return { color: "var(--sem-icons-success)" };
+      return "text-arch-sem-i-success";
     case "info":
-      return { color: "var(--sem-icons-info)" };
+      return "text-arch-sem-i-info";
     case "warning":
-      return { color: "var(--sem-icons-warning)" };
+      return "text-arch-sem-i-warning";
     case "error":
-      return { color: "var(--sem-icons-error)" };
+      return "text-arch-sem-i-error";
     default:
-      return {};
+      return "";
   }
 };
 
@@ -80,8 +80,10 @@ export const Alert: React.FC<AlertProps> = ({
     >
       {icon && (
         <span
-          className="inline-flex align-middle"
-          style={getIconColorStyle(variant)}
+          className={twMerge(
+            "inline-flex align-middle mt-1",
+            getIconColorClass(variant)
+          )}
         >
           {icon}
         </span>

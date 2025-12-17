@@ -30,7 +30,7 @@ type AlertStoryArgs = React.ComponentProps<typeof Alert> & {
 };
 
 const meta = {
-  title: "Alert",
+  title: "01 COMPONENTS/Alert",
   component: Alert,
   tags: ["autodocs"],
   parameters: {
@@ -147,7 +147,7 @@ export const AllVariants: Story = {
   render: ({ showIcon, ...args }) => {
     return (
       <ThemeSwitcher theme="doric">
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-4">
           <Alert
             {...args}
             variant="success"
@@ -183,7 +183,7 @@ export const AllSizes: Story = {
     const icon = showIcon ? getIconByVariant(args.variant) : undefined;
     return (
       <ThemeSwitcher theme="doric">
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-4">
           <Alert
             {...args}
             size="sm"

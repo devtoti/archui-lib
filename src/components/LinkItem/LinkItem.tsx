@@ -15,18 +15,18 @@ import type { LinkItemProps } from "../../types/components/LinkItem.types";
  */
 
 const linkItemVariants = cva(
-  "bg-[var(--bg-primary)] rounded-[var(--rd-md)] px-[var(--pd-sm)] py-[var(--pd-xs)] inline-flex items-center gap-[var(--sp-sm)] text-[var(--txt-secondary)] transition-colors duration-200 cursor-pointer hover:bg-[var(--bg-tertiary)] hover:text-[var(--txt-accent)] hover:rounded-[var(--rd-sm)] hover:underline hover:underline-offset-4",
+  "bg-arch-surface-primary rounded-arch-rd-md px-arch-sm py-arch-xs inline-flex items-center gap-arch-sm text-arch-secondary transition-colors duration-200 cursor-pointer hover:bg-arch-surface-tertiary hover:text-arch-accent hover:rounded-arch-rd-sm hover:underline hover:underline-offset-4",
   {
     variants: {
       variant: {
         default:
-          "text-[var(--txt-primary)] underline underline-offset-4 [&_svg]:text-[var(--txt-accent)]",
+          "text-arch-primary underline underline-offset-4 [&_svg]:text-arch-accent",
         hover:
-          "bg-[var(--bg-tertiary)] text-[var(--txt-accent)] px-[var(--pd-sm)] py-[var(--pd-xs)] rounded-[var(--rd-sm)] underline underline-offset-4",
+          "bg-arch-surface-tertiary text-arch-accent px-arch-sm py-arch-xs rounded-arch-rd-sm underline underline-offset-4",
         active:
-          "text-[var(--txt-accent)] bg-[var(--bg-secondary)] px-[var(--pd-sm)] py-[var(--pd-xs)] rounded-[var(--rd-sm)] underline underline-offset-4 font-medium border-[color:var(--txt-accent)] border-[length:var(--stroke-regular)]",
+          "text-arch-accent bg-arch-surface-secondary px-arch-sm py-arch-xs rounded-arch-rd-sm font-medium border-arch-accent border-[length:var(--stroke-regular)]",
         minimal:
-          "text-[var(--txt-secondary)] bg-transparent hover:text-[var(--txt-accent)] underline underline-offset-4",
+          "text-arch-secondary bg-transparent hover:text-arch-accent underline underline-offset-4",
         visited:
           "text-violet-800 hover:text-violet-600 underline underline-offset-4 visited:text-violet-800 [&_svg]:text-violet-800",
       },

@@ -7,7 +7,7 @@ import { useTheme } from "../../hooks/useTheme";
 import "../../index.css";
 
 const meta = {
-  title: "Button",
+  title: "01 COMPONENTS/Button",
   component: Button,
   tags: ["autodocs"],
   parameters: {
@@ -36,14 +36,6 @@ const meta = {
     label: {
       control: "text",
       description: "Text content",
-    },
-    backgroundColor: {
-      control: { type: "color" },
-      description: "Custom background color for the button",
-    },
-    labelColor: {
-      control: { type: "color" },
-      description: "Custom text color for the button label",
     },
     className: {
       control: "text",

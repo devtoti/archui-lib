@@ -99,12 +99,13 @@
   --pd-2xl: 1.625rem;
   --pd-3xl: 2rem;
 
+
   /* Stroke */
-  --stroke-extra-light: 0.3px;
-  --stroke-light: 0.5px;
-  --stroke-regular: 1px;
-  --stroke-bold: 1.5px;
-  --stroke-extra-bold: 4px;
+  --stroke-extra-light: 0.2px;
+  --stroke-light: 0.3px;
+  --stroke-regular: 0.8px;
+  --stroke-bold: 1px;
+  --stroke-extra-bold: 2px;
 
   /* Spacing */
   --sp-3xs: 0.0625rem;
@@ -119,4 +120,9 @@
   --sp-4xl: 2.5rem;
   --sp-5xl: 3rem;
   --sp-6xl: 3.75rem;
+
+  /* Shadows - Moderate */
+  --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-regular: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.12);
 }

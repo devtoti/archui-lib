@@ -23,3 +23,112 @@
 
 @import "./tokens/archui-color-palette.css";
 @import "./tokens/archui-system-tokens.css";
+
+@theme inline {
+    --color-brand: oklch(0.4616 0.0757 170.11);
+    --color-priority: oklch(0.7226 0.1352 50.08);
+    --color-danger: oklch(0.5796 0.2219 19.61);
+
+    /* Background colors */
+    --color-arch-surface-primary: var(--bg-primary);
+    --color-arch-surface-secondary: var(--bg-secondary);
+    --color-arch-surface-tertiary: var(--bg-tertiary);
+    --color-arch-surface-accent-dark: var(--bg-accent-dark);
+    --color-arch-surface-accent: var(--bg-accent);
+    --color-arch-surface-accent-light: var(--bg-accent-light);
+    --color-arch-surface-light: var(--bg-light);
+    --color-arch-sunken-1: var(--bg-sunken-1);
+    --color-arch-sunken-2: var(--bg-sunken-2);
+    --color-arch-sunken-3: var(--bg-sunken-3);
+    --color-arch-sunken-4: var(--bg-sunken-4);
+
+    /* Foreground colors */
+    --color-arch-float-primary: var(--fg-primary);
+    --color-arch-float-secondary: var(--fg-secondary);
+    --color-arch-float-tertiary: var(--fg-tertiary);
+    --color-arch-float-accent: var(--fg-accent);
+    --color-arch-raised-1: var(--fg-raised-1);
+    --color-arch-raised-2: var(--fg-raised-2);
+    --color-arch-raised-3: var(--fg-raised-3);
+
+    /* Text colors */
+    --color-arch-primary: var(--txt-primary);
+    --color-arch-secondary: var(--txt-secondary);
+    --color-arch-tertiary: var(--txt-tertiary);
+    --color-arch-light: var(--txt-light);
+    --color-arch-accent-dark: var(--txt-accent-dark);
+    --color-arch-accent: var(--txt-accent);
+    --color-arch-accent-light: var(--txt-accent-light);
+
+    /* Semantic background colors */
+    --color-arch-sem-srfc-success: var(--sem-bg-success);
+    --color-arch-sem-srfc-info: var(--sem-bg-info);
+    --color-arch-sem-srfc-warning: var(--sem-bg-warning);
+    --color-arch-sem-srfc-error: var(--sem-bg-error);
+
+    /* Semantic text colors */
+    --color-arch-sem-chars-success: var(--sem-txt-success);
+    --color-arch-sem-chars-info: var(--sem-txt-info);
+    --color-arch-sem-chars-warning: var(--sem-txt-warning);
+    --color-arch-sem-chars-error: var(--sem-txt-error);
+
+    /* Semantic border colors */
+    --color-arch-sem-brd-success: var(--sem-brd-success);
+    --color-arch-sem-brd-info: var(--sem-brd-info);
+    --color-arch-sem-brd-warning: var(--sem-brd-warning);
+    --color-arch-sem-brd-error: var(--sem-brd-error);
+
+    /* Semantic icon colors */
+    --color-arch-sem-i-success: var(--sem-icons-success);
+    --color-arch-sem-i-info: var(--sem-icons-info);
+    --color-arch-sem-i-warning: var(--sem-icons-warning);
+    --color-arch-sem-i-error: var(--sem-icons-error);
+
+    /* Border colors */
+    --color-arch-contour-primary: var(--brd-primary);
+    --color-arch-contour-secondary: var(--brd-secondary);
+    --color-arch-contour-tertiary: var(--brd-tertiary);
+    --color-arch-contour-accent-dark: var(--brd-accent-dark);
+    --color-arch-contour-accent: var(--brd-accent);
+    --color-arch-contour-accent-light: var(--brd-accent-light);
+    --color-arch-contour-light: var(--brd-light);
+    --color-arch-contour-dark: var(--brd-dark);
+
+    /* Icon colors */
+    --color-arch-icon-accent: var(--icon-accent);
+    --color-arch-icon-primary: var(--icon-primary);
+    --color-arch-icon-secondary: var(--icon-secondary);
+    --color-arch-icon-tertiary: var(--icon-tertiary);
+    --color-arch-icon-light: var(--icon-light);
+    --color-arch-icon-dark: var(--icon-dark);
+
+    /* Padding */
+    --spacing-arch-xs: var(--pd-xs);
+    --spacing-arch-sm: var(--pd-sm);
+    --spacing-arch-md: var(--pd-md);
+    --spacing-arch-lg: var(--pd-lg);
+    --spacing-arch-xl: var(--pd-xl);
+    --spacing-arch-2xl: var(--pd-2xl);
+    --spacing-arch-3xl: var(--pd-3xl);
+
+
+    /* Border radius */
+    --radius-arch-rd-xs: var(--rd-xs);
+    --radius-arch-rd-sm: var(--rd-sm);
+    --radius-arch-rd-md: var(--rd-md);
+    --radius-arch-rd-lg: var(--rd-lg);
+    --radius-arch-rd-xl: var(--rd-xl);
+    --radius-arch-rd-full: var(--rd-full);
+
+    /* Border width */
+    --border-arch-lw-extra-light: var(--stroke-extra-light);
+    --border-arch-lw-light: var(--stroke-light);
+    --border-arch-lw-regular: var(--stroke-regular);
+    --border-arch-lw-bold: var(--stroke-bold);
+    --border-arch-lw-extra-bold: var(--stroke-extra-bold);
+
+    /* Shadows */
+    --shadow-arch-light: var(--shadow-light);
+    --shadow-arch-regular: var(--shadow-regular);
+    --shadow-arch-dark: var(--shadow-dark);
+}

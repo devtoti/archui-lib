@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { fn } from "storybook/test";
 import { Switch } from "./Switch";
-import { ThemeProvider } from "../ThemeProvider";
 import "../../index.css";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 
 const meta = {
-  title: "Switch",
+  title: "01 COMPONENTS/Switch",
   component: Switch,
   tags: ["autodocs"],
   parameters: {

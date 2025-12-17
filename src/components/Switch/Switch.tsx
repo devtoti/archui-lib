@@ -15,14 +15,14 @@ import type { SwitchProps } from "../../types/components/Switch.types";
  */
 
 const switchVariants = cva(
-  "relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-[var(--rd-sm)] border-2 border-transparent transition-colors duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--bg-accent)] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-blue-500 data-[state=unchecked]:bg-[var(--gris-4)]",
+  "relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-arch-rd-sm border-2 border-transparent transition-colors duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-arch-surface-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-blue-500 data-[state=unchecked]:bg-gray-400",
   {
     variants: {
       variant: {
         default: "data-[state=checked]:bg-blue-500",
-        accent: "data-[state=checked]:bg-[var(--bg-accent)]",
+        accent: "data-[state=checked]:bg-arch-surface-accent",
         disabled:
-          "bg-[var(--bg-sunken-3)] cursor-not-allowed opacity-60 pointer-events-none",
+          "bg-arch-sunken-3 cursor-not-allowed opacity-60 pointer-events-none",
       },
       size: {
         sm: "h-5 w-9",
@@ -38,7 +38,7 @@ const switchVariants = cva(
 );
 
 const switchThumbVariants = cva(
-  "pointer-events-none block rounded-[var(--rd-sm)] bg-white shadow-lg ring-0 transition-transform duration-200 ease-in-out data-[state=unchecked]:translate-x-0.5",
+  "pointer-events-none block rounded-arch-rd-sm bg-white shadow-lg ring-0 transition-transform duration-200 ease-in-out data-[state=unchecked]:translate-x-0.5",
   {
     variants: {
       size: {

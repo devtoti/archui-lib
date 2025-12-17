@@ -15,18 +15,17 @@ import type { ButtonProps } from "../../types/components/Button.types";
  */
 
 const buttonVariants = cva(
-  "px-4 py-2 rounded-[var(--rd-sm)] font-normal transition-colors hover:cursor-pointer",
+  "px-4 py-2 rounded-arch-rd-sm font-normal transition-colors hover:cursor-pointer",
   {
     variants: {
       variant: {
         primary:
-          "bg-[var(--bg-accent)] border-[var(--brd-accent)] text-[var(--txt-light)]",
+          "bg-arch-surface-accent border-arch-contour-accent text-arch-light",
         secondary:
-          "bg-[var(--bg-accent-light)] border-[var(--brd-accent-dark)] border-[length:var(--stroke-regular)] text-[var(--txt-accent)]",
-        tertiary:
-          "bg-[var(--bg-primary)] border-transparent text-[var(--txt-accent)]",
+          "bg-arch-surface-accent-light border-arch-contour-accent-dark border-[length:var(--stroke-regular)] text-arch-accent",
+        tertiary: "bg-arch-surface-primary border-transparent text-arch-accent",
         ghost:
-          "bg-trasnparent rounded-none border-b-[length:var(--stroke-regular)] text-[var(--txt-accent)]",
+          "bg-transparent rounded-none border-b-[length:var(--stroke-regular)] text-arch-accent",
       },
       size: {
         sm: "text-sm",
@@ -43,30 +42,21 @@ const buttonVariants = cva(
 
 export const Button: React.FC<ButtonProps> = ({
   className,
-  variant,
-  size,
-  label,
-  children,
+  variant = "primary",
+  size = "md",
+  label = "Button",
+  children = null,
   asChild = false,
-  backgroundColor,
-  labelColor,
   style,
+  onClick = () => {},
   ...props
 }) => {
   const Button = asChild ? Slot.Root : "button";
   const content = children || label;
 
-  // Merge custom colors with existing style prop
-  const mergedStyle: React.CSSProperties = {
-    ...style,
-    ...(backgroundColor && { backgroundColor }),
-    ...(labelColor && { color: labelColor }),
-  };
-
   return (
     <Button
       className={twMerge(buttonVariants({ variant, size }), className)}
-      style={mergedStyle}
       {...props}
     >
       {content}

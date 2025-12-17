@@ -17,7 +17,7 @@ type LinkItemStoryArgs = React.ComponentProps<typeof LinkItem> & {
 };
 
 const meta = {
-  title: "LinkItem",
+  title: "01 COMPONENTS/LinkItem",
   component: LinkItem,
   tags: ["autodocs"],
   parameters: {

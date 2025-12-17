@@ -104,7 +104,7 @@
   --stroke-light: 1px;
   --stroke-regular: 1.5px;
   --stroke-bold: 2px;
-  --stroke-extra-bold: 2px;
+  --stroke-extra-bold: 6px;
 
   /* Spacing */
   --sp-3xs: 0.0625rem;
@@ -119,4 +119,9 @@
   --sp-4xl: 2.5rem;
   --sp-5xl: 3rem;
   --sp-6xl: 3.75rem;
+
+  /* Shadows - Subtlest */
+  --shadow-light: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-regular: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
