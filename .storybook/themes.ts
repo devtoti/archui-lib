@@ -5,6 +5,7 @@ export const lightTheme = create({
   base: 'light',
   brandTitle: 'ArchUI Library',
   brandUrl: 'https://github.com/devtoti/archui-lib',
+  brandImage: '/icons/models/archUI.svg',
   brandTarget: '_self',
   
   // Color palette
@@ -19,19 +20,19 @@ export const lightTheme = create({
   appBorderRadius: 8,
   
   // Text colors
-  textColor: '#0f172a',
-  textInverseColor: '#ffffff',
-  textMutedColor: '#64748b',
+  // textColor: '#0f172a',
+  // textInverseColor: '#ffffff',
+  // textMutedColor: '#64748b',
   
   // Bar colors
-  barTextColor: '#475569',
+  // barTextColor: '#475569',
   barSelectedColor: '#3b82f6',
   barBg: '#ffffff',
   
   // Form colors
   inputBg: '#ffffff',
   inputBorder: '#e2e8f0',
-  inputTextColor: '#0f172a',
+  // inputTextColor: '#0f172a',
   inputBorderRadius: 6,
   
   // Typography
@@ -44,13 +45,14 @@ export const darkTheme = create({
   base: 'dark',
   brandTitle: 'ArchUI Library',
   brandUrl: 'https://github.com/devtoti/archui-lib',
+  brandImage: '/icons/models/archUI.svg',
   brandTarget: '_self',
   
   // Color palette - using dark mode system tokens
   // --sys-icon-primary = --bleu-2 = #D5EFFF
-  colorPrimary: '#D5EFFF',
+  // colorPrimary: '#D5EFFF',
   // --sys-icon-secondary = --bleu-4 = #ACD8FC
-  colorSecondary: '#ACD8FC',
+  // colorSecondary: '#ACD8FC',
   
   // UI colors - using dark mode system tokens
   // --sys-bg-primary = --gris-12 = #202020
@@ -65,15 +67,15 @@ export const darkTheme = create({
   
   // Text colors - using dark mode system tokens
   // --sys-txt-primary = --bleu-8 = #0090FF
-  textColor: '#0090FF',
+  // textColor: '#0090FF',
   // --sys-txt-dark = --bleu-1 = #E6F4FE
-  textInverseColor: '#E6F4FE',
+  // textInverseColor: '#E6F4FE',
   // --sys-txt-gray-light = --gris-11 = #242424
-  textMutedColor: '#ADBAD1',
+  // textMutedColor: '#ADBAD1',
   
   // Bar colors - using dark mode system tokens
   // --sys-txt-gray-dark = --gris-4 = #ADBAD1
-  barTextColor: '#ADBAD1',
+  // barTextColor: '#ADBAD1',
   // --sys-icon-primary = --bleu-2 = #D5EFFF
   barSelectedColor: '#D5EFFF',
   // --sys-bg-primary = --gris-12 = #202020
@@ -92,43 +94,3 @@ export const darkTheme = create({
   fontBase: '"Noto Sans", system-ui, sans-serif',
   fontCode: 'monospace',
 });
-
-// Dark theme - Midnight/Purple variant
-export const darkMidnightTheme = create({
-  base: 'dark',
-  brandTitle: 'ArchUI Library',
-  brandUrl: 'https://github.com/devtoti/archui-lib',
-  brandTarget: '_self',
-  
-  // Color palette - Purple/Indigo accent
-  colorPrimary: '#8b5cf6',
-  colorSecondary: '#ec4899',
-  
-  // UI colors - Deeper, richer dark
-  appBg: '#0f0f23',
-  appContentBg: '#1a1a2e',
-  appPreviewBg: '#16213e',
-  appBorderColor: '#2d2d44',
-  appBorderRadius: 8,
-  
-  // Text colors
-  textColor: '#e2e8f0',
-  textInverseColor: '#0f0f23',
-  textMutedColor: '#a78bfa',
-  
-  // Bar colors
-  barTextColor: '#c4b5fd',
-  barSelectedColor: '#8b5cf6',
-  barBg: '#0f0f23',
-  
-  // Form colors
-  inputBg: '#1a1a2e',
-  inputBorder: '#2d2d44',
-  inputTextColor: '#e2e8f0',
-  inputBorderRadius: 6,
-  
-  // Typography
-  fontBase: '"Inter", system-ui, sans-serif',
-  fontCode: '"Fira Code", "Courier New", monospace',
-});
-

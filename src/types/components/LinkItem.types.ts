@@ -26,5 +26,15 @@ export interface LinkItemProps
   leftIcon?: React.ReactNode;
   /** Optional icon displayed on the right side */
   rightIcon?: React.ReactNode;
+  /** Open link in a new tab/window (sets target="_blank") */
+  blank?: boolean;
+  /** Add noopener and noreferrer to rel attribute for security (recommended when blank=true) */
+  noopenreferrer?: boolean;
+  /** Download the linked file instead of navigating */
+  download?: boolean | string;
+  /** Prefetch the linked resource (adds data-prefetch attribute for frameworks like Next.js) */
+  prefetch?: boolean;
+  /** Accessible label for screen readers (overrides aria-label if provided) */
+  ariaLabel?: string;
 }
 

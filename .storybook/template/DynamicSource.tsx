@@ -1,69 +1,120 @@
 import * as React from "react";
-import { useOf } from "@storybook/addon-docs/blocks";
-import { Source } from "@storybook/addon-docs/blocks";
+import { useOf, Source } from "@storybook/addon-docs/blocks";
 
 export function DynamicSource() {
+  // Always call hooks at the top level
+  const metaResolved = useOf("meta", ["meta"]);
+  const meta = metaResolved.preparedMeta;
+
   try {
-    const resolved = useOf("meta", ["meta"]);
-    const meta = resolved.preparedMeta;
-    const component = meta.component;
-    const argTypes = meta.argTypes || {};
+    // Extract component name from meta title (e.g., "01 COMPONENTS/Callout" -> "Callout")
+    const componentName = meta.title?.split("/").pop() || "Component";
 
-    // Get default args - try to get from meta, or use argTypes defaults
-    const defaultArgs: Record<string, string> = {};
+    // Render import statement and source code in a combined block
+    // We'll use a wrapper div with custom styling to make it look like a single code block
+    return (
+      <div
+        style={{
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          columnGap: "0",
+        }}
+      >
+        {/* Mac-like window controls */}
+        <div
+          style={{
+            position: "absolute",
+            left: 12,
+            top: 10,
+            zIndex: 2,
+            display: "flex",
+            gap: "6px",
+          }}
+        >
+          <span
+            style={{
+              display: "inline-block",
+              width: 10,
+              height: 10,
+              borderRadius: "50%",
+              background: "#ff5f56",
+              border: "1px solid #e0443e",
+            }}
+            aria-label="close"
+          />
+          <span
+            style={{
+              display: "inline-block",
+              width: 10,
+              height: 10,
+              borderRadius: "50%",
+              background: "#ffbd2e",
+              border: "1px solid #dea123",
+            }}
+            aria-label="minimize"
+          />
+          <span
+            style={{
+              display: "inline-block",
+              width: 10,
+              height: 10,
+              borderRadius: "50%",
+              background: "#27c93f",
+              border: "1px solid #13a10e",
+            }}
+            aria-label="zoom"
+          />
+        </div>
 
-    // Get defaults from argTypes table.defaultValue
-    Object.keys(argTypes).forEach((key) => {
-      const argType = argTypes[key];
-      if (argType?.table?.defaultValue?.summary) {
-        defaultArgs[key] = argType.table.defaultValue.summary.replace(
-          /['"]/g,
-          ""
-        );
-      } else if (argType?.options && argType.options.length > 0) {
-        // Use first option as default for select controls
-        defaultArgs[key] = String(argType.options[0]);
-      }
-    });
+        {/* Import statement as a code block */}
+        <div
+          style={{
+            backgroundColor: "#1e1e1e",
+            padding: "12px 16px",
+            paddingLeft: "42px", // leave room for window controls
+            paddingTop: "2rem",
+            borderTopLeftRadius: "6px",
+            borderTopRightRadius: "6px",
+            borderBottom: "1px solid #333",
+            fontFamily:
+              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+            fontSize: "13px",
+            color: "#d4d4d4",
+            position: "relative",
+          }}
+          className="import-module"
+        >
+          <code style={{ color: "#569cd6" }}>import</code>{" "}
+          <code style={{ color: "#9cdcfe" }}>{`{ ${componentName} }`}</code>{" "}
+          <code style={{ color: "#569cd6" }}>from</code>{" "}
+          <code
+            style={{ color: "#ce9178" }}
+          >{`'@devtoti/archui-lib/${componentName}'`}</code>
+          <code style={{ color: "#d4d4d4" }}>;</code>
+        </div>
 
-    // Get component name
-    const componentName =
-      component?.displayName || component?.name || "Component";
-
-    // Build props string from default args
-    const props: string[] = [];
-
-    // Add variant if it exists
-    if (defaultArgs.variant || argTypes.variant) {
-      props.push(`variant="${defaultArgs.variant || "primary"}"`);
-    }
-
-    // Add size if it exists
-    if (defaultArgs.size || argTypes.size) {
-      props.push(`size="${defaultArgs.size || "md"}"`);
-    }
-
-    // Add icon if it exists in argTypes
-    if (argTypes.icon) {
-      props.push('icon="column-icon"');
-    }
-
-    // Add onClick if it exists
-    if (argTypes.onClick) {
-      props.push("onClick={handleClick}");
-    }
-
-    const propsString = props.length > 0 ? ` ${props.join(" ")}` : "";
-    const children =
-      defaultArgs.label || defaultArgs.children || "Download archUI";
-
-    const code = `import { ${componentName} } from '@devtoti/archui-lib';
-
-<${componentName}${propsString}>
-  ${children}
-</${componentName}>`;
-
-    return <Source language="jsx" code={code} />;
+        {/* Story source code */}
+        <div
+          style={{
+            marginTop: 0,
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
+          }}
+        >
+          <style>
+            {`
+              .docblock-source {
+                margin-top: 0 !important;
+                border-top-left-radius: 0 !important;
+                border-top-right-radius: 0 !important;
+              }
+            `}
+          </style>
+          <Source language="tsx" dark />
+        </div>
+      </div>
+    );
   } catch {
     return null;
   }

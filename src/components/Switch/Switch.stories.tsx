@@ -12,7 +12,7 @@ const meta = {
     layout: "centered",
     docs: {
       subtitle:
-        "A control that allows users to toggle between on and off states. The Switch component provides a clear visual indication of the current state and supports keyboard navigation.",
+        "Toggle control with accessible design, keyboard support, and multiple size options.",
       description: {
         component:
           "The `Switch` component is built on Radix UI primitives and provides a fully accessible toggle control. It supports multiple sizes and variants, and can be used with or without a label. The component automatically handles focus states and keyboard interactions.",

@@ -125,3 +125,130 @@
   --shadow-regular: 0 1px 3px rgba(0, 0, 0, 0.04);
   --shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
+
+/* Dark mode overrides for Doric theme */
+/* Support both .dark .doric (nested) and .dark.doric (same element) */
+.dark .doric,
+.dark.doric {
+  /* Background - using darker values from JSON structure */
+  --bg-primary: #202020;
+  --bg-secondary: #242424;
+  --bg-tertiary: #303030;
+  --bg-accent-dark: var(--doric-accent-dark);
+  --bg-accent: var(--doric-accent-primary);
+  --bg-accent-light: var(--doric-accent-light);
+  --bg-light: #1C2024;
+  --bg-sunken-1: rgba(255, 255, 255, 0.05);
+  --bg-sunken-2: rgba(255, 255, 255, 0.1);
+  --bg-sunken-3: rgba(255, 255, 255, 0.2);
+  --bg-sunken-4: rgba(255, 255, 255, 0.3);
+
+  /* Foreground - from JSON foreground values */
+  --fg-primary: #FDFDFC;
+  --fg-secondary: #F9F9F8;
+  --fg-tertiary: #F1F0EF;
+  --fg-accent: rgba(255, 142, 0, 0.15);
+  --fg-raised-1: rgba(0, 0, 0, 0.2);
+  --fg-raised-2: rgba(0, 0, 0, 0.4);
+  --fg-raised-3: rgba(0, 0, 0, 0.6);
+
+  /* Text - from JSON text values, inverted for dark mode */
+  --txt-primary: #FDFDFC;
+  --txt-secondary: #F9F9F8;
+  --txt-tertiary: #F1F0EF;
+  --txt-light: #FFFFFF;
+  --txt-accent-dark: var(--doric-accent-dark);
+  --txt-accent: var(--doric-accent-primary);
+  --txt-accent-light: var(--orange-7);
+
+  /* Semantic Background - darker values for dark mode from Colors/Dark.tokens.json */
+  --sem-bg-success: #18251F; /* Vert/0 - Dark green for success backgrounds in dark mode */
+  --sem-bg-info: #1C262D; /* Indigo/0 - Dark blue for info backgrounds in dark mode */
+  --sem-bg-warning: #211D15; /* Jaune/0 - Dark brown/yellow for warning backgrounds in dark mode */
+  --sem-bg-error: #251516; /* Rouge/0 - Dark red for error backgrounds in dark mode */
+
+  /* Semantic Icons - from JSON semantic.icons */
+  --sem-icons-success: #30A46C;
+  --sem-icons-info: #0090FF;
+  --sem-icons-warning: #B78001;
+  --sem-icons-error: #E5484D;
+
+  /* Semantic Text - from JSON semantic.text */
+  --sem-txt-success: #0D854B;
+  --sem-txt-info: #09558F;
+  --sem-txt-warning: #997012;
+  --sem-txt-error: #BF3539;
+
+  /* Semantic Border - from JSON semantic.border */
+  --sem-brd-success: #62A379;
+  --sem-brd-info: #8ABADD;
+  --sem-brd-warning: #BEAA44;
+  --sem-brd-error: #B26466;
+
+  /* Brand - from JSON brand values */
+  --brand-primary: #AD3E28;
+  --brand-light: #E85639;
+  --brand-dark: #5A190C;
+  --brand-accent: #A15828;
+
+  /* Borders - from JSON borders values */
+  --brd-primary: #63635E;
+  --brd-secondary: #82827C;
+  --brd-tertiary: #8D8D86;
+  --brd-accent-dark: var(--doric-accent-dark);
+  --brd-accent: var(--doric-accent-primary);
+  --brd-accent-light: var(--orange-7);
+  --brd-light: #F1F0EF;
+  --brd-dark: #21201C;
+
+  /* Radii - same as light mode */
+  --rd-xs: 0;
+  --rd-sm: 0;
+  --rd-md: 0;
+  --rd-lg: 0;
+  --rd-xl: 0;
+  --rd-full: 9999px;
+
+  /* Icons - from JSON icons values */
+  --icon-accent: #CC4E00;
+  --icon-primary: #FDFDFC;
+  --icon-secondary: #F9F9F8;
+  --icon-tertiary: #F1F0EF;
+  --icon-light: #F2F7FF;
+  --icon-dark: #2D3341;
+
+  /* Padding - same as light mode */
+  --pd-xs: 0.25rem;
+  --pd-sm: 0.5rem;
+  --pd-md: 0.625rem;
+  --pd-lg: 1rem;
+  --pd-xl: 1.25rem;
+  --pd-2xl: 1.5rem;
+  --pd-3xl: 1.75rem;
+
+  /* Stroke - same as light mode */
+  --stroke-extra-light: 0.5px;
+  --stroke-light: 1px;
+  --stroke-regular: 1.5px;
+  --stroke-bold: 2px;
+  --stroke-extra-bold: 6px;
+
+  /* Spacing - same as light mode */
+  --sp-3xs: 0.0625rem;
+  --sp-2xs: 0.125rem;
+  --sp-xs: 0.25rem;
+  --sp-sm: 0.5rem;
+  --sp-md: 0.75rem;
+  --sp-lg: 1rem;
+  --sp-xl: 1.25rem;
+  --sp-2xl: 1.5rem;
+  --sp-3xl: 2rem;
+  --sp-4xl: 2.5rem;
+  --sp-5xl: 3rem;
+  --sp-6xl: 3.75rem;
+
+  /* Shadows - more prominent for dark mode */
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-regular: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.5);
+}

@@ -24,7 +24,7 @@ const meta = {
     layout: "centered",
     docs: {
       subtitle:
-        "Navigate between pages and sections with styled link components. The LinkItem component provides multiple visual variants to suit different navigation contexts and user interaction states.",
+        "A flexible link component for app navigation. Works with React Router, Nextjs Link, or plain anchors. Supports multiple styles for different navigation states.",
       description: {
         component:
           "The `LinkItem` component is designed for navigation and linking purposes. It supports multiple variants (default, hover, active, minimal, visited) to indicate different states and contexts. Icons can be placed on either side of the link text using the `leftIcon` and `rightIcon` props. Make sure to leverage the LinkItem designs by wrapping your components inside a `ThemeProvider` to apply the appropriate theme styling.",
@@ -80,6 +80,26 @@ const meta = {
       control: "text",
       description: "Link destination URL",
     },
+    blank: {
+      control: "boolean",
+      description: "Open link in a new tab/window",
+    },
+    noopenreferrer: {
+      control: "boolean",
+      description: "Add noopener and noreferrer for security",
+    },
+    download: {
+      control: "boolean",
+      description: "Download the linked file instead of navigating",
+    },
+    prefetch: {
+      control: "boolean",
+      description: "Prefetch the linked resource",
+    },
+    ariaLabel: {
+      control: "text",
+      description: "Accessible label for screen readers",
+    },
   },
   args: {
     variant: "default",
@@ -87,19 +107,27 @@ const meta = {
     href: "#",
     showLeftIcon: false,
     showRightIcon: false,
+    blank: false,
+    noopenreferrer: true,
   },
 } satisfies Meta<LinkItemStoryArgs>;
 
 export default meta;
 type Story = StoryObj<LinkItemStoryArgs>;
 
-export const Default: Story = {
+export const Showcase: Story = {
   render: ({ showLeftIcon, showRightIcon, ...args }) => {
     const leftIcon = showLeftIcon ? <IconHome /> : undefined;
     const rightIcon = showRightIcon ? <IconExternal /> : undefined;
     return (
       <ThemeSwitcher theme="ionic">
-        <LinkItem {...args} leftIcon={leftIcon} rightIcon={rightIcon} />
+        <LinkItem
+          {...args}
+          href="https://www.devtoti.com/"
+          label="Devtoti's Portfolio"
+          leftIcon={leftIcon}
+          rightIcon={rightIcon}
+        />
       </ThemeSwitcher>
     );
   },
@@ -215,8 +243,46 @@ export const NavigationExample: Story = {
             variant="minimal"
             label="External Documentation"
             rightIcon={<IconExternal />}
+            blank
+            noopenreferrer
+            href="https://storybook.js.org"
           />
         </nav>
+      </ThemeSwitcher>
+    );
+  },
+};
+
+export const ExternalLinks: Story = {
+  render: ({ ...args }) => {
+    return (
+      <ThemeSwitcher theme="doric">
+        <div className="flex flex-col items-center gap-4">
+          <LinkItem
+            {...args}
+            label="External Link (Secure)"
+            href="https://www.devtoti.com"
+            blank
+            noopenreferrer
+            rightIcon={<IconExternal />}
+            ariaLabel="Visit Devtoti's portfolio website"
+          />
+          <LinkItem
+            {...args}
+            label="External Link (No Referrer)"
+            href="https://github.com"
+            blank
+            noopenreferrer={false}
+            rightIcon={<IconExternal />}
+          />
+          <LinkItem
+            {...args}
+            label="Download File"
+            href="/example.pdf"
+            download
+            rightIcon={<IconExternal />}
+          />
+        </div>
       </ThemeSwitcher>
     );
   },

@@ -17,7 +17,7 @@ export const ThemeSwitcher: React.FC<{
     <ThemeContext.Provider
       value={{ theme: selectedTheme, setTheme: handleThemeChange }}
     >
-      <div className="flex flex-col gap-6">
+      <div className="theme-switcher flex flex-col gap-6">
         <div className="flex flex-row rounded-md border-[1px] border-gray-400 items-center w-min ml-auto overflow-hidden justify-end">
           {themes.map((th) => (
             <button

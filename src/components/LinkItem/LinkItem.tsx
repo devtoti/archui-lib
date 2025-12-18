@@ -49,15 +49,69 @@ export const LinkItem: React.FC<LinkItemProps> = ({
   leftIcon,
   rightIcon,
   children,
+  blank = false,
+  noopenreferrer,
+  download,
+  prefetch,
+  ariaLabel,
+  href,
+  rel: relProp,
+  target: targetProp,
   ...props
 }) => {
   const LinkComponent = asChild ? Slot.Root : "a";
   const content = children || label;
 
+  // Determine target attribute
+  const targetValue = blank ? "_blank" : targetProp;
+
+  // Determine rel attribute for security and accessibility
+  let relValue = relProp;
+  if (blank || noopenreferrer) {
+    const relParts = relValue ? relValue.split(" ").filter(Boolean) : [];
+
+    // Security: Always add noopener when opening in new tab (prevents window.opener access)
+    if (blank && !relParts.includes("noopener")) {
+      relParts.push("noopener");
+    }
+
+    // Add noreferrer based on noopenreferrer prop or default behavior with blank
+    if (noopenreferrer === true) {
+      // Explicitly requested
+      if (!relParts.includes("noreferrer")) {
+        relParts.push("noreferrer");
+      }
+    } else if (blank && noopenreferrer !== false) {
+      // Default: add noreferrer when blank=true unless explicitly disabled
+      if (!relParts.includes("noreferrer")) {
+        relParts.push("noreferrer");
+      }
+    }
+
+    relValue = relParts.length > 0 ? relParts.join(" ") : undefined;
+  }
+
+  // Determine download attribute
+  const downloadValue = download === true ? "" : download || undefined;
+
+  // Use ariaLabel if provided, otherwise use existing aria-label from props
+  const ariaLabelValue = ariaLabel || props["aria-label"];
+
+  // Build final props, excluding custom props and adding data attributes
+  const finalProps: React.AnchorHTMLAttributes<HTMLAnchorElement> = {
+    ...props,
+    href,
+    target: targetValue,
+    rel: relValue,
+    download: downloadValue,
+    "aria-label": ariaLabelValue,
+    ...(prefetch && { "data-prefetch": "true" }),
+  };
+
   return (
     <LinkComponent
       className={twMerge(linkItemVariants({ variant }), className)}
-      {...props}
+      {...finalProps}
     >
       {leftIcon && (
         <span className="inline-flex items-center" aria-hidden="true">

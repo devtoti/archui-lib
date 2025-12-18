@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Callout } from "./Callout";
-import { ThemeProvider } from "../ThemeProvider";
 import {
   BiBulb as IconInfo,
   BiErrorAlt as IconError,
@@ -40,7 +39,7 @@ const meta = {
     layout: "centered",
     docs: {
       subtitle:
-        "Highlight specific pieces of content statically. Used for 00 GETTING the user's attention and providing immediate feedback, based on the action that is currently taking place. It distinguishes itself from the Alert component, since this is a non-intrusive message that does not restrict user action when triggered.",
+        "Highlights important content and provides feedback without interrupting the user’s experience.",
       description: {
         component:
           "Supports a customizable top-left icon, headings, and any text length. Each `Callout` includes a default fade-in-out animation that can be disabled if a variable `animate=none` is provided. Make sure to leverage the `Callout` designs by wrapping your components inside a `ThemeProvider` and playing around with the `order` style that better suits your needs.",
@@ -93,6 +92,7 @@ const meta = {
     title: "Tip",
     label: "This is a callout message. Enter a fun fact here for your users.",
     showIcon: true,
+    className: "bg-arch-surface-secondary",
   },
 } satisfies Meta<CalloutStoryArgs>;
 
@@ -110,13 +110,34 @@ export const Default: Story = {
   },
 };
 
-export const Info: Story = {};
+export const Info: Story = {
+  render: ({ showIcon, ...args }) => {
+    return (
+      <ThemeSwitcher theme="doric">
+        <Callout
+          {...args}
+          variant="info"
+          title="Info"
+          label="This is an info message"
+          icon={showIcon ? <IconInfo /> : undefined}
+        />
+      </ThemeSwitcher>
+    );
+  },
+};
 
 export const AllVariants: Story = {
   render: ({ showIcon, ...args }) => {
     return (
       <ThemeSwitcher theme="doric">
         <div className="flex flex-col gap-4">
+          <Callout
+            {...args}
+            variant="success"
+            title="Success"
+            label="This is a success message"
+            icon={showIcon ? <IconSuccess /> : undefined}
+          />
           <Callout
             {...args}
             variant="success"

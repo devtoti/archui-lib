@@ -2,6 +2,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import tailwindcss from '@tailwindcss/vite';
+import tailwindcssPostcss from '@tailwindcss/postcss';
+import autoprefixer from 'autoprefixer';
 import { resolve } from 'path';
 
 // https://vite.dev/config/
@@ -47,6 +49,23 @@ export default defineConfig(({ mode }) => {
       react(),
       tailwindcss(),
     ],
+    resolve: {
+      // Ensure proper module resolution for browser tests
+      dedupe: ['react', 'react-dom'],
+    },
+    optimizeDeps: {
+      // Pre-bundle dependencies to avoid dynamic import issues
+      include: ['react', 'react-dom'],
+    },
+    css: {
+      // Ensure CSS is processed correctly in browser tests (matching Storybook config)
+      postcss: {
+        plugins: [
+          tailwindcssPostcss,
+          autoprefixer,
+        ],
+      },
+    },
     test: {
       globals: true,
       environment: 'jsdom',
@@ -69,7 +88,6 @@ export default defineConfig(({ mode }) => {
               }]
             },
             setupFiles: ['.storybook/vitest.setup.ts'],
-            include: ['**/*.stories.@(js|jsx|mjs|ts|tsx)'],
             exclude: ['**/*.test.@(js|jsx|mjs|ts|tsx)', '**/*.spec.@(js|jsx|mjs|ts|tsx)']
           }
         }

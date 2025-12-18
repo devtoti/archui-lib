@@ -1,0 +1,218 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="00 GETTING STARTED/Library Setup" />
+
+# Library Setup
+
+<div style={{ 
+  marginTop: '2rem',
+  marginBottom: '2rem',
+  padding: '2rem',
+  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
+  borderRadius: '8px',
+  border: '1px solid var(--brd-primary, #e2e8f0)'
+}}>
+
+Installing archUI into your existing React project is quite easy and should not take you more than just a few minutes to setup. Follow the steps below and you'll be ready to start using and editing your favorite components.
+
+</div>
+
+## Step 1: Required Packages
+
+<div style={{ 
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
+  padding: '1.5rem',
+  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
+  borderRadius: '8px'
+}}>
+
+Make sure you are using **React 19+** and **Tailwind CSS 4+** by heading over your `package.json` file and reading inside "dependencies":
+
+</div>
+
+```json
+"dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.14"
+}
+```
+
+## Step 2: Required Dependencies
+
+<div style={{ 
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
+  padding: '1.5rem',
+  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
+  borderRadius: '8px'
+}}>
+
+If you don't have Tailwind and its `postcss` and `autoprefixer` dependencies installed, run the following command:
+
+</div>
+
+```bash
+npm install tailwindcss @tailwindcss/postcss autoprefixer
+```
+
+## Step 3: Tailwind Setup
+
+<div style={{ 
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
+  padding: '1.5rem',
+  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
+  borderRadius: '8px',
+  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
+}}>
+
+You can set up Tailwind CSS in two ways:
+
+</div>
+
+### Option A: Automatic Setup
+
+Create Tailwind CSS configuration files `tailwind.config.js` and `postcss.config.js` with the following command:
+
+```bash
+npx tailwindcss init -p
+```
+
+### Option B: Manual Setup
+
+Add them manually by creating the following files: `tailwind.config.js`, `vite.config.ts`, and `postcss.config.js`, then paste the following code inside each file:
+
+**tailwind.config.js**
+
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+**vite.config.ts**
+
+```ts
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  css: {
+    postcss: "./postcss.config.js",
+  },
+});
+```
+
+**postcss.config.js**
+
+```js
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {},
+    autoprefixer: {},
+  },
+};
+```
+
+## Step 4: Install & Setup archUI
+
+<div style={{ 
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
+  padding: '1.5rem',
+  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
+  borderRadius: '8px'
+}}>
+
+Open up the CLI and install the archUI Library:
+
+</div>
+
+```bash
+npm i @devtoti/archui-lib
+```
+
+<div style={{ 
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
+  padding: '1.5rem',
+  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
+  borderRadius: '8px'
+}}>
+
+Import the library's main CSS file directly inside `index.css`, so that your project can have access to archUI's design system:
+
+</div>
+
+```css
+@import "tailwindcss";
+@import "@devtoti/archui-lib/styles";
+```
+
+## Step 5: Import Your First Component
+
+<div style={{ 
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
+  padding: '1.5rem',
+  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
+  borderRadius: '8px',
+  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
+}}>
+
+Now that you have configured Tailwind and the archUI Library, you can start using your favorite components by importing them into your React files. Additionally, you can import the Component's Type Props and adapt them to your needs:
+
+</div>
+
+```tsx
+import { Button } from "@devtoti/archui-lib";
+import type { ButtonProps } from "@devtoti/archui-lib";
+
+function App() {
+  return (
+    <>
+      <Button intent="primary" size="md">
+        Hello ArchUI!
+      </Button>
+      <Button intent="secondary" size="sm">
+        Explore components
+      </Button>
+    </>
+  );
+}
+```
+
+## Step 6: Browse Our Components
+
+<div style={{ 
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
+  padding: '1.5rem',
+  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
+  borderRadius: '8px'
+}}>
+
+You can now start exploring our _repertoire_ of components, or use our experimental Drag-and-Drop Playground to get a better grasp of how things work.
+
+</div>
+
+<div style={{ 
+  marginTop: '3rem',
+  padding: '1.5rem',
+  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
+  borderRadius: '8px',
+  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
+}}>
+
+**Excited to have you with us!** Browse the component library in the sidebar to see what archUI can do for your project.
+
+</div>

@@ -1,9 +1,10 @@
 import type { Preview } from '@storybook/react-vite';
-import { withThemeByClassName } from "@storybook/addon-themes";
-import { lightTheme } from './themes';
+import { lightTheme, darkTheme } from './themes';
+import { themes } from 'storybook/theming';
 import DocumentationTemplate from './template/DocumentationTemplate.mdx';
+import { withThemeByClassName } from '@storybook/addon-themes';
+import './preview.css';
 import '../src/index.css';
-
 const preview: Preview = {
   decorators: [
     withThemeByClassName({
@@ -15,15 +16,14 @@ const preview: Preview = {
     }),
   ],
   parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
+    darkMode: {
+      // Override the default dark theme
+      dark: { ...themes.dark, lightTheme, textColor: '#0588F0' },
+      // Override the default light theme
+      light: { ...themes.normal, darkTheme, textColor: '#102F6A' }
     },
     docs: {
-      // Default theme, will be updated by decorator
-      theme: lightTheme,
+      theme:{...lightTheme, textColor: '#0D74CE' },
       page: DocumentationTemplate,
       toc: {
         contentsSelector: '.sbdocs-content',

@@ -32,7 +32,7 @@ export default create({
   fontCode: 'monospace',
   brandTitle: 'ArchUI',
   brandUrl: 'https://github.com/devtoti/archui-lib',
-  brandImage: 'https://i.ibb.co/mFRMFfWB/arch-UI.png',
+  brandImage: 'https://i.ibb.co/LhqQSWrz/arch-UI-dark.png',
   brandTarget: '_self',
 
   // Color palette - using actual color values from system tokens

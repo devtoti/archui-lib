@@ -127,3 +127,130 @@
   /* SUPER OBVIOUS DEBUG SHADOW */
   --shadow-dark: 0 0 0 8px rgba(255,0,0,1), 0 0 0 16px rgba(0,0,255,0.6), 0 30px 30px 0 rgba(0, 0, 0, 1);
 }
+
+/* Dark mode overrides for Ionic theme */
+/* Support both .dark .ionic (nested) and .dark.ionic (same element) */
+.dark .ionic,
+.dark.ionic {
+  /* Background - using darker values for dark mode */
+  --bg-primary: #202020;
+  --bg-secondary: #242424;
+  --bg-tertiary: #303030;
+  --bg-accent-dark: var(--ionic-accent-dark);
+  --bg-accent: var(--ionic-accent-primary);
+  --bg-accent-light: var(--ionic-accent-light);
+  --bg-light: #202020;
+  --bg-sunken-1: rgba(255, 255, 255, 0.05);
+  --bg-sunken-2: rgba(255, 255, 255, 0.1);
+  --bg-sunken-3: rgba(255, 255, 255, 0.2);
+  --bg-sunken-4: rgba(255, 255, 255, 0.3);
+
+  /* Foreground - from JSON foreground values */
+  --fg-primary: #FDFDFC;
+  --fg-secondary: #F9F9F8;
+  --fg-tertiary: #F1F0EF;
+  --fg-accent: rgba(0, 64, 255, 0.15);
+  --fg-raised-1: rgba(0, 0, 0, 0.2);
+  --fg-raised-2: rgba(0, 0, 0, 0.4);
+  --fg-raised-3: rgba(0, 0, 0, 0.6);
+
+  /* Text - lighter values for dark mode (from JSON text.light and foreground) */
+  --txt-primary: #FDFDFC;
+  --txt-secondary: #F9F9F8;
+  --txt-tertiary: #F1F0EF;
+  --txt-light: #FFFFFF;
+  --txt-accent-dark: var(--ionic-accent-dark);
+  --txt-accent: var(--ionic-accent-primary);
+  --txt-accent-light: #ABBDF9;
+
+  /* Semantic Background - darker values for dark mode from Colors/Dark.tokens.json */
+  --sem-bg-success: #18251F; /* radix/green/dark/0 */
+  --sem-bg-info: #1C222B;   /* radix/blue/dark/0 */
+  --sem-bg-warning: #211C14; /* radix/yellow/dark/0 */
+  --sem-bg-error: #1D191A;  /* radix/red/dark/0 */
+
+  /* Semantic Icons - from JSON semantic.icons */
+  --sem-icons-success: #30A46C;
+  --sem-icons-info: #0090FF;
+  --sem-icons-warning: #B78001;
+  --sem-icons-error: #E5484D;
+
+  /* Semantic Text - from JSON semantic.text */
+  --sem-txt-success: #0D854B;
+  --sem-txt-info: #09558F;
+  --sem-txt-warning: #997012;
+  --sem-txt-error: #BF3539;
+
+  /* Semantic Border - from JSON semantic.border */
+  --sem-brd-success: #62A379;
+  --sem-brd-info: #8ABADD;
+  --sem-brd-warning: #BEAA44;
+  --sem-brd-error: #B26466;
+
+  /* Brand - from JSON brand values */
+  --brand-primary: #FFBF49;
+  --brand-light: #F6D970;
+  --brand-dark: #F6B501;
+  --brand-accent: #CB3F42;
+
+  /* Borders - from JSON borders values */
+  --brd-primary: #8B8D98;
+  --brd-secondary: #B9BBC6;
+  --brd-tertiary: #D9D9E0;
+  --brd-accent-dark: var(--ionic-accent-dark);
+  --brd-accent: var(--ionic-accent-primary);
+  --brd-accent-light: #ABBDF9;
+  --brd-light: #F2F0E7;
+  --brd-dark: #3B352B;
+
+  /* Radii - from JSON radii values (converted px to rem: 6px=0.375rem, 12px=0.75rem, etc.) */
+  --rd-xs: 0.375rem;
+  --rd-sm: 0.75rem;
+  --rd-md: 1rem;
+  --rd-lg: 1.25rem;
+  --rd-xl: 1.5rem;
+  --rd-full: 9999px;
+
+  /* Icons - from JSON icons values */
+  --icon-accent: #3A5BC7;
+  --icon-primary: #FDFDFC;
+  --icon-secondary: #F9F9F8;
+  --icon-tertiary: #F1F0EF;
+  --icon-light: #F2F7FF;
+  --icon-dark: #2D3341;
+
+  /* Padding - from JSON padding values (converted to rem) */
+  --pd-xs: 0.5rem;
+  --pd-sm: 0.75rem;
+  --pd-md: 1rem;
+  --pd-lg: 1.25rem;
+  --pd-xl: 1.5rem;
+  --pd-2xl: 1.75rem;
+  --pd-3xl: 2.25rem;
+
+  /* Stroke - from JSON stroke values */
+  --stroke-extra-light: 0.2px;
+  --stroke-light: 0.3px;
+  --stroke-regular: 0.8px;
+  --stroke-bold: 1px;
+  --stroke-extra-bold: 6px;
+
+  /* Spacing - from JSON spacing values (converted to rem) */
+  --sp-3xs: 0.0625rem;
+  --sp-2xs: 0.125rem;
+  --sp-xs: 0.25rem;
+  --sp-sm: 0.5rem;
+  --sp-md: 0.75rem;
+  --sp-lg: 1rem;
+  --sp-xl: 1.25rem;
+  --sp-2xl: 1.5rem;
+  --sp-3xl: 2rem;
+  --sp-4xl: 2.5rem;
+  --sp-5xl: 3rem;
+  --sp-6xl: 3.75rem;
+
+  /* Shadows - more prominent for dark mode */
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-regular: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.5);
+}

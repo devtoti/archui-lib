@@ -37,52 +37,12 @@ const meta = {
     layout: "centered",
     docs: {
       subtitle:
-        "Display important messages and notifications to users. The Alert component is used to communicate critical information, warnings, errors, or success states that require immediate user attention.",
+        "Communicate important messages or alerts that require user attention. Unlike callouts, Alerts are more prominent and are used for urgent or high-priority information.",
       description: {
         component:
           "The `Alert` component provides a visually distinct way to display important messages. It supports multiple variants (success, info, warning, error), customizable icons, and content. Each alert includes semantic color coding to help users quickly understand the message type. Make sure to leverage the Alert designs by wrapping your components inside a `ThemeProvider` to apply the appropriate theme styling.",
       },
       artwork: "/icons/models/alert.svg",
-      colorPalette: {
-        colors: [
-          {
-            title: "Success Variant",
-            colors: [
-              { name: "Icon Color", value: "#30A46C" },
-              { name: "Background", value: "#E9FFF0" },
-              { name: "Text", value: "#0D854B" },
-              { name: "Border", value: "#62A379" },
-            ],
-          },
-          {
-            title: "Info Variant",
-            colors: [
-              { name: "Icon Color", value: "#0090FF" },
-              { name: "Background", value: "#EAF7FF" },
-              { name: "Text", value: "#09558F" },
-              { name: "Border", value: "#8ABADD" },
-            ],
-          },
-          {
-            title: "Warning Variant",
-            colors: [
-              { name: "Icon Color", value: "#B78001" },
-              { name: "Background", value: "#FFFEF2" },
-              { name: "Text", value: "#997012" },
-              { name: "Border", value: "#BEAA44" },
-            ],
-          },
-          {
-            title: "Error Variant",
-            colors: [
-              { name: "Icon Color", value: "#E5484D" },
-              { name: "Background", value: "#FFEDED" },
-              { name: "Text", value: "#BF3539" },
-              { name: "Border", value: "#B26466" },
-            ],
-          },
-        ],
-      },
     },
   },
   argTypes: {
