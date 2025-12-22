@@ -1,4 +1,4 @@
-/// <reference types="vitest/config" />
+// <reference types="vitest/config" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import tailwindcss from '@tailwindcss/vite';
@@ -20,11 +20,7 @@ export default defineConfig(({ mode }) => {
       plugins: [react(), tailwindcss()],
       build: {
         lib: {
-<<<<<<< HEAD
-          entry: resolve(__dirname, 'src/lib.ts'),
-=======
           entry: resolve(__dirname, 'src/lib-with-css.ts'),
->>>>>>> setup
           name: 'ArchUILib',
           fileName: 'index',
           formats: ['es']
@@ -38,17 +34,10 @@ export default defineConfig(({ mode }) => {
             }
           }
         },
-<<<<<<< HEAD
-        // Ensure CSS is extracted
-        cssCodeSplit: false,
-        // Don't clean the dist folder to preserve declaration files
-        emptyOutDir: false
-=======
         // Don't clean the dist folder to preserve declaration files
         emptyOutDir: false,
         // Ensure CSS is extracted
         cssCodeSplit: false
->>>>>>> setup
       }
     };
   }

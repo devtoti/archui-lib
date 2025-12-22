@@ -7,24 +7,6 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-<<<<<<< HEAD
-      fontFamily: {
-        'barlow': ['Barlow', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
-        'roboto-mono': ['Roboto Mono', 'monospace'],
-      },
-      colors: {
-        primary: {
-          DEFAULT: 'var(--color-primary)',
-          hover: 'var(--color-primary-hover)',
-        },
-        secondary: {
-          DEFAULT: 'var(--color-secondary)',
-          hover: 'var(--color-secondary-hover)',
-        },
-      },
-=======
->>>>>>> setup
     },
   },
   plugins: [],

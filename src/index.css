@@ -5,11 +5,8 @@
 
 @import "tailwindcss";
 @import "./tokens.css";
-<<<<<<< HEAD
 @import "./fonts.css";
-=======
 @import "./tokens/theme-toggle.css";
->>>>>>> setup
 @custom-variant doric (&:where(.doric, .doric *));
 @custom-variant ionic (&:where(.ionic, .ionic *));
 @custom-variant corinthian (&:where(.corinthian, .corinthian *));

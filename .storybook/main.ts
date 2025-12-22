@@ -24,7 +24,12 @@ const config: StorybookConfig = {
   "docs": {
     docsMode: false,
   },
+  // Set base path for GitHub Pages deployment
+  "base": "/archui-lib/",
   viteFinal: async (config) => {
+    // Set base path for GitHub Pages deployment
+    config.base = '/archui-lib/';
+    
     config.css = {
       postcss: {
         plugins: [

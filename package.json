@@ -1,10 +1,6 @@
 {
   "name": "@devtoti/archui-lib",
-<<<<<<< HEAD
-  "version": "1.0.5",
-=======
   "version": "1.0.8",
->>>>>>> setup
   "type": "module",
   "description": "A modern React component library with Tailwind CSS",
   "main": "./dist/index.js",
@@ -16,13 +12,7 @@
       "types": "./dist/lib.d.ts"
     },
     "./styles": "./dist/index.css",
-<<<<<<< HEAD
-    "./styles/index.css": "./dist/index.css",
-    "./styles/tokens.css": "./dist/tokens.css",
-    "./styles/fonts.css": "./dist/fonts.css"
-=======
     "./styles/customize": "./dist/tokens/customize.css"
->>>>>>> setup
   },
   "files": [
     "dist",
@@ -31,18 +21,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-<<<<<<< HEAD
-    "build:lib": "tsc -p tsconfig.lib.json && node scripts/generate-declarations.js && node scripts/build-css.js && vite build --mode library",
-    "build:types": "tsc -p tsconfig.lib.json && node scripts/generate-declarations.js",
-=======
     "build:lib": "tsc -p tsconfig.lib.json && vite build --mode library",
     "build:types": "tsc -p tsconfig.lib.json",
->>>>>>> setup
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
     "storybook": "storybook dev -p 6007",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build -o ./docs",
     "prepublishOnly": "npm run build:lib",
     "chromatic": "npx chromatic --project-token=chpt_50e742096b6ca63"
   },
