@@ -4,6 +4,7 @@ import {
   type Theme,
   type ThemeType,
 } from "../contexts/ThemeContext";
+import { getAssetPath } from "../utils/paths";
 
 const themeOptions: Theme[] = ["doric", "ionic", "corinthian"];
 const themeTypeOptions: ThemeType[] = ["light", "dark"];
@@ -72,7 +73,7 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({
       >
         {th === "doric" && (
           <img
-            src="/icons/doric.svg"
+            src={getAssetPath("/icons/doric.svg")}
             alt="Doric Theme"
             aria-label="Doric Theme"
             className="inline-block w-5 h-5 align-middle"
@@ -80,7 +81,7 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({
         )}
         {th === "ionic" && (
           <img
-            src="/icons/ionic.svg"
+            src={getAssetPath("/icons/ionic.svg")}
             alt="Ionic Theme"
             aria-label="Ionic Theme"
             className="inline-block w-5 h-5 align-middle"
@@ -88,7 +89,7 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({
         )}
         {th === "corinthian" && (
           <img
-            src="/icons/corinthian.svg"
+            src={getAssetPath("/icons/corinthian.svg")}
             alt="Corinthian Theme"
             aria-label="Corinthian Theme"
             className="inline-block w-5 h-5 align-middle"
