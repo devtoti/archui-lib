@@ -1,7 +1,10 @@
 import type { Preview } from '@storybook/react-vite';
-import { withThemeByClassName } from "@storybook/addon-themes";
+import { lightTheme, darkTheme } from './themes';
+import { themes } from 'storybook/theming';
+import DocumentationTemplate from './template/DocumentationTemplate.mdx';
+import { withThemeByClassName } from '@storybook/addon-themes';
+import './preview.css';
 import '../src/index.css';
-
 const preview: Preview = {
   decorators: [
     withThemeByClassName({
@@ -13,18 +16,34 @@ const preview: Preview = {
     }),
   ],
   parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
+    options: {
+      storySort: {
+        order: ['00 GETTING STARTED', '01 COMPONENTS', '02 OTHER'],
       },
     },
-    a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
+    darkMode: {
+      // Override the default dark theme
+      dark: { ...themes.dark, lightTheme, textColor: '#0588F0' },
+      // Override the default light theme
+      light: { ...themes.normal, darkTheme, textColor: '#102F6A' }
+    },
+    docs: {
+      theme:{...lightTheme, textColor: '#0D74CE' },
+      page: DocumentationTemplate,
+      toc: {
+        contentsSelector: '.sbdocs-content',
+        headingSelector: 'h1, h2',
+        ignoreSelector: '#primary, .sbdocs-subtitle, [data-toc-ignore], h2#stories',
+        title: 'Table of Contents',
+        disable: false,
+        unsafeTocbotOptions: {
+          orderedList: false,
+          ignoreSelector: '.sbdocs-subtitle, [data-toc-ignore], h2#stories',
+          scrollSmooth: true,
+        },
+      },
+    },
+    tags: ['autodocs'],
   },
 };
 

@@ -6,13 +6,21 @@
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "outDir": "./dist",
+<<<<<<< HEAD
     "rootDir": "./src",
     "declarationDir": "./dist"
+=======
+    "rootDir": "./src"
+>>>>>>> setup
   },
   "include": [
     "src/components/**/*",
     "src/hooks/**/*",
     "src/contexts/**/*",
+<<<<<<< HEAD
+=======
+    "src/types/**/*",
+>>>>>>> setup
     "src/lib.ts"
   ],
   "exclude": [

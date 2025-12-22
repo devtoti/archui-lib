@@ -7,6 +7,7 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+<<<<<<< HEAD
       fontFamily: {
         'barlow': ['Barlow', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
@@ -22,6 +23,8 @@ export default {
           hover: 'var(--color-secondary-hover)',
         },
       },
+=======
+>>>>>>> setup
     },
   },
   plugins: [],

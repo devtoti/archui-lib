@@ -1,0 +1,163 @@
+/* 
+  Storybook Preview Custom Styles
+  -------------------------------
+  - Sets default preview canvas background with pattern and fallback color.
+*/
+
+/* Preview canvas background - Light mode */
+.sb-show-main,
+#storybook-preview-iframe,
+.sb-main-padded,
+.sbdocs.sbdocs-preview.sb-unstyled {
+  background-color: var(--preview-bg, #F2F7FF) !important;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(0.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M3.25 10h13.5M10 3.25v13.5'  stroke-linecap='square' stroke-width='1' stroke='%23b2c4dbd8' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>") !important;
+  background-repeat: repeat !important;
+  background-size: auto !important;
+  background-position: 0 0 !important;
+}
+
+/* Preview canvas background - Dark mode */
+.dark .sb-show-main,
+.dark #storybook-preview-iframe,
+.dark .sb-main-padded,
+.dark .sbdocs.sbdocs-preview.sb-unstyled {
+  background-color: #131313 !important;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(0.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%2320202000'/><path d='M3.25 10h13.5M10 3.25v13.5' stroke-linecap='square' stroke-width='1' stroke='%234242421a' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>") !important;
+  background-repeat: repeat !important;
+  background-size: auto !important;
+  background-position: 0 0 !important;
+}
+
+.sb-story {
+  background-color: transparent;
+}
+
+.sbdocs p code {
+  color: #104ec0 !important;
+  background-color: #b0c4e3 !important;
+  border-color: #6B92D3 !important;
+  border-width: 1px !important;
+  border-radius: 4px !important;
+  padding: 1px 6px!important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+}
+
+
+/* Override Storybook's default h3 color (rgb(46, 52, 56)) */
+/* This targets Storybook's generated CSS classes */
+/* .sbdocs h1,
+.sbdocs h2,
+.sbdocs h3,
+.sbdocs h4,
+.sbdocs h5,
+.sbdocs a,
+.sbdocs p,
+.sbdocs span:not(pre span),
+.sbdocs li {
+  color: #173E88 !important;
+} */
+
+/* Only color the docs wrapper, not stories */
+/* .dark .sbdocs.sbdocs-wrapper h1,
+.dark .sbdocs.sbdocs-wrapper h2,
+.dark .sbdocs.sbdocs-wrapper h3,
+.dark .sbdocs.sbdocs-wrapper h4,
+.dark .sbdocs.sbdocs-wrapper h5,
+.dark .sbdocs.sbdocs-wrapper a,
+.dark .sbdocs.sbdocs-wrapper p, 
+.dark .sbdocs.sbdocs-wrapper span:not(pre span),
+.dark .sbdocs.sbdocs-wrapper li {
+  color: #D5EFFF !important;
+} */
+/* .sbdocs h3,
+.sbdocs-wrapper h3,
+.sbdocs-content h3 {
+  color: #2855AD !important;
+}
+
+.dark .sbdocs h3,
+.dark .sbdocs-wrapper h3,
+.dark .sbdocs-content h3 {
+  color: #0588F0 !important;
+} */
+
+/* --sys-txt-primary = #0090FF (see context) */
+/* .sbdocs h1 {
+  color: #102F6A !important;
+}
+.sbdocs:not(.sbdocs-preview) h2,
+.sbdocs:not(.sbdocs-preview) h3,
+.sbdocs:not(.docs-story *) h4,
+.sbdocs:not(.sbdocs-preview) h5,
+.sbdocs:not(.sbdocs-preview) h6,
+.sbdocs:not(.sbanchor .docs-story) p {
+  color: #173E88 !important;
+}
+.sbdocs a:active,
+.sbdocs a:hover,
+.sbdocs a:focus,
+.sbdocs a:visited {
+  color: #6714ab !important;
+}
+.sbdocs a,
+.sbdocs li,
+.sbdocs span:not(pre span),
+.sbdocs p {
+  color: #173E88 !important;
+} */
+/* Docs wrapper background for dark mode */
+.dark .sb-bar {
+
+  background-color: #0d0d0d !important;
+}
+.dark .sbdocs.sbdocs-wrapper {
+  background-color: #141414 !important;
+}
+.dark .docblock-argstable-body * {
+  background-color: #141414 !important;
+  
+}
+.dark code:not(.import-module code),
+.dark .docblock-argstable-body td:not(:first-child) div:last-child span {
+  color: #ec7542 !important;
+  font-weight: bold;
+  background-color: #202020 !important;
+  border: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  outline-color: transparent !important;
+}
+
+/* Typography color for all headings and paragraphs in docs, dark mode */
+/* --sys-txt-primary = #0090FF (see context) */
+/* .dark .sbdocs h1 {
+  color: #0090FF !important;
+}
+.dark .sbdocs h2,
+.dark .sbdocs h3,
+.dark .sbdocs h4,
+.dark .sbdocs h5,
+.dark .sbdocs h6,
+.dark .sbdocs p {
+  color: #0588F0 !important;
+}
+.dark .sbdocs a:active,
+.dark .sbdocs a:hover,
+.dark .sbdocs a:focus,
+.dark .sbdocs a:visited {
+  color: #ACD8FC !important;
+}
+.dark .sbdocs a,
+.dark .sbdocs li,
+.dark .sbdocs span:not(pre span),
+.dark .sbdocs p {
+  color: #0D74CE !important;
+} */
+.dark .sbdocs,
+.dark .sbdocs-preview,
+.dark .sb-unstyled,
+.dark .docblock-argstable * {
+  border-color: #202020 !important;
+}

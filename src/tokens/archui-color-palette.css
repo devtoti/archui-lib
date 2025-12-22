@@ -1,0 +1,147 @@
+/* ArchUI Color Palette - Radix-style 1-12 scale */
+/* Excludes orange and yellow (Jaune) */
+/* Values automatically switch based on .dark class */
+
+:root {
+  /* Bleu - Light Mode (0=lightest -> 1, 10=darkest -> 12) */
+  --bleu-1: #E7EDFF;
+  --bleu-2: #C7D1EB;
+  --bleu-3: #ACC4E6;
+  --bleu-4: #6B92D3;
+  --bleu-5: #4774CC;
+  --bleu-6: #3561B9;
+  --bleu-7: #2855AD;
+  --bleu-8: #173E88;
+  --bleu-9: #102F6A;
+  --bleu-10: #061E4D;
+  --bleu-11: #01102C;
+  --bleu-12: #01102C;
+
+  /* Gris - Light Mode (0=lightest -> 1, 15=darkest -> 12) */
+  --gris-1: #F2F7FF;
+  --gris-2: #E9F1FF;
+  --gris-3: #E5EEFE;
+  --gris-4: #D4E0F5;
+  --gris-5: #C2D0EA;
+  --gris-6: #ADBAD1;
+  --gris-7: #A2ABC0;
+  --gris-8: #828EAC;
+  --gris-9: #57637F;
+  --gris-10: #424B5F;
+  --gris-11: #2D3341;
+  --gris-12: #202020;
+
+  /* Indigo - Light Mode */
+  --indigo-1: #EAF7FF;
+  --indigo-2: #8ABADD;
+  --indigo-3: #8ABADD;
+  --indigo-4: #8ABADD;
+  --indigo-5: #0090FF;
+  --indigo-6: #0090FF;
+  --indigo-7: #09558F;
+  --indigo-8: #09558F;
+  --indigo-9: #143147;
+  --indigo-10: #143147;
+  --indigo-11: #143147;
+  --indigo-12: #143147;
+
+  /* Vert - Light Mode */
+  --vert-1: #E9FFF0;
+  --vert-2: #62A379;
+  --vert-3: #62A379;
+  --vert-4: #62A379;
+  --vert-5: #30A46C;
+  --vert-6: #30A46C;
+  --vert-7: #0D854B;
+  --vert-8: #0D854B;
+  --vert-9: #103F28;
+  --vert-10: #103F28;
+  --vert-11: #103F28;
+  --vert-12: #103F28;
+
+  /* Rouge - Light Mode */
+  --rouge-1: #FFEDED;
+  --rouge-2: #B26466;
+  --rouge-3: #B26466;
+  --rouge-4: #B26466;
+  --rouge-5: #E5484D;
+  --rouge-6: #E5484D;
+  --rouge-7: #BF3539;
+  --rouge-8: #BF3539;
+  --rouge-9: #441D1E;
+  --rouge-10: #441D1E;
+  --rouge-11: #441D1E;
+  --rouge-12: #441D1E;
+}
+
+.dark {
+  /* Bleu - Dark Mode (0=darkest -> 12, 10=lightest -> 1) */
+  --bleu-1: #E6F4FE;
+  --bleu-2: #D5EFFF;
+  --bleu-3: #C2E5FF;
+  --bleu-4: #ACD8FC;
+  --bleu-5: #ACD8FC;
+  --bleu-6: #8EC8F6;
+  --bleu-7: #5EB1EF;
+  --bleu-8: #0090FF;
+  --bleu-9: #0588F0;
+  --bleu-10: #0D74CE;
+  --bleu-11: #113264;
+  --bleu-12: #113264;
+
+  /* Gris - Dark Mode (0=darkest -> 12, 15=lightest -> 1) */
+  --gris-1: #E5EEFE;
+  --gris-2: #D4E0F5;
+  --gris-3: #C2D0EA;
+  --gris-4: #ADBAD1;
+  --gris-5: #A2ABC0;
+  --gris-6: #828EAC;
+  --gris-7: #57637F;
+  --gris-8: #424B5F;
+  --gris-9: #2D3341;
+  --gris-10: #303030;
+  --gris-11: #242424;
+  --gris-12: #202020;
+
+  /* Indigo - Dark Mode */
+  --bleuet-1: #B4D4EB;
+  --bleuet-2: #B4D4EB;
+  --bleuet-3: #B4D4EB;
+  --bleuet-4: #B4D4EB;
+  --bleuet-5: #6A9CC1;
+  --bleuet-6: #6A9CC1;
+  --bleuet-7: #3C6380;
+  --bleuet-8: #3C6380;
+  --bleuet-9: #24333E;
+  --bleuet-10: #1C262D;
+  --bleuet-11: #1C262D;
+  --bleuet-12: #1C262D;
+
+  /* Vert - Dark Mode */
+  --vert-1: #A4E3C4;
+  --vert-2: #A4E3C4;
+  --vert-3: #A4E3C4;
+  --vert-4: #A4E3C4;
+  --vert-5: #67AC8A;
+  --vert-6: #67AC8A;
+  --vert-7: #3E6B55;
+  --vert-8: #3E6B55;
+  --vert-9: #2A4739;
+  --vert-10: #18251F;
+  --vert-11: #18251F;
+  --vert-12: #18251F;
+
+  /* Rouge - Dark Mode */
+  --rouge-1: #EDA8AA;
+  --rouge-2: #EDA8AA;
+  --rouge-3: #EDA8AA;
+  --rouge-4: #EDA8AA;
+  --rouge-5: #B05E61;
+  --rouge-6: #B05E61;
+  --rouge-7: #7A3B3D;
+  --rouge-8: #7A3B3D;
+  --rouge-9: #462728;
+  --rouge-10: #251516;
+  --rouge-11: #251516;
+  --rouge-12: #251516;
+}

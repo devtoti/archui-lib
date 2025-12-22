@@ -1,0 +1,255 @@
+.corinthian {
+  font-family: 'Lato', system-ui, -apple-system, sans-serif;
+  --corinthian-accent-primary: var(--jade-9);
+  --corinthian-accent-dark: var(--jade-11);
+  --corinthian-accent-light: var(--jade-5);
+
+  --bg-primary: var(--olive-1);
+  --bg-secondary: var(--olive-2);
+  --bg-tertiary: var(--gray-3);
+  --bg-accent-dark: var(--corinthian-accent-dark);
+  --bg-accent: var(--corinthian-accent-primary);
+  --bg-accent-light: var(--corinthian-accent-light);
+  --bg-light: #F2F7FF;
+  --bg-sunken-1: rgba(39, 45, 57, 0.1);
+  --bg-sunken-2: rgba(39, 45, 57, 0.2);
+  --bg-sunken-3: rgba(39, 45, 57, 0.5);
+  --bg-sunken-4: rgba(39, 45, 57, 0.7);
+
+  /* Foreground */
+  --fg-primary: #FDFDFC;
+  --fg-secondary: #F9F9F8;
+  --fg-tertiary: #F1F0EF;
+  --fg-accent: rgba(0, 163, 70, 0.04313725605607033);
+  --fg-raised-1: rgba(255, 255, 255, 0.1);
+  --fg-raised-2: rgba(255, 255, 255, 0.3);
+  --fg-raised-3: rgba(255, 255, 255, 0.5);
+
+  /* Text */
+  --txt-primary: var(--olive-12);
+  --txt-secondary: var(--olive-10);
+  --txt-tertiary: var(--olive-8);
+  --txt-light: #FFFFFF;
+  --txt-accent-dark: var(--corinthian-accent-dark);
+  --txt-accent: var(--corinthian-accent-primary);
+  --txt-accent-light: var(--jade-7);
+
+  /* Semantic Background */
+  --sem-bg-success: var(--green-1);
+  --sem-bg-info: var(--blue-1);
+  --sem-bg-warning: var(--yellow-1);
+  --sem-bg-error: var(--red-1);
+
+  /* Semantic Icons */
+  --sem-icons-success: var(--green-11);
+  --sem-icons-info: var(--blue-11);
+  --sem-icons-warning: var(--yellow-11);
+  --sem-icons-error: var(--red-11);
+
+  /* Semantic Text */
+  --sem-txt-success: var(--green-11);
+  --sem-txt-info: var(--blue-11);
+  --sem-txt-warning: var(--yellow-11);
+  --sem-txt-error: var(--red-11);
+
+  /* Semantic Border */
+  --sem-brd-success: var(--green-11);
+  --sem-brd-info: var(--blue-11);
+  --sem-brd-warning: var(--yellow-11);
+  --sem-brd-error: var(--red-11);
+
+  /* Brand */
+  --brand-primary: #FFBF49;
+  --brand-light: #F6D970;
+  --brand-dark: #F6B501;
+  --brand-accent: #CB3F42;
+
+  /* Borders */
+  --brd-primary: var(--olive-9);
+  --brd-secondary: var(--olive-8);
+  --brd-tertiary: var(--olive-7);
+  --brd-accent-dark: var(--corinthian-accent-dark);
+  --brd-accent: var(--corinthian-accent-primary);
+  --brd-accent-light: var(--jade-7);
+  --brd-light: var(--olive-3);
+  --brd-dark: var(--olive-12);
+
+  /* Radii */
+  --rd-xs: 0.125rem;
+  --rd-sm: 0.25rem;
+  --rd-md: 0.375rem;
+  --rd-lg: 0.5rem;
+  --rd-xl: 0.625rem;
+  --rd-full: 9999px;
+
+  /* Icons */
+  --icon-accent: var(--corinthian-accent-dark);
+  --icon-primary: var(--olive-12);
+  --icon-secondary: var(--olive-10);
+  --icon-tertiary: var(--olive-8);
+  --icon-light: #F2F7FF;
+  --icon-dark: #2D3341;
+
+  /* Padding */
+  --pd-xs: 0.375rem;
+  --pd-sm: 0.625rem;
+  --pd-md: 0.75rem;
+  --pd-lg: 1.125rem;
+  --pd-xl: 1.375rem;
+  --pd-2xl: 1.625rem;
+  --pd-3xl: 2rem;
+
+
+  /* Stroke */
+  --stroke-extra-light: 0.2px;
+  --stroke-light: 0.3px;
+  --stroke-regular: 0.8px;
+  --stroke-bold: 1px;
+  --stroke-extra-bold: 2px;
+
+  /* Spacing */
+  --sp-3xs: 0.0625rem;
+  --sp-2xs: 0.125rem;
+  --sp-xs: 0.25rem;
+  --sp-sm: 0.5rem;
+  --sp-md: 0.75rem;
+  --sp-lg: 1rem;
+  --sp-xl: 1.25rem;
+  --sp-2xl: 1.5rem;
+  --sp-3xl: 2rem;
+  --sp-4xl: 2.5rem;
+  --sp-5xl: 3rem;
+  --sp-6xl: 3.75rem;
+
+  /* Shadows - Moderate */
+  --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-regular: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark mode overrides for Corinthian theme */
+/* Support both .dark .corinthian (nested) and .dark.corinthian (same element) */
+.dark .corinthian,
+.dark.corinthian {
+  /* Background - using darker values for dark mode */
+  --bg-primary: #202020;
+  --bg-secondary: #242424;
+  --bg-tertiary: #303030;
+  --bg-accent-dark: var(--corinthian-accent-dark);
+  --bg-accent: var(--corinthian-accent-primary);
+  --bg-accent-light: var(--corinthian-accent-light);
+  --bg-light: #202020;
+  --bg-sunken-1: rgba(255, 255, 255, 0.05);
+  --bg-sunken-2: rgba(255, 255, 255, 0.1);
+  --bg-sunken-3: rgba(255, 255, 255, 0.2);
+  --bg-sunken-4: rgba(255, 255, 255, 0.3);
+
+  /* Foreground - from JSON foreground values */
+  --fg-primary: #FDFDFC;
+  --fg-secondary: #F9F9F8;
+  --fg-tertiary: #F1F0EF;
+  --fg-accent: rgba(0, 163, 70, 0.15);
+  --fg-raised-1: rgba(0, 0, 0, 0.2);
+  --fg-raised-2: rgba(0, 0, 0, 0.4);
+  --fg-raised-3: rgba(0, 0, 0, 0.6);
+
+  /* Text - lighter values for dark mode (from JSON text.light and foreground) */
+  --txt-primary: #FDFDFC;
+  --txt-secondary: #F9F9F8;
+  --txt-tertiary: #F1F0EF;
+  --txt-light: #FFFFFF;
+  --txt-accent-dark: var(--corinthian-accent-dark);
+  --txt-accent: var(--corinthian-accent-primary);
+  --txt-accent-light: #8BCEB6;
+
+  /* Semantic Background - darker values for dark mode from Colors/Dark.tokens.json */
+  --sem-bg-success: #18251F; /* Vert/0 - Dark green for success backgrounds in dark mode */
+  --sem-bg-info: #1C262D; /* Indigo/0 - Dark blue for info backgrounds in dark mode */
+  --sem-bg-warning: #211D15; /* Jaune/0 - Dark brown/yellow for warning backgrounds in dark mode */
+  --sem-bg-error: #251516; /* Rouge/0 - Dark red for error backgrounds in dark mode */
+
+  /* Semantic Icons - from JSON semantic.icons */
+  --sem-icons-success: #218358;
+  --sem-icons-info: #0D74CE;
+  --sem-icons-warning: #9E6C00;
+  --sem-icons-error: #CE2C31;
+
+  /* Semantic Text - from JSON semantic.text */
+  --sem-txt-success: #218358;
+  --sem-txt-info: #0D74CE;
+  --sem-txt-warning: #9E6C00;
+  --sem-txt-error: #CE2C31;
+
+  /* Semantic Border - from JSON semantic.border */
+  --sem-brd-success: #218358;
+  --sem-brd-info: #0D74CE;
+  --sem-brd-warning: #9E6C00;
+  --sem-brd-error: #CE2C31;
+
+  /* Brand - from JSON brand values */
+  --brand-primary: #FFBF49;
+  --brand-light: #F6D970;
+  --brand-dark: #F6B501;
+  --brand-accent: #CB3F42;
+
+  /* Borders - from JSON borders values */
+  --brd-primary: #898E87;
+  --brd-secondary: #B9BCB8;
+  --brd-tertiary: #CCCFCC;
+  --brd-accent-dark: var(--corinthian-accent-dark);
+  --brd-accent: var(--corinthian-accent-primary);
+  --brd-accent-light: #8BCEB6;
+  --brd-light: #EFF1EF;
+  --brd-dark: #1D211C;
+
+  /* Radii - from JSON radii values (converted px to rem: 2px=0.125rem, 4px=0.25rem, etc.) */
+  --rd-xs: 0.125rem;
+  --rd-sm: 0.25rem;
+  --rd-md: 0.375rem;
+  --rd-lg: 0.5rem;
+  --rd-xl: 0.625rem;
+  --rd-full: 9999px;
+
+  /* Icons - from JSON icons values */
+  --icon-accent: #208368;
+  --icon-primary: #FDFDFC;
+  --icon-secondary: #F9F9F8;
+  --icon-tertiary: #F1F0EF;
+  --icon-light: #F2F7FF;
+  --icon-dark: #2D3341;
+
+  /* Padding - from JSON padding values (converted px to rem: 6px=0.375rem, 10px=0.625rem, etc.) */
+  --pd-xs: 0.375rem;
+  --pd-sm: 0.625rem;
+  --pd-md: 0.75rem;
+  --pd-lg: 1.125rem;
+  --pd-xl: 1.375rem;
+  --pd-2xl: 1.625rem;
+  --pd-3xl: 2rem;
+
+  /* Stroke - from JSON stroke values */
+  --stroke-extra-light: 0.3px;
+  --stroke-light: 0.5px;
+  --stroke-regular: 1px;
+  --stroke-bold: 1.5px;
+  --stroke-extra-bold: 4px;
+
+  /* Spacing - from JSON spacing values (converted px to rem) */
+  --sp-3xs: 0.0625rem;
+  --sp-2xs: 0.125rem;
+  --sp-xs: 0.25rem;
+  --sp-sm: 0.5rem;
+  --sp-md: 0.75rem;
+  --sp-lg: 1rem;
+  --sp-xl: 1.25rem;
+  --sp-2xl: 1.5rem;
+  --sp-3xl: 2rem;
+  --sp-4xl: 2.5rem;
+  --sp-5xl: 3rem;
+  --sp-6xl: 3.75rem;
+
+  /* Shadows - more prominent for dark mode */
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-regular: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.5);
+}

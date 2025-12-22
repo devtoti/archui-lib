@@ -1,8 +1,8 @@
 import React from "react";
-import type { ButtonHTMLAttributes } from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import * as Slot from "@radix-ui/react-slot";
+import type { ButtonProps } from "../../types/components/Button.types";
 
 /**
  * @author: @devtoti
@@ -14,15 +14,19 @@ import * as Slot from "@radix-ui/react-slot";
  * @github: https://github.com/devtoti/archui-lib
  */
 
-const buttonVariants = cva(
-  "px-4 py-2 rounded font-semibold transition-colors",
+export const buttonVariants = cva(
+  "px-4 py-2 rounded-arch-rd-sm font-normal transition-colors hover:cursor-pointer \
+hover:brightness-95 hover:scale-[1.01] active:brightness-90 active:scale-[0.99] duration-150 ease-in-out",
   {
     variants: {
-      intent: {
+      variant: {
         primary:
-          "bg-primary text-white hover:cursor-pointer hover:bg-primary-hover",
+          "bg-arch-surface-accent border-arch-contour-accent text-arch-light",
         secondary:
-          "bg-secondary text-gray-800 hover:cursor-pointer hover:bg-secondary-hover",
+          "bg-arch-surface-accent-light border-arch-contour-accent-dark border-[length:var(--stroke-regular)] text-arch-accent",
+        tertiary: "bg-arch-surface-primary border-transparent text-arch-accent",
+        ghost:
+          "bg-transparent rounded-none border-b-[length:var(--stroke-regular)] text-arch-accent",
       },
       size: {
         sm: "arc-body-1 text-sm",
@@ -31,26 +35,18 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      intent: "primary",
+      variant: "primary",
       size: "md",
     },
   }
 );
 
-export interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  label?: React.ReactNode;
-  children?: React.ReactNode;
-  asChild?: boolean;
-}
-
 export const Button: React.FC<ButtonProps> = ({
   className,
-  intent,
-  size,
-  label,
-  children,
+  variant = "primary",
+  size = "md",
+  label = "Button",
+  children = null,
   asChild = false,
   ...props
 }) => {
@@ -59,7 +55,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <Button
-      className={twMerge(buttonVariants({ intent, size }), className)}
+      className={twMerge(buttonVariants({ variant, size }), className)}
       {...props}
     >
       {content}

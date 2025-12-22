@@ -1,0 +1,103 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import DesignSystem from "../../public/icons/models/design-system.png";
+
+<Meta title="00 GETTING STARTED/Design Principles" />
+
+# Design Principles
+
+ArchUI is built on three core principles: **Foundation**, **Flexibility**, and **Accessibility**. These principles guide every aspect of the design system, ensuring a robust, adaptable, and inclusive component library.
+
+## Foundation
+
+ArchUI is **written in TypeScript with predictable static types**, providing a solid foundation for type-safe development. This ensures better developer experience, fewer runtime errors, and improved code maintainability.
+
+The library offers **powerful theme customization in every detail**, allowing you to fine-tune every aspect of your design system to match your project's unique requirements.
+
+## Flexibility
+
+One of the key aspects of ArchUI is its ability to **quickly switch between Themes** and easily modify each style's tokenized variables independently, without needing to edit multiple config files all at once.
+
+### Three Classical Orders
+
+There are three default styles that come along with ArchUI v1.0. These styles—also known as **Orders**—refer to the three most emblematic architectural styles used back in Ancient Greece:
+
+- **Doric**: Bold and robust
+- **Ionic**: Elegant and refined
+- **Corinthian**: Sophisticated and modern
+
+Each _order (style)_ follows very specific properties, yet remains in perfect harmony within their immediate context, regardless of Theme variations across your application.
+
+### Tokenized Design System
+
+By extending a highly customizable CSS property file with **shared variable names per Theme**, it is possible to scope each style to specific properties that make every single ArchUI component smart enough to update their attributes on the fly, without having to worry about aspects such as:
+
+- paddings
+- borders
+- border-radius
+- background colors
+- font families
+- and more...
+
+  {" "}
+
+  <img
+    src={DesignSystem}
+    alt="Design System Illustration"
+    style={{
+      width: "75%",
+      borderRadius: "16px",
+      height: "auto",
+      flexShrink: 0,
+    }}
+  />
+
+## Accessibility
+
+ArchUI uses the [Radix Primitives](https://www.radix-ui.com/primitives/docs/overview/introduction) library as a foundation and base layer for its component designs. This low-level UI component library ensures that an adequate pattern implementation is achieved, strongly focusing on **web accessibility and development experience**.
+
+### Radix Primitives Foundation
+
+According to their official documentation:
+
+> Radix Primitives follow the WAI-ARIA authoring practices guidelines and are tested in a wide selection of modern browsers and commonly used assistive technologies.
+
+Which translates into the following perks:
+
+- **Keyboard Navigation**
+- **Accessible labels**
+- **Clear interactive elements**
+- **Keyboard Shortcuts**
+- **WAI-ARIA**
+- **Role Attributes**
+- **Proper Semantics**
+
+### ARIA Support
+
+The [Accessible Rich Internet Applications (ARIA)](https://www.w3.org/TR/wai-aria/) specification provides a set of attributes that can be used to enhance the accessibility of web content. These attributes can be used to provide additional information about the purpose and structure of your components, making them easier to navigate and use for users who rely on assistive technologies such as screen readers.
+
+### Design Considerations
+
+Every component considers the following design principles:
+
+- **Width/height proportion**
+- **Scalability**
+- **AA and AAA contrasts**
+- **Visual hierarchy**
+- **Text/image balance**
+- **Simple forms geometry**
+- **Proper use of whitespace**
+
+---
+
+<div style={{ 
+  marginTop: '1rem',
+  padding: '.5rem',
+  paddingTop: '0.2rem',
+  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
+  borderRadius: '8px',
+  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
+}}>
+
+**Ready to build with ArchUI?** Explore the components in the sidebar to see how these design principles are applied in practice.
+
+</div>

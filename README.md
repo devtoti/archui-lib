@@ -1,8 +1,14 @@
-# ArchUI Library
+![ArchUI](./public/icons/models/github-header.png)
 
-A modern React component library built with Tailwind CSS and TypeScript.
+# ArchUI
 
-## Installation
+A simple, modern React component library.
+
+## About
+
+ArchUI is a modern React component library inspired by classical architecture. It provides flexible, themeable UI primitives based on the three main architectural orders: **Doric** (minimal and sturdy), **Ionic** (elegant and balanced), and **Corinthian** (ornate and expressive). Effortlessly switch between these styles to match your design language, while enjoying a robust and accessible developer experience.
+
+## Install
 
 ```bash
 npm install @devtoti/archui-lib
@@ -11,62 +17,26 @@ npm install @devtoti/archui-lib
 ## Usage
 
 ```tsx
-import { Button } from '@devtoti/archui-lib';
-import '@devoti/archui-lib/styles';
+import { Button } from "@devtoti/archui-lib";
+import "@devtoti/archui-lib/styles";
 
 function App() {
-  return (
-    <Button intent="primary" size="md" label="Click me" />
-  );
+  return <Button intent="primary">Click me</Button>;
 }
 ```
 
-## Components
-
-### Button
-
-A customizable button component with multiple variants.
-
-#### Props
-
-- `intent`: 'primary' | 'secondary'
-- `size`: 'sm' | 'md' | 'lg'
-- `label`: React.ReactNode
-- All standard button HTML attributes
-
-## Development
+## Scripts
 
 ```bash
-npm run dev          # Start development server
-npm run storybook    # Start Storybook
-npm run build:lib    # Build library
-npm run test         # Run tests
+npm run dev        # Start dev server
+npm run storybook  # Launch Storybook
+npm run build:lib  # Build the library
+npm run test       # Run tests
 ```
+
+## Publishing
+
+```bash
+npm run build:lib
+npm publish --access public
 ```
-
-## Step 5: Publish to npm
-
-1. **Login to npm**:
-   ```bash
-   npm login
-   ```
-
-2. **Build the library**:
-   ```bash
-   npm run build:lib
-   ```
-
-3. **Publish**:
-   ```bash
-   npm publish --access public
-   ```
-
-## Key Changes Made:
-
-1. **Package name**: Changed to scoped package `@devtoti/archui-lib`
-2. **Removed `private: true`**: Now publishable
-3. **Added library build script**: `build:lib` for library-specific build
-4. **Moved React to peerDependencies**: Consumers provide their own React
-5. **Added proper exports**: Main entry point and styles
-6. **Added files field**: Only publish `dist` and `README.md`
-7. **Added prepublishOnly**: Automatically builds before publishing
