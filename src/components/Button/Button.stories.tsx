@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { fn } from "storybook/test";
 
 import { Button } from "./Button";
+import { ThemeProvider } from "../ThemeProvider";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import { useTheme } from "../../hooks/useTheme";
 import "../../index.css";
@@ -56,6 +57,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => {
+    return (
+      <ThemeSwitcher theme="doric">
+        <Button {...args} label={args.label ? args.label : "ArchUI Button"} />
+      </ThemeSwitcher>
+    );
+  },
+};
+
+export const Variants: Story = {
+  render: (args) => {
     const ButtonWithName = () => {
       const { theme } = useTheme();
       const capitalizedTheme =
@@ -63,6 +74,7 @@ export const Default: Story = {
       return (
         <Button
           {...args}
+          variant="tertiary"
           label={
             args.label
               ? `${capitalizedTheme} ${args.label}`
@@ -72,9 +84,9 @@ export const Default: Story = {
       );
     };
     return (
-      <ThemeSwitcher theme="doric">
+      <ThemeProvider theme="doric" themeType="light" hasToggler={true}>
         <ButtonWithName />
-      </ThemeSwitcher>
+      </ThemeProvider>
     );
   },
 };

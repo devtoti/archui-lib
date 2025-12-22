@@ -16,6 +16,11 @@ const preview: Preview = {
     }),
   ],
   parameters: {
+    options: {
+      storySort: {
+        order: ['00 GETTING STARTED', '01 COMPONENTS', '02 OTHER'],
+      },
+    },
     darkMode: {
       // Override the default dark theme
       dark: { ...themes.dark, lightTheme, textColor: '#0588F0' },

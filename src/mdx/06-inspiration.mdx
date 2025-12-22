@@ -1,4 +1,7 @@
 import { Meta } from "@storybook/addon-docs/blocks";
+import Corinthian from "../../public/icons/models/corinthian-order.svg";
+import Ionic from "../../public/icons/models/ionic-order.svg";
+import Doric from "../../public/icons/models/doric-order.svg";
 
 <Meta title="02 OTHER/Inspiration" />
 
@@ -15,6 +18,38 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 ArchUI draws inspiration from classical architecture and the foundational texts that have shaped architectural thinking for centuries. Understanding these sources helps illuminate the philosophy and principles behind the design system.
 
+</div>
+
+<div
+  style={{
+    margin: "2rem 0 2rem 0",
+    display: "flex",
+    gap: "2rem",
+    alignItems: "flex-end",
+    justifyContent: "center",
+  }}
+>
+  <div style={{ textAlign: "center" }}>
+    <img
+      src={Doric}
+      alt="Doric Order"
+      style={{ width: 64, height: "auto", marginBottom: 8 }}
+    />
+  </div>
+  <div style={{ textAlign: "center" }}>
+    <img
+      src={Ionic}
+      alt="Ionic Order"
+      style={{ width: 64, height: "auto", marginBottom: 8 }}
+    />
+  </div>
+  <div style={{ textAlign: "center" }}>
+    <img
+      src={Corinthian}
+      alt="Corinthian Order"
+      style={{ width: 64, height: "auto", marginBottom: 8 }}
+    />
+  </div>
 </div>
 
 ## De architectura, Vitruvio
@@ -80,7 +115,7 @@ In archUI, we translate these principles to digital design:
   borderRadius: '8px'
 }}>
 
-Just as Vitruvius's treatise provided a systematic approach to architecture, archUI aims to provide a systematic approach to building digital interfaces. The emphasis on **social relevance** reminds us that our components must serve real needs and create genuine value, not just follow trends or showcase technical prowess.
+Just as Vitruvius's treatise provided a systematic approach to architecture, ArchUI aims to provide a systematic approach to building digital interfaces. The emphasis on **social relevance** reminds us that our components must serve real needs and create genuine value, not just follow trends or showcase technical prowess.
 
 The classical orders (Doric, Ionic, Corinthian) that Vitruvius documented and that we've adapted as themes represent this same systematic approach—establishing clear patterns and principles that can be consistently applied while allowing for creative expression.
 
@@ -96,6 +131,6 @@ The classical orders (Doric, Ionic, Corinthian) that Vitruvius documented and th
   borderLeft: '4px solid var(--bg-accent, #3b82f6)'
 }}>
 
-**Explore the design system** inspired by these classical principles. Browse the [Design Principles](/docs/03-design-principles--docs) and [Themes](/docs/04-themes--docs) to see how Vitruvian ideals are applied in modern web development.
+**Explore the design system** inspired by these classical principles. Browse the [Design Principles](/docs/00-getting-started-design-principles--docs) and [Themes](/docs/00-getting-started-themes--docs) to see how Vitruvian ideals are applied in modern web development.
 
 </div>

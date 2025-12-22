@@ -1,64 +1,25 @@
 import { Meta } from "@storybook/addon-docs/blocks";
+import DesignSystem from "../../public/icons/models/design-system.png";
 
 <Meta title="00 GETTING STARTED/Design Principles" />
 
 # Design Principles
 
-<div style={{ 
-  marginTop: '2rem',
-  marginBottom: '2rem',
-  padding: '2rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px',
-  border: '1px solid var(--brd-primary, #e2e8f0)'
-}}>
-
 ArchUI is built on three core principles: **Foundation**, **Flexibility**, and **Accessibility**. These principles guide every aspect of the design system, ensuring a robust, adaptable, and inclusive component library.
 
-</div>
-
 ## Foundation
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
 
 ArchUI is **written in TypeScript with predictable static types**, providing a solid foundation for type-safe development. This ensures better developer experience, fewer runtime errors, and improved code maintainability.
 
 The library offers **powerful theme customization in every detail**, allowing you to fine-tune every aspect of your design system to match your project's unique requirements.
 
-</div>
-
 ## Flexibility
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
-  borderRadius: '8px',
-  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
-}}>
-
-One of the key aspects of archUI is its ability to **quickly switch between Themes** and easily modify each style's tokenized variables independently, without needing to edit multiple config files all at once.
-
-</div>
+One of the key aspects of ArchUI is its ability to **quickly switch between Themes** and easily modify each style's tokenized variables independently, without needing to edit multiple config files all at once.
 
 ### Three Classical Orders
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
-
-There are three default styles that come along with archUI v1.0. These styles—also known as **Orders**—refer to the three most emblematic architectural styles used back in Ancient Greece:
+There are three default styles that come along with ArchUI v1.0. These styles—also known as **Orders**—refer to the three most emblematic architectural styles used back in Ancient Greece:
 
 - **Doric**: Bold and robust
 - **Ionic**: Elegant and refined
@@ -66,53 +27,35 @@ There are three default styles that come along with archUI v1.0. These styles—
 
 Each _order (style)_ follows very specific properties, yet remains in perfect harmony within their immediate context, regardless of Theme variations across your application.
 
-</div>
-
 ### Tokenized Design System
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
+By extending a highly customizable CSS property file with **shared variable names per Theme**, it is possible to scope each style to specific properties that make every single ArchUI component smart enough to update their attributes on the fly, without having to worry about aspects such as:
 
-By extending a highly customizable CSS property file with **shared variable names per Theme**, it is possible to scope each style to specific properties that make every single archUI component smart enough to update their attributes on the fly, without having to worry about aspects such as:
+- paddings
+- borders
+- border-radius
+- background colors
+- font families
+- and more...
 
-- Paddings
-- Borders
-- Border-radius
-- Background colors
-- Font families
-- And more...
+  {" "}
 
-</div>
+  <img
+    src={DesignSystem}
+    alt="Design System Illustration"
+    style={{
+      width: "75%",
+      borderRadius: "16px",
+      height: "auto",
+      flexShrink: 0,
+    }}
+  />
 
 ## Accessibility
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
-  borderRadius: '8px',
-  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
-}}>
-
 ArchUI uses the [Radix Primitives](https://www.radix-ui.com/primitives/docs/overview/introduction) library as a foundation and base layer for its component designs. This low-level UI component library ensures that an adequate pattern implementation is achieved, strongly focusing on **web accessibility and development experience**.
 
-</div>
-
 ### Radix Primitives Foundation
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
 
 According to their official documentation:
 
@@ -128,32 +71,11 @@ Which translates into the following perks:
 - **Role Attributes**
 - **Proper Semantics**
 
-</div>
-
 ### ARIA Support
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
 
 The [Accessible Rich Internet Applications (ARIA)](https://www.w3.org/TR/wai-aria/) specification provides a set of attributes that can be used to enhance the accessibility of web content. These attributes can be used to provide additional information about the purpose and structure of your components, making them easier to navigate and use for users who rely on assistive technologies such as screen readers.
 
-</div>
-
 ### Design Considerations
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
-  borderRadius: '8px',
-  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
-}}>
 
 Every component considers the following design principles:
 
@@ -165,18 +87,17 @@ Every component considers the following design principles:
 - **Simple forms geometry**
 - **Proper use of whitespace**
 
-</div>
-
 ---
 
 <div style={{ 
-  marginTop: '3rem',
-  padding: '1.5rem',
+  marginTop: '1rem',
+  padding: '.5rem',
+  paddingTop: '0.2rem',
   backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
   borderRadius: '8px',
   borderLeft: '4px solid var(--bg-accent, #3b82f6)'
 }}>
 
-**Ready to build with archUI?** Explore the components in the sidebar to see how these design principles are applied in practice.
+**Ready to build with ArchUI?** Explore the components in the sidebar to see how these design principles are applied in practice.
 
 </div>

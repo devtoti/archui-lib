@@ -14,8 +14,9 @@ import type { ButtonProps } from "../../types/components/Button.types";
  * @github: https://github.com/devtoti/archui-lib
  */
 
-const buttonVariants = cva(
-  "px-4 py-2 rounded-arch-rd-sm font-normal transition-colors hover:cursor-pointer",
+export const buttonVariants = cva(
+  "px-4 py-2 rounded-arch-rd-sm font-normal transition-colors hover:cursor-pointer \
+hover:brightness-95 hover:scale-[1.01] active:brightness-90 active:scale-[0.99] duration-150 ease-in-out",
   {
     variants: {
       variant: {
@@ -47,8 +48,6 @@ export const Button: React.FC<ButtonProps> = ({
   label = "Button",
   children = null,
   asChild = false,
-  style,
-  onClick = () => {},
   ...props
 }) => {
   const Button = asChild ? Slot.Root : "button";

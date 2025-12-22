@@ -6,7 +6,6 @@ import {
   BiCheckCircle as IconSuccess,
   BiBell as IconNeutral,
   BiCommentError as IconWarning,
-  BiBuildingHouse as IconArch,
 } from "react-icons/bi";
 import "../../index.css";
 import { ThemeSwitcher } from "../ThemeSwitcher";
@@ -131,13 +130,6 @@ export const AllVariants: Story = {
     return (
       <ThemeSwitcher theme="doric">
         <div className="flex flex-col gap-4">
-          <Callout
-            {...args}
-            variant="success"
-            title="Success"
-            label="This is a success message"
-            icon={showIcon ? <IconSuccess /> : undefined}
-          />
           <Callout
             {...args}
             variant="success"

@@ -1,0 +1,78 @@
+/* ArchUI Theme Toggle Styles */
+
+.archui-theme-toggle {
+  display: flex;
+  flex-direction: row;
+  gap: var(--sys-sp-xs, 0.25rem);
+  padding: var(--sys-pd-sm, 0.5rem);
+  background-color: var(--sys-bg-secondary, var(--gris-2));
+  border: var(--sys-stroke-light, 1px) solid var(--sys-brd-secondary, var(--bleu-6));
+  border-radius: var(--sys-rd-md, 0);
+  margin-bottom: var(--sys-sp-md, 0.75rem);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.dark .archui-theme-toggle {
+  background-color: var(--sys-bg-secondary, var(--gris-12));
+  border-color: var(--sys-brd-secondary, var(--bleu-4));
+}
+
+.archui-theme-btn {
+  padding: var(--sys-pd-xs, 0.25rem) var(--sys-pd-sm, 0.5rem);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--sys-txt-secondary, var(--bleu-8));
+  background-color: transparent;
+  border: var(--sys-stroke-light, 1px) solid transparent;
+  border-radius: var(--sys-rd-sm, 0);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.archui-theme-btn:hover {
+  background-color: var(--sys-bg-tertiary, var(--bleu-2));
+  color: var(--sys-txt-primary, var(--bleu-9));
+  border-color: var(--sys-brd-tertiary, var(--bleu-4));
+}
+
+.dark .archui-theme-btn {
+  color: var(--sys-txt-secondary, var(--bleu-7));
+}
+
+.dark .archui-theme-btn:hover {
+  background-color: var(--sys-bg-tertiary, var(--gris-11));
+  color: var(--sys-txt-primary, var(--bleu-8));
+  border-color: var(--sys-brd-tertiary, var(--bleu-6));
+}
+
+.archui-theme-btn.selected {
+  background-color: var(--bg-accent, var(--bleu-9));
+  color: var(--txt-light, var(--bleu-2));
+  border-color: var(--brd-accent, var(--bleu-9));
+  font-weight: 600;
+}
+
+.dark .archui-theme-btn.selected {
+  background-color: var(--bg-accent, var(--bleu-6));
+  color: var(--txt-light, var(--bleu-2));
+  border-color: var(--brd-accent, var(--bleu-6));
+}
+
+.archui-theme-btn:focus-visible {
+  outline: 2px solid var(--icon-accent, var(--bleu-9));
+  outline-offset: 2px;
+}
+
+.dark .archui-theme-btn:focus-visible {
+  outline-color: var(--icon-accent, var(--bleu-4));
+}
+
+.archui-theme-btn:active {
+  transform: scale(0.98);
+}
+

@@ -32,6 +32,19 @@
   background-color: transparent;
 }
 
+.sbdocs p code {
+  color: #104ec0 !important;
+  background-color: #b0c4e3 !important;
+  border-color: #6B92D3 !important;
+  border-width: 1px !important;
+  border-radius: 4px !important;
+  padding: 1px 6px!important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+}
+
+
 /* Override Storybook's default h3 color (rgb(46, 52, 56)) */
 /* This targets Storybook's generated CSS classes */
 /* .sbdocs h1,

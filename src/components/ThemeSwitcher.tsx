@@ -8,14 +8,18 @@ export const ThemeSwitcher: React.FC<{
   theme: Theme;
 }> = ({ children, theme = "doric" }) => {
   const [selectedTheme, setSelectedTheme] = useState<Theme>(theme);
-
   const handleThemeChange = (th: Theme) => {
     setSelectedTheme(th);
   };
 
   return (
     <ThemeContext.Provider
-      value={{ theme: selectedTheme, setTheme: handleThemeChange }}
+      value={{
+        theme: selectedTheme,
+        setTheme: handleThemeChange,
+        themeType: "light",
+        setThemeType: () => {},
+      }}
     >
       <div className="theme-switcher flex flex-col gap-6">
         <div className="flex flex-row rounded-md border-[1px] border-gray-400 items-center w-min ml-auto overflow-hidden justify-end">

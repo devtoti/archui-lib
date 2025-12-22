@@ -1,4 +1,7 @@
 import { Meta } from "@storybook/addon-docs/blocks";
+import Corinthian from "../../public/icons/models/corinthian-order.svg";
+import Ionic from "../../public/icons/models/ionic-order.svg";
+import Doric from "../../public/icons/models/doric-order.svg";
 
 <Meta title="02 OTHER/Glossary" />
 
@@ -13,7 +16,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
   border: '1px solid var(--brd-primary, #e2e8f0)'
 }}>
 
-This glossary provides definitions for key architectural and design terms used throughout the archUI documentation and design system. Understanding these concepts will help you better appreciate the philosophy and structure of archUI.
+This glossary provides definitions for key architectural and design terms used throughout the ArchUI documentation and design system. Understanding these concepts will help you better appreciate the philosophy and structure of archUI.
 
 </div>
 
@@ -73,86 +76,108 @@ In archUI, we use the concept of orders to represent our three main themes: **Do
 
 ## Doric
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
-
-**Doric** is the oldest and most straightforward of the three classical Greek architectural orders. Characterized by:
-
-- Simple, sturdy columns without bases
-- Plain, fluted shafts
-- Minimal decorative elements
-- Strong, masculine appearance
-
-In archUI, the Doric theme embodies **simplicity and balance**, prioritizing clean design over decorative elements. It features sharp edges, contrasting borders, and a sturdier appearance—perfect for professional, bold, and modern brands.
-
+<div
+  style={{
+    marginTop: "1.5rem",
+    marginBottom: "1.5rem",
+    padding: "1.5rem",
+    backgroundColor: "var(--bg-secondary, #f8f9fa)",
+    borderRadius: "8px",
+    display: "flex",
+    alignItems: "center",
+    gap: "1.5rem",
+  }}
+>
+  <img
+    src={Doric}
+    alt="Doric Order"
+    style={{ width: 56, height: "auto", flexShrink: 0 }}
+  />
+  <div>
+    <b>Doric</b> is the oldest and most straightforward of the three classical
+    Greek architectural orders. Characterized by:
+    <ul style={{ marginBlock: "0.75rem" }}>
+      <li>Simple, sturdy columns without bases</li>
+      <li>Plain, fluted shafts</li>
+      <li>Minimal decorative elements</li>
+      <li>Strong, masculine appearance</li>
+    </ul>
+    In archUI, the Doric theme embodies <b>simplicity and balance</b>,
+    prioritizing clean design over decorative elements. It features sharp edges,
+    contrasting borders, and a sturdier appearance—perfect for professional,
+    bold, and modern brands.
+  </div>
 </div>
 
 ## Ionic
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
-
-**Ionic** is the second classical Greek architectural order, known for its elegance and grace. Distinguished by:
-
-- Slender columns with bases
-- Volutes (spiral scrolls) on the capitals
-- More decorative than Doric
-- Feminine, graceful appearance
-
-In archUI, the Ionic theme is the **default theme** and creates a welcoming, visually engaging user experience. It features rounded corners, generous padding, borderless design, and soft shadows—ideal for calm, innovative, warm & inviting, playful, and beauty brands.
-
+<div
+  style={{
+    marginTop: "1.5rem",
+    marginBottom: "1.5rem",
+    padding: "1.5rem",
+    backgroundColor: "var(--bg-secondary, #f8f9fa)",
+    borderRadius: "8px",
+    display: "flex",
+    alignItems: "center",
+    gap: "1.5rem",
+  }}
+>
+  <img
+    src={Ionic}
+    alt="Ionic Order"
+    style={{ width: 56, height: "auto", flexShrink: 0 }}
+  />
+  <div>
+    <b>Ionic</b> is the second classical Greek architectural order, known for
+    its elegance and grace. Distinguished by:
+    <ul style={{ marginBlock: "0.75rem" }}>
+      <li>Slender columns with bases</li>
+      <li>Volutes (spiral scrolls) on the capitals</li>
+      <li>More decorative than Doric</li>
+      <li>Feminine, graceful appearance</li>
+    </ul>
+    In archUI, the Ionic theme is the <b>default theme</b> and creates a
+    welcoming, visually engaging user experience. It features rounded corners,
+    generous padding, borderless design, and soft shadows—ideal for calm,
+    innovative, warm & inviting, playful, and beauty brands.
+  </div>
 </div>
 
 ## Corinthian
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
-
-**Corinthian** is the most elaborate and decorative of the three classical Greek architectural orders. Recognized by:
-
-- Ornate capitals decorated with acanthus leaves
-- Slender, elegant columns
-- Rich decorative details
-- Sophisticated, luxurious appearance
-
-In archUI, the Corinthian theme embodies **sophistication and refined elegance**. It features subtle rounded corners, delicate padding, light-gray borders, rich ornamental details, gradient backgrounds, and a slender appearance—perfect for luxury, elegant, sophisticated, premium, and artistic brands.
-
-</div>
-
-## Composite
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
-
-**Composite** is a Roman architectural order that combines elements from both Ionic and Corinthian orders. It features:
-
-- Volutes from the Ionic order
-- Acanthus leaves from the Corinthian order
-- The most ornate and decorative style
-- A synthesis of previous orders
-
-While archUI currently focuses on the three primary Greek orders (Doric, Ionic, and Corinthian), the Composite order represents the potential for future theme variations that combine characteristics from multiple orders, allowing for even more sophisticated and customized design systems.
-
+<div
+  style={{
+    marginTop: "1.5rem",
+    marginBottom: "1.5rem",
+    padding: "1.5rem",
+    backgroundColor: "var(--bg-secondary, #f8f9fa)",
+    borderRadius: "8px",
+    display: "flex",
+    alignItems: "center",
+    gap: "1.5rem",
+  }}
+>
+  <img
+    src={Corinthian}
+    alt="Corinthian Order"
+    style={{ width: 56, height: "auto", flexShrink: 0 }}
+  />
+  <div>
+    <b>Corinthian</b> is the most elaborate and decorative of the three
+    classical Greek architectural orders. Recognized by:
+    <ul style={{ marginBlock: "0.75rem" }}>
+      <li>Ornate capitals decorated with acanthus leaves</li>
+      <li>Slender, elegant columns</li>
+      <li>Rich decorative details</li>
+      <li>Sophisticated, luxurious appearance</li>
+    </ul>
+    In archUI, the Corinthian theme embodies{" "}
+    <b>sophistication and refined elegance</b>. It features subtle rounded
+    corners, delicate padding, light-gray borders, rich ornamental details,
+    gradient backgrounds, and a slender appearance—perfect for luxury, elegant,
+    sophisticated, premium, and artistic brands.
+  </div>
 </div>
 
 ---

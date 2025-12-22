@@ -1,46 +1,65 @@
 import { Meta } from "@storybook/addon-docs/blocks";
+import Corinthian from "../../public/icons/corinthian.svg";
+import Ionic from "../../public/icons/ionic.svg";
+import Doric from "../../public/icons/doric.svg";
+export const toc = false;
 
 <Meta title="00 GETTING STARTED/Themes" />
 
 # Themes
 
-<div style={{ 
-  marginTop: '2rem',
-  marginBottom: '2rem',
-  padding: '2rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px',
-  border: '1px solid var(--brd-primary, #e2e8f0)'
-}}>
+There are three default themes in ArchUI, each with unique characteristics—**Doric**, **Ionic**, and **Corinthian**—all inspired by Ancient Greek architectural orders. Each theme offers a distinct visual identity and design language to match your project's needs.
 
-There are three default themes in archUI, each with unique characteristics. These themes are inspired by Ancient Greek architectural orders: **Ionic**, **Doric**, and **Corinthian**. Each theme offers a distinct visual identity and design language to match your project's aesthetic needs.
+## **Doric**
 
-</div>
+This is the `default` theme and requires no additional configuration to get started. The most straightforward of the three orders, Doric UI embodies **simplicity and balance**, prioritizing clean design over decorative elements.
 
-## Ionic
+With its honest and robust appearance, Doric harmonizes beautifully with:
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
-  borderRadius: '8px',
-  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
-}}>
+- **Professional** brands
+- **Bold** brands
+- **Modern** brands
+- **Retro** brands
+- **Sport** brands
 
-This is the `default` theme, and requires no additional configuration to get started. Inspired by the volutes and flowing curves of ancient Greek architecture, Ionic UI creates a welcoming and visually engaging user experience.
+  <div
+    style={{
+      margin: "1.5rem 0",
+      display: "flex",
+      alignItems: "center",
+      gap: "1.5rem",
+      backgroundColor: "var(--bg-secondary, #f8f9fa)",
+      borderRadius: "8px",
+      padding: "1.5rem",
+    }}
+  >
+    <img
+      src={Doric}
+      alt="Doric Order"
+      style={{ width: 56, height: "auto", flexShrink: 0 }}
+    />
+    <div>
+      <b>Doric</b> is the oldest and most straightforward of the three classical
+      architectural orders. It is characterized by simple, sturdy columns
+      without bases, plain fluted shafts, and minimal ornamentation.
+    </div>
+  </div>
 
-</div>
+#### Characteristics
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
+The Doric UI theme is distinguished by these key traits:
 
-With its approachable aesthetic, this theme harmonizes beautifully with:
+- **Sharp edges**
+- **Contrasting border colors**
+- **Lack of aesthetic details**
+- **Subtle shadows**
+- **Shorter and sturdier appearance**
+
+## **Ionic**
+
+Inspired by the volutes and flowing curves of ancient Greek architecture, the Ionic UI theme creates a welcoming and visually engaging user experience. To use this theme, simply switch your theme configuration to `ionic`.
+
+With its approachable aesthetic, Ionic harmonizes beautifully with:
 
 - **Calm** brands
 - **Innovative** brands
@@ -48,19 +67,33 @@ With its approachable aesthetic, this theme harmonizes beautifully with:
 - **Playful** brands
 - **Beauty** brands
 
-</div>
+  <div
+    style={{
+      margin: "1.5rem 0",
+      display: "flex",
+      alignItems: "center",
+      gap: "1.5rem",
+      backgroundColor: "var(--bg-secondary, #f8f9fa)",
+      borderRadius: "8px",
+      padding: "1.5rem",
+    }}
+  >
+    <img
+      src={Ionic}
+      alt="Ionic Order"
+      style={{ width: 56, height: "auto", flexShrink: 0 }}
+    />
+    <div>
+      <b>Ionic</b> is the second classical Greek architectural order, known for
+      its elegance and grace. It is distinguished by slender columns with bases,
+      volutes (spiral scrolls) on the capitals, and a generally more decorative
+      and feminine appearance.
+    </div>
+  </div>
 
-### Characteristics
+#### Characteristics
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
-
-The Ionic UI theme is defined by these distinctive characteristics:
+The Ionic UI theme is defined by these distinctive features:
 
 - **Rounded corners** that soften visual edges
 - **Generous paddings** for comfortable spacing
@@ -69,83 +102,9 @@ The Ionic UI theme is defined by these distinctive characteristics:
 - **Soft, blurred shadows** that add depth
 - **An overall pleasant, graceful appearance**
 
-</div>
-
-## Doric
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
-  borderRadius: '8px',
-  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
-}}>
-
-The most straightforward of the three orders, Doric UI embodies **simplicity and balance**, prioritizing clean design over decorative elements.
-
-</div>
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
-
-This theme pairs beautifully with:
-
-- **Professional** brands
-- **Bold** brands
-- **Modern** brands
-- **Retro** brands
-- **Sport** brands
-
-</div>
-
-### Characteristics
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
-
-The Doric UI theme is distinguished by the following key characteristics:
-
-- **Sharp edges**
-- **Contrasting border colors**
-- **Lack of aesthetic details**
-- **Subtle shadows**
-- **Shorter and sturdier appearance**
-
-</div>
-
-## Corinthian
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
-  borderRadius: '8px',
-  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
-}}>
+## **Corinthian**
 
 The most elaborate and decorative of the three themes, Corinthian UI embodies **sophistication and refined elegance**. Drawing inspiration from the ornate acanthus leaves and intricate details of ancient Greek columns, this theme creates a luxurious and polished user experience.
-
-</div>
-
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
 
 With its distinguished aesthetic, Corinthian UI harmonizes beautifully with:
 
@@ -155,19 +114,33 @@ With its distinguished aesthetic, Corinthian UI harmonizes beautifully with:
 - **Premium** brands
 - **Artistic** brands
 
-</div>
+  <div
+    style={{
+      margin: "1.5rem 0",
+      display: "flex",
+      alignItems: "center",
+      gap: "1.5rem",
+      backgroundColor: "var(--bg-secondary, #f8f9fa)",
+      borderRadius: "8px",
+      padding: "1.5rem",
+    }}
+  >
+    <img
+      src={Corinthian}
+      alt="Corinthian Order"
+      style={{ width: 56, height: "auto", flexShrink: 0 }}
+    />
+    <div>
+      <b>Corinthian</b> is the most elaborate and decorative of the three
+      classical Greek architectural orders. Recognized for its ornate capitals
+      decorated with acanthus leaves, slender columns, and rich details, it
+      conveys luxury, style, and elegance.
+    </div>
+  </div>
 
-### Characteristics
+#### Characteristics
 
-<div style={{ 
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-secondary, #f8f9fa)',
-  borderRadius: '8px'
-}}>
-
-The Corinthian UI theme is distinguished by the following key characteristics:
+The Corinthian UI theme is defined by these notable attributes:
 
 - **Subtle rounded corners** for refined edges
 - **Delicate padding** that maintains spaciousness
@@ -177,18 +150,6 @@ The Corinthian UI theme is distinguished by the following key characteristics:
 - **Gradient backgrounds** that add visual sophistication
 - **Slender, svelte appearance** that conveys grace
 
-</div>
-
 ---
 
-<div style={{ 
-  marginTop: '3rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--bg-accent-light, #e0e7ff)',
-  borderRadius: '8px',
-  borderLeft: '4px solid var(--bg-accent, #3b82f6)'
-}}>
-
 **Ready to choose your theme?** Explore the components in the sidebar to see how each theme looks in practice, or check out the [Library Setup](/docs/02-library-setup--docs) guide to learn how to configure themes in your project.
-
-</div>
