@@ -1,104 +1,150 @@
 body {
-    margin: 0 !important;
-    padding: 0 !important;
-    block-size: 100vh;
-    inline-size: 100vw;
-    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='70' height='8' patternTransform='scale(0.6) rotate(0)'><rect x='0' y='0' width='200%' height='100%' fill='%232b2b3100'/><path d='M-.02 22c8.373 0 11.938-4.695 16.32-9.662C20.785 7.258 25.728 2 35 2c9.272 0 14.215 5.258 18.7 10.338C58.082 17.305 61.647 22 70.02 22M-.02 14.002C8.353 14 11.918 9.306 16.3 4.339 20.785-.742 25.728-6 35-6 44.272-6 49.215-.742 53.7 4.339c4.382 4.967 7.947 9.661 16.32 9.664M70 6.004c-8.373-.001-11.918-4.698-16.3-9.665C49.215-8.742 44.272-14 35-14c-9.272 0-14.215 5.258-18.7 10.339C11.918 1.306 8.353 6-.02 6.002'  stroke-width='1' stroke='%2385A3E0' fill='none'/></pattern></defs><rect width='800%' height='400%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
-    background-color: var(--sys-bg-tertiary) !important;
-    background-repeat: repeat !important;
-    background-size: auto !important;
-    background-position: 0 0 !important;
-}
-
-/* Dark mode for body background */
-.dark body {
-    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='70' height='8' patternTransform='scale(0.6) rotate(0)'><rect x='0' y='0' width='200%' height='100%' fill='%232b2b3188'/><path d='M-.02 22c8.373 0 11.938-4.695 16.32-9.662C20.785 7.258 25.728 2 35 2c9.272 0 14.215 5.258 18.7 10.338C58.082 17.305 61.647 22 70.02 22M-.02 14.002C8.353 14 11.918 9.306 16.3 4.339 20.785-.742 25.728-6 35-6 44.272-6 49.215-.742 53.7 4.339c4.382 4.967 7.947 9.661 16.32 9.664M70 6.004c-8.373-.001-11.918-4.698-16.3-9.665C49.215-8.742 44.272-14 35-14c-9.272 0-14.215 5.258-18.7 10.339C11.918 1.306 8.353 6-.02 6.002'  stroke-width='1' stroke='%235DA0F1' fill='none'/></pattern></defs><rect width='800%' height='400%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
-    background-color: var(--sys-bg-blueprint) !important;
-    /* slightly different svg blue and rect opacity for dark */
-}
-
-.sbdocs .introduction {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    height: 100% !important;
-    width: 100% !important;
-    background-image: url('../../public/icons/models/archui-intro.svg');
+    background-image: url('../../public/icons/models/archui-portal.png');
     background-repeat: no-repeat;
-    background-position: center right;
-    background-size: 450px auto;
+    background-position: center center;
+    background-size: 500px auto;
     display: flex;
     flex-direction: column;
     align-items: start;
     position: relative;
-    /* Show the blueprint as a ::before element at 20% opacity */
 }
 
-/* Remove background image/illustration on mobile and tablet */
-@media (max-width: 1024px) {
-  .sbdocs .introduction {
-    background-image: none !important;
-    background-size: 0 !important;
-    background-position: unset !important;
-  }
+
+body {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: transparent !important;
 }
-.sbdocs .introduction::before {
-    content: "";
+
+.image-container {
     position: absolute;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); 
-    width: 100%;
-    height: 420px;
-    background-image: url('../../public/icons/models/blueprint-bg.png');
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80svw;
+    height: 100%;
+    z-index: -10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: var(--sys-brd-primary);
+
+    /* Add background image */
+    background-image: url('../../public/icons/models/archui-portal-no-text.svg');
     background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 420px auto;
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: 0;
+    background-size: auto 100%;
+    background-position: center;
 }
-.sbdocs .introduction > * {
+
+
+.sbdocs .sbdocs-content:has(> .sbdocs-content > .introduction) {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 1;
-    /* Add custom property for ::before element styling */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
-/* Optional: use different illustration in dark mode if available 
-.dark .sbdocs .introduction {
-    background-image: url('../../public/icons/models/archui-intro-dark.svg');
-}
-*/
-
-.sbdocs .introduction .sbdocs-toc--custom,
-.introduction nav {
+.sbdocs-wrapper:has(> .sbdocs-content > .introduction) aside{
     display: none !important;
 }
+
+.sbdocs.sbdocs-wrapper:has(> .sbdocs-content > .introduction) {
+    display: grid !important;
+    width: 100%;
+    background-color: var(--sys-bg-primary) !important;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='50' height='33.333' patternTransform='scale(.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M25 .806v2.79h.8V.806Zm0 4.465v2.791h.8v-2.79Zm-2.043 3.902-2.32 1.55.444.665 2.32-1.55-.443-.665zm4.885 0-.444.665 2.32 1.55.445-.665zM-.4 10.61v2.79h.8v-2.79zm50 0v2.79h.8v-2.79zm-30.356 1.042-2.32 1.55.443.666 2.322-1.55-.444-.666zm12.311 0-.444.665 2.32 1.55.445-.664zm3.783 2.566-.444.666 2.321 1.55.444-.666zm-19.852.025-2.32 1.55.444.665 2.32-1.55zm-15.886.77v2.79h.8v-2.79Zm50 0v2.79h.8v-2.79Zm-50 4.465v2.79h.8v-2.79h-.8Zm50 0v2.79h.8v-2.79h-.8zM2.442 23.379l-.444.665 2.32 1.55.445-.665zm45.115 0-2.32 1.55.443.666 2.322-1.55-.444-.666zM6.155 25.86l-.444.665 2.32 1.55.445-.665zm37.69 0-2.322 1.55.444.665 2.321-1.55-.444-.666zM9.937 28.424l-.444.665 2.32 1.55.445-.665-2.321-1.55zm30.11.003-2.321 1.55.444.666 2.321-1.55zM25 29.737v2.79h.8v-2.79z'  stroke-width='1' stroke='none' fill='%233f51b580'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    overflow: visible !important;
+}
+
+.sbdocs.sbdocs-wrapper:has(> .sbdocs-content > .introduction)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='1' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>");
+    background-size: 100px 100px;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+/* aside:has(.introduction) {
+    display: none !important;
+} */
+
 .introduction {
-    margin: 0 !important;
-    padding: 0 !important;
-    height: 100% !important;
-    width: 100% !important;
+    position: relative;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    height: 100%;
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
-.intrduction .css-1mrvlek {
-    display: none !important;
-    width: 0 !important;
-}
-
-.sbdocs .sbdocs-toc--custom,
-.sbdocs .unstyled,
-.sbdocs .introduction {
-    height: 100% !important;
-}
-
-.introduction h2 {
-    font-size: 3rem;
+.introduction h1 {
+    font-size: 2.5rem;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 0.5rem;
     color: var(--sys-txt-secondary);
+    letter-spacing: 0.05em;
+    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    display: flex;
+    align-items: center;
+    /* Vertically center text if inside a flex column */
+    justify-content: center;
+    /* Horizontally center text, just in case */
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
-.dark .introduction h2 {
+
+.introduction h1 span {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: var(--sys-txt-secondary);
+    padding: 0;
+    margin: 0;
+}
+
+.introduction__heading--version {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: var(--sys-txt-tertiary);
+    background-color: var(--sys-bg-tertiary);
+    margin: 0;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.introduction__heading--description {
+    margin: 0 12px;
+    padding: 0 12px;
+    max-width: 35ch;
+}
+
+.dark .introduction h1 {
     color: var(--sys-txt-light);
 }
 
@@ -109,16 +155,49 @@ body {
     margin-bottom: 0.5rem;
     color: var(--sys-txt-tertiary);
 }
+
 .dark .introduction h4 {
     color: var(--sys-txt-gray-light);
 }
 
 .introduction__links {
-    margin-top: auto !important;
     display: flex;
     flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    z-index: 10;
     gap: .5rem;
 }
+
+.introduction__content {
+    margin: auto 0 !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        background-size: auto 50%;
+        background-position: top;
+    }
+
+    .introduction__content {
+        margin: auto 0 0 0 !important;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .introduction__links {
+        align-items: start;
+        width: 100%;
+        padding-left: 3rem;
+        justify-content: center;
+    }
+}
+
 
 .introduction__link {
     color: var(--sys-txt-tertiary);
@@ -127,6 +206,7 @@ body {
     display: inline-block;
     width: fit-content;
 }
+
 .dark .introduction__link {
     color: var(--sys-txt-gray-light-2);
 }
@@ -139,6 +219,7 @@ body {
     transition: transform 0.2s;
     vertical-align: middle;
 }
+
 .dark .introduction__link::after {
     color: var(--sys-txt-gray-light-3);
 }

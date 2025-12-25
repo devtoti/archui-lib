@@ -4,7 +4,13 @@ import autoprefixer from 'autoprefixer';
 
 const config: StorybookConfig = {
   "stories": [
-    "../src/**/*.mdx",
+    "../src/mdx/00-Introduction.mdx",
+    "../src/mdx/01-why-archui.mdx",
+    "../src/mdx/02-library-setup.mdx",
+    "../src/mdx/03-design-principles.mdx",
+    "../src/mdx/04-themes.mdx",
+    "../src/mdx/08-figma-library.mdx",
+    "../src/mdx/09-incoming-updates.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
   "addons": [

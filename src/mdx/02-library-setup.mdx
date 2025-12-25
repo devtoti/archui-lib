@@ -105,21 +105,25 @@ Import the library's main CSS file directly inside `index.css`, so that your pro
 
 Now that you have configured Tailwind and the ArchUI Library, you can start using your favorite components by importing them into your React files. Additionally, you can import the Component's Type Props and adapt them to your needs:
 
-<Source dark language="tsx" code={`import { Button } from "@devtoti/archui-lib";
+<Source
+  dark
+  language="tsx"
+  code={`import { Button } from "@devtoti/archui-lib";
 import type { ButtonProps } from "@devtoti/archui-lib";
 
-function App() {
+function CardComponent() {
 return (
-
-<>
-  <Button intent="primary" size="md">
-    Hello ArchUI !
-  </Button>
-  <Button intent="secondary" size="sm">
-    Explore components
-  </Button>
-</>
-); }`} />
+<Card>
+<Button
+        variant="primary"
+        size="md"
+        onClick={handleRegister}
+        label="Welcome to ArchUI!"
+      />
+</Card>
+);
+}
+`} />
 
 ## **Step 6: Browse Our Components**
 
@@ -132,7 +136,7 @@ You can now start exploring our [_repertoire_](/docs/01-components-alert--docs) 
   backgroundColor: 'var(--bg-warning-light, #fef3c7)',
   borderRadius: '8px',
   border: '1px solid var(--brd-warning, #fbbf24)',
-  color: 'var(--sem-text-warning, #b78100)'
+  color: 'var(--sem-text-warning, #b78100) !important'
 }}>
 
 💡 <strong>Inspiration & Acknowledgment</strong>

@@ -43,50 +43,59 @@
     </style>
 
     <script>
-      window.CONFIG_TYPE = "PRODUCTION";
-      window.LOGLEVEL = "info";
-      window.FRAMEWORK_OPTIONS = {};
-      window.CHANNEL_OPTIONS = {};
-      window.FEATURES = {
-        argTypeTargetsV7: true,
-        legacyDecoratorFileOrder: false,
-        disallowImplicitActionsInRenderV8: true,
-        viewport: true,
-        highlight: true,
-        controls: true,
-        interactions: true,
-        actions: true,
-        backgrounds: true,
-        outline: true,
-        measure: true,
-      };
-      window.STORIES = [
-        {
-          titlePrefix: "",
-          directory: "./src",
-          files: "**/*.mdx",
-          importPathMatcher:
-            "^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.mdx)$",
-        },
-        {
-          titlePrefix: "",
-          directory: "./src",
-          files: "**/*.stories.@(js|jsx|mjs|ts|tsx)",
-          importPathMatcher:
-            "^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(js|jsx|mjs|ts|tsx))$",
-        },
-      ];
-      window.DOCS_OPTIONS = { defaultName: "Docs", docsMode: false };
-      window.TAGS_OPTIONS = {
-        "dev-only": { excludeFromDocsStories: true },
-        "docs-only": { excludeFromSidebar: true },
-        "test-only": { excludeFromSidebar: true, excludeFromDocsStories: true },
-      };
+            window.CONFIG_TYPE = "PRODUCTION";
+            window.LOGLEVEL = "info";
+            window.FRAMEWORK_OPTIONS = {};
+            window.CHANNEL_OPTIONS = {};
+      <<<<<<< HEAD
+            window.FEATURES = {
+              argTypeTargetsV7: true,
+              legacyDecoratorFileOrder: false,
+              disallowImplicitActionsInRenderV8: true,
+              viewport: true,
+              highlight: true,
+              controls: true,
+              interactions: true,
+              actions: true,
+              backgrounds: true,
+              outline: true,
+              measure: true,
+            };
+            window.STORIES = [
+              {
+                titlePrefix: "",
+                directory: "./src",
+                files: "**/*.mdx",
+                importPathMatcher:
+                  "^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.mdx)$",
+              },
+              {
+                titlePrefix: "",
+                directory: "./src",
+                files: "**/*.stories.@(js|jsx|mjs|ts|tsx)",
+                importPathMatcher:
+                  "^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(js|jsx|mjs|ts|tsx))$",
+              },
+            ];
+            window.DOCS_OPTIONS = { defaultName: "Docs", docsMode: false };
+            window.TAGS_OPTIONS = {
+              "dev-only": { excludeFromDocsStories: true },
+              "docs-only": { excludeFromSidebar: true },
+              "test-only": { excludeFromSidebar: true, excludeFromDocsStories: true },
+            };
+      =======
+            window.FEATURES = {"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false,"disallowImplicitActionsInRenderV8":true,"viewport":true,"highlight":true,"controls":true,"interactions":true,"actions":true,"backgrounds":true,"outline":true,"measure":true};
+            window.STORIES = [{"titlePrefix":"","directory":"./src/mdx","files":"00-Introduction.mdx","importPathMatcher":"^\\.[\\\\/](?:src\\/mdx\\/00-Introduction\\.mdx)$"},{"titlePrefix":"","directory":"./src/mdx","files":"01-why-archui.mdx","importPathMatcher":"^\\.[\\\\/](?:src\\/mdx\\/01-why-archui\\.mdx)$"},{"titlePrefix":"","directory":"./src/mdx","files":"02-library-setup.mdx","importPathMatcher":"^\\.[\\\\/](?:src\\/mdx\\/02-library-setup\\.mdx)$"},{"titlePrefix":"","directory":"./src/mdx","files":"03-design-principles.mdx","importPathMatcher":"^\\.[\\\\/](?:src\\/mdx\\/03-design-principles\\.mdx)$"},{"titlePrefix":"","directory":"./src/mdx","files":"04-themes.mdx","importPathMatcher":"^\\.[\\\\/](?:src\\/mdx\\/04-themes\\.mdx)$"},{"titlePrefix":"","directory":"./src/mdx","files":"08-figma-library.mdx","importPathMatcher":"^\\.[\\\\/](?:src\\/mdx\\/08-figma-library\\.mdx)$"},{"titlePrefix":"","directory":"./src/mdx","files":"09-incoming-updates.mdx","importPathMatcher":"^\\.[\\\\/](?:src\\/mdx\\/09-incoming-updates\\.mdx)$"},{"titlePrefix":"","directory":"./src","files":"**/*.stories.@(js|jsx|mjs|ts|tsx)","importPathMatcher":"^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(js|jsx|mjs|ts|tsx))$"}];
+            window.DOCS_OPTIONS = {"defaultName":"Docs","docsMode":false};
+            window.TAGS_OPTIONS = {"dev-only":{"excludeFromDocsStories":true},"docs-only":{"excludeFromSidebar":true},"test-only":{"excludeFromSidebar":true,"excludeFromDocsStories":true}};
 
-      // We do this so that "module && module.hot" etc. in Storybook source code
-      // doesn't fail (it will simply be disabled)
-      window.module = undefined;
-      window.global = window;
+
+      >>>>>>> 81492b7 (Add Astro setup for website deployment)
+
+            // We do this so that "module && module.hot" etc. in Storybook source code
+            // doesn't fail (it will simply be disabled)
+            window.module = undefined;
+            window.global = window;
     </script>
     <base target="_parent" />
 

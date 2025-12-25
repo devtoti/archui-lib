@@ -25,3 +25,8 @@ dist-ssr
 
 *storybook.log
 storybook-static
+
+website/node_modules/
+website/dist/
+website/.env.locals
+website/.env

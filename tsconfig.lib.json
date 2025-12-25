@@ -6,14 +6,16 @@
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "skipLibCheck": true
   },
   "include": [
     "src/components/**/*",
     "src/hooks/**/*",
     "src/contexts/**/*",
     "src/types/**/*",
-    "src/lib.ts"
+    "src/lib-with-css.ts",
+    "src/vite-env.d.ts"
   ],
   "exclude": [
     "src/**/*.stories.*",
@@ -21,7 +23,6 @@
     "src/**/*.spec.*",
     "src/setupTests.ts",
     "src/main.tsx",
-    "src/vite-env.d.ts",
     "src/App.tsx",
     "src/stories/**/*",
     "src/assets/**/*",

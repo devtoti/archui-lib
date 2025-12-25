@@ -4,8 +4,8 @@ import viteLogo from "/vite.svg";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useTheme } from "./hooks/useTheme";
 import { Button } from "./components/Button/Button";
+import { Callout } from "./components/Callout/Callout";
 import type { Theme } from "./contexts/ThemeContext";
-import "./App.css";
 
 function App() {
   const [theme, setTheme] = useState<Theme>("doric");
@@ -42,13 +42,13 @@ function AppContent({
       <h2>ArchUI Theme: {archuiTheme}</h2>
       <div className="flex flex-row gap-4 justify-center items-center w-full">
         <Button
-          intent="primary"
+          variant="primary"
           size="lg"
           label="Ionic Theme"
           onClick={() => setTheme("ionic")}
         />
         <Button
-          intent="primary"
+          variant="primary"
           size="lg"
           label="Doric Theme"
           onClick={() => setTheme("doric")}
@@ -65,6 +65,11 @@ function AppContent({
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Callout
+        variant="success"
+        title="Success"
+        label="This is a success message"
+      />
     </>
   );
 }

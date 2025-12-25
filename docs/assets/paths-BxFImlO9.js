@@ -1,0 +1,1 @@
+const s=()=>typeof window<"u"&&window.location.pathname.startsWith("/archui-lib/")?"/archui-lib":"",n=t=>{const i=s();if(t.startsWith("/archui-lib/"))return t;const e=t.startsWith("/")?t.slice(1):t;return i?`${i}/${e}`:`/${e}`};export{n as g};

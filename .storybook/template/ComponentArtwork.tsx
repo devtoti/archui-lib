@@ -2,32 +2,43 @@ import * as React from "react";
 import { useOf } from "@storybook/addon-docs/blocks";
 
 /**
- * Get the base path for assets in Storybook
- * This ensures paths work correctly in both development and GitHub Pages deployment
- */
-const getBasePath = (): string => {
-  if (typeof window !== "undefined") {
-    // Check if we're on GitHub Pages (has /archui-lib/ in path)
-    if (window.location.pathname.startsWith("/archui-lib/")) {
-      return "/archui-lib";
-    }
-  }
-  // Default to empty string for local development
-  return "";
-};
-
-/**
- * Get asset path with base path prefix
+ * Get asset path for Storybook
+ * Since staticDirs: ["../public"] is configured, assets in public/ are accessible
+ * at paths like "/icons/models/button.svg"
+ *
+ * For GitHub Pages with base path "/archui-lib/", we prepend the base path.
+ * We detect this by checking if the current URL includes the base path.
  */
 const getAssetPath = (path: string): string => {
-  const base = getBasePath();
-  // If path already starts with base path, return as is
-  if (path.startsWith("/archui-lib/")) {
-    return path;
+  // Normalize: ensure path starts with /
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+
+  // If already has base path, return as-is
+  if (normalizedPath.startsWith("/archui-lib/")) {
+    return normalizedPath;
   }
-  // Remove leading slash if present
-  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
-  return base ? `${base}/${cleanPath}` : `/${cleanPath}`;
+
+  // Try to detect if we need base path
+  // Check both window.location and parent window (for iframe context)
+  if (typeof window !== "undefined") {
+    try {
+      const currentPath = window.location.pathname;
+      const parentPath = window.parent?.location?.pathname || "";
+
+      // If either current or parent path includes base path, we're on GitHub Pages
+      if (
+        currentPath.startsWith("/archui-lib/") ||
+        parentPath.startsWith("/archui-lib/")
+      ) {
+        return `/archui-lib${normalizedPath}`;
+      }
+    } catch {
+      // Cross-origin iframe access might fail, ignore and use default
+    }
+  }
+
+  // Default: return normalized path (works for local dev with staticDirs)
+  return normalizedPath;
 };
 
 export function ComponentArtwork() {

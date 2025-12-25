@@ -2,14 +2,14 @@
   "name": "@devtoti/archui-lib",
   "version": "1.0.8",
   "type": "module",
-  "description": "A modern React component library with Tailwind CSS",
+  "description": "A modern React and Tailwind CSS component library inspired by architectural blueprint design",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/lib.d.ts",
+  "types": "./dist/lib-with-css.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "types": "./dist/lib.d.ts"
+      "types": "./dist/lib-with-css.d.ts"
     },
     "./styles": "./dist/index.css",
     "./styles/customize": "./dist/tokens/customize.css"
@@ -27,9 +27,13 @@
     "preview": "vite preview",
     "test": "vitest",
     "storybook": "storybook dev -p 6007",
-    "build-storybook": "storybook build -o ./docs",
+    "build:storybook": "storybook build -o ./docs",
+    "preview:storybook": "npx serve docs -p 6008",
     "prepublishOnly": "npm run build:lib",
-    "chromatic": "npx chromatic --project-token=chpt_50e742096b6ca63"
+    "chromatic": "npx chromatic --project-token=chpt_50e742096b6ca63",
+    "dev:website": "vite --config website/vite.config.ts",
+    "build:website": "vite build --config website/vite.config.ts",
+    "preview:website": "vite preview --config website/vite.config.ts"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
