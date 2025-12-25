@@ -4,8 +4,16 @@ import PackageInfo from "./../../package.json";
 export const Introduction = () => {
   return (
     <div className="introduction">
-      <h2 className="introduction__heading">{PackageInfo.name}</h2>
-      <h4 className="introduction__heading introduction__heading--subtitle">{`v${PackageInfo.version}`}</h4>
+      <div className="introduction__content">
+        <h1 className="introduction__heading">
+          ARCH<span className="introduction__heading--accent">UI</span>
+        </h1>
+        <h4 className="introduction__heading--subtitle">{PackageInfo.name}</h4>
+        <p className="introduction__heading--version">{`v${PackageInfo.version}`}</p>
+        <p className="introduction__heading--description">
+          {PackageInfo.description}
+        </p>
+      </div>
       <div className="introduction__links">
         <a href="https://devtoti.com/" className="introduction__link">
           Portfolio
@@ -23,6 +31,7 @@ export const Introduction = () => {
           Releases
         </a>
       </div>
+      <div className="image-container"></div>
     </div>
   );
 };

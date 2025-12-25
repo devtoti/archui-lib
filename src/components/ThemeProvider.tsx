@@ -4,7 +4,13 @@ import {
   type Theme,
   type ThemeType,
 } from "../contexts/ThemeContext";
-import { getAssetPath } from "../utils/paths";
+
+import { twMerge } from "tailwind-merge";
+
+import doricIcon from "../../public/icons/doric.svg?url";
+import ionicIcon from "../../public/icons/ionic.svg?url";
+import corinthianIcon from "../../public/icons/corinthian.svg?url";
+import "./ThemeProvider.css";
 
 const themeOptions: Theme[] = ["doric", "ionic", "corinthian"];
 const themeTypeOptions: ThemeType[] = ["light", "dark"];
@@ -61,59 +67,39 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({
   themeType,
   setThemeType,
 }) => (
-  <div className="archui-theme-toggle flex gap-0 !rounded-lg border-[1px] border-gray-400">
+  <div className="archui-theme-toggle">
     {themeOptions.map((th) => (
       <button
         key={th}
         aria-label={`Switch theme to ${th}`}
         onClick={() => setTheme(th)}
-        className={`archui-theme-btn${
-          theme === th ? " selected" : ""
-        } p-0 w-8 h-8 inline-flex items-center justify-center !rounded-md`}
+        className={twMerge("archui-theme-btn", theme === th ? "selected" : "")}
       >
         {th === "doric" && (
-          <img
-            src={getAssetPath("/icons/doric.svg")}
-            alt="Doric Theme"
-            aria-label="Doric Theme"
-            className="inline-block w-5 h-5 align-middle"
-          />
+          <img src={doricIcon} alt="Doric Theme" aria-label="Doric Theme" />
         )}
         {th === "ionic" && (
-          <img
-            src={getAssetPath("/icons/ionic.svg")}
-            alt="Ionic Theme"
-            aria-label="Ionic Theme"
-            className="inline-block w-5 h-5 align-middle"
-          />
+          <img src={ionicIcon} alt="Ionic Theme" aria-label="Ionic Theme" />
         )}
         {th === "corinthian" && (
           <img
-            src={getAssetPath("/icons/corinthian.svg")}
+            src={corinthianIcon}
             alt="Corinthian Theme"
             aria-label="Corinthian Theme"
-            className="inline-block w-5 h-5 align-middle"
           />
         )}
       </button>
     ))}
-    <span
-      aria-hidden="true"
-      className="mx-2 w-px h-6 bg-gray-300 self-center"
-      style={{
-        display: "inline-block",
-        verticalAlign: "middle",
-        minWidth: "1px",
-      }}
-    />
+    <span aria-hidden="true" className="archui-theme-toggle-separator" />
     {themeTypeOptions.map((opt) => (
       <button
         key={opt}
         aria-label={`Switch theme type to ${opt}`}
         onClick={() => setThemeType(opt)}
-        className={`archui-theme-btn${
-          themeType === opt ? " selected" : ""
-        } p-0 w-8 h-8 inline-flex items-center justify-center !rounded-md`}
+        className={twMerge(
+          "archui-theme-btn",
+          themeType === opt ? "selected" : ""
+        )}
       >
         {themeTypeIcons[opt]}
       </button>
@@ -128,6 +114,7 @@ export const ThemeProvider: React.FC<{
   themeType?: ThemeType;
   setThemeType?: (themeType: ThemeType) => void;
   hasToggler?: boolean;
+  className?: string;
 }> = ({
   children,
   theme: initialTheme = "doric",
@@ -135,6 +122,7 @@ export const ThemeProvider: React.FC<{
   themeType: initialThemeType = "light",
   setThemeType: externalSetThemeType,
   hasToggler = false,
+  className,
 }) => {
   const [internalTheme, setInternalTheme] = useState<Theme>(initialTheme);
   const [internalThemeType, setInternalThemeType] =
@@ -159,6 +147,10 @@ export const ThemeProvider: React.FC<{
     }
   };
 
+  const baseClasses = className
+    ? `theme-context ${theme} ${themeType}`
+    : `theme-context ${theme} ${themeType} contents`;
+
   return (
     <ThemeContext.Provider
       value={{
@@ -169,7 +161,7 @@ export const ThemeProvider: React.FC<{
         hasToggler,
       }}
     >
-      <div className={`${theme} ${themeType} contents`}>
+      <div className={twMerge(baseClasses, className)}>
         {hasToggler && (
           <ThemeToggler
             theme={theme}

@@ -1,0 +1,42 @@
+---
+export const prerender = false;
+import "../../index.css";
+import Head from "../components/head.astro";
+import { Button } from "@devtoti/archui-lib";
+import ThemeProviderIsland from "../react/components/ThemeProviderIsland";
+
+const data = fetch(`${import.meta.env.PUBLIC_POKEAPI}/pokemon/squirtle`);
+const result = await data.then(res => res.json());
+console.log(result.name);
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <Head />
+  </head>
+  <body>
+      <ThemeProviderIsland client:load className="w-svw h-svh content flex flex-col items-center justify-center gap-4 bg-arch-surface-tertiary px-4 py-2 border-arch-contour-tertiary border-[length:var(--stroke-regular)]">
+        <Button variant="tertiary" size="md" label="ArchUI Button" className="fetch-btn" />
+      </ThemeProviderIsland>
+  </body>
+</html>
+
+<style>
+  h1 {
+    color: orange;
+  }
+</style>
+<script>
+  import { isActionError, actions } from 'astro:actions';
+  
+  const button = document.querySelector('.fetch-btn');
+  button?.addEventListener('click', async () => {
+    const { data, error } = await actions.getGreeting({ name: "Astro" });
+    if (isActionError(error)) {
+      console.log(error.code);
+      return;
+    }
+    alert(data);
+  });
+  </script>

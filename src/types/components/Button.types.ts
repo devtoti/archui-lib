@@ -24,4 +24,5 @@ export interface ButtonProps
   children?: React.ReactNode;
   /** Render as a different element using Radix Slot */
   asChild?: boolean;
+  className?: string;
 }

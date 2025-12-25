@@ -38,10 +38,10 @@ const meta = {
     layout: "centered",
     docs: {
       subtitle:
-        "Highlights important content and provides feedback without interrupting the user’s experience.",
+        "A static, contextual message that displays important information without interrupting the user, unlike alerts that demand immediate attention.",
       description: {
         component:
-          "Supports a customizable top-left icon, headings, and any text length. Each `Callout` includes a default fade-in-out animation that can be disabled if a variable `animate=none` is provided. Make sure to leverage the `Callout` designs by wrapping your components inside a `ThemeProvider` and playing around with the `order` style that better suits your needs.",
+          "Supports a customizable top-left icon, headings, and any text length. Make sure to leverage the `Callout` designs by wrapping your components inside a `ThemeProvider` and playing around with the `theme` style that better suits your needs.",
       },
       artwork: "/icons/models/callout.svg",
     },
