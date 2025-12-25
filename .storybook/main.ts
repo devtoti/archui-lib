@@ -2,6 +2,10 @@ import type { StorybookConfig } from '@storybook/react-vite';
 import tailwindcss from '@tailwindcss/postcss';
 import autoprefixer from 'autoprefixer';
 
+// Determine base path: use /archui-lib/ for GitHub Pages, / for Chromatic and local dev
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const basePath = isGitHubPages ? '/archui-lib/' : '/';
+
 const config: StorybookConfig = {
   "stories": [
     "../src/mdx/00-Introduction.mdx",
@@ -30,11 +34,9 @@ const config: StorybookConfig = {
   "docs": {
     docsMode: false,
   },
-  // Set base path for GitHub Pages deployment
-  "base": "/archui-lib/",
   viteFinal: async (config) => {
-    // Set base path for GitHub Pages deployment
-    config.base = '/archui-lib/';
+    // Set base path: root (/) for Chromatic, /archui-lib/ for GitHub Pages
+    config.base = basePath;
     
     config.css = {
       postcss: {

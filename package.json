@@ -27,10 +27,11 @@
     "preview": "vite preview",
     "test": "vitest",
     "storybook": "storybook dev -p 6007",
-    "build:storybook": "storybook build -o ./docs",
+    "build-storybook": "GITHUB_PAGES=true storybook build -o ./docs",
+    "build-storybook:chromatic": "storybook build",
     "preview:storybook": "npx serve docs -p 6008",
     "prepublishOnly": "npm run build:lib",
-    "chromatic": "npx chromatic --project-token=chpt_50e742096b6ca63",
+    "chromatic": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --build-script-name=build-storybook:chromatic",
     "dev:website": "vite --config website/vite.config.ts",
     "build:website": "vite build --config website/vite.config.ts",
     "preview:website": "vite preview --config website/vite.config.ts"

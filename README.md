@@ -4,6 +4,8 @@
 
 A React 19+ and Tailwind component library designed with architectural blueprint precision.
 
+[Storybook Documentation](https://devtoti.github.io/archui-lib/)
+
 ## About
 
 ArchUI is a unique and modern React component library inspired by classical architecture. It provides flexible, themeable UI tokens based on three main architectural orders: **Doric**, **Ionic**, and **Corinthian**. Each order can be customizable and offers your app a whole new appearance once changed.
@@ -78,6 +80,7 @@ We are committed to inclusive design and ensure ArchUI components conform to WCA
 
 - [Figma UI Kit](https://www.figma.com/community/file/1585101937198168427)
 - [Documentation](https://devtoti.github.io/archui-lib/)
+- [Storybook](https://69407e8add389895667a46fe-dltggumnte.chromatic.com)
 - Sandbox (coming soon)
 - Examples (coming soon)
 
@@ -93,3 +96,12 @@ We are committed to inclusive design and ensure ArchUI components conform to WCA
 **Version** v1.0.9
 
 ---
+
+## Find me at
+
+- [Dribbble](https://dribbble.com/totisketches)
+- [LinkedIn](https://linkedin.com/in/devtoti)
+- [FigmaCommunity](https://www.figma.com/@totiruiz)
+- [Portfolio](https://devtoti.com)
+
+![Info](./public/icons/models/archui-github-footer.png)

@@ -16,17 +16,16 @@ console.log(result.name);
     <Head />
   </head>
   <body>
-      <ThemeProviderIsland client:load className="w-svw h-svh content flex flex-col items-center justify-center gap-4 bg-arch-surface-tertiary px-4 py-2 border-arch-contour-tertiary border-[length:var(--stroke-regular)]">
+      <ThemeProviderIsland client:load className="w-svw h-svh relative flex flex-col items-center justify-center gap-4 px-4 py-2 bg-arch-surface-tertiary border-arch-contour-tertiary border-[length:var(--stroke-regular)]">
         <Button variant="tertiary" size="md" label="ArchUI Button" className="fetch-btn" />
       </ThemeProviderIsland>
   </body>
 </html>
 
 <style>
-  h1 {
-    color: orange;
-  }
+
 </style>
+
 <script>
   import { isActionError, actions } from 'astro:actions';
   
@@ -39,4 +38,4 @@ console.log(result.name);
     }
     alert(data);
   });
-  </script>
+</script>
