@@ -1,12 +1,23 @@
-![ArchUI](./public/icons/models/github-header.png)
+![ArchUI](./public/icons/models/archui-github-header.png)
 
-# ArchUI
+# ArchUI Component Library
 
-A simple, modern React component library.
+A React 19+ and Tailwind component library designed with architectural blueprint precision.
 
 ## About
 
-ArchUI is a modern React component library inspired by classical architecture. It provides flexible, themeable UI primitives based on the three main architectural orders: **Doric** (minimal and sturdy), **Ionic** (elegant and balanced), and **Corinthian** (ornate and expressive). Effortlessly switch between these styles to match your design language, while enjoying a robust and accessible developer experience.
+ArchUI is a unique and modern React component library inspired by classical architecture. It provides flexible, themeable UI tokens based on three main architectural orders: **Doric**, **Ionic**, and **Corinthian**. Each order can be customizable and offers your app a whole new appearance once changed.
+
+- **Doric**: Distinguished by sharp edges, contrasting border colors, a lack of aesthetic details, subtle shadows, and a shorter, sturdier appearance.
+
+- **Ionic**: Characterized by rounded corners that soften visual edges, generous paddings for comfortable spacing, a borderless design for seamless integration, subtle decorative touches, soft blurred shadows that add depth, and an overall pleasant, graceful appearance.
+
+- **Corinthian**: Features subtle rounded corners for refined edges, delicate padding that maintains spaciousness, light-gray borders for elegant definition, and rich ornamental details throughout. Expect soft, layered shadows for dimensional depth, gradient backgrounds that add visual sophistication, and a slender, svelte appearance that conveys grace.
+
+![Orders](./public/icons/models/archui-github-orders.png)
+
+> [!NOTE]
+> ArchUI brings an artistic, outside-the-box perspective inspired by architecture, urbanism, and industrial design to web development. This project is a tribute to early architectural treatises that dictated why and how we should build and engineer structures (apps).
 
 ## Install
 
@@ -18,25 +29,67 @@ npm install @devtoti/archui-lib
 
 ```tsx
 import { Button } from "@devtoti/archui-lib";
-import "@devtoti/archui-lib/styles";
 
 function App() {
-  return <Button intent="primary">Click me</Button>;
+  return (
+    <Button
+      variant="primary"
+      size="md"
+      onClick={handleClick}
+      label="Welcome to ArchUI!"
+    />
+  );
 }
 ```
 
-## Scripts
+## Library Principles
 
-```bash
-npm run dev        # Start dev server
-npm run storybook  # Launch Storybook
-npm run build:lib  # Build the library
-npm run test       # Run tests
-```
+The _causa finis_ of this library is to offer a new robust and rigorous Design System that offers:
 
-## Publishing
+- Granularity
+- Functionality
+- Attractiveness
 
-```bash
-npm run build:lib
-npm publish --access public
-```
+![Orders](./public/icons/models/archui-github-principles.png)
+
+### Modular Designs
+
+All ArchUI components are organized within three modular themes. Each theme uses the same set of variables, property names, and a tokenized design system. Easily switch your application's appearance by changing a single class name—the design system ensures the entire UI adapts harmoniously across Doric, Ionic, or Corinthian styles.
+
+---
+
+### Blueprint Approach
+
+Our design methodology draws inspiration from architectural blueprints, emphasizing structural proportion and uniqueness. Every component has been crafted with special care and attention to detail, so your interfaces feel deliberate and cohesive.
+
+---
+
+### A11y-Lens
+
+We are committed to inclusive design and ensure ArchUI components conform to WCAG 2.0 standards. Key accessibility features include:
+
+- **Text Legibility**: Ensured through scalable font sizing and weights
+- **Color Contrasts**: Carefully selected to provide sufficient contrast ratios
+- **ARIA Attributes**: Added to communicate UI semantics to assistive technologies
+- **Keyboard Navigation**: Fully navigable via keyboard inputs
+- **Responsiveness**: Designed for usability across all devices
+
+## Resources
+
+- [Figma UI Kit](https://www.figma.com/community/file/1585101937198168427)
+- [Documentation](https://devtoti.github.io/archui-lib/)
+- Sandbox (coming soon)
+- Examples (coming soon)
+
+---
+
+## Project Information
+
+**Architect:** @devtoti Antonio 'Toti' Ruiz
+**Collaborators** @hugoarchundia
+**Date:** December 2025
+**Technologies:** React, TypeScript, Tailwind, Storybook, Chromatic, ESLint, Prettier  
+**Location:** Mexico City, Mexico
+**Version** v1.0.9
+
+---
