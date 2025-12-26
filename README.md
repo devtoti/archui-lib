@@ -64,7 +64,7 @@ All ArchUI components are organized within three modular themes. Each theme uses
 
 Our design methodology draws inspiration from architectural blueprints, emphasizing structural proportion and uniqueness. Every component has been crafted with special care and attention to detail, so your interfaces feel deliberate and cohesive.
 
----
+## ![Blueprints](./public/icons/models/archui-github-blueprint-approach.png)
 
 ### A11y-Lens
 
