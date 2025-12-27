@@ -1,13 +1,15 @@
 import React, { useState, type ReactNode } from "react";
 import { ThemeContext, type Theme } from "../contexts/ThemeContext";
 import { getAssetPath } from "../utils/paths";
+import { twMerge } from "tailwind-merge";
 
 const themes: Theme[] = ["doric", "ionic", "corinthian"];
 
 export const ThemeSwitcher: React.FC<{
   children: ReactNode;
   theme: Theme;
-}> = ({ children, theme = "doric" }) => {
+  className?: string;
+}> = ({ children, theme = "doric", className }) => {
   const [selectedTheme, setSelectedTheme] = useState<Theme>(theme);
   const handleThemeChange = (th: Theme) => {
     setSelectedTheme(th);
@@ -22,7 +24,7 @@ export const ThemeSwitcher: React.FC<{
         setThemeType: () => {},
       }}
     >
-      <div className="theme-switcher flex flex-col gap-6">
+      <div className={twMerge("theme-switcher flex flex-col gap-6", className)}>
         <div className="flex flex-row rounded-md border-[1px] border-gray-400 items-center w-min ml-auto overflow-hidden justify-end">
           {themes.map((th) => (
             <button

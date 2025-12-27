@@ -91,6 +91,7 @@
   --icon-dark: #2D3341;
 
   /* Padding */
+  --pd-2xs: 0.125rem;
   --pd-xs: 0.25rem;
   --pd-sm: 0.5rem;
   --pd-md: 0.625rem;
@@ -194,7 +195,7 @@
   /* Borders - from JSON borders values */
   --brd-primary: #63635E;
   --brd-secondary: #82827C;
-  --brd-tertiary: #8D8D86;
+  --brd-tertiary: #DAD9D6;
   --brd-accent-dark: var(--doric-accent-dark);
   --brd-accent: var(--doric-accent-primary);
   --brd-accent-light: var(--orange-7);

@@ -103,6 +103,7 @@
     --color-arch-icon-dark: var(--icon-dark);
 
     /* Padding */
+    --spacing-arch-2xs: var(--pd-2xs);
     --spacing-arch-xs: var(--pd-xs);
     --spacing-arch-sm: var(--pd-sm);
     --spacing-arch-md: var(--pd-md);

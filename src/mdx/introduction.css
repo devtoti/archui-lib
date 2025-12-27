@@ -1,4 +1,4 @@
-body {
+/* body {
     background-image: url('../../public/icons/models/archui-portal.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -14,9 +14,9 @@ body {
     width: 100% !important;
     height: 100% !important;
     background-color: transparent !important;
-}
+} */
 
-.image-container {
+/* .image-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29,12 +29,11 @@ body {
     align-items: center;
     border-color: var(--sys-brd-primary);
 
-    /* Add background image */
     background-image: url('../../public/icons/models/archui-portal-no-text.svg');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
-}
+} */
 
 
 .sbdocs .sbdocs-content:has(> .sbdocs-content > .introduction) {
@@ -76,10 +75,6 @@ body {
     opacity: 0.6;
     z-index: 0;
 }
-
-/* aside:has(.introduction) {
-    display: none !important;
-} */
 
 .introduction {
     position: relative;
@@ -170,11 +165,11 @@ body {
 }
 
 .introduction__content {
-    margin: auto 0 !important;
+    /* margin: auto 0 !important; */
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
 }
 
 @media (max-width: 768px) {
@@ -182,12 +177,12 @@ body {
         background-size: auto 50%;
         background-position: top;
     }
-
     .introduction__content {
-        margin: auto 0 0 0 !important;
+        /* margin: auto 0 0 0 !important; */
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin: auto 0;
     }
 
     .introduction__links {
@@ -195,6 +190,7 @@ body {
         width: 100%;
         padding-left: 3rem;
         justify-content: center;
+        /* margin-top: auto; */
     }
 }
 
@@ -205,6 +201,13 @@ body {
     position: relative;
     display: inline-block;
     width: fit-content;
+    transition: color 0.2s;
+}
+
+.introduction__link:hover,
+.introduction__link:focus {
+    color: #fc6d00; /* Blue-900 */
+    text-decoration: none;
 }
 
 .dark .introduction__link {
