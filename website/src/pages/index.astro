@@ -1,42 +1,22 @@
 ---
 export const prerender = false;
-import "../../index.css";
-import Head from "../components/head.astro";
-import { Button } from "@devtoti/archui-lib";
-import ThemeProviderIsland from "../react/components/ThemeProviderIsland";
-
-const data = fetch(`${import.meta.env.PUBLIC_POKEAPI}/pokemon/squirtle`);
-const result = await data.then(res => res.json());
-console.log(result.name);
+import '../../index.css';
+import '../src/fonts.css';
+import './website.css';
+import Head from '../components/head.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <html>
   <head>
     <meta charset="utf-8" />
     <Head />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body>
-      <ThemeProviderIsland client:load className="w-svw h-svh content flex flex-col items-center justify-center gap-4 bg-arch-surface-tertiary px-4 py-2 border-arch-contour-tertiary border-[length:var(--stroke-regular)]">
-        <Button variant="tertiary" size="md" label="ArchUI Button" className="fetch-btn" />
-      </ThemeProviderIsland>
+  <body
+    class="grid items-start grid-cols-4 px-4 gap-2 grid-rows-auto bg-sys-surface-primary h-screen w-screen overflow-hidden md:grid-cols-8 md:grid-rows-auto md:px-4 lg:grid-cols-12 lg:grid-rows-auto"
+  >
+    <Hero class="col-span-4 row-span-1" />
+    <!-- <Features /> -->
   </body>
 </html>
-
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
-<script>
-  import { isActionError, actions } from 'astro:actions';
-  
-  const button = document.querySelector('.fetch-btn');
-  button?.addEventListener('click', async () => {
-    const { data, error } = await actions.getGreeting({ name: "Astro" });
-    if (isActionError(error)) {
-      console.log(error.code);
-      return;
-    }
-    alert(data);
-  });
-  </script>

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "prettier --write \"src/**/*.{astro,ts,tsx,js,jsx,css,json}\"",
+    "format:check": "prettier --check \"src/**/*.{astro,ts,tsx,js,jsx,css,json}\""
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
