@@ -6,6 +6,7 @@ import './website.css';
 import Head from '../components/head.astro';
 import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
+import Banners from '../components/Banners.astro';
 ---
 
 <html>
@@ -17,6 +18,7 @@ import Features from '../components/Features.astro';
   <body
     class="grid items-start grid-cols-4 px-4 gap-2 grid-rows-auto bg-sys-surface-primary min-h-svh w-screen md:grid-cols-8 md:grid-rows-auto md:px-4 lg:grid-cols-12 lg:grid-rows-auto"
   >
+    <Banners class="col-span-4 row-span-1" />
     <Hero class="col-span-4 row-span-1" />
     <Features class="col-span-4 row-span-1" />
   </body>

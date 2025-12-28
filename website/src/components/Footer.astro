@@ -1,0 +1,388 @@
+<!-- ----
+---- -->
+<footer
+  class="footer w-full col-start-1 col-end-5 flex flex-col items-center gap-2 border-t border-sys-brd-primary border-b-0 border-l-0 border-r-0 pt-sys-sp-lg pb-sys-sp-sm"
+>
+  <!-- Radial Decoration -->
+  <div
+    class="radial-deco"
+    style="position: relative; width: 5rem; height: 5rem;"
+  >
+    <!-- Concentric circles centered absolutely -->
+    <div
+      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); display: flex; align-items: center; justify-content: center;"
+    >
+      <div
+        style="width: 4rem; height: 4rem; border: 1px solid var(--sys-brd-dark); border-radius: 9999px; display: flex; align-items: center; justify-content: center;"
+      >
+        <div
+          style="width: 3.5rem; height: 3.5rem; border: 1px solid var(--sys-brd-primary); border-radius: 9999px; display: flex; align-items: center; justify-content: center;"
+        >
+          <div
+            style="width: 1.75rem; height: 1.75rem; border: 1px solid var(--sys-brd-dark); border-radius: 9999px; display: flex; align-items: center; justify-content: center;"
+          >
+            <span class="text-sys-primary text-sm font-normal">ø</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Horizontal line left -->
+    <div
+      style="position: absolute; top: 50%; left: 0; width: 2.25rem; height: 1px; background: var(--sys-brd-primary); transform: translateY(-50%);"
+    >
+    </div>
+    <!-- Horizontal line right -->
+    <div
+      style="position: absolute; top: 50%; right: 0; width: 2.25rem; height: 1px; background: var(--sys-brd-primary); transform: translateY(-50%);"
+    >
+    </div>
+    <!-- Vertical line top -->
+    <div
+      style="position: absolute; left: 50%; top: 0; width: 1px; height: 2.25rem; background: var(--sys-brd-primary); transform: translateX(-50%);"
+    >
+    </div>
+    <!-- Vertical line bottom -->
+    <div
+      style="position: absolute; left: 50%; bottom: 0; width: 1px; height: 2.25rem; background: var(--sys-brd-primary); transform: translateX(-50%);"
+    >
+    </div>
+  </div>
+
+  <!-- Footer Links Container -->
+  <div
+    class="footer-links-container w-full flex flex-col gap-sys-sp-lg px-sys-pd-md"
+  >
+    <!-- Footer Links Grid -->
+    <div
+      class="footer-links-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-sys-sp-md w-full"
+    >
+      <!-- ArchUI Column -->
+      <div class="footer-column flex flex-col gap-1 py-sys-pd-sm px-sys-pd-xs">
+        <h3 class="arc-h5 text-sys-primary uppercase mb-sys-pd-xs">Contact</h3>
+        <ul class="flex flex-col gap-0.5">
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">GitHub</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">LinkedIn</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Dribbble</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Portfolio</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Documentation Column -->
+      <div class="footer-column flex flex-col gap-1 py-sys-pd-sm px-sys-pd-xs">
+        <h3 class="arc-h5 text-sys-primary mb-sys-pd-xs">documentation</h3>
+        <ul class="flex flex-col gap-0.5">
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Get Started</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Editor Setup</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Themes</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Components</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Community Column -->
+      <!-- <div class="footer-column flex flex-col gap-1 py-sys-pd-sm px-sys-pd-xs">
+        <h3 class="arc-h5 text-sys-primary uppercase mb-sys-pd-xs">
+          Community
+        </h3>
+        <ul class="flex flex-col gap-0.5">
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Discord</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">ArchTools</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Support</a>
+          </li>
+        </ul>
+      </div> -->
+
+      <!-- Playground Column
+      <div class="footer-column flex flex-col gap-1 py-sys-pd-sm px-sys-pd-xs">
+        <h3 class="arc-h5 text-sys-primary uppercase mb-sys-pd-xs">
+          playground
+        </h3>
+        <ul class="flex flex-col gap-0.5">
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Compare</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Customize</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Inspect</a>
+          </li>
+          <li class="footer-link-item px-sys-pd-xs py-0.5">
+            <a href="#" class="arc-body-1 text-sys-primary">Contribute</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Container -->
+      <div
+        class="footer-bottom-container col-start-1 col-span-3 w-full flex flex-row items-end mt-4"
+      >
+        <!-- Left Filler -->
+        <div class="footer-filler w-4 h-full"></div>
+
+        <!-- Footer Bottom Content -->
+        <div class="footer-bottom-content flex flex-col flex-1">
+          <!-- Footer Bottom Row -->
+          <div class="footer-bottom-row flex flex-row items-end w-full">
+            <!-- Version Container -->
+            <div
+              class="footer-version-container flex items-center justify-center w-25 h-25 border-3 border-sys-brd-dark"
+            >
+              <span class="arc-h1 text-sys-primary uppercase">v1</span>
+            </div>
+
+            <!-- Footer Entries Container -->
+            <div class="footer-entries-container flex flex-col flex-1">
+              <!-- Design System Entry -->
+              <div
+                class="pl-4 footer-entry flex flex-col gap-0.5 p-1 border border-sys-brd-dark"
+              >
+                <h4 class="arc-h6 text-sys-primary uppercase">design system</h4>
+                <p class="arc-body-3 text-sys-primary text-start">
+                  ArchUI Component Library
+                </p>
+              </div>
+
+              <!-- Head Architect Entry -->
+              <div
+                class="footer-entry flex flex-col gap-0.5 p-1 border border-sys-brd-dark"
+              >
+                <h4 class="arc-h6 text-sys-primary uppercase">
+                  head architect
+                </h4>
+                <p class="arc-body-3 text-sys-primary text-start">
+                  Antonio Ruiz
+                </p>
+              </div>
+
+              <!-- Social Container -->
+              <div class="footer-social-container flex flex-row flex-1">
+                <!-- Latest Version Entry -->
+                <div
+                  class="footer-entry flex flex-col gap-0.5 p-1 border border-sys-brd-dark bg-white flex-shrink-0"
+                >
+                  <h4 class="arc-h6 text-sys-primary uppercase">
+                    latest version
+                  </h4>
+                  <p class="arc-body-3 text-sys-primary text-center">
+                    v.1.0.9, December 2025
+                  </p>
+                </div>
+
+                <!-- Find Us Entry -->
+                <div
+                  class="footer-entry flex flex-col gap-0.5 p-1 border border-sys-brd-dark bg-white flex-1"
+                >
+                  <h4 class="arc-h6 text-sys-primary uppercase">find us at</h4>
+                  <div
+                    class="footer-social-icons flex flex-row items-center gap-2 px-1"
+                  >
+                    <!-- Social icons would go here -->
+                    <a href="#" class="bg-sys-icon-primary rounded"></a>
+                    <a href="#" class="bg-sys-icon-primary rounded"></a>
+                    <a href="#" class="bg-sys-icon-primary rounded"></a>
+                    <a href="#" class="bg-sys-icon-primary rounded"></a>
+                    <a href="#" class="bg-sys-icon-primary rounded"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Filler -->
+        <div class="footer-filler w-4 h-full"></div>
+      </div>
+
+      <!-- Copyright Text -->
+      <p
+        class="arc-body-2 text-sys-primary text-center col-start-1 col-span-3 w-full px-sys-pd-md"
+      >
+        © 2025, ArchUI | All Rights Reserved
+      </p>
+    </div>
+
+    <style>
+      .footer {
+        background: var(--sys-bg-primary);
+        min-height: 320px;
+      }
+
+      .radial-deco {
+        flex-shrink: 0;
+      }
+
+      .radial-deco-inner {
+        position: relative;
+      }
+
+      .footer-links-container {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .footer-links-grid {
+        padding: var(--spacing-sys-pd-sm) var(--spacing-sys-pd-md) 0;
+      }
+
+      .footer-column {
+        border-radius: 6px;
+      }
+
+      .footer-link-item {
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-link-item a {
+        transition: opacity 0.2s ease;
+      }
+
+      .footer-link-item a:hover {
+        opacity: 0.7;
+      }
+
+      .footer-bottom-container {
+        width: 100%;
+      }
+
+      .footer-filler {
+        background: var(--sys-bg-primary);
+        flex-shrink: 0;
+      }
+
+      .footer-bottom-content {
+        flex: 1;
+      }
+
+      .footer-bottom-row {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+      }
+
+      .footer-version-container {
+        width: 100px;
+        height: 100px;
+        border: 3px solid var(--sys-brd-dark);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .footer-entries-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 100px;
+      }
+
+      .footer-entry {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        padding: 2px;
+        border: 1px solid var(--sys-brd-dark);
+        background: white;
+        margin-top: -1px;
+        justify-content: center;
+      }
+
+      .footer-entry:first-child {
+        margin-top: 0;
+      }
+
+      .footer-entry h4 {
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer-entry p {
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+      }
+
+      .footer-social-container {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        min-height: 0;
+      }
+
+      .footer-social-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+        padding: 0 2px;
+      }
+
+      .footer-social-icons a {
+        width: 10px;
+        height: 10px;
+      }
+
+      @media (min-width: 640px) {
+        .footer-links-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .footer-links-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .footer-bottom-row {
+          flex-direction: row;
+        }
+
+        .footer-social-container {
+          flex-direction: row;
+        }
+      }
+
+      @media (max-width: 639px) {
+        .footer-bottom-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .footer-version-container {
+          width: 100%;
+          height: auto;
+          min-height: 100px;
+        }
+
+        .footer-social-container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </div>
+</footer>
