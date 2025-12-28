@@ -5,6 +5,7 @@ import '../src/fonts.css';
 import './website.css';
 import Head from '../components/head.astro';
 import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
 ---
 
 <html>
@@ -14,9 +15,9 @@ import Hero from '../components/Hero.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body
-    class="grid items-start grid-cols-4 px-4 gap-2 grid-rows-auto bg-sys-surface-primary h-screen w-screen overflow-hidden md:grid-cols-8 md:grid-rows-auto md:px-4 lg:grid-cols-12 lg:grid-rows-auto"
+    class="grid items-start grid-cols-4 px-4 gap-2 grid-rows-auto bg-sys-surface-primary min-h-svh w-screen md:grid-cols-8 md:grid-rows-auto md:px-4 lg:grid-cols-12 lg:grid-rows-auto"
   >
     <Hero class="col-span-4 row-span-1" />
-    <!-- <Features /> -->
+    <Features class="col-span-4 row-span-1" />
   </body>
 </html>
