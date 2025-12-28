@@ -1,0 +1,88 @@
+---
+import '../../../src/index.css';
+import '../../../src/fonts.css';
+import '../../website.css';
+import Head from '../components/head.astro';
+import Footer from '../components/Footer.astro';
+import { ThemeProvider } from '@devtoti/archui-lib';
+interface Props {
+  title?: string;
+}
+const { title } = Astro.props;
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <Head title={title} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body
+    class="grid items-start grid-cols-4 px-4 gap-2 grid-rows-auto bg-sys-surface-primary min-h-svh w-screen md:grid-cols-8 md:grid-rows-auto md:px-4 lg:grid-cols-12 lg:grid-rows-auto"
+  >
+    <ThemeProvider theme="doric" hasToggler={false}>
+      <!-- Navbar Section -->
+      <div class="col-span-4 md:col-span-8 lg:col-span-12 w-full">
+        <div
+          class="arc-body-1 text-white bg-[var(--bleu-7)] px-sys-pd-lg px-sys-pd-sm w-full text-center"
+        >
+          ArchUI v1.1.0 is an early release. Please note that many features are
+          still in the experimental phase.
+        </div>
+        <nav
+          class="bg-sys-surface-primary w-full h-12 shadow-sm flex flex-row items-center justify-between gap-sys-sp-md my-sys-sp-xs lg:pr-sys-pd-md"
+        >
+          <div class="desktop hidden md:flex gap-6 w-full">
+            <img
+              src="/icons/System/archUI-logo.svg"
+              alt="ArchUI Logo"
+              class="h-8 inline-block align-middle mr-auto"
+            />
+            <a
+              href="#"
+              class="inline-block my-auto arc-body-1 text-sys-primary hover:underline"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="inline-block my-auto arc-body-1 text-sys-primary hover:underline"
+              >Docs</a
+            >
+            <button
+              class="bg-sys-surface-blueprint min-w-20 border-2 border-sys-brd-accent text-white uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-md"
+            >
+              Get Started
+            </button>
+          </div>
+          <div
+            class="mobile w-full px-sys-pd-lg flex flex-row items-center justify-between gap-sys-sp-md md:hidden"
+          >
+            <div class="wrapper w-10 h-full flex items-center justify-center">
+              <img
+                src="/icons/System/hamburger.svg"
+                alt="Hamburger Icon"
+                class="w-6 h-6 inline-block align-middle"
+              />
+            </div>
+            <img
+              src="/icons/System/archUI-logo.svg"
+              alt="ArchUI Logo"
+              class="h-8 inline-block align-middle"
+            />
+            <button
+              class="bg-sys-surface-blueprint min-w-20 border-2 border-sys-brd-accent text-white uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-md"
+            >
+              Get Started
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Main Content Slot -->
+      <slot />
+
+      <!-- Footer -->
+      <Footer />
+    </ThemeProvider>
+  </body>
+</html>

@@ -3,105 +3,117 @@
 ---
 
 <section
-  class="w-full min-h-screen col-start-1 col-end-5 text-sys-secondary flex flex-col items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-secondary border-t-0 border-b-0"
+  class="w-full h-full min-h-screen col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary flex flex-col items-center justify-start gap-4 border-2 border-sys-brd-secondary border-t-0 border-b-4 px-0 md:px-sys-pd-md lg:px-sys-pd-lg"
 >
   <article
-    class="w-full flex flex-col items-center justify-center text-center mx-sys-pd-lg"
+    class="hero w-full h-full flex flex-col items-center justify-center text-center px-sys-pd-md md:px-sys-pd-lg max-w-3xl mx-auto"
+    style="max-height: calc(100svh - 64px);"
   >
-    <div
-      class="arc-body-1 text-white bg-[var(--bleu-7)] px-sys-pd-lg py-sys-pd-sm"
-    >
-      ArchUI v1.1.0 is an early release. Please note that many features are
-      still in the experimental phase.
-    </div>
-    <nav
-      class="bg-sys-surface-primary w-full h-12 shadow-sm flex flex-row items-center justify-center gap-sys-sp-md"
-    >
-      <div class="desktop hidden display-none">
-        <a href="#">Home</a>
-        <a href="#">Home</a>
-        <a href="#">Home</a>
-      </div>
-      <div
-        class="mobile w-full px-sys-pd-lg flex flex-row items-center justify-between gap-sys-sp-md display-block"
-      >
-        <div class="wrapper w-32 h-full flex items-center justify-center">
-          <img
-            src="/icons/System/hamburger.svg"
-            alt="Hamburger Icon"
-            class="w-6 h-6 inline-block mr-auto align-middle"
-          />
-        </div>
-        <img
-          src="/icons/System/archUI-logo.svg"
-          alt="ArchUI Logo"
-          class="h-full inline-block mr-2 align-middle"
-        />
-        <button
-          class="bg-sys-surface-blueprint w-32 border-2 border-sys-brd-accent text-white uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-md"
-        >
-          Get Started
-        </button>
-      </div>
-    </nav>
   </article>
-  <article class="mt-sys-sp-lg">
+  <article class="beta mt-sys-sp-lg w-full max-w-2xl mx-auto lg:!mt-0 lg:pt-0">
     <div
-      class="flex flex-row items-center justify-center gap-sys-sp-md bg-sys-surface-secondary border-2 border-sys-brd-secondary border-dashed px-sys-pd-md py-sys-pd-xs"
+      class="flex flex-row items-center justify-center gap-sys-sp-md bg-sys-surface-secondary border-2 border-sys-brd-secondary border-dashed px-sys-pd-md py-sys-pd-xs rounded-md max-w-36 mx-auto"
     >
       <span class="w-2 h-2 block bg-indigo-500 rounded-full"></span>
-      <p>Now in Beta</p>
+      <p class="arc-body-2">Now in Beta</p>
     </div>
   </article>
-  <article class="flex flex-col items-center justify-center gap-sys-sp-md">
+  <article
+    class="max-w-80 flex flex-col items-center justify-center gap-sys-sp-md w-full mx-auto px-sys-pd-md"
+  >
+    <img
+      src="/images/react-blueprint.svg"
+      alt="React Blueprint Logo"
+      class="desktop w-32 h-auto object-contain"
+    />
     <div
-      class="border-2 border-red-200 arch-title text-sys-primary text-6xl font-bold flex flex-row items-center justify-center"
+      class="arch-title text-sys-primary text-4xl md:text-4xl font-bold flex flex-row items-center justify-center px-2 md:px-0 font-['Roboto_Mono'] uppercase tracking-wider"
     >
-      Arch<span class="text-sys-blueprint text-8xl">UI</span>
+      Arch<span
+        class="text-sys-blueprint text-6xl md:text-7xl ml-1 font-['Roboto_Mono'] uppercase"
+        >UI</span
+      >
     </div>
-    <p class="font-lg text-sys-tertiary text-center">
+    <p class="text-sys-tertiary text-center text-lg px-0 md:px-4">
       A React and Tailwind component library inspired by architectural blueprint
       precision.
     </p>
     <div
-      class="buttons-wrapper w-full flex flex-col items-center justify-center gap-sys-sp-md"
+      class="buttons-wrapper w-full flex flex-col items-center justify-center gap-sys-sp-md max-w-96"
     >
       <strong
-        class="bg-sys-surface-tertiary/40 px-sys-pd-lg py-sys-pd-xs rounded-md"
+        class="bg-sys-surface-tertiary/40 px-sys-pd-lg py-sys-pd-xs rounded-md flex items-center justify-center w-full"
       >
         <img
           src="/icons/code.svg"
           alt="Code Icon"
           class="w-4 h-4 inline-block mr-2 align-middle"
-        />npm install @devtoti/archui-react</strong
-      >
+        />npm install @devtoti/archui-react
+      </strong>
       <div
-        class="flex w-full flex-row items-center justify-center gap-sys-sp-md"
+        class="buttons w-full flex flew-col items-center justify-center gap-sys-sp-md lg:flex-row"
       >
-      </div><button
-        class="bg-sys-surface-primary h-12 w-full border-2 border-sys-brd-primary text-sys-txt-primary rounded-md px-2 py-1"
-        >Get Started</button
-      ><button
-        class="w-full h-12 underline underline-offset-4 bg-sys-surface-tertiary/50"
-        >Github Repo</button
-      >
+        <button
+          class="bg-sys-surface-primary h-8 w-full border-2 border-sys-brd-primary text-sys-txt-primary rounded-md px-2 py-1"
+          >Get Started</button
+        >
+        <button
+          class="w-full h-8 underline underline-offset-4 bg-sys-surface-tertiary/50 rounded-md"
+          >Github Repo</button
+        >
+      </div>
     </div>
-    <div></div>
   </article>
-  <article class="hero-images">
-    <div class="hero-image-2">
+  <article
+    class="desktop hidden !grid grid-cols-8 lg:grid-cols-12 hero-images w-full mx-auto items-center justify-center gap-sys-sp-sm mt-sys-sp-lg px-2"
+  >
+    <img
+      src="/images/column-hero.svg"
+      alt="Column Hero"
+      class="desktop w-auto h-auto object-contain col-start-2 col-span-2"
+    />
+    <img
+      src="/images/column-hero.svg"
+      alt="Column Hero"
+      class="desktop w-auto h-auto object-contain col-start-6 col-span-2"
+    />
+  </article>
+  <article
+    class="mobile flex md:hidden hero-images w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 mt-sys-sp-lg px-2"
+  >
+    <div
+      class="hero-image-2 w-full md:w-2/3 lg:w-3/4 h-40 md:h-64 relative mb-8 md:mb-0"
+    >
       <img
         src="/images/hero-blueprints.png"
         alt="Hero Blueprint"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover rounded-lg border border-sys-brd-secondary shadow-md"
       />
     </div>
-    <div class="hero-image-1">
+    <div
+      class="hero-image-1 w-28 md:w-40 h-32 md:h-64 flex-shrink-0 flex items-center justify-center mx-auto"
+    >
       <img
         src="/images/doric-column.svg"
         alt="Doric Column"
-        class="w-40 h-full mx-auto object-cover"
+        class="w-full h-full object-contain"
       />
     </div>
   </article>
 </section>
+<style>
+  .beta {
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 768px) {
+    .desktop {
+      display: none !important;
+    }
+  }
+  @media (min-width: 768px) {
+    .mobile {
+      display: none !important;
+    }
+  }
+</style>
