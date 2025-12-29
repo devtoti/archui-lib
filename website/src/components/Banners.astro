@@ -5,7 +5,7 @@ import { RxSpeakerLoud, RxStar, RxEnvelopeClosed } from 'react-icons/rx';
 ---
 
 <section
-  class="banners w-full h-fit pb-12 col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary flex flex-col items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-secondary border-t-0 border-b-0 px-0 md:px-sys-pd-md lg:px-sys-pd-lg"
+  class="banners w-full h-fit col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary flex flex-col items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-secondary border-t-0 border-b-0 px-0 md:px-sys-pd-md lg:px-sys-pd-lg"
 >
   <article
     class="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] lg:h-[38vh] lg:max-h-[560px] w-full overflow-hidden border-[1.5px] border-l-0 border-r-0 border-[var(--border-secondary)] col-span-full bg-[radial-gradient(circle,#5b60c8,#343fa0_50%,#2a3397_100%)] dark:bg-[radial-gradient(circle,#7b81a8,#3a4d8e_50%,#161d4a_100%)]"
@@ -27,10 +27,14 @@ import { RxSpeakerLoud, RxStar, RxEnvelopeClosed } from 'react-icons/rx';
       <div
         class="w-full max-w-[12rem] md:max-w-[40ch] md:inline-block md:w-1/2 lg:max-w-[16rem]"
       >
-        <button
-          class="button secondary invert text-sys-primary bg-white px-sys-pd-sm py-sys-pd-xs"
-          >View Library</button
+        <a
+          href="https://www.figma.com/community/file/1585101937198168427/archui-design-system-v1-1-0"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button secondary flex items-center justify-center h-10 w-40 text-sys-primary bg-white border border-sys-brd-primary px-sys-pd-sm py-sys-pd-xs transition-colors transition-shadow duration-200 font-semibold rounded-md shadow-sm outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sys-primary hover:bg-sys-surface-secondary hover:text-sys-primary hover:border-sys-primary active:bg-sys-surface-primary active:text-sys-primary"
         >
+          View Library
+        </a>
       </div>
     </div>
     <div
@@ -53,7 +57,7 @@ import { RxSpeakerLoud, RxStar, RxEnvelopeClosed } from 'react-icons/rx';
     </div>
   </article>
   <article
-    class="flex flex-col items-center justify-center gap-sys-sp-lg w-full max-w-4xl mx-auto px-sys-pd-md md:px-sys-pd-lg"
+    class="bricks flex flex-col items-center justify-center gap-sys-sp-lg w-full mx-auto px-sys-pd-md md:px-sys-pd-lg pb-12"
   >
     <div class="text-center w-full md:w-4/5">
       <h3 class="text-sys-primary text-xl md:text-2xl font-bold uppercase">

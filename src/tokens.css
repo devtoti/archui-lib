@@ -30,6 +30,7 @@
     --color-danger: oklch(0.5796 0.2219 19.61);
 
     /* Background colors */
+   
     --color-arch-surface-primary: var(--bg-primary);
     --color-arch-surface-secondary: var(--bg-secondary);
     --color-arch-surface-tertiary: var(--bg-tertiary);

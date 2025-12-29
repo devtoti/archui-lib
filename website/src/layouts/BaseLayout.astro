@@ -22,7 +22,9 @@ const { title } = Astro.props;
   >
     <ThemeProvider theme="doric" hasToggler={false}>
       <!-- Navbar Section -->
-      <div class="col-span-4 md:col-span-8 lg:col-span-12 w-full">
+      <div
+        class="col-span-4 md:col-span-8 lg:col-span-12 w-screen relative left-1/2 right-1/2 -translate-x-1/2"
+      >
         <div
           class="arc-body-1 text-white bg-[var(--bleu-7)] px-sys-pd-lg px-sys-pd-sm w-full text-center"
         >
@@ -39,19 +41,38 @@ const { title } = Astro.props;
               class="h-8 inline-block align-middle mr-auto"
             />
             <a
-              href="#"
-              class="inline-block my-auto arc-body-1 text-sys-primary hover:underline"
-              >Github</a
+              href="https://github.com/devtoti"
+              class="arc-body-1 block w-max h-full my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open GitHub (opens in a new tab)"
             >
+              GitHub <span class="sr-only">(opens in a new tab)</span>
+            </a>
             <a
-              href="#"
-              class="inline-block my-auto arc-body-1 text-sys-primary hover:underline"
-              >Docs</a
+              href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
+              class="arc-body-1 block w-max h-full my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Get Started documentation (opens in a new tab)"
+              tabindex="0"
             >
+              Docs <span class="sr-only">(opens in a new tab)</span>
+            </a>
             <button
-              class="bg-sys-surface-blueprint min-w-20 border-2 border-sys-brd-accent text-white uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-md"
+              type="button"
+              class="bg-sys-surface-blueprint min-w-20 border-2 border-sys-brd-accent text-white uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-blue-500 hover:cursor-pointer hover:text-sys-light hover:border-sys-blue-8"
+              aria-label="Get Started (opens documentation in a new tab)"
             >
-              Get Started
+              <a
+                href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
+                class="arc-body-1 block w-full w-full decoration-none"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Get Started documentation (opens in a new tab)"
+              >
+                Get Started <span class="sr-only">(opens in a new tab)</span>
+              </a>
             </button>
           </div>
           <div

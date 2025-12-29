@@ -144,6 +144,7 @@
   /* System Tokens */
 
 /* System Background colors */
+--color-sys-surface-white: var(--sys-bg-white);
 --color-sys-surface-primary: var(--sys-bg-primary);
 --color-sys-surface-secondary: var(--sys-bg-secondary);
 --color-sys-surface-tertiary: var(--sys-bg-tertiary);
@@ -227,3 +228,81 @@
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+.grainy {
+  position: relative;
+  /* Ensure that grainy can be stacked above standard content if needed. */
+  z-index: 0;
+}
+
+.grainy::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  
+  width: 100%;
+  height: 100%;
+  background-image: url('/hatches/grainy-texture.png');
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: 40px 40px;
+  /* Mix-blend-mode can sometimes interfere; try remove or try 'multiply' if not visible! */
+  mix-blend-mode: multiply;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 2;
+  /* make sure this also inherits border-radius if parent has it */
+  border-radius: inherit;
+  /* Allow ::after to show above background if .grainy has content */
+  /* Fallback for stacking context for child(s) */
+}
+
+.bricks {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' width='30' height='30' patternTransform='scale(0.5)' patternUnits='userSpaceOnUse'><rect width='100%' height='100%' fill='none'/><path fill='none' stroke='%2340514A' stroke-opacity='0.13' d='M0 22.5h30v15H0zm15-15h30v15H15m-30-15h30v15h-30zm15-15h30v15H0z'/></pattern></defs><rect width='100%' height='100%' fill='url(%23a)'/></svg>");
+  background-size: 60px 60px;
+  background-repeat: repeat;
+}
+
+.squares::after {
+ background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(1.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.2' stroke='%233f51b540' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+ background-size: 60px 60px;
+ background-repeat: repeat;
+ pointer-events: none;
+}
+
+.squares-sm {
+  position: relative;
+  /* Ensure stacking for ::before pseudo-element */
+  z-index: 0;
+}
+
+.squares-sm::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--sys-surface-primary, #fff);
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.2' stroke='%233f51b540' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  background-size: 60px 60px;
+  background-repeat: repeat;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1; /* Place under content, above background */
+  border-radius: inherit;
+}
+
+.dropdown-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(.3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M11 6a5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5 5 5 0 015 5'  stroke-width='1' stroke='none' fill='%233f51b526'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: -1;
+}

@@ -3,6 +3,7 @@
 
 :root {
   /* Background */
+  --sys-bg-white: #FFFFFF;
   --sys-bg-primary: var(--gris-1);
   --sys-bg-secondary: var(--gris-2);
   --sys-bg-tertiary: var(--bleu-2);
@@ -87,6 +88,7 @@
 
 .dark {
   /* Background */
+  --sys-bg-white: #2C2C2C;
   --sys-bg-primary: var(--gris-12);
   --sys-bg-secondary: var(--gris-12);
   --sys-bg-tertiary: var(--gris-11);

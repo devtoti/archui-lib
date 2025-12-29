@@ -1,5 +1,5 @@
 <footer
-  class="footer text-sys-secondary border-t-2 border-sys-brd-primary flex flex-col lg:grid lg:grid-cols-12"
+  class="footer col-span-4 md:col-span-8 lg:col-span-12 w-screen relative left-1/2 right-1/2 -translate-x-1/2 bg-white text-sys-secondary border-t-2 border-sys-brd-primary flex flex-col lg:grid lg:grid-cols-12"
   id="footer"
 >
   <div
@@ -85,19 +85,59 @@
       <ul>
         <h6 class="arc-h4">Contact</h6>
         <li>
-          <a href="/" class="arc-body-1">Storybook</a>
+          <a
+            href="https://devtoti.github.io/archui-lib/?path=/docs/welcome-to-archui--introduction"
+            class="arc-body-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Storybook (opens in a new tab)"
+          >
+            Storybook <span class="sr-only">(opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="/#work-experience" class="arc-body-1">GitHub</a>
+          <a
+            href="https://github.com/devtoti"
+            class="arc-body-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open GitHub (opens in a new tab)"
+          >
+            GitHub <span class="sr-only">(opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="/#projects" class="arc-body-1">Dribbble</a>
+          <a
+            href="https://dribbble.com/totisketches"
+            class="arc-body-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Dribbble (opens in a new tab)"
+          >
+            Dribbble <span class="sr-only">(opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="/#skills" class="arc-body-1">LinkedIn</a>
+          <a
+            href="https://www.linkedin.com/in/devtoti/"
+            class="arc-body-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open LinkedIn (opens in a new tab)"
+          >
+            LinkedIn <span class="sr-only">(opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="/#services" class="arc-body-1">Portfolio</a>
+          <a
+            href="https://devtoti.com"
+            class="arc-body-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Portfolio (opens in a new tab)"
+          >
+            Portfolio <span class="sr-only">(opens in a new tab)</span>
+          </a>
         </li>
       </ul>
     </article>
@@ -109,24 +149,62 @@
       <ul>
         <h6 class="arc-h4">Documentation</h6>
         <li>
-          <a href="/about" class="arc-body-1">Get Started</a>
+          <a
+            href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
+            class="arc-body-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Get Started documentation (opens in a new tab)"
+          >
+            Get Started <span class="sr-only">(opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="/dev" class="arc-body-1">Docs</a>
+          <a
+            href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-design-principles--docs"
+            class="arc-body-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Design Principles documentation (opens in a new tab)"
+          >
+            Design Principles <span class="sr-only">(opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="/design" class="arc-body-1">Setup</a>
+          <a
+            href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-library-setup--docs"
+            class="arc-body-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Setup documentation (opens in a new tab)"
+          >
+            Setup <span class="sr-only">(opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="/concept" class="arc-body-1">Themes</a>
+          <a
+            href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-themes--docs"
+            class="arc-body-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Themes documentation (opens in a new tab)"
+          >
+            Themes <span class="sr-only">(opens in a new tab)</span>
+          </a>
         </li>
         <li>
-          <a href="/concept" class="arc-body-1">Contact</a>
+          <a
+            href="mailto:toti.webdev@gmail.com"
+            class="arc-body-1"
+            aria-label="Send email to toti.webdev@gmail.com"
+          >
+            Contact
+          </a>
         </li>
       </ul>
     </article>
   </article>
-  <div class="footer-container lg:w-3/5 mx-auto row-start-2 row-end-3">
+  <div class="footer-container px-4 lg:w-3/5 mx-auto row-start-2 row-end-3">
     <article class="plan-info techs">
       <span class="arc-h5">Tech Stack</span>
       <p class="arc-body-2">React, Tailwind, TypeScript</p>
@@ -250,7 +328,6 @@
     height: fit-content;
     max-width: 100svw;
     grid-column: 1 / -1;
-    background-color: var(--sys-bg-primary);
     padding-bottom: var(--sys-pd-lg);
   }
 

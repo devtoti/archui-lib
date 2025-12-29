@@ -1,9 +1,11 @@
 ---
 import ReactComponentsPreview from '../react/components/ReactComponentsPreview';
+import Dropdown from '../react/components/Dropdown';
+import ComponentPreview from '../react/components/ComponentPreview';
 ---
 
 <section
-  class="w-max-content min-h-screen col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary py-sys-sp-2xl items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-secondary border-t-0 border-b-0 px-0 md:px-sys-pd-md lg:px-sys-pd-lg flex flex-col md:grid md:grid-cols-8 lg:grid-cols-12 divide-dashed divide-x-3 divide-indigo-600"
+  class="squares-sm w-max-content min-h-screen col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary py-sys-sp-2xl items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-secondary border-t-0 border-b-0 px-0 md:px-sys-pd-md lg:px-sys-pd-lg flex flex-col md:grid md:grid-cols-8 lg:grid-cols-12 divide-dashed divide-x-3 divide-indigo-600"
 >
   <article
     class="content w-full flex flex-col items-center justify-center text-center px-sys-pd-md md:px-sys-pd-lg max-w-4xl mx-auto lg:!px-0 lg:!mx-0 md:contents"
@@ -12,19 +14,20 @@ import ReactComponentsPreview from '../react/components/ReactComponentsPreview';
       <h3
         class="text-sys-primary text-xl md:text-2xl font-bold uppercase md:text-start"
       >
-        Core Principles
+        Explore the library
       </h3>
       <p class="text-sm md:text-base px-4 md:px-0">
-        Our non-restrictive component library offers a few advantages that
-        you'll love.
+        All our components are organized into three modular themes and use the
+        same set of variables, property names, and a tokenized design system.
+        Learn more about our three main design principles:
       </p>
     </div>
     <article
-      class="principle flex flex-col gap-4 my-sys-sp-lg md:my-sys-sp-2xl w-full max-w-4xl px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8"
+      class="principle flex flex-col gap-4 my-sys-sp-lg md:my-sys-sp-2xl w-full px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 lg:col-start-3 lg:-col-end-3"
     >
       <img
         src="/icons/System/DetailMarker-1.svg"
-        class="mr-auto w-8 h-8 md:w-auto md:h-auto"
+        class="mr-auto w-[calc(50%+24px)] h-auto md:w-auto md:h-auto lg:hidden"
         alt="Detail Marker 1"
       />
       <div
@@ -38,557 +41,262 @@ import ReactComponentsPreview from '../react/components/ReactComponentsPreview';
           control over your style variables at all times.
         </p>
       </div>
-      <div class="w-full">
-        <ul
-          class="h-8 px-sys-pd-sm md:px-sys-pd-lg flex flex-row items-center gap-2 w-full bg-white justify-between text-xs md:text-sm"
-        >
-          <li>Preview</li>
-          <li>Properties</li>
-          <li>Colors</li>
-        </ul>
-        <div class="w-full h-48 md:h-64 bg-sys-surface-secondary"></div>
-      </div>
+      <ComponentPreview client:only="react" />
     </article>
     <article
-      class="principle flex flex-col gap-4 my-sys-sp-lg md:my-sys-sp-2xl w-full max-w-4xl px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8"
+      class="principle flex flex-col my-sys-sp-lg md:my-sys-sp-2xl w-full px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 lg:col-start-3 lg:-col-end-3"
     >
       <img
         src="/icons/System/DetailMarker-2.svg"
-        class="ml-auto w-8 h-8 md:w-auto md:h-auto"
+        class="ml-auto w-[calc(50%+24px)] h-auto md:w-auto md:h-auto lg:hidden"
         alt="Detail Marker 2"
       />
       <div
-        class="principle__title w-full max-w-[60ch] md:w-4/5 mx-auto md:text-end md:mr-0"
+        class="principle__title w-full mb-8 max-w-[60ch] md:w-4/5 mx-auto md:text-end md:mr-0 z-10"
       >
         <h3 class="text-sys-primary text-lg md:text-xl font-semibold uppercase">
           Flexibility
         </h3>
         <p class="text-sm md:text-base px-2 md:px-0">
-          Quickly switch between Styles and Themes. Watch your Theme-Wrapped
-          components morph consistently
+          Quickly switch between Styles and Themes by using a Theme Provider.
+          Customize your components to your liking with just a few lines of
+          code.
         </p>
       </div>
-      <div class="columns-container w-full md:mt-10">
-        <ul
-          class="h-auto px-sys-pd-sm md:px-sys-pd-lg w-full md:w-3/5 mx-auto flex flex-row items-center gap-2 md:gap-4 justify-center"
-        >
-          <li class="w-1/3 flex justify-center">
-            <img
-              src="/images/doric-col.svg"
-              class="w-12 h-auto md:w-16"
-              alt="Doric Column Capital"
-            />
-          </li>
-          <li class="w-1/3 flex justify-center">
-            <img
-              src="/images/ionic-col.svg"
-              class="w-12 h-auto md:w-16"
-              alt="Ionic Column Capital"
-            />
-          </li>
-          <li class="w-1/3 flex justify-center">
-            <img
-              src="/images/corinthian-col.svg"
-              class="w-12 h-auto md:w-16"
-              alt="Corinthian Column Capital"
-            />
-          </li>
-        </ul>
-        <div class="w-full h-48 md:h-64 bg-sys-surface-secondary relative">
-          <!-- Navigation Menu -->
-          <div
-            class="absolute bg-sys-surface-primary flex flex-col gap-sys-sp-sm items-start px-sys-pd-sm md:px-sys-pd-lg py-sys-pd-sm md:py-sys-pd-md rounded-lg shadow-[0px_4px_16px_-8px_rgba(0,0,0,0.1),0px_3px_12px_-4px_rgba(0,0,0,0.1),0px_2px_3px_-2px_rgba(0,0,51,0.06)] top-8 md:top-[64px] left-4 md:left-[203.8px] w-[140px] md:w-[179.1px] text-xs md:text-sm"
-          >
-            <p
-              class="arc-body-2 underline decoration-solid font-sans not-italic text-sys-gray-dark-2 text-left w-full"
-            >
-              ArchUI Design System v1.0.0
-            </p>
-            <div
-              class="flex items-center justify-between pl-sys-pd-xs pr-0 py-sys-pd-xs rounded-md w-full"
-            >
-              <p
-                class="arc-body-1 font-sans not-italic text-sys-blueprint whitespace-nowrap"
-              >
-                Colors
-              </p>
-              <div class="size-[14.4px] shrink-0">
-                <img
-                  alt=""
-                  class="block max-w-none size-full"
-                  src="http://localhost:3845/assets/c03883aa02df97b9f639fd4aa0560345c8ca18f5.svg"
-                />
-              </div>
-            </div>
-            <div
-              class="bg-sys-blue-2 flex items-center justify-between pl-sys-pd-xs pr-0 py-sys-pd-xs rounded-md w-full"
-            >
-              <p
-                class="arc-body-1 font-sans not-italic text-sys-blueprint whitespace-nowrap"
-              >
-                Orders
-              </p>
-              <div class="size-[14.4px] shrink-0">
-                <img
-                  alt=""
-                  class="block max-w-none size-full"
-                  src="http://localhost:3845/assets/3b1ae7ccc5c61b14445170373d2d4096cc86b186.svg"
-                />
-              </div>
-            </div>
-          </div>
-          <!-- Dropdown Menu -->
-          <div
-            class="absolute bg-sys-surface-primary flex flex-col gap-sys-sp-sm h-auto md:h-[140px] items-start left-0 px-sys-pd-sm md:px-sys-pd-lg py-sys-pd-sm md:py-sys-pd-md rounded-lg shadow-[0px_4px_16px_-8px_rgba(0,0,0,0.1),0px_3px_12px_-4px_rgba(0,0,0,0.1),0px_2px_3px_-2px_rgba(0,0,51,0.06)] top-32 md:top-[128px] w-[160px] md:w-[196.2px] text-xs md:text-sm"
-          >
-            <div class="flex gap-sys-sp-2xs items-center w-full">
-              <div class="size-[14.4px] shrink-0">
-                <img
-                  alt=""
-                  class="block max-w-none size-full"
-                  src="http://localhost:3845/assets/f20d7c0f8c6708ccbcc4da171213ff04773a9a35.svg"
-                />
-              </div>
-              <p
-                class="arc-body-1 font-sans not-italic text-sys-tertiary whitespace-nowrap"
-              >
-                Auto (Doric)
-              </p>
-            </div>
-            <div class="h-0 w-full relative">
-              <div class="absolute inset-[-0.45px_0_0_0]">
-                <img
-                  alt=""
-                  class="block max-w-none size-full"
-                  src="http://localhost:3845/assets/4961d58849c24e3340c6b779069557e2f9332717.svg"
-                />
-              </div>
-            </div>
-            <div class="flex items-center justify-center pl-6 pr-0 py-0">
-              <p
-                class="arc-body-1 font-sans not-italic text-sys-blueprint whitespace-nowrap"
-              >
-                Doric
-              </p>
-            </div>
-            <div class="flex items-center justify-center pl-6 pr-0 py-0">
-              <p
-                class="arc-body-1 font-sans not-italic text-sys-blueprint whitespace-nowrap"
-              >
-                Ionic
-              </p>
-            </div>
-            <div class="flex items-center justify-center pl-6 pr-0 py-0">
-              <p
-                class="arc-body-1 font-sans not-italic text-sys-blueprint whitespace-nowrap"
-              >
-                Corinthian
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article
-      class="principle flex flex-col gap-4 my-sys-sp-lg md:my-sys-sp-2xl w-full max-w-4xl px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8"
-    >
-      <img
-        src="/icons/System/DetailMarker-3.svg"
-        class="mr-auto w-8 h-8 md:w-auto md:h-auto"
-        alt="Detail Marker 3"
-      />
-      <div
-        class="principle__title w-full max-w-[60ch] md:w-4/5 mx-auto md:text-start md:ml-0"
+      <article
+        class="floor-plan-1 w-full col-start-1 -col-end-1 px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 md:mx-0 md:min-h-60 z-10"
       >
-        <h3 class="text-sys-primary text-lg md:text-xl font-semibold uppercase">
-          Attractiveness
-        </h3>
-        <p class="text-sm md:text-base px-2 md:px-0">
-          We have 20+ fully customizable components designed meticulously to
-          achieve visually harmonious interfaces.
-        </p>
-      </div>
-    </article>
-    <article
-      class="floor-plan-1 w-full col-start-1 -col-end-1 px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 md:mx-0 md:min-h-60"
-    >
-      <div class="north-facade">
-        <div class="wall-corner" style="transform: rotate(270deg);"></div>
-        <div class="wall-middle"></div>
-        <div class="wall-end"></div>
-        <div class="void"></div>
-        <div class="wall-end" style="transform: rotate(180deg);"></div>
-        <div class="wall-middle" style="transform: rotate(180deg);"></div>
-        <div class="wall-corner"></div>
-      </div>
-      <div class="middle-facade">
-        <div class="west-facade" style="grid-row: 1 / 2;">
-          <div class="wall-middle vertical"></div>
-          <div class="wall-end vertical"></div>
+        <div class="north-facade">
+          <div class="wall-corner" style="transform: rotate(270deg);"></div>
+          <div class="wall-middle"></div>
+          <div class="wall-end"></div>
           <div class="void"></div>
-          <div class="wall-end vertical flip"></div>
-          <div class="wall-middle vertical"></div>
+          <div class="wall-end" style="transform: rotate(180deg);"></div>
+          <div class="wall-middle" style="transform: rotate(180deg);"></div>
+          <div class="wall-corner"></div>
         </div>
-        <div class="space" id="space-container" style="grid-row: 1 / 2;">
-          <div
-            class="experience-card-container w-full md:w-64 h-auto md:h-80 p-sys-pd-md md:p-sys-pd-xl"
-          >
-            <ReactComponentsPreview />
+        <div class="middle-facade">
+          <div class="west-facade" style="grid-row: 1 / 2;">
+            <div class="wall-middle vertical"></div>
+            <div class="wall-end vertical"></div>
+            <div class="void"></div>
+            <div class="wall-end vertical flip"></div>
+            <div class="wall-middle vertical"></div>
+          </div>
+          <div class="space" id="space-container" style="grid-row: 1 / 2;">
+            <div
+              class="experience-card-container w-full md:w-64 h-auto md:h-80 p-sys-pd-md md:p-sys-pd-xl"
+            >
+              <Dropdown client:only="react" />
+            </div>
+          </div>
+          <div class="east-facade" style="grid-row: 1 / 2;">
+            <div class="wall-middle vertical"></div>
+            <div class="wall-end vertical"></div>
+            <div class="void"></div>
+            <div class="wall-end vertical flip"></div>
+            <div class="wall-middle vertical"></div>
           </div>
         </div>
-        <div class="east-facade" style="grid-row: 1 / 2;">
-          <div class="wall-middle vertical"></div>
-          <div class="wall-end vertical"></div>
+        <div class="south-facade">
+          <div class="wall-corner" style="transform: rotate(180deg);"></div>
+          <div class="wall-middle"></div>
+          <div class="wall-end"></div>
           <div class="void"></div>
-          <div class="wall-end vertical flip"></div>
-          <div class="wall-middle vertical"></div>
+          <div class="wall-end" style="transform: rotate(180deg);"></div>
+          <div class="wall-middle" style="transform: rotate(180deg);"></div>
+          <div class="wall-corner" style="transform: rotate(90deg);"></div>
         </div>
-      </div>
-      <div class="south-facade">
-        <div class="wall-corner" style="transform: rotate(180deg);"></div>
-        <div class="wall-middle"></div>
-        <div class="wall-end"></div>
-        <div class="void"></div>
-        <div class="wall-end" style="transform: rotate(180deg);"></div>
-        <div class="wall-middle" style="transform: rotate(180deg);"></div>
-        <div class="wall-corner" style="transform: rotate(90deg);"></div>
-      </div>
+      </article>
+      <article
+        class="principle flex flex-col gap-4 my-sys-sp-lg md:my-sys-sp-2xl w-full max-w-4xl px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8"
+      >
+        <img
+          src="/icons/System/DetailMarker-3.svg"
+          class="mr-auto w-[calc(50%+24px)] h-auto md:w-auto md:h-auto lg:hidden"
+          alt="Detail Marker 3"
+        />
+        <div
+          class="principle__title w-full max-w-[60ch] md:w-4/5 mx-auto md:text-start md:ml-0 z-10"
+        >
+          <h3
+            class="text-sys-primary text-lg md:text-xl font-semibold uppercase"
+          >
+            Attractiveness
+          </h3>
+          <p class="text-sm md:text-base px-2 md:px-0">
+            We have designed 10+ React components to help you build your next
+            project and plan to develope many more in the future. Explore our
+            library!
+          </p>
+        </div>
+      </article>
+      <article
+        class="floor-plan-1 w-full col-start-1 -col-end-1 px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 md:mx-0 md:min-h-60 z-10"
+      >
+        <div class="north-facade">
+          <div class="wall-corner" style="transform: rotate(270deg);"></div>
+          <div class="wall-middle"></div>
+          <div class="wall-end"></div>
+          <div class="void"></div>
+          <div class="wall-end" style="transform: rotate(180deg);"></div>
+          <div class="wall-middle" style="transform: rotate(180deg);"></div>
+          <div class="wall-corner"></div>
+        </div>
+        <div class="middle-facade">
+          <div class="west-facade" style="grid-row: 1 / 2;">
+            <div class="wall-middle vertical"></div>
+            <div class="wall-end vertical"></div>
+            <div class="void"></div>
+            <div class="wall-end vertical flip"></div>
+            <div class="wall-middle vertical"></div>
+          </div>
+          <div class="space" id="space-container" style="grid-row: 1 / 2;">
+            <div
+              class="experience-card-container w-full md:w-64 h-auto md:h-80 p-sys-pd-md md:p-sys-pd-xl"
+            >
+              <ReactComponentsPreview />
+            </div>
+          </div>
+          <div class="east-facade" style="grid-row: 1 / 2;">
+            <div class="wall-middle vertical"></div>
+            <div class="wall-end vertical"></div>
+            <div class="void"></div>
+            <div class="wall-end vertical flip"></div>
+            <div class="wall-middle vertical"></div>
+          </div>
+        </div>
+        <div class="south-facade">
+          <div class="wall-corner" style="transform: rotate(180deg);"></div>
+          <div class="wall-middle"></div>
+          <div class="wall-end"></div>
+          <div class="void"></div>
+          <div class="wall-end" style="transform: rotate(180deg);"></div>
+          <div class="wall-middle" style="transform: rotate(180deg);"></div>
+          <div class="wall-corner" style="transform: rotate(90deg);"></div>
+        </div>
+      </article>
     </article>
   </article>
-</section>
-<style>
-  .floor-plan-1 {
-    display: flex;
-    flex-direction: column;
-  }
-  .floor-plan-1 {
-    height: fit-content;
-    width: 100%;
-    max-width: 100svw;
-    background-color: var(--gris-1);
-    transition: height 2s ease-in-out;
-  }
-  .void {
-    flex-grow: 1;
-    background-color: var(--bleu-2) !important;
-  }
-  div[class*='wall-'] {
-    min-width: 16px;
-    min-height: 16px;
-    background: repeating-linear-gradient(
-      45deg,
-      var(--bleu-2),
-      var(--bleu-2) 1px,
-      var(--bleu-3) 1px,
-      var(--bleu-3) 2px
-    );
-    background-color: var(--bleu-2);
-    border: 2px solid var(--bleu-1);
-    -moz-box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5);
-    -webkit-box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5);
-    box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5);
-  }
-  div[class*='wall']::after {
-    content: '';
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 2px solid var(--bleu-8);
-  }
-  .floor-plan-1 {
-    display: grid;
-    grid-template-rows: 18px 1fr 18px;
-  }
-  .wall-end {
-    position: relative;
-    width: 100% !important;
-    background-color: var(--bleu-2);
-    border: 2px solid var(--bleu-1);
-    border-left: none !important;
-    box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5) !important;
-  }
-  .wall-end::after {
-    border-left: none !important;
-  }
-  .wall-middle {
-    position: relative;
-    width: 100% !important;
-    background-color: var(--bleu-2);
-    border-left: none !important;
-    border-right: none !important;
-    box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow:
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5) !important;
-  }
-  .wall-middle::after {
-    border-right: none !important;
-    border-left: none !important;
-  }
-  .vertical {
-    box-shadow:
-      1px 0 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5) !important;
-    border: 2px solid var(--bleu-1) !important;
-    border-top: none !important;
-    border-bottom: none !important;
-  }
-  .vertical::after {
-    border: 2px solid var(--bleu-8) !important;
-    border-top: none !important;
-    border-bottom: none !important;
-  }
-  .wall-end.vertical {
-    box-shadow:
-      1px 0 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5) !important;
-    border: 2px solid var(--bleu-1) !important;
-    border-top: none !important;
-  }
-  .flip {
-    transform: rotate(180deg);
-  }
-  .wall-end.vertical::after {
-    border-bottom: 2px solid var(--bleu-8) !important;
-  }
-  .wall-corner {
-    position: relative;
-    border: 2px solid var(--bleu-1) !important;
-    border-left: none !important;
-    border-bottom: none !important;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5) !important;
-  }
-  .wall-corner::after {
-    border: 2px solid var(--bleu-8) !important;
-    border-bottom: none !important;
-    border-left: none !important;
-  }
-  .wall-corner::before {
-    content: '';
-    position: absolute;
-    top: calc(100% - 4px);
-    left: 0;
-    z-index: 1;
-    width: 2px;
-    height: 2px;
-    border: 2px solid var(--bleu-8) !important;
-    border-bottom: none !important;
-    border-left: none !important;
-  }
-  .north-facade,
-  .south-facade {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 18px repeat(2, 1fr) 3fr repeat(2, 1fr) 18px;
-    gap: 0;
-  }
-  .middle-facade {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 18px 1fr 18px;
-    grid-template-rows: 1fr;
-    gap: 0px;
-    min-height: 0;
-  }
-  .west-facade,
-  .east-facade {
-    display: flex;
-    gap: 0;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    & .wall-middle,
-    & .wall-end {
-      flex-grow: 1;
-    }
-    & .void {
-      flex-grow: 5;
-      width: 100% !important;
-    }
-  }
-  #space-container {
-    position: relative;
-    transform-origin: center;
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    min-height: 0;
-    overflow: visible;
-    & :first-child {
-      width: 100%;
-      height: auto;
-      min-height: 0;
-    }
-  }
-  .experience-cards {
-    width: 100%;
-    height: auto;
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .floor-plan-1 {
-    height: fit-content;
-    /* width: 100%; */
-    background-color: var(--gris-1);
-    transition: height 2s ease-in-out;
-  }
-
-  @media (max-width: 768px) {
-    .principle {
-      width: 100%;
-    }
-
-    .principle__title {
-      width: 100% !important;
-    }
-
+  <style>
     .floor-plan-1 {
-      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .floor-plan-1 {
+      height: fit-content;
+      width: 100%;
       max-width: 100svw;
+      background-color: var(--gris-1);
+      transition: height 2s ease-in-out;
     }
-
-    .north-facade,
-    .south-facade {
-      min-width: 300px;
-    }
-
-    .middle-facade {
-      min-width: 300px;
-    }
-  }
-  :global([data-theme='dark']) {
     .void {
-      background-color: var(--gris-1) !important;
-      opacity: 0.75;
+      flex-grow: 1;
+      background-color: var(--bleu-2) !important;
     }
-    .floor-plan-1 {
-      background-color: var(--gris-12);
-    }
-
     div[class*='wall-'] {
+      min-width: 16px;
+      min-height: 16px;
       background: repeating-linear-gradient(
         45deg,
-        var(--bleu-1),
-        var(--bleu-1) 1px,
+        var(--bleu-2),
         var(--bleu-2) 1px,
-        var(--bleu-2) 2px
+        var(--bleu-3) 1px,
+        var(--bleu-3) 2px
       );
       background-color: var(--bleu-2);
-      border: 2px solid var(--gris-12);
+      border: 2px solid var(--bleu-1);
       -moz-box-shadow:
-        1px 0 0 var(--bleu-7),
-        0 1px 0 var(--bleu-7),
-        0 -1px 0 var(--bleu-7),
-        -1px 0 0 var(--bleu-7);
+        1px 0 0 var(--bleu-5),
+        0 1px 0 var(--bleu-5),
+        0 -1px 0 var(--bleu-5),
+        -1px 0 0 var(--bleu-5);
       -webkit-box-shadow:
-        1px 0 0 var(--bleu-7),
-        0 1px 0 var(--bleu-7),
-        0 -1px 0 var(--bleu-7),
-        -1px 0 0 var(--bleu-7);
+        1px 0 0 var(--bleu-5),
+        0 1px 0 var(--bleu-5),
+        0 -1px 0 var(--bleu-5),
+        -1px 0 0 var(--bleu-5);
       box-shadow:
-        1px 0 0 var(--bleu-7),
-        0 1px 0 var(--bleu-7),
-        0 -1px 0 var(--bleu-7),
-        -1px 0 0 var(--bleu-7);
+        1px 0 0 var(--bleu-5),
+        0 1px 0 var(--bleu-5),
+        0 -1px 0 var(--bleu-5),
+        -1px 0 0 var(--bleu-5);
     }
-
     div[class*='wall']::after {
-      border: 2px solid var(--bleu-9);
+      content: '';
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 2px solid var(--bleu-8);
     }
-
+    .floor-plan-1 {
+      display: grid;
+      grid-template-rows: 18px 1fr 18px;
+    }
     .wall-end {
+      position: relative;
       width: 100% !important;
       background-color: var(--bleu-2);
       border: 2px solid var(--bleu-1);
+      border-left: none !important;
+      box-shadow: none !important;
       -moz-box-shadow: none !important;
       -webkit-box-shadow: none !important;
       box-shadow:
-        1px 0 0 var(--bleu-3),
-        0 1px 0 var(--bleu-3),
-        0 -1px 0 var(--bleu-3) !important;
+        1px 0 0 var(--bleu-5),
+        0 1px 0 var(--bleu-5),
+        0 -1px 0 var(--bleu-5) !important;
     }
-
+    .wall-end::after {
+      border-left: none !important;
+    }
     .wall-middle {
+      position: relative;
+      width: 100% !important;
       background-color: var(--bleu-2);
+      border-left: none !important;
+      border-right: none !important;
+      box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
       box-shadow:
-        0 1px 0 var(--bleu-3),
-        0 -1px 0 var(--bleu-3) !important;
-
-      &::after {
-        border-right: none !important;
-        border-left: none !important;
-      }
+        0 1px 0 var(--bleu-5),
+        0 -1px 0 var(--bleu-5) !important;
     }
-
+    .wall-middle::after {
+      border-right: none !important;
+      border-left: none !important;
+    }
     .vertical {
       box-shadow:
-        1px 0 0 var(--bleu-3),
-        -1px 0 0 var(--bleu-3) !important;
+        1px 0 0 var(--bleu-5),
+        -1px 0 0 var(--bleu-5) !important;
       border: 2px solid var(--bleu-1) !important;
       border-top: none !important;
       border-bottom: none !important;
-
-      &::after {
-        border: 2px solid var(--bleu-9) !important;
-        border-top: none !important;
-        border-bottom: none !important;
-      }
     }
-
+    .vertical::after {
+      border: 2px solid var(--bleu-8) !important;
+      border-top: none !important;
+      border-bottom: none !important;
+    }
     .wall-end.vertical {
       box-shadow:
-        1px 0 0 var(--bleu-3),
-        -1px 0 0 var(--bleu-3),
-        0 1px 0 var(--bleu-3) !important;
+        1px 0 0 var(--bleu-5),
+        -1px 0 0 var(--bleu-5),
+        0 1px 0 var(--bleu-5) !important;
       border: 2px solid var(--bleu-1) !important;
       border-top: none !important;
-
-      &::after {
-        border-bottom: 2px solid var(--bleu-9) !important;
-      }
     }
-
     .flip {
       transform: rotate(180deg);
     }
-
+    .wall-end.vertical::after {
+      border-bottom: 2px solid var(--bleu-8) !important;
+    }
     .wall-corner {
       position: relative;
       border: 2px solid var(--bleu-1) !important;
@@ -597,27 +305,242 @@ import ReactComponentsPreview from '../react/components/ReactComponentsPreview';
       -webkit-box-shadow: none !important;
       -moz-box-shadow: none !important;
       box-shadow:
-        1px 0 0 var(--bleu-3),
-        0 -1px 0 var(--bleu-3) !important;
-
-      &::after {
-        border: 2px solid var(--bleu-9) !important;
-        border-bottom: none !important;
-        border-left: none !important;
+        1px 0 0 var(--bleu-5),
+        0 -1px 0 var(--bleu-5) !important;
+    }
+    .wall-corner::after {
+      border: 2px solid var(--bleu-8) !important;
+      border-bottom: none !important;
+      border-left: none !important;
+    }
+    .wall-corner::before {
+      content: '';
+      position: absolute;
+      top: calc(100% - 4px);
+      left: 0;
+      z-index: 1;
+      width: 2px;
+      height: 2px;
+      border: 2px solid var(--bleu-8) !important;
+      border-bottom: none !important;
+      border-left: none !important;
+    }
+    .north-facade,
+    .south-facade {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 18px repeat(2, 1fr) 3fr repeat(2, 1fr) 18px;
+      gap: 0;
+    }
+    .middle-facade {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-columns: 18px 1fr 18px;
+      grid-template-rows: 1fr;
+      gap: 0px;
+      min-height: 0;
+    }
+    .west-facade,
+    .east-facade {
+      display: flex;
+      gap: 0;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      & .wall-middle,
+      & .wall-end {
+        flex-grow: 1;
       }
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: calc(100% - 4px);
-        left: 0;
-        z-index: 1;
-        width: 2px;
-        height: 2px;
-        border: 2px solid var(--bleu-9) !important;
-        border-bottom: none !important;
-        border-left: none !important;
+      & .void {
+        flex-grow: 5;
+        width: 100% !important;
       }
     }
-  }
-</style>
+    #space-container {
+      position: relative;
+      transform-origin: center;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      min-height: 0;
+      overflow: visible;
+      & :first-child {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+      }
+    }
+    .experience-cards {
+      width: 100%;
+      height: auto;
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: row;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .floor-plan-1 {
+      height: fit-content;
+      /* width: 100%; */
+      background-color: var(--gris-1);
+      transition: height 2s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      .principle {
+        width: 100%;
+      }
+
+      .principle__title {
+        width: 100% !important;
+      }
+
+      .floor-plan-1 {
+        overflow-x: hidden;
+        max-width: 100svw;
+      }
+
+      .north-facade,
+      .south-facade {
+        min-width: 300px;
+      }
+
+      .middle-facade {
+        min-width: 300px;
+      }
+    }
+    :global([data-theme='dark']) {
+      .void {
+        background-color: var(--gris-1) !important;
+        opacity: 0.75;
+      }
+      .floor-plan-1 {
+        background-color: var(--gris-12);
+      }
+
+      div[class*='wall-'] {
+        background: repeating-linear-gradient(
+          45deg,
+          var(--bleu-1),
+          var(--bleu-1) 1px,
+          var(--bleu-2) 1px,
+          var(--bleu-2) 2px
+        );
+        background-color: var(--bleu-2);
+        border: 2px solid var(--gris-12);
+        -moz-box-shadow:
+          1px 0 0 var(--bleu-7),
+          0 1px 0 var(--bleu-7),
+          0 -1px 0 var(--bleu-7),
+          -1px 0 0 var(--bleu-7);
+        -webkit-box-shadow:
+          1px 0 0 var(--bleu-7),
+          0 1px 0 var(--bleu-7),
+          0 -1px 0 var(--bleu-7),
+          -1px 0 0 var(--bleu-7);
+        box-shadow:
+          1px 0 0 var(--bleu-7),
+          0 1px 0 var(--bleu-7),
+          0 -1px 0 var(--bleu-7),
+          -1px 0 0 var(--bleu-7);
+      }
+
+      div[class*='wall']::after {
+        border: 2px solid var(--bleu-9);
+      }
+
+      .wall-end {
+        width: 100% !important;
+        background-color: var(--bleu-2);
+        border: 2px solid var(--bleu-1);
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow:
+          1px 0 0 var(--bleu-3),
+          0 1px 0 var(--bleu-3),
+          0 -1px 0 var(--bleu-3) !important;
+      }
+
+      .wall-middle {
+        background-color: var(--bleu-2);
+        box-shadow:
+          0 1px 0 var(--bleu-3),
+          0 -1px 0 var(--bleu-3) !important;
+
+        &::after {
+          border-right: none !important;
+          border-left: none !important;
+        }
+      }
+
+      .vertical {
+        box-shadow:
+          1px 0 0 var(--bleu-3),
+          -1px 0 0 var(--bleu-3) !important;
+        border: 2px solid var(--bleu-1) !important;
+        border-top: none !important;
+        border-bottom: none !important;
+
+        &::after {
+          border: 2px solid var(--bleu-9) !important;
+          border-top: none !important;
+          border-bottom: none !important;
+        }
+      }
+
+      .wall-end.vertical {
+        box-shadow:
+          1px 0 0 var(--bleu-3),
+          -1px 0 0 var(--bleu-3),
+          0 1px 0 var(--bleu-3) !important;
+        border: 2px solid var(--bleu-1) !important;
+        border-top: none !important;
+
+        &::after {
+          border-bottom: 2px solid var(--bleu-9) !important;
+        }
+      }
+
+      .flip {
+        transform: rotate(180deg);
+      }
+
+      .wall-corner {
+        position: relative;
+        border: 2px solid var(--bleu-1) !important;
+        border-left: none !important;
+        border-bottom: none !important;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow:
+          1px 0 0 var(--bleu-3),
+          0 -1px 0 var(--bleu-3) !important;
+
+        &::after {
+          border: 2px solid var(--bleu-9) !important;
+          border-bottom: none !important;
+          border-left: none !important;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(100% - 4px);
+          left: 0;
+          z-index: 1;
+          width: 2px;
+          height: 2px;
+          border: 2px solid var(--bleu-9) !important;
+          border-bottom: none !important;
+          border-left: none !important;
+        }
+      }
+    }
+  </style>
+</section>

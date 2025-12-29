@@ -14,6 +14,7 @@
     "@astrojs/react": "^4.4.2",
     "@astrojs/svelte": "^7.2.4",
     "@devtoti/archui-lib": "file:..",
+    "@radix-ui/react-tabs": "^1.1.13",
     "@tailwindcss/postcss": "^4.1.18",
     "astro": "^5.16.6",
     "autoprefixer": "^10.4.23",
