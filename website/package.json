@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
+    "@astrojs/svelte": "^7.2.4",
     "@devtoti/archui-lib": "file:..",
     "@tailwindcss/postcss": "^4.1.18",
     "astro": "^5.16.6",
@@ -19,6 +20,7 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
+    "svelte": "^5.46.1",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {

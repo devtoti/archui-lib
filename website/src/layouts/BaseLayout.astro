@@ -3,7 +3,7 @@ import '../../../src/index.css';
 import '../../../src/fonts.css';
 import '../../website.css';
 import Head from '../components/head.astro';
-import Footer from '../components/Footer.astro';
+import FooterSvelte from '../components/Footer.svelte';
 import { ThemeProvider } from '@devtoti/archui-lib';
 interface Props {
   title?: string;
@@ -55,7 +55,7 @@ const { title } = Astro.props;
             </button>
           </div>
           <div
-            class="mobile w-full px-sys-pd-lg flex flex-row items-center justify-between gap-sys-sp-md md:hidden"
+            class="mobile w-full px-sys-pd-lg grid grid-cols-3 items-center justify-between gap-sys-sp-md md:hidden"
           >
             <div class="wrapper w-10 h-full flex items-center justify-center">
               <img
@@ -82,7 +82,7 @@ const { title } = Astro.props;
       <slot />
 
       <!-- Footer -->
-      <Footer />
+      <FooterSvelte />
     </ThemeProvider>
   </body>
 </html>

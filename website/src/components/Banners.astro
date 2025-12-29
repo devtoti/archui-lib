@@ -1,198 +1,103 @@
 ---
 import LeftHand from './LeftHand.astro';
 import RightHand from './RightHand.astro';
-import Footer from './Footer.astro';
+import { RxSpeakerLoud, RxStar, RxEnvelopeClosed } from 'react-icons/rx';
 ---
 
 <section
-  class="banners w-full min-h-screen col-start-1 col-end-5 text-sys-secondary flex flex-col items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-secondary border-t-0 border-b-0"
+  class="banners w-full h-fit pb-12 col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary flex flex-col items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-secondary border-t-0 border-b-0 px-0 md:px-sys-pd-md lg:px-sys-pd-lg"
 >
   <article
-    class="cta-banner min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] lg:h-[38vh] lg:max-h-[560px]"
+    class="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] lg:h-[38vh] lg:max-h-[560px] w-full overflow-hidden border-[1.5px] border-l-0 border-r-0 border-[var(--border-secondary)] col-span-full bg-[radial-gradient(circle,#5b60c8,#343fa0_50%,#2a3397_100%)] dark:bg-[radial-gradient(circle,#7b81a8,#3a4d8e_50%,#161d4a_100%)]"
   >
-    <div class="cta-banner-info text-white">
-      <h2 class="arc-h3 cta-text color-invert">
+    <div
+      class="absolute inset-0 w-full h-full flex flex-col items-center justify-start md:justify-start text-center gap-3 md:gap-4 z-10 px-4 py-6 md:px-6 md:py-8 lg:p-8 md:mt-8 md:mx-auto md:h-auto text-white"
+    >
+      <h2 class="arc-h2 md:arc-h1 color-invert mb-0 pb-0">
         <span>ArchUI Figma Kit</span>
       </h2>
-      <h3 class="arc-body-0 color-invert">
+      <h3
+        class="arc-body-1 md:arc-body-1 lg:arc-body-0 color-invert pb-2 md:inline-block md:w-1/2"
+      >
         <span
           >You can now download our archUI Component Library for free and start
           prototyping using our latest Design System and UI Kit.</span
         >
       </h3>
-      <div class="button-wrapper">
+      <div
+        class="w-full max-w-[12rem] md:max-w-[40ch] md:inline-block md:w-1/2 lg:max-w-[16rem]"
+      >
         <button
           class="button secondary invert text-sys-primary bg-white px-sys-pd-sm py-sys-pd-xs"
           >View Library</button
         >
       </div>
     </div>
-    <div class="illustrations-container">
-      <div class="left-hand container active">
-        <LeftHand />
+    <div
+      class="absolute top-1/2 left-1/2 w-full h-full origin-center grid grid-cols-2 place-items-center -translate-x-1/2 -translate-y-[20%] scale-[1.75] rotate-[20deg] md:-translate-x-[45%] md:-translate-y-[60%] md:scale-[1.2] md:rotate-[10deg] md:items-end md:pb-8 lg:-translate-x-1/2 lg:-translate-y-[45%] lg:scale-100 lg:rotate-[10deg] pointer-events-none mix-blend-multiply dark:mix-blend-screen z-[1]"
+    >
+      <div class="relative w-full h-full flex items-center justify-center">
+        <div
+          class="left-hand active w-full h-fit -translate-x-[20%] md:translate-x-[3%] opacity-50 md:opacity-100 transition-all duration-[2000ms] ease-in-out"
+        >
+          <LeftHand />
+        </div>
       </div>
-      <div class="right-hand container active">
-        <RightHand />
+      <div class="relative w-full h-full flex items-center justify-center">
+        <div
+          class="right-hand active w-full h-fit translate-x-[20%] md:translate-x-0 opacity-100 md:opacity-100 transition-all duration-[2000ms] ease-in-out"
+        >
+          <RightHand />
+        </div>
       </div>
     </div>
   </article>
-  <article class="flex flex-col items-center justify-center gap-sys-sp-lg">
-    <div class="text-center w-4/5">
-      <h3 class="text-sys-primary text-2xl font-bold uppercase">
+  <article
+    class="flex flex-col items-center justify-center gap-sys-sp-lg w-full max-w-4xl mx-auto px-sys-pd-md md:px-sys-pd-lg"
+  >
+    <div class="text-center w-full md:w-4/5">
+      <h3 class="text-sys-primary text-xl md:text-2xl font-bold uppercase">
         Support the Project
       </h3>
-      <p>
-        We are still in beta, but we'll be happy to have you with us early in
-        the game.
+      <p class="text-sm md:text-base px-2 md:px-0">
+        We are still in beta, but we'll be happy to have you with us early.
       </p>
     </div>
     <div
-      class="content__row flex flex-row items-center justify-center gap-sys-sp-sm w-full"
+      class="content__row flex flex-row items-center justify-center gap-sys-sp-xs md:gap-sys-sp-sm w-full px-sys-pd-sm md:px-0"
     >
       <hr class="grow-1 border-[1px] border-dashed border-sys-brd-secondary" />
       <div
-        class="grow-2 flex-1 inline-flex items-center justify-center bg-white w-max-content rounded-md w-min-40 text-sys-secondary px-sys-pd-sm py-sys-pd-xs"
+        class="grow-2 flex-1 gap-4 inline-flex items-center justify-center bg-white w-max-content rounded-md min-w-[100px] text-sys-secondary px-sys-pd-xs md:px-sys-pd-sm py-sys-pd-xs h-8"
       >
-        Spread the word
+        <RxSpeakerLoud className="w-4 h-4" />
+        <span class="">Spread the word</span>
       </div>
       <hr class="grow-1 border-[1px] border-dashed border-sys-brd-secondary" />
     </div>
     <div
-      class="content__row flex flex-row items-center justify-center gap-sys-sp-sm w-full"
+      class="content__row flex flex-row items-center justify-center gap-sys-sp-xs md:gap-sys-sp-sm w-full px-sys-pd-sm md:px-0"
     >
       <hr class="grow-1 border-[1px] border-dashed border-sys-brd-secondary" />
       <div
-        class="grow-2 flex-1 inline-flex items-center justify-center bg-white w-max-content rounded-md w-min-40 text-sys-secondary px-sys-pd-sm py-sys-pd-xs"
+        class="grow-2 flex-1 gap-4 inline-flex items-center justify-center bg-white w-max-content rounded-md min-w-[100px] text-sys-secondary px-sys-pd-xs md:px-sys-pd-sm py-sys-pd-xs h-8"
       >
-        Star the project
+        <RxStar className="w-4 h-4" />
+        <span class="">Star the project</span>
       </div>
       <hr class="grow-1 border-[1px] border-dashed border-sys-brd-secondary" />
     </div>
     <div
-      class="content__row flex flex-row items-center justify-center gap-sys-sp-sm w-full"
+      class="content__row flex flex-row items-center justify-center gap-sys-sp-xs md:gap-sys-sp-sm w-full px-sys-pd-sm md:px-0"
     >
       <hr class="grow-1 border-[1px] border-dashed border-sys-brd-secondary" />
       <div
-        class="grow-2 flex-1 inline-flex items-center justify-center bg-white w-max-content rounded-md w-min-40 text-sys-secondary px-sys-pd-sm py-sys-pd-xs"
+        class="grow-2 flex-1 gap-4 inline-flex items-center justify-center bg-white w-max-content rounded-md min-w-[100px] text-sys-secondary px-sys-pd-xs md:px-sys-pd-sm py-sys-pd-xs h-8"
       >
-        Send a message
+        <RxEnvelopeClosed className="w-4 h-4" />
+        <span class="">Send a message</span>
       </div>
       <hr class="grow-1 border-[1px] border-dashed border-sys-brd-secondary" />
     </div>
   </article>
-  <Footer />
 </section>
-<style>
-  .cta-banner {
-    position: relative;
-    background: radial-gradient(#5b60c8, #343fa0 50%, #2a3397 100%);
-    grid-column: 1 / -1;
-    width: 100%;
-    overflow: hidden;
-    border: 1.5px solid var(--border-secondary);
-    border-left: none;
-    border-right: none;
-  }
-  .cta-banner-info {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 2rem 1rem;
-    text-align: center;
-    inset: auto;
-    gap: 1rem;
-    z-index: 10;
-    .cta-text {
-      margin-bottom: 0 !important;
-      padding-bottom: 0 !important;
-    }
-    h3 {
-      padding-bottom: 0.5rem;
-    }
-  }
-  .button-wrapper {
-    width: 100%;
-    max-width: 12rem;
-  }
-  .illustrations-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    place-items: center;
-    transform: translate(-50%, -20%) scale(1.75) rotate(20deg);
-    pointer-events: none;
-    mix-blend-mode: multiply;
-    z-index: 1;
-  }
-  .container {
-    position: relative;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-  }
-  .left-hand,
-  .right-hand {
-    transition: all 2s ease-in-out;
-    opacity: 0.5;
-  }
-  .left-hand:first-child {
-    width: 100%;
-    height: fit-content;
-    transform: translateX(-20%);
-  }
-  .right-hand {
-    width: 100%;
-    height: fit-content;
-    transform: translateX(20%);
-  }
-  .left-hand.active {
-    transform: translateX(3%);
-    opacity: 1;
-  }
-  .right-hand.active {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  @media (min-width: 720px) {
-    .illustrations-container {
-      transform: translate(-45%, -60%) scale(1.2) rotate(10deg) !important;
-      align-items: flex-end;
-      padding-bottom: 2rem;
-    }
-    .cta-banner-info {
-      justify-content: flex-start;
-      margin: 2rem auto 0;
-      height: fit-content;
-    }
-    .cta-banner-info > * {
-      display: inline-block;
-      width: 50%;
-    }
-    .button-wrapper {
-      max-width: 40ch;
-    }
-    @media (min-width: 1024px) {
-      .illustrations-container {
-        transform: translate(-50%, -45%) scale(1) rotate(10deg) !important;
-        align-items: flex-end;
-        padding-bottom: 2rem;
-      }
-    }
-  }
-  :global([data-theme='dark']) {
-    .cta-banner {
-      background: radial-gradient(#7b81a8, #3a4d8e 50%, #161d4a 100%);
-    }
-    .illustrations-container {
-      mix-blend-mode: screen;
-    }
-  }
-</style>
