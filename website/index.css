@@ -27,6 +27,7 @@
 /* Import library component styles */
 @import "../src/components/ThemeProvider.css";
 @import "../src/tokens/theme-toggle.css";
+@import "../src/fonts.css";
 
 /* @theme directive must be in the main CSS file for Tailwind v4 to process it */
 @theme inline {
@@ -294,7 +295,7 @@
   border-radius: inherit;
 }
 
-.dropdown-container::before {
+.dotted-pattern::before {
   content: "";
   display: block;
   position: absolute;

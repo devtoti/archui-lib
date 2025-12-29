@@ -4,7 +4,7 @@
 :root {
   /* Background */
   --sys-bg-white: #FFFFFF;
-  --sys-bg-primary: var(--gris-1);
+  --sys-bg-primary: var(--gris-0);
   --sys-bg-secondary: var(--gris-2);
   --sys-bg-tertiary: var(--bleu-2);
   --sys-bg-blueprint: var(--bleu-10);

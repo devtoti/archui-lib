@@ -75,7 +75,7 @@ const TokensGrid: React.FC = () => {
   ];
 
   return (
-    <div className="w-full h-48 md:h-64 bg-sys-surface-secondary p-2 md:p-3 overflow-auto">
+    <div className="flex flex-col items-center justify-center w-full h-48 md:h-64 bg-sys-surface-secondary p-2 md:p-3 overflow-auto">
       <div className="grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-3 max-w-4xl mx-auto">
         {tokens.map((token) => (
           <div
@@ -95,7 +95,7 @@ const TokensGrid: React.FC = () => {
               />
             ) : (
               <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded border border-sys-brd-primary shadow-sm bg-white flex items-center justify-center"
+                className="w-6 h-6 md:w-10 md:h-10 rounded border border-sys-brd-primary shadow-sm bg-white flex items-center justify-center"
                 title={token.value}
               >
                 {token.type === 'spacing' && (
@@ -162,13 +162,19 @@ const ComponentPreview: React.FC = () => {
           </Tabs.Trigger>
         </Tabs.List>
         <Tabs.Content className="TabsContent" value="component">
-          <div className="w-full h-48 flex items-center justify-center md:h-64 bg-sys-surface-secondary">
-            <Callout
-              title="Tip"
-              label="This is a callout message. Enter a fun fact here for your users."
-              variant="success"
-              size="md"
-            />
+          <div className="w-full h-48 flex items-center  overflow-hidden justify-center md:h-64 bg-sys-surface-secondary">
+            <div className="w-fit h-fit relative">
+              <Callout
+                title="Tip"
+                label="Check out the code and see how easy it is to use the Callout component."
+                variant="success"
+                size="md"
+              />
+              <span className="w-[1px] h-svh bg-sys-brd-tertiary/50 absolute bottom-0 left-0 translate-y-[50%]"></span>
+              <span className="w-[1px] h-svh bg-sys-brd-tertiary/50 absolute bottom-0 right-0 translate-y-[50%]"></span>
+              <span className="w-svw h-[1px] bg-sys-brd-tertiary/50 absolute top-0 left-0 translate-x-[-50%]"></span>
+              <span className="w-svw h-[1px] bg-sys-brd-tertiary/50 absolute bottom-0 left-0 translate-x-[-50%]"></span>
+            </div>
           </div>
         </Tabs.Content>
         <Tabs.Content className="TabsContent" value="code">

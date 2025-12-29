@@ -4,6 +4,10 @@ import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 import { useTheme } from "../../hooks/useTheme";
 import { RxCross1 } from "react-icons/rx";
+import type {
+  ToastProps,
+  ToastVariantProps,
+} from "../../types/components/Toast.types";
 /**
  * @author: @devtoti
  * @description: Toast using Radix UI Primitive
@@ -48,32 +52,13 @@ export const toastVariants = cva(
     },
   }
 );
-type ArchToastProps = ToastPrimitive.ToastProps & {
-  /** Visual variant of the toast */
-  variant?: "default" | "minimal";
-  /** Size of the toast */
-  size?: "sm" | "md" | "lg";
-  /** Aria label for the toast */
-  ariaLabel?: string;
-  /** Icon for the toast */
-  icon?: React.ReactNode;
-  /** Title for the toast */
-  title?: string;
-  /** Description for the toast */
-  description?: string;
-  /** Whether to show a divider between the icon and the content */
-  hasDivider?: boolean;
-  /** Content for the toast (preferred over action) */
-  children?: React.ReactNode;
-  /** Action for the toast */
-  actionButton?: React.ReactNode;
-  /** Render as a different element using Radix Slot */
-  open?: boolean;
-};
+
+// Use types from toast.types
+export type { ToastProps, ToastVariantProps };
 
 export const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitive.Root>,
-  ArchToastProps
+  ToastProps
 >(
   (
     {

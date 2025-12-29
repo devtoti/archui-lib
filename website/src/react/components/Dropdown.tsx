@@ -9,7 +9,7 @@ type DropdownType = 'colors' | 'themes' | null;
 
 const Dropdown: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<DropdownType>(null);
-  const [theme, setTheme] = useState<'doric' | 'ionic' | 'corinthian'>('doric');
+  const [theme, setTheme] = useState<'doric' | 'ionic' | 'corinthian'>('ionic');
   const [color, setColor] = useState<'light' | 'dark'>('light');
   // For delay logic
   const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -80,26 +80,26 @@ const Dropdown: React.FC = () => {
             <DoricColumn
               theme={theme}
               themeType={color}
-              className="h-24 md:h-40 w-20 md:w-32"
+              className="h-20 md:h-40 w-20 md:w-32"
             />
           </li>
           <li className="flex-1 flex justify-center z-9">
             <IonicColumn
               theme={theme}
               themeType={color}
-              className="h-24 md:h-40 w-20 md:w-32"
+              className="h-20 md:h-40 w-20 md:w-32"
             />
           </li>
           <li className="flex-1 flex justify-center z-9">
             <CorinthianColumn
               theme={theme}
               themeType={color}
-              className="h-24 md:h-40 w-20 md:w-32"
+              className="h-20 md:h-40 w-20 md:w-32"
             />
           </li>
         </ul>
       </div>
-      <div className="dropdown-container relative w-full h-80 bg-sys-surface-secondary relative z-10">
+      <div className="dotted-pattern dropdown-container relative w-full h-80 bg-sys-surface-secondary relative z-10">
         <Button
           variant="tertiary"
           size="lg"
