@@ -1,6 +1,6 @@
 import "./introduction.css";
 import PackageInfo from "./../../package.json";
-import ArchUILogo from "../../public/icons/models/archui-portal-no-text.svg";
+import ArchUILogo from "../../public/storybook-assets/archui-portal-no-text.svg";
 
 export const Introduction = () => {
   return (

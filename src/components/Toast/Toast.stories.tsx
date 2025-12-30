@@ -18,7 +18,7 @@ const meta = {
         component:
           "The `Toast` component provides accessible notification popups using Radix UI primitives. Supports multiple variants and sizes, and can include actions, icons, or custom content.",
       },
-      artwork: "/icons/models/toast.svg",
+      artwork: "/storybook-assets/toast.svg",
     },
   },
   argTypes: {

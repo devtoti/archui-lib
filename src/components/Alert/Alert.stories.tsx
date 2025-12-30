@@ -42,7 +42,7 @@ const meta = {
         component:
           "The `Alert` component provides a visually distinct way to display important messages. It supports multiple variants (success, info, warning, error), customizable icons, and content. Each alert includes semantic color coding to help users quickly understand the message type. Make sure to leverage the Alert designs by wrapping your components inside a `ThemeProvider` to apply the appropriate theme styling.",
       },
-      artwork: "/icons/models/alert.svg",
+      artwork: "/storybook-assets/alert.svg",
     },
   },
   argTypes: {

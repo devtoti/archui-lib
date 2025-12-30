@@ -4,7 +4,7 @@ import { useOf } from "@storybook/addon-docs/blocks";
 /**
  * Get asset path for Storybook
  * Since staticDirs: ["../public"] is configured, assets in public/ are accessible
- * at paths like "/icons/models/button.svg"
+ * at paths like "/storybook-assets/button.svg"
  *
  * For GitHub Pages with base path "/archui-lib/", we prepend the base path.
  * We detect this by checking if the current URL includes the base path.

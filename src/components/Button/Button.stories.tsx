@@ -20,7 +20,7 @@ const meta = {
         component:
           "The `Button` component can be thought of as a stylized wrapper to be used with custom methods and third-party libraries. It does not easily interfere with external logic, since all its content remains within its own scope.\n\nIdeally, the `Button` component can be used along with the `LinkItem` component for internal and external navigation. For additional examples, please refer to our practical usage section.",
       },
-      artwork: "/icons/models/button.svg",
+      artwork: "/storybook-assets/button.svg",
     },
   },
   argTypes: {

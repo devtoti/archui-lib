@@ -1,5 +1,5 @@
 /* body {
-    background-image: url('../../public/icons/models/archui-portal.png');
+    background-image: url('../../public/storybook-assets/archui-portal.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 500px auto;
@@ -29,7 +29,7 @@ body {
     align-items: center;
     border-color: var(--sys-brd-primary);
 
-    background-image: url('../../public/icons/models/archui-portal-no-text.svg');
+    background-image: url('../../public/storybook-assets/archui-portal-no-text.svg');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
