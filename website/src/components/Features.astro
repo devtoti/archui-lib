@@ -5,12 +5,14 @@ import ComponentPreview from '../react/components/ComponentPreview';
 ---
 
 <section
-  class="bricks w-max-content min-h-screen col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary py-sys-sp-2xl items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-secondary border-t-0 border-b-0 px-0 md:px-sys-pd-md lg:px-sys-pd-lg flex flex-col md:grid md:grid-cols-8 lg:grid-cols-12"
+  class="bricks w-max-content min-h-screen bg-sys-surface-primary col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary py-sys-sp-2xl items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-tertiary border-t-0 border-b-0 px-0 md:px-sys-pd-md lg:px-sys-pd-lg flex flex-col md:grid md:grid-cols-8 lg:grid-cols-12"
 >
   <article
     class="content w-full flex flex-col items-center justify-center text-center px-sys-pd-md md:px-sys-pd-lg max-w-4xl mx-auto lg:!px-0 lg:!mx-0 md:contents"
   >
-    <div class="md:col-start-3 md:col-span-8 text-start">
+    <div
+      class="md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8 text-start"
+    >
       <h3
         class="text-sys-primary text-xl md:text-2xl font-bold uppercase md:text-start"
       >
@@ -23,7 +25,7 @@ import ComponentPreview from '../react/components/ComponentPreview';
       </p>
     </div>
     <article
-      class="principle flex flex-col gap-4 my-sys-sp-lg md:my-sys-sp-2xl w-full px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 lg:col-start-3 lg:-col-end-3"
+      class="principle flex flex-col gap-4 my-sys-sp-lg md:my-sys-sp-2xl w-full px-sys-pd-md md:px-0 md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8"
     >
       <img
         src="/icons/System/DetailMarker-1.svg"
@@ -61,7 +63,7 @@ import ComponentPreview from '../react/components/ComponentPreview';
     </article>
   </article>
   <article
-    class="principle flex flex-col my-sys-sp-lg md:my-sys-sp-2xl w-full px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 lg:col-start-3 lg:-col-end-3"
+    class="principle flex flex-col my-sys-sp-lg md:my-sys-sp-2xl w-full px-sys-pd-md md:px-0 md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8"
   >
     <img
       src="/icons/System/DetailMarker-2.svg"
@@ -95,13 +97,13 @@ import ComponentPreview from '../react/components/ComponentPreview';
       </div>
     </div>
     <article
-      class="floor-plan-1 w-full col-start-1 -col-end-1 px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 md:mx-0 md:min-h-60 z-10"
+      class="floor-plan-1 !p-0 shadow-lg w-full col-start-1 -col-end-1 px-sys-pd-md md:px-0 md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8 md:mx-0 md:min-h-60 z-10"
     >
       <div class="north-facade">
         <div class="wall-corner" style="transform: rotate(270deg);"></div>
         <div class="wall-middle"></div>
         <div class="wall-end"></div>
-        <div class="void"></div>
+        <div class="void bg-sys-surface-tertiary"></div>
         <div class="wall-end" style="transform: rotate(180deg);"></div>
         <div class="wall-middle" style="transform: rotate(180deg);"></div>
         <div class="wall-corner"></div>
@@ -110,13 +112,17 @@ import ComponentPreview from '../react/components/ComponentPreview';
         <div class="west-facade" style="grid-row: 1 / 2;">
           <div class="wall-middle vertical"></div>
           <div class="wall-end vertical"></div>
-          <div class="void"></div>
+          <div class="void bg-sys-surface-tertiary !w-max-content"></div>
           <div class="wall-end vertical flip"></div>
           <div class="wall-middle vertical"></div>
         </div>
-        <div class="space" id="space-container" style="grid-row: 1 / 2;">
+        <div
+          class="space bg-sys-surface-secondary grainy dotted-pattern"
+          id="space-container"
+          style="grid-row: 1 / 2;"
+        >
           <div
-            class="experience-card-container w-full md:w-64 h-auto md:h-80 p-sys-pd-md md:p-sys-pd-xl"
+            class="experience-card-container w-full sm:w-40 lg:w-64 h-auto md:h-80 py-sys-pd-md md:py-sys-pd-xl"
           >
             <Dropdown client:only="react" />
           </div>
@@ -124,7 +130,7 @@ import ComponentPreview from '../react/components/ComponentPreview';
         <div class="east-facade" style="grid-row: 1 / 2;">
           <div class="wall-middle vertical"></div>
           <div class="wall-end vertical"></div>
-          <div class="void"></div>
+          <div class="void bg-sys-surface-tertiary !w-max-content"></div>
           <div class="wall-end vertical flip"></div>
           <div class="wall-middle vertical"></div>
         </div>
@@ -133,14 +139,14 @@ import ComponentPreview from '../react/components/ComponentPreview';
         <div class="wall-corner" style="transform: rotate(180deg);"></div>
         <div class="wall-middle"></div>
         <div class="wall-end"></div>
-        <div class="void"></div>
+        <div class="void bg-sys-surface-tertiary !w-max-content w-full"></div>
         <div class="wall-end" style="transform: rotate(180deg);"></div>
         <div class="wall-middle" style="transform: rotate(180deg);"></div>
         <div class="wall-corner" style="transform: rotate(90deg);"></div>
       </div>
     </article>
     <article
-      class="principle flex flex-col gap-4 mt-10 mb-sys-sp-lg md:my-sys-sp-2xl w-full max-w-4xl px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8"
+      class="principle flex flex-col gap-4 mt-10 mb-sys-sp-lg md:my-sys-sp-2xl w-full max-w-4xl px-sys-pd-md md:px-0 md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8"
     >
       <img
         src="/icons/System/DetailMarker-3.svg"
@@ -177,13 +183,13 @@ import ComponentPreview from '../react/components/ComponentPreview';
       </div>
     </article>
     <article
-      class="floor-plan-1 w-full col-start-1 -col-end-1 px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 md:mx-0 md:min-h-60 z-10"
+      class="floor-plan-1 !p-0 shadow-lg w-full col-start-1 -col-end-1 px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 md:mx-0 md:min-h-60 z-10"
     >
       <div class="north-facade">
         <div class="wall-corner" style="transform: rotate(270deg);"></div>
         <div class="wall-middle"></div>
         <div class="wall-end"></div>
-        <div class="void"></div>
+        <div class="void bg-sys-surface-tertiary"></div>
         <div class="wall-end" style="transform: rotate(180deg);"></div>
         <div class="wall-middle" style="transform: rotate(180deg);"></div>
         <div class="wall-corner"></div>
@@ -192,13 +198,17 @@ import ComponentPreview from '../react/components/ComponentPreview';
         <div class="west-facade" style="grid-row: 1 / 2;">
           <div class="wall-middle vertical"></div>
           <div class="wall-end vertical"></div>
-          <div class="void"></div>
+          <div class="void bg-sys-surface-tertiary"></div>
           <div class="wall-end vertical flip"></div>
           <div class="wall-middle vertical"></div>
         </div>
-        <div class="space" id="space-container" style="grid-row: 1 / 2;">
+        <div
+          class="space bg-sys-surface-secondary grainy dotted-pattern !p-0"
+          id="space-container"
+          style="grid-row: 1 / 2;"
+        >
           <div
-            class="experience-card-container w-full md:w-64 h-auto md:h-80 p-sys-pd-md md:p-sys-pd-xl"
+            class="experience-card-container w-full w-full md:w-64 h-auto md:h-80"
           >
             <ReactComponentsPreview client:only="react" />
           </div>
@@ -206,7 +216,7 @@ import ComponentPreview from '../react/components/ComponentPreview';
         <div class="east-facade" style="grid-row: 1 / 2;">
           <div class="wall-middle vertical"></div>
           <div class="wall-end vertical"></div>
-          <div class="void"></div>
+          <div class="void bg-sys-surface-tertiary"></div>
           <div class="wall-end vertical flip"></div>
           <div class="wall-middle vertical"></div>
         </div>
@@ -215,7 +225,7 @@ import ComponentPreview from '../react/components/ComponentPreview';
         <div class="wall-corner" style="transform: rotate(180deg);"></div>
         <div class="wall-middle"></div>
         <div class="wall-end"></div>
-        <div class="void"></div>
+        <div class="void bg-sys-surface-tertiary"></div>
         <div class="wall-end" style="transform: rotate(180deg);"></div>
         <div class="wall-middle" style="transform: rotate(180deg);"></div>
         <div class="wall-corner" style="transform: rotate(90deg);"></div>
@@ -237,35 +247,34 @@ import ComponentPreview from '../react/components/ComponentPreview';
   }
   .void {
     flex-grow: 1;
-    background-color: var(--bleu-2) !important;
   }
   div[class*='wall-'] {
     min-width: 16px;
     min-height: 16px;
     background: repeating-linear-gradient(
       45deg,
-      var(--bleu-2),
+      var(--bleu-5),
+      var(--bleu-5) 1px,
       var(--bleu-2) 1px,
-      var(--bleu-3) 1px,
-      var(--bleu-3) 2px
+      var(--bleu-2) 2px
     );
-    background-color: var(--bleu-2);
-    border: 2px solid var(--bleu-1);
+    background-color: var(--sys-bg-primary);
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light);
     -moz-box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5);
+      1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary);
     -webkit-box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5);
+      1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary);
     box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5);
+      1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary);
   }
   div[class*='wall']::after {
     content: '';
@@ -275,7 +284,7 @@ import ComponentPreview from '../react/components/ComponentPreview';
     position: absolute;
     top: 0;
     left: 0;
-    border: 2px solid var(--bleu-8);
+    border: var(--sys-stroke-bold) solid var(--bleu-8);
   }
   .floor-plan-1 {
     display: grid;
@@ -284,16 +293,16 @@ import ComponentPreview from '../react/components/ComponentPreview';
   .wall-end {
     position: relative;
     width: 100% !important;
-    background-color: var(--bleu-2);
-    border: 2px solid var(--bleu-1);
+    background-color: var(--sys-bg-tertiary);
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light);
     border-left: none !important;
     box-shadow: none !important;
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5) !important;
+      1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary) !important;
   }
   .wall-end::after {
     border-left: none !important;
@@ -301,15 +310,15 @@ import ComponentPreview from '../react/components/ComponentPreview';
   .wall-middle {
     position: relative;
     width: 100% !important;
-    background-color: var(--bleu-2);
+    background-color: var(--sys-bg-tertiary);
     border-left: none !important;
     border-right: none !important;
     box-shadow: none !important;
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow:
-      0 1px 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5) !important;
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary) !important;
   }
   .wall-middle::after {
     border-right: none !important;
@@ -317,44 +326,44 @@ import ComponentPreview from '../react/components/ComponentPreview';
   }
   .vertical {
     box-shadow:
-      1px 0 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5) !important;
-    border: 2px solid var(--bleu-1) !important;
+      1px 0 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary) !important;
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light) !important;
     border-top: none !important;
     border-bottom: none !important;
   }
   .vertical::after {
-    border: 2px solid var(--bleu-8) !important;
+    border: var(--sys-stroke-bold) solid var(--bleu-8) !important;
     border-top: none !important;
     border-bottom: none !important;
   }
   .wall-end.vertical {
     box-shadow:
-      1px 0 0 var(--bleu-5),
-      -1px 0 0 var(--bleu-5),
-      0 1px 0 var(--bleu-5) !important;
-    border: 2px solid var(--bleu-1) !important;
+      1px 0 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary) !important;
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light) !important;
     border-top: none !important;
   }
   .flip {
     transform: rotate(180deg);
   }
   .wall-end.vertical::after {
-    border-bottom: 2px solid var(--bleu-8) !important;
+    border-bottom: var(--sys-stroke-bold) solid var(--bleu-8) !important;
   }
   .wall-corner {
     position: relative;
-    border: 2px solid var(--bleu-1) !important;
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light) !important;
     border-left: none !important;
     border-bottom: none !important;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow:
-      1px 0 0 var(--bleu-5),
-      0 -1px 0 var(--bleu-5) !important;
+      1px 0 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary) !important;
   }
   .wall-corner::after {
-    border: 2px solid var(--bleu-8) !important;
+    border: var(--sys-stroke-bold) solid var(--bleu-8) !important;
     border-bottom: none !important;
     border-left: none !important;
   }
@@ -366,7 +375,7 @@ import ComponentPreview from '../react/components/ComponentPreview';
     z-index: 1;
     width: 2px;
     height: 2px;
-    border: 2px solid var(--bleu-8) !important;
+    border: var(--sys-stroke-bold) solid var(--bleu-8) !important;
     border-bottom: none !important;
     border-left: none !important;
   }
@@ -413,10 +422,14 @@ import ComponentPreview from '../react/components/ComponentPreview';
     padding: 1rem;
     min-height: 0;
     overflow: visible;
+    /* Ensure dotted-pattern is visible */
+    isolation: isolate;
     & :first-child {
       width: 100%;
       height: auto;
       min-height: 0;
+      position: relative;
+      z-index: 1;
     }
   }
   .experience-cards {
@@ -460,63 +473,59 @@ import ComponentPreview from '../react/components/ComponentPreview';
       min-width: 300px;
     }
   }
-  :global([data-theme='dark']) {
-    .void {
-      background-color: var(--gris-1) !important;
-      opacity: 0.75;
-    }
+  /* :global([data-theme='dark']) {
     .floor-plan-1 {
-      background-color: var(--gris-12);
+      background-color: var(--sys-bg-primary);
     }
 
     div[class*='wall-'] {
       background: repeating-linear-gradient(
         45deg,
-        var(--bleu-1),
-        var(--bleu-1) 1px,
-        var(--bleu-2) 1px,
-        var(--bleu-2) 2px
+        var(--sys-bg-white),
+        var(--sys-bg-white) 1px,
+        var(--sys-bg-tertiary) 1px,
+        var(--sys-bg-tertiary) 2px
       );
-      background-color: var(--bleu-2);
-      border: 2px solid var(--gris-12);
+      background-color: var(--sys-bg-blueprint);
+      border: var(--sys-stroke-bold) solid var(--sys-bg-primary);
       -moz-box-shadow:
-        1px 0 0 var(--bleu-7),
-        0 1px 0 var(--bleu-7),
-        0 -1px 0 var(--bleu-7),
-        -1px 0 0 var(--bleu-7);
+        1px 0 0 var(--sys-brd-primary),
+        0 1px 0 var(--sys-brd-primary),
+        0 -1px 0 var(--sys-brd-primary),
+        -1px 0 0 var(--sys-brd-primary);
       -webkit-box-shadow:
-        1px 0 0 var(--bleu-7),
-        0 1px 0 var(--bleu-7),
-        0 -1px 0 var(--bleu-7),
-        -1px 0 0 var(--bleu-7);
+        1px 0 0 var(--sys-brd-primary),
+        0 1px 0 var(--sys-brd-primary),
+        0 -1px 0 var(--sys-brd-primary),
+        -1px 0 0 var(--sys-brd-primary);
       box-shadow:
-        1px 0 0 var(--bleu-7),
-        0 1px 0 var(--bleu-7),
-        0 -1px 0 var(--bleu-7),
-        -1px 0 0 var(--bleu-7);
+        1px 0 0 var(--sys-brd-primary),
+        0 1px 0 var(--sys-brd-primary),
+        0 -1px 0 var(--sys-brd-primary),
+        -1px 0 0 var(--sys-brd-primary);
     }
 
     div[class*='wall']::after {
-      border: 2px solid var(--bleu-9);
+      border: var(--sys-stroke-bold) solid var(--sys-brd-dark);
     }
 
     .wall-end {
       width: 100% !important;
-      background-color: var(--bleu-2);
-      border: 2px solid var(--bleu-1);
+      background-color: var(--sys-bg-tertiary);
+      border: var(--sys-stroke-bold) solid var(--sys-bg-white);
       -moz-box-shadow: none !important;
       -webkit-box-shadow: none !important;
       box-shadow:
-        1px 0 0 var(--bleu-3),
-        0 1px 0 var(--bleu-3),
-        0 -1px 0 var(--bleu-3) !important;
+        1px 0 0 var(--sys-brd-secondary),
+        0 1px 0 var(--sys-brd-secondary),
+        0 -1px 0 var(--sys-brd-secondary) !important;
     }
 
     .wall-middle {
-      background-color: var(--bleu-2);
+      background-color: var(--sys-bg-tertiary);
       box-shadow:
-        0 1px 0 var(--bleu-3),
-        0 -1px 0 var(--bleu-3) !important;
+        0 1px 0 var(--sys-brd-secondary),
+        0 -1px 0 var(--sys-brd-secondary) !important;
 
       &::after {
         border-right: none !important;
@@ -526,14 +535,14 @@ import ComponentPreview from '../react/components/ComponentPreview';
 
     .vertical {
       box-shadow:
-        1px 0 0 var(--bleu-3),
-        -1px 0 0 var(--bleu-3) !important;
-      border: 2px solid var(--bleu-1) !important;
+        1px 0 0 var(--sys-brd-secondary),
+        -1px 0 0 var(--sys-brd-secondary) !important;
+      border: var(--sys-stroke-bold) solid var(--sys-bg-white) !important;
       border-top: none !important;
       border-bottom: none !important;
 
       &::after {
-        border: 2px solid var(--bleu-9) !important;
+        border: var(--sys-stroke-bold) solid var(--sys-brd-dark) !important;
         border-top: none !important;
         border-bottom: none !important;
       }
@@ -541,14 +550,14 @@ import ComponentPreview from '../react/components/ComponentPreview';
 
     .wall-end.vertical {
       box-shadow:
-        1px 0 0 var(--bleu-3),
-        -1px 0 0 var(--bleu-3),
-        0 1px 0 var(--bleu-3) !important;
-      border: 2px solid var(--bleu-1) !important;
+        1px 0 0 var(--sys-brd-secondary),
+        -1px 0 0 var(--sys-brd-secondary),
+        0 1px 0 var(--sys-brd-secondary) !important;
+      border: var(--sys-stroke-bold) solid var(--sys-bg-white) !important;
       border-top: none !important;
 
       &::after {
-        border-bottom: 2px solid var(--bleu-9) !important;
+        border-bottom: var(--sys-stroke-bold) solid var(--sys-brd-dark) !important;
       }
     }
 
@@ -558,17 +567,17 @@ import ComponentPreview from '../react/components/ComponentPreview';
 
     .wall-corner {
       position: relative;
-      border: 2px solid var(--bleu-1) !important;
+      border: var(--sys-stroke-bold) solid var(--sys-bg-white) !important;
       border-left: none !important;
       border-bottom: none !important;
       -webkit-box-shadow: none !important;
       -moz-box-shadow: none !important;
       box-shadow:
-        1px 0 0 var(--bleu-3),
-        0 -1px 0 var(--bleu-3) !important;
+        1px 0 0 var(--sys-brd-secondary),
+        0 -1px 0 var(--sys-brd-secondary) !important;
 
       &::after {
-        border: 2px solid var(--bleu-9) !important;
+        border: var(--sys-stroke-bold) solid var(--sys-brd-dark) !important;
         border-bottom: none !important;
         border-left: none !important;
       }
@@ -581,10 +590,10 @@ import ComponentPreview from '../react/components/ComponentPreview';
         z-index: 1;
         width: 2px;
         height: 2px;
-        border: 2px solid var(--bleu-9) !important;
+        border: var(--sys-stroke-bold) solid var(--sys-brd-dark) !important;
         border-bottom: none !important;
         border-left: none !important;
       }
     }
-  }
+  } */
 </style>

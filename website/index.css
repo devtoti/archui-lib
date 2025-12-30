@@ -227,7 +227,7 @@
 --spacing-sys-sp-5xl: var(--sys-sp-5xl);
 --spacing-sys-sp-6xl: var(--sys-sp-6xl);
 }
-
+@custom-variant xs (@media (max-width: 480px));
 @custom-variant dark (&:where(.dark, .dark *));
 
 .grainy {
@@ -235,29 +235,46 @@
   /* Ensure that grainy can be stacked above standard content if needed. */
   z-index: 0;
 }
+section {
+  /* Apply grainy texture to all section elements */
+  position: relative;
+  z-index: 1;
+}
 
-.grainy::after {
+.grainy::after,
+section::after,
+footer::after,
+nav::after {
   content: "";
   display: block;
   position: absolute;
   inset: 0;
-  
   width: 100%;
   height: 100%;
   background-image: url('/hatches/grainy-texture.png');
   background-position: center center;
   background-repeat: repeat;
   background-size: 40px 40px;
-  /* Mix-blend-mode can sometimes interfere; try remove or try 'multiply' if not visible! */
+  filter: invert(0.20);
   mix-blend-mode: multiply;
   opacity: 1;
   pointer-events: none;
-  z-index: 2;
-  /* make sure this also inherits border-radius if parent has it */
+  z-index: -1;
   border-radius: inherit;
-  /* Allow ::after to show above background if .grainy has content */
-  /* Fallback for stacking context for child(s) */
 }
+
+.dark .grainy::after,
+.dark section::after,
+.dark footer::after,
+.dark nav::after {
+  background-image: url('/hatches/grainy-texture-dark.png');
+  mix-blend-mode: multiply;
+}
+article {
+  position: relative;
+  z-index: 1;
+}
+
 
 .bricks {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' width='30' height='30' patternTransform='scale(0.5)' patternUnits='userSpaceOnUse'><rect width='100%' height='100%' fill='none'/><path fill='none' stroke='%2340514A' stroke-opacity='0.13' d='M0 22.5h30v15H0zm15-15h30v15H15m-30-15h30v15h-30zm15-15h30v15H0z'/></pattern></defs><rect width='100%' height='100%' fill='url(%23a)'/></svg>");
@@ -265,11 +282,34 @@
   background-repeat: repeat;
 }
 
+.dark .bricks {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' width='30' height='30' patternTransform='scale(0.5)' patternUnits='userSpaceOnUse'><rect width='100%' height='100%' fill='none'/><path fill='none' stroke='%23FFFFFF' stroke-opacity='0.05' d='M0 22.5h30v15H0zm15-15h30v15H15m-30-15h30v15h-30zm15-15h30v15H0z'/></pattern></defs><rect width='100%' height='100%' fill='url(%23a)'/></svg>");
+}
+
 .squares::after {
- background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(1.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.2' stroke='%233f51b540' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
- background-size: 60px 60px;
- background-repeat: repeat;
+ content: "";
+ display: block;
+ position: absolute;
+ inset: 0;
+ width: 100%;
+ height: 100%;
+ background-image: 
+   url('/hatches/grainy-texture.png'),
+   url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(1.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.2' stroke='%233f51b540' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+ background-size: 40px 40px, 60px 60px;
+ background-repeat: repeat, repeat;
+ background-position: center center, center center;
  pointer-events: none;
+ mix-blend-mode: multiply;
+ z-index: -1;
+ border-radius: inherit;
+}
+
+.dark .squares::after {
+ background-image: 
+   url('/hatches/grainy-texture-dark.png'),
+   url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(1.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.2' stroke='%23ffffff' stroke-opacity='0.15' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+ mix-blend-mode: multiply;
 }
 
 .squares-sm {
@@ -285,7 +325,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--sys-surface-primary, #fff);
+  /* background-color: var(--sys-surface-primary, #fff); */
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.2' stroke='%233f51b540' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   background-size: 60px 60px;
   background-repeat: repeat;
@@ -293,6 +333,14 @@
   pointer-events: none;
   z-index: 1; /* Place under content, above background */
   border-radius: inherit;
+}
+
+.dark .squares-sm::before {
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.2' stroke='%23ffffff19' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+}
+
+.dotted-pattern {
+  position: relative;
 }
 
 .dotted-pattern::before {
@@ -305,5 +353,9 @@
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(.3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M11 6a5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5 5 5 0 015 5'  stroke-width='1' stroke='none' fill='%233f51b526'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   background-repeat: repeat;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
+}
+
+.dark .dotted-pattern::before {
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(.3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b3100'/><path d='M11 6a5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5 5 5 0 015 5'  stroke-width='1' stroke='none' fill='%23ffffff1a'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
 }

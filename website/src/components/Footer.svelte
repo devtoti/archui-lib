@@ -1,5 +1,5 @@
 <footer
-  class="footer col-span-4 md:col-span-8 lg:col-span-12 w-screen relative left-1/2 right-1/2 -translate-x-1/2 bg-white text-sys-secondary border-t-2 border-sys-brd-primary flex flex-col lg:grid lg:grid-cols-12"
+  class="footer col-span-4 md:col-span-8 lg:col-span-12 w-screen relative left-1/2 right-1/2 -translate-x-1/2 bg-sys-surface-primary text-sys-secondary border-t-2 border-sys-brd-primary flex flex-col lg:grid lg:grid-cols-12"
   id="footer"
 >
   <div
@@ -204,10 +204,12 @@
       </ul>
     </article>
   </article>
-  <div class="footer-container px-4 lg:w-3/5 mx-auto row-start-2 row-end-3">
+  <div
+    class="footer-container !w-full !mx-4 md:px-0 lg:w-3/5 mx-auto row-start-2 row-end-3 outline-6 outline-sys-primary"
+  >
     <article class="plan-info techs">
-      <span class="arc-h5">Tech Stack</span>
-      <p class="arc-body-2">React, Tailwind, TypeScript</p>
+      <span class="arc-h5">Technologies</span>
+      <p class="arc-body-2">React / Tailwind /TypeScript</p>
     </article>
     <article class="plan-info proj">
       <h6 class="arc-h5">Project</h6>
@@ -248,18 +250,21 @@
       <p class="arc-body-2">December 28, 2025</p>
     </article>
     <article class="plan-info collab">
-      <h6 class="arc-h5">Collaborators</h6>
+      <h6 class="arc-h5">Architect</h6>
       <p class="arc-body-2">@devtoti</p>
     </article>
     <article class="plan-info author">
-      <h6 class="arc-h5">Architect</h6>
-      <p class="arc-body-2">@devtoti</p>
+      <h6 class="arc-h5">Description</h6>
+      <p class="arc-body-2">
+        A React 19+ and Tailwind component library designed with architectural
+        blueprint precision.
+      </p>
     </article>
     <article class="plan-info v">
       <h4 class="arc-h3">V1.1.0</h4>
     </article>
     <article class="plan-info id" id="clave">
-      <h5 class="arc-h0">V1</h5>
+      <h5 class="arc-h1">A-1</h5>
     </article>
   </div>
 </footer>
@@ -332,10 +337,8 @@
   }
 
   .footer-container {
-    outline: var(--sys-stroke-bold) solid var(--sys-brd-primary);
     height: fit-content;
     grid-column: 2 / -2;
-    width: 100%;
     grid-row: 3 / 4;
     display: grid;
     grid-template-columns: repeat(6, 1fr);

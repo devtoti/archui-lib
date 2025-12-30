@@ -90,8 +90,8 @@
   /* Background */
   --sys-bg-white: #2C2C2C;
   --sys-bg-primary: var(--gris-12);
-  --sys-bg-secondary: var(--gris-12);
-  --sys-bg-tertiary: var(--gris-11);
+  --sys-bg-secondary: var(--gris-11);
+  --sys-bg-tertiary: var(--gris-10);
   --sys-bg-blueprint: var(--bleu-6);
 
   /* Foreground */
@@ -117,7 +117,7 @@
   /* Borders */
   --sys-brd-primary: var(--bleu-5);
   --sys-brd-secondary: var(--bleu-4);
-  --sys-brd-tertiary: var(--bleu-6);
+  --sys-brd-tertiary: var(--bleu-10);
   --sys-brd-dark: var(--bleu-1);
   --sys-brd-light: var(--bleu-10);
   --sys-brd-gray-light: var(--gris-11);

@@ -1,78 +1,40 @@
 ---
 import Slider from '../react/components/Carrousel.tsx';
-import { RxCopy } from 'react-icons/rx';
+import ColumnHero from './ColumnHero.astro';
+import ReactBlueprint from './ReactBlueprint.astro';
+import { RxCopy, RxCode } from 'react-icons/rx';
+import { Image } from 'astro:assets';
 const Concept1 = '/images/carrousel/Concept-1.svg';
 const Concept2 = '/images/carrousel/Concept-2.svg';
 const Concept3 = '/images/carrousel/Concept-3.svg';
 const Concept4 = '/images/carrousel/Concept-4.svg';
 ---
 
-<script>
-  function copyInstallCommand() {
-    const installCommandEl = document.getElementById('install-command');
-    if (!installCommandEl) return;
-
-    const installCommand = installCommandEl.textContent?.trim();
-    if (!installCommand) return;
-
-    navigator.clipboard
-      .writeText(installCommand)
-      .then(() => {
-        const copyButton = document.getElementById('copy-install-btn');
-        if (!copyButton) return;
-
-        const originalContent = copyButton.innerHTML;
-        copyButton.innerHTML = '✓';
-        copyButton.style.color = 'blue-500';
-
-        setTimeout(() => {
-          copyButton.innerHTML = originalContent;
-          copyButton.style.color = '';
-        }, 2000);
-      })
-      .catch((err) => {
-        console.error('Failed to copy:', err);
-      });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const copyButton = document.getElementById('copy-install-btn');
-    if (copyButton) {
-      copyButton.addEventListener('click', copyInstallCommand);
-    }
-  });
-</script>
 <section
-  class="grainy bricks squares w-full h-full max-h-[90svh] overflow-hidden col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary grid grid-cols-4 grid-rows-[auto_1fr_120px_1fr] md:grid-cols-8 lg:grid-cols-12 items-center justify-start gap-4 border-2 border-sys-brd-secondary border-t-0 border-b-4 px-0 md:px-sys-pd-md lg:px-sys-pd-lg"
+  class="bricks squares w-full max-w-screen pt-4 h-full max-h-[90svh] overflow-hidden col-span-4 md:col-span-8 lg:col-span-12 bg-sys-surface-primary text-sys-secondary grid grid-cols-4 grid-rows-[auto_1fr_120px_1fr] md:grid-cols-8 lg:grid-cols-12 items-center justify-start gap-4 border-2 border-sys-brd-tertiary border-t-0 border-b-4 px-0 md:px-sys-pd-md lg:px-sys-pd-lg"
 >
-  <!-- <article
-    class="hero w-full h-full flex flex-col items-center justify-center text-center px-sys-pd-md md:px-sys-pd-lg max-w-3xl mx-auto"
-    style="max-height: calc(100svh - 64px);"
-  >
-  </article> -->
   <article
     class="beta mt-sys-sp-lg w-full max-w-2xl mx-auto lg:!mt-0 lg:pt-0 col-span-full"
   >
     <div
-      class="relative flex flex-row items-center justify-center gap-sys-sp-md bg-sys-surface-secondary border-2 border-sys-brd-secondary border-dashed px-sys-pd-md py-sys-pd-xs rounded-md w-min mx-auto"
+      class="relative flex flex-row items-center justify-center gap-2 bg-emerald-500/10 border-[2px] border-emerald-600 border-dashed px-sys-pd-md pl-1 py-sys-pd-xs rounded-md w-min mx-auto"
     >
-      <span class="relative inline-block w-6 h-6">
+      <span class="relative inline-block w-6 h-4">
         <span
-          class="absolute inset-0 m-auto w-4 h-4 bg-indigo-300 rounded-full animate-pulse duration-[5000ms]"
+          class="absolute inset-0 m-auto w-4 h-4 bg-emerald-400/30 rounded-full animate-pulse duration-[5000ms]"
         ></span>
-        <span class="absolute inset-0 m-auto w-2 h-2 bg-indigo-500 rounded-full"
+        <span
+          class="absolute inset-0 m-auto w-2 h-2 bg-emerald-600 rounded-full"
         ></span>
       </span>
-      <p class="arc-body-2 inline-block w-max">Now in Beta</p>
+      <p class="arc-body-2 inline-block w-max text-emerald-600">Now in Beta</p>
     </div>
   </article>
   <article
-    class="max-w-96 flex flex-col items-center justify-center gap-sys-sp-md w-full mx-auto px-sys-pd-md col-span-full row-start-2 row-span-1 mb-10"
+    class="max-w-96 flex flex-col items-center justify-center gap-sys-sp-md w-full mx-auto px-sys-pd-md col-span-full row-start-2 row-span-1"
   >
-    <img
-      src="/images/react-blueprint.svg"
-      alt="React Blueprint Logo"
-      class="desktop w-32 h-auto object-contain"
+    <ReactBlueprint
+      className="hidden md:block desktop w-32 h-auto object-contain"
     />
     <div
       class="arch-title text-sys-primary text-4xl md:text-4xl font-bold flex flex-row items-center justify-center px-2 md:px-0 font-['Roboto_Mono'] uppercase tracking-wider"
@@ -90,13 +52,9 @@ const Concept4 = '/images/carrousel/Concept-4.svg';
       class="buttons-wrapper w-full flex flex-col items-center justify-center gap-sys-sp-md w-fit"
     >
       <strong
-        class="bg-sys-surface-tertiary/40 px-sys-pd-lg py-sys-pd-xs rounded-md flex items-center justify-center w-full relative"
+        class="bg-[var(--bleu-6)]/30 px-sys-pd-lg py-sys-pd-xs rounded-md flex items-center justify-center w-full relative"
       >
-        <img
-          src="/icons/code.svg"
-          alt="Code Icon"
-          class="w-4 h-4 inline-block mr-2 align-middle"
-        />
+        <RxCode className="w-4 h-4 inline-block align-middle mr-2" />
         <span id="install-command" class="w-max"
           >npm install @devtoti/archui-react</span
         >
@@ -105,47 +63,48 @@ const Concept4 = '/images/carrousel/Concept-4.svg';
           aria-label="Copy install command"
           class="copy-button flex items-center justify-center ml-2 px-2 py-1 rounded text-xs text-sys-secondary hover:bg-sys-surface-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sys-primary z-10"
           id="copy-install-btn"
-          ><RxCopy className="w-4 h-4 inline-block align-middle" /></button
         >
+          <RxCopy className="w-4 h-4 inline-block align-middle" />
+        </button>
       </strong>
       <div
-        class="buttons w-full flex flew-col items-center justify-center gap-sys-sp-md lg:flex-row"
+        class="buttons w-full flex flex-col items-center justify-center gap-sys-sp-md lg:flex-row"
       >
-        <button
-          type="button"
-          class="bg-sys-surface-blueprint w-full border-2 border-sys-brd-accent text-white uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-orange-400 hover:cursor-pointer hover:text-orange-900 hover:font-black hover:border-orange-800"
-          aria-label="Get Started (opens documentation in a new tab)"
+        <a
+          href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
+          class="arc-body-1 block w-full decoration-none"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Get Started documentation (opens in a new tab)"
         >
-          <a
-            href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
-            class="arc-body-1 block w-full w-full decoration-none"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Get Started documentation (opens in a new tab)"
+          <button
+            type="button"
+            class="bg-sys-surface-blueprint w-full border-2 border-sys-brd-tertiary text-sys-light uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-orange-400 hover:cursor-pointer hover:text-orange-900 hover:font-black hover:border-orange-800"
+            aria-label="Get Started (opens documentation in a new tab)"
           >
             Get Started <span class="sr-only">(opens in a new tab)</span>
-          </a>
-        </button>
-        <button
-          type="button"
-          class="bg-sys-surface-primary w-full border-2 border-sys-brd-accent text-sys-blueprint uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-sys-surface-tertiary hover:cursor-pointer hover:text-sys-primary hover:font-black hover:border-sys-brd-primary"
+          </button>
+        </a>
+        <a
+          href="https://github.com/devtoti/archui-lib"
+          class="arc-body-1 block w-full decoration-none"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Open GitHub (opens in a new tab)"
         >
-          <a
-            href="https://github.com/devtoti/archui-lib"
-            class="arc-body-1 block w-full w-full decoration-none"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            class="bg-sys-surface-primary w-full border-2 border-sys-brd-accent text-sys-blueprint uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-sys-surface-tertiary hover:cursor-pointer hover:text-sys-primary hover:font-black hover:border-sys-brd-primary"
             aria-label="Open GitHub (opens in a new tab)"
           >
             Github Repo <span class="sr-only">(opens in a new tab)</span>
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </div>
   </article>
   <div
-    class="absolute inset-0 desktop relative h-40 my-auto col-span-full row-start-3 -row-end-1flex items-center justify-center"
+    class="absolute inset-0 desktop relative h-40 my-auto col-span-full row-start-3 flex items-center justify-center"
   >
     <Slider
       width="500px"
@@ -156,44 +115,56 @@ const Concept4 = '/images/carrousel/Concept-4.svg';
       client:only="react"
     >
       <Slider.Slide>
-        <img
+        <Image
           src={Concept1}
           alt="Concept 1"
+          width={600}
+          height={400}
           class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+          draggable="false"
+          loading="eager"
         />
       </Slider.Slide>
       <Slider.Slide>
-        <img
+        <Image
           src={Concept2}
           alt="Concept 2"
+          width={600}
+          height={400}
           class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+          draggable="false"
+          loading="lazy"
         />
       </Slider.Slide>
       <Slider.Slide>
-        <img
+        <Image
           src={Concept3}
           alt="Concept 3"
+          width={600}
+          height={400}
           class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+          draggable="false"
+          loading="lazy"
         />
       </Slider.Slide>
       <Slider.Slide>
-        <img
+        <Image
           src={Concept4}
           alt="Concept 4"
+          width={600}
+          height={400}
           class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+          draggable="false"
+          loading="lazy"
         />
       </Slider.Slide>
     </Slider>
   </div>
-  <img
-    src="/images/column-hero.svg"
-    alt="Column Hero"
-    class="desktop w-auto h-full col-start-2 col-span-2 grow-2 object-none row-start-4 row-span-1"
+  <ColumnHero
+    className="hidden md:block desktop w-full lg:w-4/5 h-auto md:col-start-1 lg:col-start-3 md:place-self-start md:col-span-3 object-none row-start-4 row-span-1"
   />
-  <img
-    src="/images/column-hero.svg"
-    alt="Column Hero"
-    class="desktop w-full h-full col-start-6 col-span-2 lg:col-start-10 object-none row-start-4 row-span-1"
+  <ColumnHero
+    className="hidden md:block desktop w-full lg:w-4/5 h-auto md:col-start-6 lg:col-start-9 md:col-span-3 md:place-self-start object-none row-start-4 row-span-1"
   />
   <article
     class="mobile relative row-start-3 row-span-1 md:hidden hero-images w-full h-full max-w-5xl mx-auto grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 items-center justify-center gap-0 mt-sys-sp-lg px-2 col-span-full"
@@ -208,55 +179,70 @@ const Concept4 = '/images/carrousel/Concept-4.svg';
         client:only="react"
       >
         <Slider.Slide>
-          <img
+          <Image
             src={Concept1}
             alt="Concept 1"
-            class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+            width={600}
+            height={400}
+            class="opacity-50 hover:opacity-100 hover:scale-125 origin-center px-4 w-full h-auto"
+            draggable="false"
+            loading="eager"
           />
         </Slider.Slide>
         <Slider.Slide>
-          <img
+          <Image
             src={Concept2}
             alt="Concept 2"
-            class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+            width={600}
+            height={400}
+            class="opacity-50 hover:opacity-100 hover:scale-125 origin-center px-4 w-full h-auto"
+            draggable="false"
+            loading="lazy"
           />
         </Slider.Slide>
         <Slider.Slide>
-          <img
+          <Image
             src={Concept3}
             alt="Concept 3"
-            class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+            width={600}
+            height={400}
+            class="opacity-50 hover:opacity-100 hover:scale-125 origin-center px-4 w-full h-auto"
+            draggable="false"
+            loading="lazy"
           />
         </Slider.Slide>
         <Slider.Slide>
-          <img
+          <Image
             src={Concept4}
             alt="Concept 4"
-            class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+            width={600}
+            height={400}
+            class="opacity-50 hover:opacity-100 hover:scale-[110%] origin-center px-4 w-full h-auto"
+            draggable="false"
+            loading="lazy"
           />
         </Slider.Slide>
       </Slider>
     </div>
   </article>
-  <img
-    src="/images/column-hero.svg"
-    alt="Column Hero"
-    class="z-10 w-auto h-auto row-start-4 row-span-1 col-start-2 col-span-2 mobile"
+  <ColumnHero
+    className="z-10 w-full place-self-start object-none h-auto col-span-full sm:row-start-4 sm:row-span-1 sm:col-start-2 sm:col-span-2 mobile md:hidden"
   />
-</section>
-<style>
-  .beta {
-    margin-top: 0 !important;
-  }
 
-  @media (max-width: 768px) {
-    .desktop {
-      display: none !important;
+  <style>
+    .beta {
+      margin-top: 0 !important;
     }
-  }
-  @media (min-width: 768px) {
-    .mobile {
-      display: none !important;
+
+    @media (max-width: 768px) {
+      .desktop {
+        display: none !important;
+      }
     }
-  }
-</style>
+    @media (min-width: 768px) {
+      .mobile {
+        display: none !important;
+      }
+    }
+  </style>
+</section>

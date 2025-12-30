@@ -6,12 +6,32 @@ import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
 import Banners from '../components/Banners.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+const Layout = BaseLayout;
+import ThemeProviderWrapper from '../react/components/ThemeProviderWrapper.tsx';
+import Head from '../components/head.astro';
+const { title } = Astro.props;
 ---
 
-<BaseLayout>
-  <Hero />
-  <Features />
-  <Banners />
-</BaseLayout>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <Head title={title} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/scripts/copyInstallCommand.js" defer></script>
+  </head>
+  <body class="relative">
+    <ThemeProviderWrapper
+      initialTheme="doric"
+      initialThemeType="dark"
+      client:only="react"
+    >
+      <Layout>
+        <Hero />
+        <Features />
+        <Banners />
+      </Layout>
+    </ThemeProviderWrapper>
 
-<style></style>
+    <style></style>
+  </body>
+</html>

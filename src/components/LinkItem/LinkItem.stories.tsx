@@ -124,7 +124,7 @@ export const Showcase: Story = {
         <LinkItem
           {...args}
           href="https://www.devtoti.com/"
-          label="Devtoti's Portfolio"
+          label="Portfolio"
           leftIcon={leftIcon}
           rightIcon={rightIcon}
         />

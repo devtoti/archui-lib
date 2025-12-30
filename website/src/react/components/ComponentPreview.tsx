@@ -75,7 +75,7 @@ const TokensGrid: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-48 md:h-64 bg-sys-surface-secondary p-2 md:p-3 overflow-auto">
+    <div className="flex flex-col items-center justify-center w-full h-48 md:h-64 bg-zinc-100 dark:bg-zinc-900 dotted-pattern p-2 md:p-3 overflow-auto">
       <div className="grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-3 max-w-4xl mx-auto">
         {tokens.map((token) => (
           <div
@@ -95,7 +95,7 @@ const TokensGrid: React.FC = () => {
               />
             ) : (
               <div
-                className="w-6 h-6 md:w-10 md:h-10 rounded border border-sys-brd-primary shadow-sm bg-white flex items-center justify-center"
+                className="w-6 h-6 md:w-10 md:h-10 rounded border border-sys-brd-primary shadow-sm bg-sys-surface-tertiary flex items-center justify-center"
                 title={token.value}
               >
                 {token.type === 'spacing' && (
@@ -106,14 +106,14 @@ const TokensGrid: React.FC = () => {
                 )}
                 {token.type === 'border-radius' && (
                   <div
-                    className="w-5 h-5 bg-sys-primary"
+                    className="w-5 h-5 bg-sys-bg-primary"
                     style={{ borderRadius: token.value }}
                   />
                 )}
                 {token.type === 'stroke-width' && (
                   <div className="flex flex-col items-center gap-0.5">
                     <div
-                      className="w-6 bg-sys-primary"
+                      className="w-6 bg-sys-bg-primary"
                       style={{ height: token.value }}
                     />
                     <span className="text-[7px] text-sys-secondary font-mono">
@@ -123,7 +123,7 @@ const TokensGrid: React.FC = () => {
                 )}
                 {token.type === 'font-family' && (
                   <span
-                    className="text-[10px] text-sys-primary font-bold"
+                    className="text-[10px] text-sys-bg-primary font-bold"
                     style={{ fontFamily: token.value }}
                   >
                     Aa
@@ -148,37 +148,55 @@ const TokensGrid: React.FC = () => {
 
 const ComponentPreview: React.FC = () => {
   return (
-    <div className="w-full z-10">
+    <div className="border-[2px] border-sys-brd-secondary rounded-lg overflow-hidden w-full z-10">
       <Tabs.Root className="TabsRoot" defaultValue="component">
         <Tabs.List className="TabsList" aria-label="Component preview tabs">
-          <Tabs.Trigger className="TabsTrigger" value="component">
+          <Tabs.Trigger
+            className="TabsTrigger"
+            style={{
+              backgroundColor: 'var(--sys-bg-primary)',
+            }}
+            value="component"
+          >
             Component
           </Tabs.Trigger>
-          <Tabs.Trigger className="TabsTrigger" value="code">
+          <Tabs.Trigger
+            className="TabsTrigger"
+            style={{
+              backgroundColor: 'var(--sys-bg-primary)',
+            }}
+            value="code"
+          >
             Code
           </Tabs.Trigger>
-          <Tabs.Trigger className="TabsTrigger" value="tokens">
+          <Tabs.Trigger
+            className="TabsTrigger"
+            style={{
+              backgroundColor: 'var(--sys-bg-primary)',
+            }}
+            value="tokens"
+          >
             Tokens
           </Tabs.Trigger>
         </Tabs.List>
         <Tabs.Content className="TabsContent" value="component">
-          <div className="w-full h-48 flex items-center  overflow-hidden justify-center md:h-64 bg-sys-surface-secondary">
-            <div className="w-fit h-fit relative">
+          <div className="w-full h-48 flex items-center  overflow-hidden justify-center md:h-64 bg-zinc-100 dark:bg-zinc-900 dotted-pattern">
+            <div className="w-fit h-fit relative text-start">
               <Callout
                 title="Tip"
-                label="Check out the code and see how easy it is to use the Callout component."
+                label="Inspect the code and see how easy it is to import and customize your components."
                 variant="success"
                 size="md"
               />
               <span className="w-[1px] h-svh bg-sys-brd-tertiary/50 absolute bottom-0 left-0 translate-y-[50%]"></span>
               <span className="w-[1px] h-svh bg-sys-brd-tertiary/50 absolute bottom-0 right-0 translate-y-[50%]"></span>
-              <span className="w-svw h-[1px] bg-sys-brd-tertiary/50 absolute top-0 left-0 translate-x-[-50%]"></span>
-              <span className="w-svw h-[1px] bg-sys-brd-tertiary/50 absolute bottom-0 left-0 translate-x-[-50%]"></span>
+              <span className="w-svw h-[1px] bg-sys-brd-tertiary/50 absolute top-0 left-1/2 translate-x-[-50%]"></span>
+              <span className="w-svw h-[1px] bg-sys-brd-tertiary/50 absolute bottom-0 left-1/2 translate-x-[-50%]"></span>
             </div>
           </div>
         </Tabs.Content>
         <Tabs.Content className="TabsContent" value="code">
-          <div className="bg-gray-800 w-full h-48 flex items-center justify-center md:h-64 bg-sys-surface-secondary">
+          <div className="bg-sys-surface-tertiary w-full h-48 flex items-center justify-center md:h-64 bg-gray-900">
             <pre className="px-8 text-xs rounded-md p-4 w-full overflow-x-auto font-mono whitespace-pre-wrap text-start">
               <code>
                 <span style={{ color: '#7dd3fc' }}>{'import'}</span>
@@ -203,7 +221,7 @@ const ComponentPreview: React.FC = () => {
                 </span>
                 <span style={{ color: '#fbbf24' }}>
                   {
-                    '"This is a callout message. Enter a fun fact here for your users."'
+                    '"Inspect the code and see how easy it is to import and customize your components."'
                   }
                 </span>
                 <span>{'\n'}</span>
@@ -237,13 +255,13 @@ const ComponentPreview: React.FC = () => {
           flex-direction: row;
           align-items: stretch;
           width: 100%;
-          background-color: white;
+          background-color: var(--sys-surface-primary);
           border-bottom: 1px solid var(--sys-brd-primary);
         }
         .TabsTrigger {
           all: unset;
+          background-color: var(--sys-bg-primary);
           font-family: inherit;
-          background-color: transparent;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -259,18 +277,18 @@ const ComponentPreview: React.FC = () => {
           padding: 0 0;
         }
         .TabsTrigger:hover {
-          color: var(--sys-primary);
+          color: var(--sys-txt-tertiary);
           background: rgba(20,48,120,0.04);
         }
         .TabsTrigger[data-state='active'] {
-          color: var(--sys-primary);
+          color: var(--sys-txt-primary);
           font-weight: 600;
-          border-bottom: 2.5px solid var(--sys-primary);
-          background: rgba(40,85,173,0.08);
+          border-bottom: 4px solid var(--sys-brd-primary);
+          background: var(--sys-bg-primary);
         }
         .TabsTrigger:focus-visible {
           position: relative;
-          outline: 2px solid var(--sys-primary);
+          outline: 2px solid var(--sys-bg-primary);
           outline-offset: 2px;
           border-radius: 2px;
         }

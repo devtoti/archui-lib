@@ -151,6 +151,16 @@ export const ThemeProvider: React.FC<{
     ? `theme-context ${theme} ${themeType}`
     : `theme-context ${theme} ${themeType} contents`;
 
+  // When className is provided (nested ThemeProvider), ensure proper isolation
+  // to prevent parent theme CSS variables from affecting nested themes
+  const wrapperStyle = className
+    ? {
+        isolation: "isolate" as const,
+        // Force a new stacking context to ensure CSS variables are properly scoped
+        position: "relative" as const,
+      }
+    : undefined;
+
   return (
     <ThemeContext.Provider
       value={{
@@ -161,7 +171,7 @@ export const ThemeProvider: React.FC<{
         hasToggler,
       }}
     >
-      <div className={twMerge(baseClasses, className)}>
+      <div className={twMerge(baseClasses, className)} style={wrapperStyle}>
         {hasToggler && (
           <ThemeToggler
             theme={theme}
