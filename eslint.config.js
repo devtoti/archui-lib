@@ -11,7 +11,10 @@ import { globalIgnores } from 'eslint/config'
 export default tseslint.config([
   globalIgnores(['dist']),
   {
-    files: ['**/*.{ts,tsx}'],
+    ignores: ['docs/sb-manager/globals-runtime.js'],
+  },
+  {
+    files: ['**/*.{ts,tsx,d.ts}'],
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,

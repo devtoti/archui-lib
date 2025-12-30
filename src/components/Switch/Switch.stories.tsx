@@ -17,7 +17,7 @@ const meta = {
         component:
           "The `Switch` component is built on Radix UI primitives and provides a fully accessible toggle control. It supports multiple sizes and variants, and can be used with or without a label. The component automatically handles focus states and keyboard interactions.",
       },
-      artwork: "/icons/models/switch.svg",
+      artwork: "/storybook-assets/switch.svg",
     },
   },
   argTypes: {

@@ -2,16 +2,19 @@ import * as React from "react";
 import { useOf, Source } from "@storybook/addon-docs/blocks";
 
 export function DynamicSource() {
-  // Always call hooks at the top level
   const metaResolved = useOf("meta", ["meta"]);
   const meta = metaResolved.preparedMeta;
 
   try {
-    // Extract component name from meta title (e.g., "01 COMPONENTS/Callout" -> "Callout")
     const componentName = meta.title?.split("/").pop() || "Component";
 
-    // Render import statement and source code in a combined block
-    // We'll use a wrapper div with custom styling to make it look like a single code block
+    const multiExportComponents: Record<string, string[]> = {
+      Toast: ["Toast", "ToastProvider", "ToastViewport"],
+    };
+
+    const exports = multiExportComponents[componentName] || [componentName];
+    const importNames = exports.join(", ");
+
     return (
       <div
         style={{
@@ -21,7 +24,6 @@ export function DynamicSource() {
           columnGap: "0",
         }}
       >
-        {/* Mac-like window controls */}
         <div
           style={{
             position: "absolute",
@@ -67,12 +69,11 @@ export function DynamicSource() {
           />
         </div>
 
-        {/* Import statement as a code block */}
         <div
           style={{
             backgroundColor: "#1e1e1e",
             padding: "12px 16px",
-            paddingLeft: "42px", // leave room for window controls
+            paddingLeft: "42px",
             paddingTop: "2rem",
             borderTopLeftRadius: "6px",
             borderTopRightRadius: "6px",
@@ -86,7 +87,7 @@ export function DynamicSource() {
           className="import-module"
         >
           <code style={{ color: "#569cd6" }}>import</code>{" "}
-          <code style={{ color: "#9cdcfe" }}>{`{ ${componentName} }`}</code>{" "}
+          <code style={{ color: "#9cdcfe" }}>{`{ ${importNames} }`}</code>{" "}
           <code style={{ color: "#569cd6" }}>from</code>{" "}
           <code
             style={{ color: "#ce9178" }}
@@ -94,7 +95,6 @@ export function DynamicSource() {
           <code style={{ color: "#d4d4d4" }}>;</code>
         </div>
 
-        {/* Story source code */}
         <div
           style={{
             marginTop: 0,

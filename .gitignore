@@ -30,3 +30,10 @@ website/node_modules/
 website/dist/
 website/.env.locals
 website/.env
+
+# Environment files
+.env
+.env.local
+.env.*.local
+# Local Netlify folder
+.netlify

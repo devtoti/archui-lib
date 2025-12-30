@@ -56,10 +56,105 @@
 /* Theme Context Wrapper */
 .theme-context {
   /* Base styles - theme and themeType classes are applied here */
+  /* CSS variables are set by theme classes (.doric, .ionic, .corinthian) and themeType (.light, .dark) */
+  /* This is intentionally minimal - actual styling comes from theme token classes */
+  contain: layout style;
 }
 
 .theme-context.contents {
   display: contents;
+}
+
+/* Ensure nested themes properly override parent theme CSS variables */
+/* When a ThemeProvider has isolation, it creates a new CSS variable scope */
+.theme-isolated {
+  /* Force CSS variables to be recalculated in this scope */
+  /* This ensures nested themes don't inherit parent theme variables */
+  isolation: isolate;
+  position: relative;
+}
+
+/* CRITICAL: Override parent .dark selectors for nested light themes */
+/* Selector specificity: .theme-isolated.light.ionic = 0,3,0 (higher than .dark .ionic = 0,2,0) */
+/* This ensures nested light themes don't inherit dark mode variables from parent */
+/* We need to explicitly reset all CSS variables that .dark .theme classes set */
+
+.theme-isolated.light.doric {
+  /* Override .dark .doric variables - reset to light mode values from .doric base */
+  /* Background */
+  --bg-primary: var(--slate-1);
+  --bg-secondary: var(--slate-2);
+  --bg-tertiary: var(--slate-3);
+  --bg-light: #F2F7FF;
+  --bg-sunken-1: rgba(39, 45, 57, 0.1);
+  --bg-sunken-2: rgba(39, 45, 57, 0.2);
+  --bg-sunken-3: rgba(39, 45, 57, 0.5);
+  --bg-sunken-4: rgba(39, 45, 57, 0.7);
+  /* Text */
+  --txt-primary: var(--slate-12);
+  --txt-secondary: var(--slate-11);
+  --txt-tertiary: var(--slate-10);
+  --txt-light: #FFFFFF;
+  /* Foreground */
+  --fg-primary: #FDFDFC;
+  --fg-secondary: #F9F9F8;
+  --fg-tertiary: #F1F0EF;
+  --fg-accent: rgba(255, 142, 0, 0.07058823853731155);
+  --fg-raised-1: rgba(255, 255, 255, 0.1);
+  --fg-raised-2: rgba(255, 255, 255, 0.3);
+  --fg-raised-3: rgba(255, 255, 255, 0.5);
+}
+
+.theme-isolated.light.ionic {
+  /* Override .dark .ionic variables - reset to light mode values from .ionic base */
+  /* Background */
+  --bg-primary: var(--gray-1);
+  --bg-secondary: var(--gray-2);
+  --bg-tertiary: var(--gray-3);
+  --bg-light: #F2F7FF;
+  --bg-sunken-1: rgba(39, 45, 57, 0.1);
+  --bg-sunken-2: rgba(39, 45, 57, 0.2);
+  --bg-sunken-3: rgba(39, 45, 57, 0.5);
+  --bg-sunken-4: rgba(39, 45, 57, 0.7);
+  /* Text */
+  --txt-primary: var(--gray-12);
+  --txt-secondary: var(--gray-11);
+  --txt-tertiary: var(--gray-10);
+  --txt-light: #FFFFFF;
+  /* Foreground */
+  --fg-primary: #FDFDFC;
+  --fg-secondary: #F9F9F8;
+  --fg-tertiary: #F1F0EF;
+  --fg-accent: rgba(0, 64, 255, 0.0313725508749485);
+  --fg-raised-1: rgba(255, 255, 255, 0.1);
+  --fg-raised-2: rgba(255, 255, 255, 0.3);
+  --fg-raised-3: rgba(255, 255, 255, 0.5);
+}
+
+.theme-isolated.light.corinthian {
+  /* Override .dark .corinthian variables - reset to light mode values from .corinthian base */
+  /* Background */
+  --bg-primary: var(--olive-1);
+  --bg-secondary: var(--olive-2);
+  --bg-tertiary: var(--gray-3);
+  --bg-light: #F2F7FF;
+  --bg-sunken-1: rgba(39, 45, 57, 0.1);
+  --bg-sunken-2: rgba(39, 45, 57, 0.2);
+  --bg-sunken-3: rgba(39, 45, 57, 0.5);
+  --bg-sunken-4: rgba(39, 45, 57, 0.7);
+  /* Text */
+  --txt-primary: var(--olive-12);
+  --txt-secondary: var(--olive-10);
+  --txt-tertiary: var(--olive-8);
+  --txt-light: #FFFFFF;
+  /* Foreground */
+  --fg-primary: #FDFDFC;
+  --fg-secondary: #F9F9F8;
+  --fg-tertiary: #F1F0EF;
+  --fg-accent: rgba(0, 163, 70, 0.04313725605607033);
+  --fg-raised-1: rgba(255, 255, 255, 0.1);
+  --fg-raised-2: rgba(255, 255, 255, 0.3);
+  --fg-raised-3: rgba(255, 255, 255, 0.5);
 }
 
 /* Icon Styles */

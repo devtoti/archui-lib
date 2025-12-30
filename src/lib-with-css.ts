@@ -5,6 +5,7 @@ export { Alert, alertVariants } from './components/Alert/Alert';
 export { LinkItem, linkItemVariants } from './components/LinkItem/LinkItem';
 export { Heading, headingVariants, descriptionVariants } from './components/Heading/Heading';
 export { Switch, switchVariants, switchThumbVariants } from './components/Switch/Switch';
+export { Toast, ToastProvider, ToastViewport, toastVariants } from './components/Toast/Toast';
 export { ThemeProvider } from './components/ThemeProvider';
 
 // Export hooks
@@ -18,6 +19,7 @@ export type { LinkItemProps, LinkItemVariantProps } from './types/components/Lin
 export type { HeadingProps, HeadingVariantProps } from './types/components/Heading.types';
 export type { SwitchProps, SwitchVariantProps } from './types/components/Switch.types';
 export type { Theme, ThemeType, ThemeContextType } from './contexts/ThemeContext';
+export type { ToastProps, ToastVariantProps } from './types/components/Toast.types';
 
 // Import styles (this will be bundled by Vite)
 import './index.css';

@@ -30,7 +30,7 @@ const config: StorybookConfig = {
     "name": "@storybook/react-vite",
     "options": {}
   },
-  "staticDirs": ["../public"],
+  "staticDirs": ["../public", "../public/storybook-assets"],
   "docs": {
     docsMode: false,
   },

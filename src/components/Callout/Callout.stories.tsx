@@ -43,7 +43,7 @@ const meta = {
         component:
           "Supports a customizable top-left icon, headings, and any text length. Make sure to leverage the `Callout` designs by wrapping your components inside a `ThemeProvider` and playing around with the `theme` style that better suits your needs.",
       },
-      artwork: "/icons/models/callout.svg",
+      artwork: "/storybook-assets/callout.svg",
     },
   },
   argTypes: {

@@ -1,0 +1,248 @@
+---
+import Slider from '../react/components/Carrousel.tsx';
+import ColumnHero from './ColumnHero.astro';
+import ReactBlueprint from './ReactBlueprint.astro';
+import { RxCopy, RxCode } from 'react-icons/rx';
+import { Image } from 'astro:assets';
+const Concept1 = '/images/carrousel/Concept-1.svg';
+const Concept2 = '/images/carrousel/Concept-2.svg';
+const Concept3 = '/images/carrousel/Concept-3.svg';
+const Concept4 = '/images/carrousel/Concept-4.svg';
+---
+
+<section
+  class="bricks squares w-full max-w-screen pt-4 h-full max-h-[90svh] overflow-hidden col-span-4 md:col-span-8 lg:col-span-12 bg-sys-surface-primary text-sys-secondary grid grid-cols-4 grid-rows-[auto_1fr_120px_1fr] md:grid-cols-8 lg:grid-cols-12 items-center justify-start gap-4 border-2 border-sys-brd-tertiary border-t-0 border-b-4 px-0 md:px-sys-pd-md lg:px-sys-pd-lg"
+>
+  <article
+    class="beta mt-sys-sp-lg w-full max-w-2xl mx-auto lg:!mt-0 lg:pt-0 col-span-full"
+  >
+    <div
+      class="relative flex flex-row items-center justify-center gap-2 bg-emerald-500/10 border-[2px] border-emerald-600 border-dashed px-sys-pd-md pl-1 py-sys-pd-xs rounded-md w-min mx-auto"
+    >
+      <span class="relative inline-block w-6 h-4">
+        <span
+          class="absolute inset-0 m-auto w-4 h-4 bg-emerald-400/30 rounded-full animate-pulse duration-[5000ms]"
+        ></span>
+        <span
+          class="absolute inset-0 m-auto w-2 h-2 bg-emerald-600 rounded-full"
+        ></span>
+      </span>
+      <p class="arc-body-2 inline-block w-max text-emerald-600">Now in Beta</p>
+    </div>
+  </article>
+  <article
+    class="max-w-96 flex flex-col items-center justify-center gap-sys-sp-md w-full mx-auto px-sys-pd-md col-span-full row-start-2 row-span-1"
+  >
+    <ReactBlueprint
+      className="hidden md:block desktop w-32 h-auto object-contain"
+    />
+    <div
+      class="arch-title text-sys-primary text-4xl md:text-4xl font-bold flex flex-row items-center justify-center px-2 md:px-0 font-['Roboto_Mono'] uppercase tracking-wider"
+    >
+      Arch<span
+        class="text-sys-blueprint text-6xl md:text-7xl ml-1 font-['Roboto_Mono'] uppercase"
+        >UI</span
+      >
+    </div>
+    <p class="text-sys-tertiary text-center text-lg px-0 md:px-4">
+      A React and Tailwind component library inspired by architectural blueprint
+      precision.
+    </p>
+    <div
+      class="buttons-wrapper w-full flex flex-col items-center justify-center gap-sys-sp-md w-fit"
+    >
+      <strong
+        class="bg-[var(--bleu-6)]/30 px-sys-pd-lg py-sys-pd-xs rounded-md flex items-center justify-center w-full relative"
+      >
+        <RxCode className="w-4 h-4 inline-block align-middle mr-2" />
+        <span id="install-command" class="w-max"
+          >npm install @devtoti/archui-lib</span
+        >
+        <button
+          type="button"
+          aria-label="Copy install command"
+          class="copy-button flex items-center justify-center ml-2 px-2 py-1 rounded text-xs text-sys-secondary hover:bg-sys-surface-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sys-primary z-10"
+          id="copy-install-btn"
+        >
+          <RxCopy className="w-4 h-4 inline-block align-middle" />
+        </button>
+      </strong>
+      <div
+        class="buttons w-full flex flex-col items-center justify-center gap-sys-sp-md lg:flex-row"
+      >
+        <a
+          href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
+          class="arc-body-1 block w-full decoration-none"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Get Started documentation (opens in a new tab)"
+        >
+          <button
+            type="button"
+            class="h-12 bg-sys-surface-blueprint w-full border-2 border-sys-brd-blueprint text-sys-light uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-orange-400 hover:cursor-pointer hover:text-orange-900 hover:font-black hover:border-orange-800"
+            aria-label="Get Started (opens documentation in a new tab)"
+          >
+            Get Started <span class="sr-only">(opens in a new tab)</span>
+          </button>
+        </a>
+        <a
+          href="https://github.com/devtoti/archui-lib"
+          class="arc-body-1 block w-full decoration-none"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open GitHub (opens in a new tab)"
+        >
+          <button
+            type="button"
+            class="h-12 bg-sys-surface-primary w-full border-2 border-sys-brd-accent text-sys-blueprint uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-sys-surface-tertiary hover:cursor-pointer hover:text-sys-primary hover:font-black hover:border-sys-brd-primary"
+            aria-label="Open GitHub (opens in a new tab)"
+          >
+            Github Repo <span class="sr-only">(opens in a new tab)</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </article>
+  <div
+    class="absolute inset-0 desktop relative h-40 my-auto col-span-full row-start-3 flex items-center justify-center"
+  >
+    <Slider
+      width="500px"
+      duration={25}
+      pauseOnHover={true}
+      blurBorders={false}
+      blurBorderColor={'#fff'}
+      client:only="react"
+    >
+      <Slider.Slide>
+        <Image
+          src={Concept1}
+          alt="Concept 1"
+          width={600}
+          height={400}
+          class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+          draggable="false"
+          loading="eager"
+        />
+      </Slider.Slide>
+      <Slider.Slide>
+        <Image
+          src={Concept2}
+          alt="Concept 2"
+          width={600}
+          height={400}
+          class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+          draggable="false"
+          loading="lazy"
+        />
+      </Slider.Slide>
+      <Slider.Slide>
+        <Image
+          src={Concept3}
+          alt="Concept 3"
+          width={600}
+          height={400}
+          class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+          draggable="false"
+          loading="lazy"
+        />
+      </Slider.Slide>
+      <Slider.Slide>
+        <Image
+          src={Concept4}
+          alt="Concept 4"
+          width={600}
+          height={400}
+          class="opacity-50 hover:opacity-100 px-4 w-full h-auto"
+          draggable="false"
+          loading="lazy"
+        />
+      </Slider.Slide>
+    </Slider>
+  </div>
+  <ColumnHero
+    className="hidden md:block desktop w-full lg:w-4/5 h-auto md:col-start-1 lg:col-start-3 md:place-self-start md:col-span-3 object-none row-start-4 row-span-1"
+  />
+  <ColumnHero
+    className="hidden md:block desktop w-full lg:w-4/5 h-auto md:col-start-6 lg:col-start-9 md:col-span-3 md:place-self-start object-none row-start-4 row-span-1"
+  />
+  <article
+    class="mobile relative row-start-3 row-span-1 md:hidden hero-images w-full h-full max-w-5xl mx-auto grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 items-center justify-center gap-0 mt-sys-sp-lg px-2 col-span-full"
+  >
+    <div class="absolute inset-0 flex items-center justify-center">
+      <Slider
+        width="500px"
+        duration={25}
+        pauseOnHover={true}
+        blurBorders={false}
+        blurBorderColor={'#fff'}
+        client:only="react"
+      >
+        <Slider.Slide>
+          <Image
+            src={Concept1}
+            alt="Concept 1"
+            width={600}
+            height={400}
+            class="opacity-50 hover:opacity-100 hover:scale-125 origin-center px-4 w-full h-auto"
+            draggable="false"
+            loading="eager"
+          />
+        </Slider.Slide>
+        <Slider.Slide>
+          <Image
+            src={Concept2}
+            alt="Concept 2"
+            width={600}
+            height={400}
+            class="opacity-50 hover:opacity-100 hover:scale-125 origin-center px-4 w-full h-auto"
+            draggable="false"
+            loading="lazy"
+          />
+        </Slider.Slide>
+        <Slider.Slide>
+          <Image
+            src={Concept3}
+            alt="Concept 3"
+            width={600}
+            height={400}
+            class="opacity-50 hover:opacity-100 hover:scale-125 origin-center px-4 w-full h-auto"
+            draggable="false"
+            loading="lazy"
+          />
+        </Slider.Slide>
+        <Slider.Slide>
+          <Image
+            src={Concept4}
+            alt="Concept 4"
+            width={600}
+            height={400}
+            class="opacity-50 hover:opacity-100 hover:scale-[110%] origin-center px-4 w-full h-auto"
+            draggable="false"
+            loading="lazy"
+          />
+        </Slider.Slide>
+      </Slider>
+    </div>
+  </article>
+  <ColumnHero
+    className="z-10 w-full place-self-start object-none h-auto col-span-full sm:row-start-4 sm:row-span-1 sm:col-start-2 sm:col-span-2 mobile md:hidden"
+  />
+
+  <style>
+    .beta {
+      margin-top: 0 !important;
+    }
+
+    @media (max-width: 768px) {
+      .desktop {
+        display: none !important;
+      }
+    }
+    @media (min-width: 768px) {
+      .mobile {
+        display: none !important;
+      }
+    }
+  </style>
+</section>

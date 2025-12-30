@@ -1,0 +1,116 @@
+import React from 'react';
+
+interface DoricColumnProps {
+  className?: string;
+  theme: 'doric' | 'ionic' | 'corinthian';
+  themeType: 'light' | 'dark';
+}
+
+const DoricColumn: React.FC<DoricColumnProps> = ({
+  className,
+  theme,
+  themeType,
+}) => {
+  const colors =
+    themeType === 'dark'
+      ? {
+          fill: '#2C2C2C',
+          stroke: '#6B92D3',
+          mask: '#2C2C2C',
+        }
+      : {
+          fill: '#FFFFFF',
+          stroke: '#2855AD',
+          mask: '#FFFFFF',
+        };
+  return (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 77 101"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ opacity: theme === 'doric' ? 1 : 0.5 }}
+    >
+      <mask
+        id="mask0_606_15980"
+        style={{ maskType: 'alpha' }}
+        maskUnits="userSpaceOnUse"
+        x="1"
+        y="33"
+        width="75"
+        height="68"
+      >
+        <rect x="1.5" y="33.5" width="74" height="67" fill={colors.mask} />
+      </mask>
+      <g mask="url(#mask0_606_15980)">
+        <path
+          d="M15.2288 35.1751L39 35.175H62.7712L66.5 686.75H39H11.5L15.2288 35.1751Z"
+          fill={colors.fill}
+          stroke={colors.stroke}
+          strokeWidth="0.5"
+        />
+      </g>
+      <path
+        d="M0.5 0.5H76.5V3.5H0.5V0.5Z"
+        fill={colors.fill}
+        stroke={colors.stroke}
+        strokeWidth="0.5"
+      />
+      <path
+        d="M3.5 3.5H73.5V9.5H3.5V3.5Z"
+        fill={colors.fill}
+        stroke={colors.stroke}
+        strokeWidth="0.5"
+      />
+      <path
+        d="M5.5 9.5H71.5C71.5 12.8137 68.8137 15.5 65.5 15.5H11.5C8.18629 15.5 5.5 12.8137 5.5 9.5Z"
+        fill={colors.fill}
+        stroke={colors.stroke}
+        strokeWidth="0.5"
+      />
+      <path
+        d="M8.5 15.5H68.5V17.5H8.5V15.5Z"
+        fill={colors.fill}
+        stroke={colors.stroke}
+        strokeWidth="0.5"
+      />
+      <path
+        d="M8.5 17.5H68.5L65.5 19.5H11.5L8.5 17.5Z"
+        fill={colors.fill}
+        stroke={colors.stroke}
+        strokeWidth="0.5"
+      />
+      <path
+        d="M11.5 19.5H65.5V29.5H11.5V19.5Z"
+        fill={colors.fill}
+        stroke={colors.stroke}
+        strokeWidth="0.5"
+      />
+      <rect
+        x="8.5"
+        y="29.5"
+        width="60"
+        height="2"
+        rx="1"
+        fill={colors.fill}
+        stroke={colors.stroke}
+        strokeWidth="0.5"
+      />
+      <path
+        d="M10.5 31.5H66.5C66.5 33.7091 64.7091 35.5 62.5 35.5H14.5C12.2909 35.5 10.5 33.7091 10.5 31.5Z"
+        fill={colors.fill}
+        stroke={colors.stroke}
+        strokeWidth="0.5"
+      />
+      <path
+        d="M14.855 100.5L15.227 35.5H14.5C13.0194 35.5 11.7267 34.6956 11.0351 33.5C10.6948 32.9117 10.5 32.2286 10.5 31.5H9.5C8.94771 31.5 8.5 31.0523 8.5 30.5C8.5 29.9477 8.94772 29.5 9.5 29.5H11.5V19.5L8.5 17.5V15.5H11.5C8.18629 15.5 5.5 12.8137 5.5 9.5H3.5V3.5H0.5V0.5H76.5V3.5H73.5V9.5H71.5C71.5 12.8137 68.8137 15.5 65.5 15.5H68.5V17.5L65.5 19.5V29.5H67.5C68.0523 29.5 68.5 29.9477 68.5 30.5C68.5 31.0523 68.0523 31.5 67.5 31.5H66.5C66.5 32.2286 66.3052 32.9117 65.9649 33.5C65.3161 34.6215 64.1385 35.3988 62.773 35.4908L63.145 100.5"
+        stroke={colors.stroke}
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
+
+export default DoricColumn;

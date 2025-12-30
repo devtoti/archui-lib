@@ -1,0 +1,473 @@
+---
+import ReactComponentsPreview from '../react/components/ReactComponentsPreview';
+import Dropdown from '../react/components/Dropdown';
+import ComponentPreview from '../react/components/ComponentPreview';
+---
+
+<section
+  class="bricks w-max-content min-h-screen bg-sys-surface-primary col-span-4 md:col-span-8 lg:col-span-12 text-sys-secondary py-sys-sp-2xl items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-tertiary border-t-0 border-b-0 px-0 md:px-sys-pd-md lg:px-sys-pd-lg flex flex-col md:grid md:grid-cols-8 lg:grid-cols-12"
+>
+  <article
+    class="content w-full flex flex-col items-center justify-center text-center px-sys-pd-md md:px-sys-pd-lg max-w-4xl mx-auto lg:!px-0 lg:!mx-0 md:contents"
+  >
+    <div
+      class="md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8 text-center md:text-start"
+    >
+      <h3
+        class="text-sys-primary text-xl md:text-2xl font-bold uppercase md:text-start"
+      >
+        Explore the library
+      </h3>
+      <p class="text-sm md:text-base md:px-0">
+        Think of ArchUI as a shape-shifting component library, grounded in
+        different classical architectural orders. It is built around three core
+        principles:
+      </p>
+    </div>
+    <article
+      class="principle flex flex-col gap-4 my-sys-sp-lg md:my-sys-sp-2xl w-full px-sys-pd-md md:px-0 md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8"
+    >
+      <img
+        src="/icons/System/DetailMarker-1.svg"
+        class="desktop mr-auto w-[calc(50%+24px)] h-auto md:w-auto md:h-auto lg:hidden"
+        alt="Detail Marker 1"
+      />
+      <div
+        class="principle__title w-full relative flex flex-row items-center justify-start gap-2 max-w-[60ch] md:w-4/5 mx-auto md:text-start md:ml-0"
+      >
+        <span class="hidden annotation lg:block relative shrink-0">
+          <img
+            src="/icons/System/Annotation.svg"
+            class="w-16 h-16"
+            alt="Detail Marker 1"
+          />
+          <h3
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sys-primary text-lg md:text-xl font-semibold uppercase"
+          >
+            01
+          </h3>
+        </span>
+        <div>
+          <h3
+            class="text-sys-primary text-lg md:text-xl font-semibold uppercase"
+          >
+            Granularity
+          </h3>
+          <p class="text-sm md:text-base md:px-0">
+            Its extensive tokenized system lets you keep full control over your
+            components. Style your own with just a few lines of code.
+          </p>
+        </div>
+      </div>
+      <ComponentPreview client:only="react" />
+    </article>
+  </article>
+  <article
+    class="principle flex flex-col my-sys-sp-lg md:my-sys-sp-2xl w-full px-sys-pd-md md:px-0 md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8"
+  >
+    <img
+      src="/icons/System/DetailMarker-2.svg"
+      class="desktop ml-auto w-[calc(50%+24px)] h-auto md:w-auto md:h-auto lg:hidden"
+      alt="Detail Marker 2"
+    />
+    <div
+      class="principle__title flex flex-row-reverse items-center text-center md:text-end justify-end gap-2 w-full mb-8 max-w-[60ch] md:w-4/5 mx-auto md:text-end md:mr-0 z-10"
+    >
+      <span class="hidden annotation lg:block relative shrink-0">
+        <img
+          src="/icons/System/Annotation.svg"
+          class="w-16 h-16"
+          alt="Detail Marker 1"
+        />
+        <h3
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sys-primary text-lg md:text-xl font-semibold uppercase"
+        >
+          02
+        </h3>
+      </span>
+      <div>
+        <h3 class="text-sys-primary text-lg md:text-xl font-semibold uppercase">
+          Flexibility
+        </h3>
+        <p class="text-sm md:text-base md:px-0">
+          There are three different themes you can choose. Switch between them
+          by using a Theme Provider and watch your app's appearance change
+          entirely.
+        </p>
+      </div>
+    </div>
+    <article
+      class="floor-plan-1 !p-0 shadow-lg w-full col-start-1 -col-end-1 px-sys-pd-md md:px-0 md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8 md:mx-0 md:min-h-60 z-10"
+    >
+      <div class="north-facade">
+        <div class="wall-corner" style="transform: rotate(270deg);"></div>
+        <div class="wall-middle"></div>
+        <div class="wall-end"></div>
+        <div class="void bg-sys-surface-tertiary"></div>
+        <div class="wall-end" style="transform: rotate(180deg);"></div>
+        <div class="wall-middle" style="transform: rotate(180deg);"></div>
+        <div class="wall-corner"></div>
+      </div>
+      <div class="middle-facade">
+        <div class="west-facade" style="grid-row: 1 / 2;">
+          <div class="wall-middle vertical"></div>
+          <div class="wall-end vertical"></div>
+          <div class="void bg-sys-surface-tertiary !w-max-content"></div>
+          <div class="wall-end vertical flip"></div>
+          <div class="wall-middle vertical"></div>
+        </div>
+        <div
+          class="space bg-sys-surface-secondary grainy dotted-pattern"
+          id="space-container"
+          style="grid-row: 1 / 2;"
+        >
+          <div
+            class="experience-card-container w-full sm:w-40 lg:w-64 h-auto md:h-80 py-sys-pd-md md:py-sys-pd-xl"
+          >
+            <Dropdown client:only="react" />
+          </div>
+        </div>
+        <div class="east-facade" style="grid-row: 1 / 2;">
+          <div class="wall-middle vertical"></div>
+          <div class="wall-end vertical"></div>
+          <div class="void bg-sys-surface-tertiary !w-max-content"></div>
+          <div class="wall-end vertical flip"></div>
+          <div class="wall-middle vertical"></div>
+        </div>
+      </div>
+      <div class="south-facade">
+        <div class="wall-corner" style="transform: rotate(180deg);"></div>
+        <div class="wall-middle"></div>
+        <div class="wall-end"></div>
+        <div class="void bg-sys-surface-tertiary !w-max-content w-full"></div>
+        <div class="wall-end" style="transform: rotate(180deg);"></div>
+        <div class="wall-middle" style="transform: rotate(180deg);"></div>
+        <div class="wall-corner" style="transform: rotate(90deg);"></div>
+      </div>
+    </article>
+    <article
+      class="principle flex flex-col gap-4 mt-10 mb-sys-sp-lg md:my-sys-sp-2xl w-full max-w-4xl px-sys-pd-md md:px-0 md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8"
+    >
+      <img
+        src="/icons/System/DetailMarker-3.svg"
+        class="mr-auto w-[calc(50%+24px)] h-auto md:w-auto md:h-auto lg:hidden"
+        alt="Detail Marker 3"
+      />
+      <div
+        class="principle__title flex flex-row items-center text-center md:text-start justify-start gap-2 w-full max-w-[60ch] md:w-4/5 mx-auto md:text-start md:ml-0 z-10"
+      >
+        <span class="hidden annotation lg:block relative shrink-0">
+          <img
+            src="/icons/System/Annotation.svg"
+            class="w-16 h-16"
+            alt="Detail Marker 1"
+          />
+          <h3
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sys-primary text-lg md:text-xl font-semibold uppercase"
+          >
+            03
+          </h3>
+        </span>
+        <div>
+          <h3
+            class="text-sys-primary text-lg md:text-xl font-semibold uppercase"
+          >
+            Attractiveness
+          </h3>
+          <p class="text-sm md:text-base md:px-0">
+            Every component intends to be easy to use and visually appealing.
+            There are 10+ components ready to be used on your next project.
+          </p>
+        </div>
+      </div>
+    </article>
+    <article
+      class="floor-plan-1 !p-0 shadow-lg w-full col-start-1 -col-end-1 px-sys-pd-md md:px-0 md:col-start-3 md:col-span-8 md:mx-0 md:min-h-60 z-10"
+    >
+      <div class="north-facade">
+        <div class="wall-corner" style="transform: rotate(270deg);"></div>
+        <div class="wall-middle"></div>
+        <div class="wall-end"></div>
+        <div class="void bg-sys-surface-tertiary"></div>
+        <div class="wall-end" style="transform: rotate(180deg);"></div>
+        <div class="wall-middle" style="transform: rotate(180deg);"></div>
+        <div class="wall-corner"></div>
+      </div>
+      <div class="middle-facade">
+        <div class="west-facade" style="grid-row: 1 / 2;">
+          <div class="wall-middle vertical"></div>
+          <div class="wall-end vertical"></div>
+          <div class="void bg-sys-surface-tertiary"></div>
+          <div class="wall-end vertical flip"></div>
+          <div class="wall-middle vertical"></div>
+        </div>
+        <div
+          class="space bg-sys-surface-secondary grainy dotted-pattern !p-0"
+          id="space-container"
+          style="grid-row: 1 / 2;"
+        >
+          <div
+            class="experience-card-container w-full w-full md:w-64 h-auto md:h-80"
+          >
+            <ReactComponentsPreview client:only="react" />
+          </div>
+        </div>
+        <div class="east-facade" style="grid-row: 1 / 2;">
+          <div class="wall-middle vertical"></div>
+          <div class="wall-end vertical"></div>
+          <div class="void bg-sys-surface-tertiary"></div>
+          <div class="wall-end vertical flip"></div>
+          <div class="wall-middle vertical"></div>
+        </div>
+      </div>
+      <div class="south-facade">
+        <div class="wall-corner" style="transform: rotate(180deg);"></div>
+        <div class="wall-middle"></div>
+        <div class="wall-end"></div>
+        <div class="void bg-sys-surface-tertiary"></div>
+        <div class="wall-end" style="transform: rotate(180deg);"></div>
+        <div class="wall-middle" style="transform: rotate(180deg);"></div>
+        <div class="wall-corner" style="transform: rotate(90deg);"></div>
+      </div>
+    </article>
+  </article>
+</section>
+<style>
+  .floor-plan-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .floor-plan-1 {
+    height: fit-content;
+    width: 100%;
+    max-width: 100svw;
+    background-color: var(--gris-1);
+    transition: height 2s ease-in-out;
+  }
+  .void {
+    flex-grow: 1;
+  }
+  div[class*='wall-'] {
+    min-width: 16px;
+    min-height: 16px;
+    background: repeating-linear-gradient(
+      45deg,
+      var(--bleu-5),
+      var(--bleu-5) 1px,
+      var(--bleu-2) 1px,
+      var(--bleu-2) 2px
+    );
+    background-color: var(--sys-bg-primary);
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light);
+    -moz-box-shadow:
+      1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary);
+    -webkit-box-shadow:
+      1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary);
+    box-shadow:
+      1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary);
+  }
+  div[class*='wall']::after {
+    content: '';
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: var(--sys-stroke-bold) solid var(--bleu-8);
+  }
+  .floor-plan-1 {
+    display: grid;
+    grid-template-rows: 18px 1fr 18px;
+  }
+  .wall-end {
+    position: relative;
+    width: 100% !important;
+    background-color: var(--sys-bg-tertiary);
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light);
+    border-left: none !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow:
+      1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary) !important;
+  }
+  .wall-end::after {
+    border-left: none !important;
+  }
+  .wall-middle {
+    position: relative;
+    width: 100% !important;
+    background-color: var(--sys-bg-tertiary);
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow:
+      0 1px 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary) !important;
+  }
+  .wall-middle::after {
+    border-right: none !important;
+    border-left: none !important;
+  }
+  .vertical {
+    box-shadow:
+      1px 0 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary) !important;
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light) !important;
+    border-top: none !important;
+    border-bottom: none !important;
+  }
+  .vertical::after {
+    border: var(--sys-stroke-bold) solid var(--bleu-8) !important;
+    border-top: none !important;
+    border-bottom: none !important;
+  }
+  .wall-end.vertical {
+    box-shadow:
+      1px 0 0 var(--sys-brd-primary),
+      -1px 0 0 var(--sys-brd-primary),
+      0 1px 0 var(--sys-brd-primary) !important;
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light) !important;
+    border-top: none !important;
+  }
+  .flip {
+    transform: rotate(180deg);
+  }
+  .wall-end.vertical::after {
+    border-bottom: var(--sys-stroke-bold) solid var(--bleu-8) !important;
+  }
+  .wall-corner {
+    position: relative;
+    border: var(--sys-stroke-bold) solid var(--sys-brd-light) !important;
+    border-left: none !important;
+    border-bottom: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow:
+      1px 0 0 var(--sys-brd-primary),
+      0 -1px 0 var(--sys-brd-primary) !important;
+  }
+  .wall-corner::after {
+    border: var(--sys-stroke-bold) solid var(--bleu-8) !important;
+    border-bottom: none !important;
+    border-left: none !important;
+  }
+  .wall-corner::before {
+    content: '';
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 0;
+    z-index: 1;
+    width: 2px;
+    height: 2px;
+    border: var(--sys-stroke-bold) solid var(--bleu-8) !important;
+    border-bottom: none !important;
+    border-left: none !important;
+  }
+  .north-facade,
+  .south-facade {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 18px repeat(2, 1fr) 3fr repeat(2, 1fr) 18px;
+    gap: 0;
+  }
+  .middle-facade {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 18px 1fr 18px;
+    grid-template-rows: 1fr;
+    gap: 0px;
+    min-height: 0;
+  }
+  .west-facade,
+  .east-facade {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    & .wall-middle,
+    & .wall-end {
+      flex-grow: 1;
+    }
+    & .void {
+      flex-grow: 5;
+      width: 100% !important;
+    }
+  }
+  #space-container {
+    position: relative;
+    transform-origin: center;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    min-height: 0;
+    overflow: visible;
+    isolation: isolate;
+    & :first-child {
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .experience-cards {
+    width: 100%;
+    height: auto;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .floor-plan-1 {
+    height: fit-content;
+    background-color: var(--gris-1);
+    transition: height 2s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    .principle {
+      width: 100%;
+    }
+
+    .principle__title {
+      width: 100% !important;
+    }
+
+    .floor-plan-1 {
+      overflow-x: hidden;
+      max-width: 100svw;
+    }
+
+    .north-facade,
+    .south-facade {
+      min-width: 300px;
+    }
+
+    .middle-facade {
+      min-width: 300px;
+    }
+  }
+</style>

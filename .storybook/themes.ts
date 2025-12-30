@@ -5,7 +5,7 @@ export const lightTheme = create({
   base: 'light',
   brandTitle: 'ArchUI Library',
   brandUrl: 'https://github.com/devtoti/archui-lib',
-  brandImage: '/icons/models/archUI.svg',
+  brandImage: '/storybook-assets/archUI.svg',
   brandTarget: '_self',
   
   // Color palette
@@ -45,7 +45,7 @@ export const darkTheme = create({
   base: 'dark',
   brandTitle: 'ArchUI Library',
   brandUrl: 'https://github.com/devtoti/archui-lib',
-  brandImage: '/icons/models/archUI.svg',
+  brandImage: '/storybook-assets/archUI.svg',
   brandTarget: '_self',
   
   // Color palette - using dark mode system tokens
