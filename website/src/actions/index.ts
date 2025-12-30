@@ -6,7 +6,7 @@ export const server = {
     input: z.object({
       name: z.string(),
     }),
-    handler: async (input, context) => {
+    handler: async (input) => {
       return `Welcome to ArchUI. You are using the library with ${input.name}.`
     }
   })

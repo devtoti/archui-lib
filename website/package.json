@@ -11,6 +11,7 @@
     "format:check": "prettier --check \"src/**/*.{astro,ts,tsx,js,jsx,css,json}\""
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.6",
     "@astrojs/react": "^4.4.2",
     "@astrojs/svelte": "^7.2.4",
     "@devtoti/archui-lib": "file:..",
