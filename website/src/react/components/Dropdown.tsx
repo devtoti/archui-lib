@@ -11,10 +11,7 @@ const Dropdown: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<DropdownType>(null);
   const [theme, setTheme] = useState<'doric' | 'ionic' | 'corinthian'>('ionic');
   const [color, setColor] = useState<'light' | 'dark'>('light');
-  // For delay logic
   const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  // NEW: Track "theme at start" for theme dropdown logic
   const themeAtStartRef = useRef<'doric' | 'ionic' | 'corinthian' | null>(null);
 
   const handleThemeChange = (th: 'doric' | 'ionic' | 'corinthian') => {
@@ -24,7 +21,6 @@ const Dropdown: React.FC = () => {
     setColor(c);
   };
 
-  // Called on mouse leave: triggers a 1s delay before hiding
   const handleDropdownHideWithDelay = () => {
     if (hideTimeoutRef.current) {
       clearTimeout(hideTimeoutRef.current);
@@ -34,24 +30,20 @@ const Dropdown: React.FC = () => {
     }, 500);
   };
 
-  // Called on mouse enter: cancels any pending hiding
   const handleDropdownShow = (type: DropdownType) => {
     if (hideTimeoutRef.current) {
       clearTimeout(hideTimeoutRef.current);
     }
     setActiveDropdown(type);
 
-    // Capture the theme at the start of the dropdown display
     if (type === 'themes' && themeAtStartRef.current === null) {
       themeAtStartRef.current = theme;
     }
-    // Reset themeAtStart when entering a different dropdown or closing
     if (type !== 'themes') {
       themeAtStartRef.current = null;
     }
   };
 
-  // Also clear timeout if component unmounts to avoid setting state on unmounted
   React.useEffect(() => {
     return () => {
       if (hideTimeoutRef.current) {
@@ -60,7 +52,6 @@ const Dropdown: React.FC = () => {
     };
   }, []);
 
-  // When dropdown is hidden, clear the remembered theme
   React.useEffect(() => {
     if (activeDropdown !== 'themes') {
       themeAtStartRef.current = null;
@@ -141,7 +132,6 @@ const Dropdown: React.FC = () => {
               <RxCaretRight className="text-sys-blueprint size-4 shrink-0" />
             </div>
           </div>
-          {/* Dropdown Menu - Themes */}
           {activeDropdown === 'themes' && (
             <div
               className="dropdown-menu-orders z-20 relative md:absolute md:top-1/2 md:right-4 md:transform md:-translate-y-1/2 bg-sys-surface-white flex flex-col gap-sys-sp-sm h-auto md:h-[140px] items-start px-sys-pd-sm md:px-sys-pd-lg py-2 rounded-lg shadow-md md:top-1/2 md:right-62 md:transform md:-translate-y-1/5 w-[160px] md:w-[196.2px] text-xs md:text-sm z-20 transition-opacity duration-200"
@@ -202,7 +192,6 @@ const Dropdown: React.FC = () => {
             </div>
           )}
 
-          {/* Dropdown Menu - Colors */}
           {activeDropdown === 'colors' && (
             <div
               className="dropdown-menu-colors z-20 relative md:absolute md:top-1/2 md:right-4 md:transform md:-translate-y-1/2 bg-sys-surface-white flex flex-col gap-sys-sp-sm h-24 items-start px-sys-pd-sm md:px-sys-pd-lg py-sys-pd-sm md:py-sys-pd-md rounded-lg shadow-md md:top-1/2 md:right-62 md:transform md:-translate-y-1/2 w-[160px] md:w-[196.2px] text-xs md:text-sm z-20 transition-opacity duration-200"

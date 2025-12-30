@@ -26,14 +26,12 @@ const Slider: React.FC<SliderProps> & { Slide: React.FC<SlideProps> } = ({
 }) => {
   const [idNanoid, setIdNanoid] = useState<string>('');
 
-  // Convert children to array and filter out invalid elements
   const childrenArray = useMemo(() => {
     return React.Children.toArray(children).filter((child) =>
       React.isValidElement(child)
     ) as React.ReactElement[];
   }, [children]);
 
-  // Generate a random string ID for keyframes
   const generarCadenaAleatoria = (): string => {
     let cadena = '';
     const caracteres =
@@ -53,13 +51,10 @@ const Slider: React.FC<SliderProps> & { Slide: React.FC<SlideProps> } = ({
   useEffect(() => {
     if (!idNanoid || childrenArray.length === 0) return;
 
-    // Calculate the total translation value based on children length and width
-    // This moves exactly one set of children to create seamless loop
     const totalTranslateX = `calc(${toRight ? '' : '-'}${width} * ${
       childrenArray.length
     })`;
 
-    // Dynamically create the CSS keyframes for the animation
     const style = document.createElement('style');
     style.type = 'text/css';
     style.id = `slider-style-${idNanoid}`;
@@ -76,7 +71,6 @@ const Slider: React.FC<SliderProps> & { Slide: React.FC<SlideProps> } = ({
     style.innerHTML = keyFrames;
     document.getElementsByTagName('head')[0].appendChild(style);
 
-    // Cleanup the created styles on component unmount
     return () => {
       const existingStyle = document.getElementById(`slider-style-${idNanoid}`);
       if (existingStyle) {
@@ -175,7 +169,6 @@ const Slider: React.FC<SliderProps> & { Slide: React.FC<SlideProps> } = ({
   );
 };
 
-// Slide component definition with TypeScript
 const Slide: React.FC<SlideProps> = ({
   children,
   width = '200px',
@@ -197,7 +190,6 @@ const Slide: React.FC<SlideProps> = ({
   );
 };
 
-// Assign the Slide component to Slider.Slide
 Slider.Slide = Slide;
 
 export default Slider;

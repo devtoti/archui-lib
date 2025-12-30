@@ -1,8 +1,7 @@
 import { useTheme } from '@devtoti/archui-lib';
-import { RxMoon, RxSun } from 'react-icons/rx';
+import { RxSun } from 'react-icons/rx';
 import { IoMoonOutline } from 'react-icons/io5';
 export default function ThemeTypeSwitcher() {
-  // Hook must be called unconditionally - if it throws, React will handle it
   const { themeType, setThemeType } = useTheme();
 
   const toggleThemeType = () => {

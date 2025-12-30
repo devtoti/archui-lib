@@ -17,59 +17,53 @@ interface Token {
 }
 
 const TokensGrid: React.FC = () => {
-  // Hardcoded token values based on Doric theme (light mode)
   const tokens: Token[] = [
-    // Colors
     {
       name: 'Background',
       variable: '--color-arch-surface-secondary',
-      value: '#F9F9F8', // slate-2 from doric theme
+      value: '#F9F9F8',
       type: 'color',
     },
     {
       name: 'Text',
       variable: '--color-arch-primary',
-      value: '#1C2024', // slate-12 from doric theme
+      value: '#1C2024',
       type: 'color',
     },
     {
       name: 'Border (Success)',
       variable: '--color-arch-sem-brd-success',
-      value: '#62A379', // sem-brd-success from doric theme
+      value: '#62A379',
       type: 'color',
     },
     {
       name: 'Icon (Success)',
       variable: '--color-arch-sem-i-success',
-      value: '#30A46C', // sem-icons-success from doric theme
+      value: '#30A46C',
       type: 'color',
     },
-    // Padding
     {
       name: 'Padding (Small)',
       variable: '--spacing-arch-sm',
-      value: '0.5rem', // pd-sm from doric theme
+      value: '0.5rem',
       type: 'spacing',
     },
-    // Border Radius
     {
       name: 'Border Radius (Small)',
       variable: '--radius-arch-rd-sm',
-      value: '0', // rd-sm from doric theme
+      value: '0',
       type: 'border-radius',
     },
-    // Stroke Width
     {
       name: 'Stroke (Extra Bold)',
       variable: '--stroke-extra-bold',
-      value: '6px', // stroke-extra-bold from doric theme
+      value: '6px',
       type: 'stroke-width',
     },
-    // Font Family
     {
       name: 'Font Family',
       variable: 'font-family',
-      value: "'Barlow', system-ui, -apple-system, sans-serif", // doric theme font
+      value: "'Barlow', system-ui, -apple-system, sans-serif",
       type: 'font-family',
     },
   ];

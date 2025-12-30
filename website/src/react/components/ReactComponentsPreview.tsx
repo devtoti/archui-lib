@@ -52,14 +52,6 @@ export default function ReactComponentsPreview() {
           size="md"
           icon={<RxBell />}
         />
-        {/* <div className="flex w-full items-center justify-center">
-          <Button
-          variant="secondary"
-          size="md"
-          label={open ? 'Close Toast' : 'Open Toast'}
-          onClick={() => setOpen(!open)}
-          />
-          </div> */}
         <Toast
           variant="minimal"
           className="ionic text-start"

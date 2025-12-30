@@ -13,7 +13,6 @@ export default function Navbar({ children }: NavbarProps) {
         still in the experimental phase.
       </div>
       <nav className="sticky top-0 z-50 bg-sys-surface-white w-full h-12 shadow-sm flex flex-row items-center justify-between gap-sys-sp-md shadow-lg dark:shadow-sys-brd-tertiary lg:pr-sys-pd-md">
-        {/* Desktop Navbar */}
         <div className="desktop hidden md:flex gap-6 w-full">
           <svg
             width="98"
@@ -93,7 +92,6 @@ export default function Navbar({ children }: NavbarProps) {
             </a>
           </button>
         </div>
-        {/* Mobile Navbar */}
         <div className="mobile w-full px-sys-pd-lg grid grid-cols-3 items-center justify-between gap-sys-sp-md md:hidden">
           <svg
             width="98"

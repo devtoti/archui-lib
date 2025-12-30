@@ -11,18 +11,17 @@ const CorinthianColumn: React.FC<CorinthianColumnProps> = ({
   theme,
   themeType,
 }) => {
-  // Switch SVG colors based on themeType (light or dark)
   const colors =
     themeType === 'dark'
       ? {
-          fill: '#2C2C2C', // bleu-8 (dark mode fill)
-          stroke: '#6B92D3', // bleu-2 (dark mode stroke)
-          mask: '#2C2C2C', // match sys-bg-white in dark mode
+          fill: '#2C2C2C',
+          stroke: '#6B92D3',
+          mask: '#2C2C2C',
         }
       : {
-          fill: '#FFFFFF', // bleu-5 (light mode fill)
-          stroke: '#2855AD', // bleu-7 (light mode stroke)
-          mask: '#FFFFFF', // match sys-bg-white in light mode
+          fill: '#FFFFFF',
+          stroke: '#2855AD',
+          mask: '#FFFFFF',
         };
   return (
     <svg

@@ -422,7 +422,6 @@ import ComponentPreview from '../react/components/ComponentPreview';
     padding: 1rem;
     min-height: 0;
     overflow: visible;
-    /* Ensure dotted-pattern is visible */
     isolation: isolate;
     & :first-child {
       width: 100%;
@@ -445,7 +444,6 @@ import ComponentPreview from '../react/components/ComponentPreview';
   }
   .floor-plan-1 {
     height: fit-content;
-    /* width: 100%; */
     background-color: var(--gris-1);
     transition: height 2s ease-in-out;
   }
@@ -473,127 +471,4 @@ import ComponentPreview from '../react/components/ComponentPreview';
       min-width: 300px;
     }
   }
-  /* :global([data-theme='dark']) {
-    .floor-plan-1 {
-      background-color: var(--sys-bg-primary);
-    }
-
-    div[class*='wall-'] {
-      background: repeating-linear-gradient(
-        45deg,
-        var(--sys-bg-white),
-        var(--sys-bg-white) 1px,
-        var(--sys-bg-tertiary) 1px,
-        var(--sys-bg-tertiary) 2px
-      );
-      background-color: var(--sys-bg-blueprint);
-      border: var(--sys-stroke-bold) solid var(--sys-bg-primary);
-      -moz-box-shadow:
-        1px 0 0 var(--sys-brd-primary),
-        0 1px 0 var(--sys-brd-primary),
-        0 -1px 0 var(--sys-brd-primary),
-        -1px 0 0 var(--sys-brd-primary);
-      -webkit-box-shadow:
-        1px 0 0 var(--sys-brd-primary),
-        0 1px 0 var(--sys-brd-primary),
-        0 -1px 0 var(--sys-brd-primary),
-        -1px 0 0 var(--sys-brd-primary);
-      box-shadow:
-        1px 0 0 var(--sys-brd-primary),
-        0 1px 0 var(--sys-brd-primary),
-        0 -1px 0 var(--sys-brd-primary),
-        -1px 0 0 var(--sys-brd-primary);
-    }
-
-    div[class*='wall']::after {
-      border: var(--sys-stroke-bold) solid var(--sys-brd-dark);
-    }
-
-    .wall-end {
-      width: 100% !important;
-      background-color: var(--sys-bg-tertiary);
-      border: var(--sys-stroke-bold) solid var(--sys-bg-white);
-      -moz-box-shadow: none !important;
-      -webkit-box-shadow: none !important;
-      box-shadow:
-        1px 0 0 var(--sys-brd-secondary),
-        0 1px 0 var(--sys-brd-secondary),
-        0 -1px 0 var(--sys-brd-secondary) !important;
-    }
-
-    .wall-middle {
-      background-color: var(--sys-bg-tertiary);
-      box-shadow:
-        0 1px 0 var(--sys-brd-secondary),
-        0 -1px 0 var(--sys-brd-secondary) !important;
-
-      &::after {
-        border-right: none !important;
-        border-left: none !important;
-      }
-    }
-
-    .vertical {
-      box-shadow:
-        1px 0 0 var(--sys-brd-secondary),
-        -1px 0 0 var(--sys-brd-secondary) !important;
-      border: var(--sys-stroke-bold) solid var(--sys-bg-white) !important;
-      border-top: none !important;
-      border-bottom: none !important;
-
-      &::after {
-        border: var(--sys-stroke-bold) solid var(--sys-brd-dark) !important;
-        border-top: none !important;
-        border-bottom: none !important;
-      }
-    }
-
-    .wall-end.vertical {
-      box-shadow:
-        1px 0 0 var(--sys-brd-secondary),
-        -1px 0 0 var(--sys-brd-secondary),
-        0 1px 0 var(--sys-brd-secondary) !important;
-      border: var(--sys-stroke-bold) solid var(--sys-bg-white) !important;
-      border-top: none !important;
-
-      &::after {
-        border-bottom: var(--sys-stroke-bold) solid var(--sys-brd-dark) !important;
-      }
-    }
-
-    .flip {
-      transform: rotate(180deg);
-    }
-
-    .wall-corner {
-      position: relative;
-      border: var(--sys-stroke-bold) solid var(--sys-bg-white) !important;
-      border-left: none !important;
-      border-bottom: none !important;
-      -webkit-box-shadow: none !important;
-      -moz-box-shadow: none !important;
-      box-shadow:
-        1px 0 0 var(--sys-brd-secondary),
-        0 -1px 0 var(--sys-brd-secondary) !important;
-
-      &::after {
-        border: var(--sys-stroke-bold) solid var(--sys-brd-dark) !important;
-        border-bottom: none !important;
-        border-left: none !important;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: calc(100% - 4px);
-        left: 0;
-        z-index: 1;
-        width: 2px;
-        height: 2px;
-        border: var(--sys-stroke-bold) solid var(--sys-brd-dark) !important;
-        border-bottom: none !important;
-        border-left: none !important;
-      }
-    }
-  } */
 </style>

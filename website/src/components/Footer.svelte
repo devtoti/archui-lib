@@ -270,13 +270,6 @@
 </footer>
 
 <style lang="scss">
-  /* footer {
-    background-image:
-      linear-gradient(to right, var(--gray-alpha-05) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--gray-alpha-05) 1px, transparent 1px);
-    background-size: 16px 16px;
-    background-position: -5px -5px;
-  } */
   h6 {
     color: var(--sys-txt-primary) !important;
   }
@@ -423,7 +416,6 @@
         color: var(--sys-txt-tertiary);
         font-weight: 400;
         grid-row: 3 / 4;
-        /* display: inline-block; */
         width: 100%;
         text-align: center;
         &:nth-child(1) {

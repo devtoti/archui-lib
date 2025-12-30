@@ -16,7 +16,6 @@ export default function ThemeProviderWrapper({
 }: ThemeProviderWrapperProps) {
   const [theme, setTheme] = useState<Theme>(initialTheme);
   const [themeType, setThemeType] = useState<ThemeType>(() => {
-    // Try to get from localStorage on mount
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('archui-theme-type');
       if (saved === 'light' || saved === 'dark') {
@@ -26,7 +25,6 @@ export default function ThemeProviderWrapper({
     return initialThemeType;
   });
 
-  // Persist themeType to localStorage whenever it changes
   useEffect(() => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('archui-theme-type', themeType);
