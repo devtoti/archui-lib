@@ -28,8 +28,18 @@ export default function ThemeProviderWrapper({
   useEffect(() => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('archui-theme-type', themeType);
+      if (window.LogRocket) {
+        const visitorId = localStorage.getItem('archui-visitor-id');
+        if (visitorId) {
+          window.LogRocket.identify(visitorId, {
+            themeType: themeType,
+            theme: theme,
+            lastThemeUpdate: new Date().toISOString(),
+          });
+        }
+      }
     }
-  }, [themeType]);
+  }, [themeType, theme]);
 
   return (
     <ThemeProvider
