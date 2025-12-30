@@ -2,7 +2,7 @@ declare module 'astro:content' {
 	export interface RenderResult {
 		Content: import('astro/runtime/server/index.js').AstroComponentFactory;
 		headings: import('astro').MarkdownHeading[];
-		remarkPluginFrontmatter: Record<string, unknown>;
+		remarkPluginFrontmatter: Record<string, any>;
 	}
 	interface Render {
 		'.md': Promise<RenderResult>;
@@ -26,7 +26,7 @@ declare module 'astro:content' {
 	export type ContentCollectionKey = keyof ContentEntryMap;
 	export type DataCollectionKey = keyof DataEntryMap;
 
-	type AllValuesOf<T> = T extends object ? T[keyof T] : never;
+	type AllValuesOf<T> = T extends any ? T[keyof T] : never;
 	type ValidContentEntrySlug<C extends keyof ContentEntryMap> = AllValuesOf<
 		ContentEntryMap[C]
 	>['slug'];
@@ -152,14 +152,18 @@ declare module 'astro:content' {
 		collection: C,
 	): import('astro/zod').ZodEffects<import('astro/zod').ZodString, never>;
 
-	type ReturnTypeOrOriginal<T> = T extends (...args: unknown[]) => infer R ? R : T;
+	type ReturnTypeOrOriginal<T> = T extends (...args: any[]) => infer R ? R : T;
 	type InferEntrySchema<C extends keyof AnyEntryMap> = import('astro/zod').infer<
 		ReturnTypeOrOriginal<Required<ContentConfig['collections'][C]>['schema']>
 	>;
 
-	type ContentEntryMap = Record<string, never>;
+	type ContentEntryMap = {
+		
+	};
 
-	type DataEntryMap = Record<string, never>;
+	type DataEntryMap = {
+		
+	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
