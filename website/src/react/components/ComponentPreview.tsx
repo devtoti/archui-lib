@@ -1,0 +1,302 @@
+import React from 'react';
+import * as Tabs from '@radix-ui/react-tabs';
+import { Callout } from '@devtoti/archui-lib';
+
+type TokenType =
+  | 'color'
+  | 'spacing'
+  | 'border-radius'
+  | 'stroke-width'
+  | 'font-family';
+
+interface Token {
+  name: string;
+  variable: string;
+  value: string;
+  type: TokenType;
+}
+
+const TokensGrid: React.FC = () => {
+  const tokens: Token[] = [
+    {
+      name: 'Background',
+      variable: '--color-arch-surface-secondary',
+      value: '#F9F9F8',
+      type: 'color',
+    },
+    {
+      name: 'Text',
+      variable: '--color-arch-primary',
+      value: '#1C2024',
+      type: 'color',
+    },
+    {
+      name: 'Border (Success)',
+      variable: '--color-arch-sem-brd-success',
+      value: '#62A379',
+      type: 'color',
+    },
+    {
+      name: 'Icon (Success)',
+      variable: '--color-arch-sem-i-success',
+      value: '#30A46C',
+      type: 'color',
+    },
+    {
+      name: 'Padding (Small)',
+      variable: '--spacing-arch-sm',
+      value: '0.5rem',
+      type: 'spacing',
+    },
+    {
+      name: 'Border Radius (Small)',
+      variable: '--radius-arch-rd-sm',
+      value: '0',
+      type: 'border-radius',
+    },
+    {
+      name: 'Stroke (Extra Bold)',
+      variable: '--stroke-extra-bold',
+      value: '6px',
+      type: 'stroke-width',
+    },
+    {
+      name: 'Font Family',
+      variable: 'font-family',
+      value: "'Barlow', system-ui, -apple-system, sans-serif",
+      type: 'font-family',
+    },
+  ];
+
+  return (
+    <div className="flex flex-col items-center justify-center w-full h-48 md:h-64 bg-zinc-100 dark:bg-zinc-900 dotted-pattern p-2 md:p-3 overflow-auto">
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-3 max-w-4xl mx-auto">
+        {tokens.map((token) => (
+          <div
+            key={`${token.variable}-${token.name}`}
+            className="flex flex-col items-center gap-1"
+          >
+            {token.type === 'color' ? (
+              <div
+                className="w-8 h-8 md:w-10 md:h-10 rounded border border-sys-brd-primary shadow-sm bg-gray-100"
+                style={{
+                  backgroundColor:
+                    token.value && token.value !== 'transparent'
+                      ? token.value
+                      : undefined,
+                }}
+                title={token.value || 'Color not available'}
+              />
+            ) : (
+              <div
+                className="w-6 h-6 md:w-10 md:h-10 rounded border border-sys-brd-primary shadow-sm bg-sys-surface-tertiary flex items-center justify-center"
+                title={token.value}
+              >
+                {token.type === 'spacing' && (
+                  <div
+                    className="w-5 h-5 bg-sys-surface-secondary border border-sys-brd-primary"
+                    style={{ padding: token.value }}
+                  />
+                )}
+                {token.type === 'border-radius' && (
+                  <div
+                    className="w-5 h-5 bg-sys-bg-primary"
+                    style={{ borderRadius: token.value }}
+                  />
+                )}
+                {token.type === 'stroke-width' && (
+                  <div className="flex flex-col items-center gap-0.5">
+                    <div
+                      className="w-6 bg-sys-bg-primary"
+                      style={{ height: token.value }}
+                    />
+                    <span className="text-[7px] text-sys-secondary font-mono">
+                      {token.value}
+                    </span>
+                  </div>
+                )}
+                {token.type === 'font-family' && (
+                  <span
+                    className="text-[10px] text-sys-bg-primary font-bold"
+                    style={{ fontFamily: token.value }}
+                  >
+                    Aa
+                  </span>
+                )}
+              </div>
+            )}
+            <div className="flex flex-col items-center gap-0.5 w-full">
+              <span className="text-[9px] md:text-[10px] text-sys-secondary text-center font-medium">
+                {token.name}
+              </span>
+              <span className="text-[8px] md:text-[9px] text-sys-secondary text-center font-mono break-all px-0.5 leading-tight">
+                {token.variable}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const ComponentPreview: React.FC = () => {
+  return (
+    <div className="border-[2px] border-sys-brd-secondary rounded-lg overflow-hidden w-full z-10">
+      <Tabs.Root className="TabsRoot" defaultValue="component">
+        <Tabs.List className="TabsList" aria-label="Component preview tabs">
+          <Tabs.Trigger
+            className="TabsTrigger"
+            style={{
+              backgroundColor: 'var(--sys-bg-primary)',
+            }}
+            value="component"
+          >
+            Component
+          </Tabs.Trigger>
+          <Tabs.Trigger
+            className="TabsTrigger"
+            style={{
+              backgroundColor: 'var(--sys-bg-primary)',
+            }}
+            value="code"
+          >
+            Code
+          </Tabs.Trigger>
+          <Tabs.Trigger
+            className="TabsTrigger"
+            style={{
+              backgroundColor: 'var(--sys-bg-primary)',
+            }}
+            value="tokens"
+          >
+            Tokens
+          </Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content className="TabsContent" value="component">
+          <div className="w-full h-48 flex items-center  overflow-hidden justify-center md:h-64 bg-zinc-100 dark:bg-zinc-900 dotted-pattern">
+            <div className="w-fit h-fit relative text-start">
+              <Callout
+                title="Tip"
+                label="Inspect the code and see how easy it is to import and customize your components."
+                variant="success"
+                size="md"
+              />
+              <span className="w-[1px] h-svh bg-sys-brd-tertiary/50 absolute bottom-0 left-0 translate-y-[50%]"></span>
+              <span className="w-[1px] h-svh bg-sys-brd-tertiary/50 absolute bottom-0 right-0 translate-y-[50%]"></span>
+              <span className="w-svw h-[1px] bg-sys-brd-tertiary/50 absolute top-0 left-1/2 translate-x-[-50%]"></span>
+              <span className="w-svw h-[1px] bg-sys-brd-tertiary/50 absolute bottom-0 left-1/2 translate-x-[-50%]"></span>
+            </div>
+          </div>
+        </Tabs.Content>
+        <Tabs.Content className="TabsContent" value="code">
+          <div className="bg-sys-surface-tertiary w-full h-48 flex items-center justify-center md:h-64 bg-gray-900">
+            <pre className="px-8 text-xs rounded-md p-4 w-full overflow-x-auto font-mono whitespace-pre-wrap text-start">
+              <code>
+                <span style={{ color: '#7dd3fc' }}>{'import'}</span>
+                <span style={{ color: '#fff' }}>{' { '}</span>
+                <span style={{ color: '#a5b4fc' }}>{'Callout'}</span>
+                <span style={{ color: '#fff' }}>{' } '}</span>
+                <span style={{ color: '#7dd3fc' }}>{'from'}</span>
+                <span style={{ color: '#fbbf24' }}>
+                  {" '@devtoti/archui-lib'"}
+                </span>
+                <span style={{ color: '#fff' }}>{';\n\n'}</span>
+                <span style={{ color: '#60a5fa' }}>{'<'}</span>
+                <span style={{ color: '#a5b4fc' }}>{'Callout'}</span>
+                <span style={{ color: '#60a5fa' }}>{'\n'}</span>
+                <span style={{ color: '#22d3ee', paddingLeft: 2 }}>
+                  {'  title='}
+                </span>
+                <span style={{ color: '#fbbf24' }}>{'"Tip"'}</span>
+                <span>{'\n'}</span>
+                <span style={{ color: '#22d3ee', paddingLeft: 2 }}>
+                  {'  label='}
+                </span>
+                <span style={{ color: '#fbbf24' }}>
+                  {
+                    '"Inspect the code and see how easy it is to import and customize your components."'
+                  }
+                </span>
+                <span>{'\n'}</span>
+                <span style={{ color: '#22d3ee', paddingLeft: 2 }}>
+                  {'  variant='}
+                </span>
+                <span style={{ color: '#fbbf24' }}>{'"success"'}</span>
+                <span>{'\n'}</span>
+                <span style={{ color: '#22d3ee', paddingLeft: 2 }}>
+                  {'  size='}
+                </span>
+                <span style={{ color: '#fbbf24' }}>{'"md"'}</span>
+                <span>{'\n'}</span>
+                <span style={{ color: '#60a5fa' }}>{'/>'}</span>
+                <span>{'\n'}</span>
+              </code>
+            </pre>
+          </div>
+        </Tabs.Content>
+        <Tabs.Content className="TabsContent" value="tokens">
+          <TokensGrid />
+        </Tabs.Content>
+      </Tabs.Root>
+      <style>{`
+        .TabsRoot {
+          width: 100%;
+        }
+        .TabsList {
+          all: unset;
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+          width: 100%;
+          background-color: var(--sys-surface-primary);
+          border-bottom: 1px solid var(--sys-brd-primary);
+        }
+        .TabsTrigger {
+          all: unset;
+          background-color: var(--sys-bg-primary);
+          font-family: inherit;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--sys-secondary);
+          user-select: none;
+          cursor: pointer;
+          transition: color 0.2s, border-bottom 0.2s, background 0.15s;
+          flex: 1 1 0;
+          height: 100%;
+          border-bottom: 2px solid transparent;
+          position: relative;
+          min-width: 0;
+          padding: 0 0;
+        }
+        .TabsTrigger:hover {
+          color: var(--sys-txt-tertiary);
+          background: rgba(20,48,120,0.04);
+        }
+        .TabsTrigger[data-state='active'] {
+          color: var(--sys-txt-primary);
+          font-weight: 600;
+          border-bottom: 4px solid var(--sys-brd-primary);
+          background: var(--sys-bg-primary);
+        }
+        .TabsTrigger:focus-visible {
+          position: relative;
+          outline: 2px solid var(--sys-bg-primary);
+          outline-offset: 2px;
+          border-radius: 2px;
+        }
+        .TabsContent {
+          width: 100%;
+          flex-grow: 1;
+          outline: none;
+        }
+        .TabsContent[data-state='inactive'] {
+          display: none;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default ComponentPreview;

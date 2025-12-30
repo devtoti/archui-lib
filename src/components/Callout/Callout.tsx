@@ -93,7 +93,7 @@ export const Callout: React.FC<CalloutProps> = ({
       >
         {IconElement}
       </span>
-      <h4 className="font-medium inline">{title}:</h4>
+      {title && <h4 className="font-medium inline">{title}:</h4>}
       <p className="inline"> {content}</p>
     </Component>
   );

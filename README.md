@@ -1,4 +1,4 @@
-![ArchUI](./public/icons/models/archui-github-header.png)
+![ArchUI](./public/storybook-assets/archui-github-header.png)
 
 # ArchUI Component Library
 
@@ -16,7 +16,7 @@ ArchUI is a unique and modern React component library inspired by classical arch
 
 - **Corinthian**: Features subtle rounded corners for refined edges, delicate padding that maintains spaciousness, light-gray borders for elegant definition, and rich ornamental details throughout. Expect soft, layered shadows for dimensional depth, gradient backgrounds that add visual sophistication, and a slender, svelte appearance that conveys grace.
 
-![Orders](./public/icons/models/archui-github-orders.png)
+![Orders](./public/storybook-assets/archui-github-orders.png)
 
 > [!NOTE]
 > ArchUI brings an artistic, outside-the-box perspective inspired by architecture, urbanism, and industrial design to web development. This project is a tribute to early architectural treatises that dictated why and how we should build and engineer structures (apps).
@@ -52,7 +52,7 @@ The _causa finis_ of this library is to offer a new robust and rigorous Design S
 - Functionality
 - Attractiveness
 
-![Orders](./public/icons/models/archui-github-principles.png)
+![Orders](./public/storybook-assets/archui-github-principles.png)
 
 ### Modular Designs
 
@@ -64,7 +64,7 @@ All ArchUI components are organized within three modular themes. Each theme uses
 
 Our design methodology draws inspiration from architectural blueprints, emphasizing structural proportion and uniqueness. Every component has been crafted with special care and attention to detail, so your interfaces feel deliberate and cohesive.
 
----
+## ![Blueprints](./public/storybook-assets/archui-github-blueprint-approach.png)
 
 ### A11y-Lens
 
@@ -104,4 +104,4 @@ We are committed to inclusive design and ensure ArchUI components conform to WCA
 - [FigmaCommunity](https://www.figma.com/@totiruiz)
 - [Portfolio](https://devtoti.com)
 
-![Info](./public/icons/models/archui-github-footer.png)
+![Info](./public/storybook-assets/archui-github-footer.png)

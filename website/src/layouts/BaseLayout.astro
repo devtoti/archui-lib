@@ -1,0 +1,17 @@
+---
+import '../../../src/index.css';
+import '../../../src/fonts.css';
+import FooterSvelte from '../components/Footer.svelte';
+interface Props {
+  title?: string;
+}
+---
+
+<!-- Main Content Slot -->
+<section
+  class="main-content-slot bg-sys-surface-primary grid items-start grid-cols-4 px-4 gap-2 grid-rows-auto min-h-svh w-screen md:grid-cols-8 md:grid-rows-auto md:px-4 lg:grid-cols-12 lg:grid-rows-auto"
+>
+  <slot />
+  <!-- Footer -->
+  <FooterSvelte />
+</section>

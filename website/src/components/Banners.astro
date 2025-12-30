@@ -1,0 +1,121 @@
+---
+import LeftHand from './LeftHand.astro';
+import RightHand from './RightHand.astro';
+import { RxSpeakerLoud, RxStar, RxEnvelopeClosed } from 'react-icons/rx';
+---
+
+<section
+  class="banners w-full h-fit col-span-4 md:col-span-8 lg:col-span-12 bg-sys-surface-primary text-sys-secondary flex flex-col items-center justify-start gap-sys-sp-lg border-2 border-sys-brd-tertiary border-t-0 border-b-0 px-0 md:px-sys-pd-md lg:px-sys-pd-lg"
+>
+  <article
+    class="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[500px] lg:h-[38vh] lg:max-h-[560px] w-full overflow-hidden border-[1.5px] border-l-0 border-r-0 border-[var(--border-secondary)] col-span-full bg-[radial-gradient(circle,#5b60c8,#343fa0_50%,#2a3397_100%)]"
+  >
+    <div
+      class="absolute inset-0 w-full h-full flex flex-col items-center justify-start md:justify-start text-center gap-3 md:gap-4 z-10 px-4 py-6 md:px-6 md:py-8 lg:p-8 md:mt-8 md:mx-auto md:h-auto text-white"
+    >
+      <h2 class="arc-h2 md:arc-h1 color-invert mb-0 pb-0">
+        <span>ArchUI Figma Library Kit</span>
+      </h2>
+      <h3
+        class="arc-body-1 md:arc-body-1 lg:arc-body-0 color-invert pb-2 md:inline-block md:w-1/2"
+      >
+        <span
+          >Explore the Official Figma Library we made for you and start
+          prototyping your next project with ArchUI!</span
+        >
+      </h3>
+      <div
+        class="w-full max-w-[12rem] md:max-w-[40ch] md:inline-block md:w-1/2 lg:max-w-[16rem]"
+      >
+        <a
+          href="https://www.figma.com/community/file/1585101937198168427/archui-design-system-v1-1-0"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button secondary flex items-center justify-center h-10 w-full text-sys-dark bg-sys-surface-primary border border-sys-brd-primary px-sys-pd-sm py-sys-pd-xs transition-colors transition-shadow duration-200 font-semibold rounded-md shadow-sm outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sys-primary hover:bg-orange-500 hover:text-orange-900 hover:border-orange-900 active:bg-sys-surface-primary active:text-sys-primary"
+        >
+          VIEW LIBRARY
+        </a>
+      </div>
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 w-full h-full origin-center grid grid-cols-2 place-items-center -translate-x-1/2 -translate-y-[20%] scale-[1.75] rotate-[20deg] md:-translate-x-[45%] md:-translate-y-[60%] md:scale-[1.2] md:rotate-[10deg] md:items-end md:pb-8 lg:-translate-x-1/2 lg:-translate-y-[45%] lg:scale-100 lg:rotate-[10deg] pointer-events-none mix-blend-multiply z-[1]"
+    >
+      <div class="relative w-full h-full flex items-center justify-center">
+        <div
+          class="left-hand active w-full h-fit -translate-x-[20%] md:translate-x-[3%] opacity-40 transition-all duration-[2000ms] ease-in-out"
+        >
+          <LeftHand />
+        </div>
+      </div>
+      <div class="relative w-full h-full flex items-center justify-center">
+        <div
+          class="right-hand active w-full h-fit translate-x-[20%] md:translate-x-0 opacity-40 transition-all duration-[2000ms] ease-in-out"
+        >
+          <RightHand />
+        </div>
+      </div>
+    </div>
+  </article>
+  <article
+    class="bricks flex flex-col items-center justify-center gap-sys-sp-lg w-full mx-auto px-sys-pd-md md:px-sys-pd-lg pb-12"
+  >
+    <div class="text-center w-full md:w-4/5">
+      <h3 class="text-sys-primary text-xl md:text-2xl font-bold uppercase">
+        Support the Project
+      </h3>
+      <p class="text-sm md:text-base px-2 md:px-0">
+        ArchUI is currently in beta, so your support helps us grow and improve.
+        Thank you for being part of the journey!
+      </p>
+      <div class="mt-2 flex flex-row items-center mb-8 justify-center gap-2">
+        <img
+          src="https://img.shields.io/github/stars/devtoti/archui-lib?logo=GitHub
+"
+          alt="github stars"
+          class="inline-block"
+        />
+        <img
+          src="https://img.shields.io/npm/d18m/%40devtoti%2Farchui-lib?logo=npm"
+          alt="npm downloads"
+          class="inline-block"
+        />
+      </div>
+    </div>
+    <div
+      class="content__row flex flex-row items-center justify-center gap-sys-sp-xs md:gap-sys-sp-sm w-full px-sys-pd-sm md:px-0"
+    >
+      <hr class="w-full border-[1px] border-dashed border-sys-brd-tertiary" />
+      <div
+        class="gap-4 flex items-center justify-center bg-sys-surface-tertiary min-w-60 rounded-md text-sys-secondary px-sys-pd-xs md:px-sys-pd-sm py-sys-pd-xs h-8"
+      >
+        <RxSpeakerLoud className="w-4 h-4" />
+        <span class="block">Spread the word</span>
+      </div>
+      <hr class="w-full border-[1px] border-dashed border-sys-brd-tertiary" />
+    </div>
+    <div
+      class="content__row flex flex-row items-center justify-center gap-sys-sp-xs md:gap-sys-sp-sm w-full px-sys-pd-sm md:px-0"
+    >
+      <hr class="w-full border-[1px] border-dashed border-sys-brd-tertiary" />
+      <div
+        class="gap-4 flex items-center justify-center bg-sys-surface-tertiary min-w-60 rounded-md text-sys-secondary px-sys-pd-xs md:px-sys-pd-sm py-sys-pd-xs h-8"
+      >
+        <RxStar className="w-4 h-4" />
+        <span class="block">Star the repository</span>
+      </div>
+      <hr class="w-full border-[1px] border-dashed border-sys-brd-tertiary" />
+    </div>
+    <div
+      class="content__row flex flex-row items-center justify-center gap-sys-sp-xs md:gap-sys-sp-sm w-full px-sys-pd-sm md:px-0"
+    >
+      <hr class="w-full border-[1px] border-dashed border-sys-brd-tertiary" />
+      <div
+        class="gap-4 flex items-center justify-center bg-sys-surface-tertiary min-w-60 rounded-md text-sys-secondary px-sys-pd-xs md:px-sys-pd-sm py-sys-pd-xs h-8"
+      >
+        <RxEnvelopeClosed className="w-4 h-4" />
+        <span class="block">Contribute to the project</span>
+      </div>
+      <hr class="w-full border-[1px] border-dashed border-sys-brd-tertiary" />
+    </div>
+  </article>
+</section>

@@ -6,17 +6,23 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "prettier --write \"src/**/*.{astro,ts,tsx,js,jsx,css,json}\"",
+    "format:check": "prettier --check \"src/**/*.{astro,ts,tsx,js,jsx,css,json}\""
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.6",
     "@astrojs/react": "^4.4.2",
+    "@astrojs/svelte": "^7.2.4",
     "@devtoti/archui-lib": "file:..",
+    "@radix-ui/react-tabs": "^1.1.13",
     "@tailwindcss/postcss": "^4.1.18",
     "astro": "^5.16.6",
     "autoprefixer": "^10.4.23",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
+    "svelte": "^5.46.1",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {

@@ -220,6 +220,7 @@
   --icon-dark: #2D3341;
 
   /* Padding - from JSON padding values (converted to rem) */
+  --pd-2xs: 0.25rem;
   --pd-xs: 0.5rem;
   --pd-sm: 0.75rem;
   --pd-md: 1rem;

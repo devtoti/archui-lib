@@ -1,0 +1,24 @@
+# Exclude documentation images that bloat the package
+dist/icons/models/
+dist/archUI.png
+dist/archUI.svg
+dist/favicon.ico
+dist/vite.svg
+
+# Exclude source files (only dist should be published)
+src/
+public/
+website/
+docs/
+.storybook/
+*.config.*
+tsconfig*.json
+eslint.config.js
+vitest.shims.d.ts
+index.html
+
+# Exclude development files
+node_modules/
+*.log
+.DS_Store
+

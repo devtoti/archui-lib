@@ -18,6 +18,7 @@
   --bleu-12: #01102C;
 
   /* Gris - Light Mode (0=lightest -> 1, 15=darkest -> 12) */
+  --gris-0: #f5f8fd;
   --gris-1: #F2F7FF;
   --gris-2: #E9F1FF;
   --gris-3: #E5EEFE;

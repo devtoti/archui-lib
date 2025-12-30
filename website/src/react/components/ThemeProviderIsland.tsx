@@ -11,7 +11,7 @@ export default function ThemeProviderIsland({
   className,
 }: ThemeProviderIslandProps & React.HTMLAttributes<HTMLDivElement>) {
   const [theme, setTheme] = useState<"doric" | "ionic" | "corinthian">("doric");
-  const [themeType, setThemeType] = useState<"light" | "dark">("light");
+  const [themeType, setThemeType] = useState<"light" | "dark">("dark");
 
   return (
     <ThemeProvider

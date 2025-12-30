@@ -18,6 +18,8 @@ export default defineConfig(({ mode }) => {
   if (isLibrary) {
     return {
       plugins: [react(), tailwindcss()],
+      // Disable copying public directory for library builds
+      publicDir: false,
       build: {
         lib: {
           entry: resolve(__dirname, 'src/lib-with-css.ts'),

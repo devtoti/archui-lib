@@ -9,7 +9,7 @@ interface ScreenshotImage {
 
 const images: ScreenshotImage[] = [
   {
-    src: getAssetPath("/icons/models/thumb5.png"),
+    src: getAssetPath("/storybook-assets/thumb5.png"),
     alt: "Screenshot 5",
     style: {
       height: "180px",
@@ -23,7 +23,7 @@ const images: ScreenshotImage[] = [
     },
   },
   {
-    src: getAssetPath("/icons/models/thumb4.png"),
+    src: getAssetPath("/storybook-assets/thumb4.png"),
     alt: "Screenshot 4",
     style: {
       height: "140px",
@@ -37,7 +37,7 @@ const images: ScreenshotImage[] = [
     },
   },
   {
-    src: getAssetPath("/icons/models/thumb3.png"),
+    src: getAssetPath("/storybook-assets/thumb3.png"),
     alt: "Screenshot 3",
     style: {
       height: "180px",
@@ -51,7 +51,7 @@ const images: ScreenshotImage[] = [
     },
   },
   {
-    src: getAssetPath("/icons/models/thumb2.png"),
+    src: getAssetPath("/storybook-assets/thumb2.png"),
     alt: "Screenshot 2",
     style: {
       height: "140px",
@@ -65,7 +65,7 @@ const images: ScreenshotImage[] = [
     },
   },
   {
-    src: getAssetPath("/icons/models/thumb1.png"),
+    src: getAssetPath("/storybook-assets/thumb1.png"),
     alt: "Screenshot 1",
     style: {
       height: "240px",

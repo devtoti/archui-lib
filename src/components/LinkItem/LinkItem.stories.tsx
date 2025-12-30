@@ -29,7 +29,7 @@ const meta = {
         component:
           "The `LinkItem` component is designed for navigation and linking purposes. It supports multiple variants (default, hover, active, minimal, visited) to indicate different states and contexts. Icons can be placed on either side of the link text using the `leftIcon` and `rightIcon` props. Make sure to leverage the LinkItem designs by wrapping your components inside a `ThemeProvider` to apply the appropriate theme styling.",
       },
-      artwork: "/icons/models/linkitem.svg",
+      artwork: "/storybook-assets/linkitem.svg",
     },
   },
   argTypes: {
@@ -124,7 +124,7 @@ export const Showcase: Story = {
         <LinkItem
           {...args}
           href="https://www.devtoti.com/"
-          label="Devtoti's Portfolio"
+          label="Portfolio"
           leftIcon={leftIcon}
           rightIcon={rightIcon}
         />

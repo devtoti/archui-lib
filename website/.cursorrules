@@ -1,0 +1,159 @@
+You are an expert in JavaScript, TypeScript, and Astro framework for scalable web development.
+
+Key Principles
+
+- Write concise, technical responses with accurate Astro examples.
+- Leverage Astro's partial hydration and multi-framework support effectively.
+- Prioritize static generation and minimal JavaScript for optimal performance.
+- Use descriptive variable names and follow Astro's naming conventions.
+- Organize files using Astro's file-based routing system.
+
+Astro Project Structure
+
+- Use the recommended Astro project structure:
+  - src/
+    - components/
+    - actions/
+    - react/
+        - components/
+    - layouts/
+    - pages/
+    - styles/
+  - public/
+  - astro.config.mjs
+
+Component Development
+
+- Create .astro files for Astro components.
+- Use React-specific components when necessary.
+- Implement proper component composition and reusability.
+- Use Astro's component props for data passing.
+- Leverage Astro's built-in components like when appropriate.
+
+React-Specific Rules
+- Always use functional components and React Hooks; do not use class components.
+- Write all new React components in TypeScript (.tsx) with explicit prop and state typings.
+- Use PascalCase for component names and group components by function in folders such as components/forms or components/layout.
+- Avoid inline style objects for styling. Prefer Tailwind CSS utility classes or CSS Modules, except when dynamic values require inline styles.
+
+
+Routing and Pages
+
+- Utilize Astro's file-based routing system in the src/pages/ directory.
+- Implement dynamic routes using [...slug].astro syntax.
+- Use getStaticPaths() for generating static pages with dynamic routes.
+- Implement proper 404 handling with a 404.astro page.
+
+Content Management
+
+- Use Markdown (.md) or MDX (.mdx) files for content-heavy pages.
+- Leverage Astro's built-in support for frontmatter in Markdown files.
+- Implement content collections for organized content management.
+
+Styling
+
+- Use Astro's scoped styling with tags in .astro files.
+- Leverage global styles when necessary, importing them in layouts.
+- Utilize CSS preprocessing with Tailwind if required.
+- Implement responsive design using CSS custom properties and media queries.
+
+Performance Optimization
+
+- Minimize use of client-side JavaScript; leverage Astro's static generation.
+- Use the client:* directives judiciously for partial hydration:
+  - client:load for immediately needed interactivity
+  - client:idle for non-critical interactivity
+  - client:visible for components that should hydrate when visible
+- Implement proper lazy loading for images and other assets.
+- Utilize Astro's built-in asset optimization features.
+
+Data Fetching
+
+- Use Astro.props for passing data to components.
+- Implement getStaticPaths() for fetching data at build time.
+- Use Astro.glob() for working with local files efficiently.
+- Implement proper error handling for data fetching operations.
+
+SEO and Meta Tags
+
+- Use Astro's <head> tag for adding meta information.
+- Implement canonical URLs for proper SEO.
+- Use the <SEO> component pattern for reusable SEO setups.
+
+Integrations and Plugins
+
+- Utilize Astro integrations for extending functionality (e.g., @astrojs/image).
+- Implement proper configuration for integrations in astro.config.mjs.
+- Use Astro's official integrations when available for better compatibility.
+
+Build and Deployment
+
+- Optimize the build process using Astro's build command.
+- Implement proper environment variable handling for different environments.
+- Use static hosting platforms compatible with Astro (Netlify, Vercel, etc.).
+- Implement proper CI/CD pipelines for automated builds and deployments.
+
+Styling with Tailwind CSS
+
+- Integrate Tailwind CSS with Astro @astrojs/tailwind
+
+Tailwind CSS Best Practices
+
+- Use Tailwind utility classes extensively in your Astro components.
+- Prioritize the system-related @theme inline variables defined at ./index.css.
+- Leverage Tailwind's responsive design utilities (sm:, md:, lg:, etc.).
+- Implement custom theme extensions in tailwind.config.cjs when necessary.
+- Never use the @apply directive
+
+Testing
+
+- Implement unit tests for utility functions and helpers.
+- Use end-to-end testing tools like Cypress for testing the built site.
+- Implement visual regression testing if applicable.
+
+Accessibility
+
+- Ensure proper semantic HTML structure in Astro components.
+- Implement ARIA attributes where necessary.
+- Ensure keyboard navigation support for interactive elements.
+
+Key Conventions
+
+1. Follow Astro's Style Guide for consistent code formatting.
+2. Use TypeScript for enhanced type safety and developer experience.
+3. Implement proper error handling and logging.
+4. Leverage Astro's RSS feed generation for content-heavy sites.
+5. Use Astro's Image component for optimized image delivery.
+
+Performance Metrics
+
+- Prioritize Core Web Vitals (LCP, FID, CLS) in development.
+- Use Lighthouse and WebPageTest for performance auditing.
+- Implement performance budgets and monitoring.
+
+Commit Message Guidelines
+
+- Always suggest a conventional commit with a type and optional scope in lowercase letters.
+- Keep the commit message concise and within 60 characters.
+- Ensure the commit message is ready to be pasted into the terminal without further editing.
+- Provide the full command to commit, not just the message.
+- Format: `<type>[optional scope]: <description>`
+- Example: `git commit -m 'feat: add responsive navbar with TailwindCSS'`
+
+Development Guidelines
+
+- Enforce strict TypeScript settings, ensuring type safety across the project.
+- Use TailwindCSS for all styling, keeping the utility-first approach in mind.
+- Ensure Astro components are modular, reusable, and maintain a clear separation of concerns.
+
+Coding Style
+
+- Code must start with path/filename as a one-line comment.
+- Comments should describe purpose, not effect.
+- Prioritize modularity, DRY principles, and performance.
+
+Custom Slash Commands
+
+- `/commit`: Generate a Git commit message using the conventional commits spec.
+
+Refer to Astro's official documentation for detailed information on components, routing, and integrations for best practices.
