@@ -12,7 +12,7 @@ export default function Navbar({ children }: NavbarProps) {
         ArchUI v1.1.0 is an early release. Please note that many features are
         still in the experimental phase.
       </div>
-      <nav className="sticky top-0 z-50 bg-sys-surface-white w-full h-12 shadow-sm flex flex-row items-center justify-between gap-sys-sp-md shadow-lg dark:shadow-sys-brd-tertiary lg:pr-sys-pd-md">
+      <nav className="sticky top-0 z-50 bg-sys-surface-white pr-4 w-full h-12 shadow-sm flex flex-row items-center justify-between gap-sys-sp-md shadow-lg dark:shadow-sys-brd-tertiary lg:pr-sys-pd-md">
         <div className="desktop hidden md:flex gap-6 w-full">
           <svg
             width="98"

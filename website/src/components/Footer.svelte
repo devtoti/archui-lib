@@ -76,7 +76,7 @@
     </svg>
   </div>
 
-  <article class="nav-links row-start-2 row-end-3">
+  <article class="nav-links px-4 md:gap-8row-start-2 row-end-3">
     <article
       class="navigation-left"
       role="navigation"
@@ -205,7 +205,7 @@
     </article>
   </article>
   <div
-    class="footer-container !w-full !mx-4 md:px-0 lg:w-3/5 mx-auto row-start-2 row-end-3 outline-6 outline-sys-primary"
+    class="footer-container lg:w-full !mx-4 md:px-0 lg:w-3/5 mx-auto row-start-2 row-end-3 outline-6 outline-sys-primary"
   >
     <article class="plan-info techs">
       <span class="arc-h5">Technologies</span>
@@ -482,7 +482,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
     margin: var(--sys-pd-lg) 0;
     width: 100%;
     grid-column: 1 / -1;
