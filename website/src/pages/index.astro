@@ -15,6 +15,13 @@ const { title } = Astro.props;
     <meta charset="utf-8" />
     <Head title={title} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdn.logr-in.com/LogRocket.min.js"
+      crossorigin="anonymous"></script>
+    <script>
+      window.LogRocket && window.LogRocket.init('devtoti/arch-epm1n');
+    </script>
+    <script src="/scripts/logrocket-identify.js" defer></script>
     <script src="/scripts/copyInstallCommand.js" defer></script>
   </head>
   <body class="relative">
