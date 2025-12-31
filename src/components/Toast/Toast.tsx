@@ -87,8 +87,8 @@ export const Toast = React.forwardRef<
         className={twMerge(
           "archui-toast-root",
           toastVariants({ variant, size }),
-          className,
-          shadow
+          shadow,
+          className
         )}
         {...props}
       >

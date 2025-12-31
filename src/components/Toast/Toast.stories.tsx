@@ -16,7 +16,7 @@ const meta = {
       subtitle: "Toast notifications for quick feedback and action.",
       description: {
         component:
-          "The `Toast` component provides accessible notification popups using Radix UI primitives. Supports multiple variants and sizes, and can include actions, icons, or custom content.",
+          "The `Toast` component provides accessible notification popups using Radix UI primitives. Supports multiple variants and sizes, and can include actions, icons, or custom content. A ThemeProvider is required to ensure the toast is styled correctly.",
       },
       artwork: "/storybook-assets/toast.svg",
     },
@@ -43,6 +43,14 @@ const meta = {
     ariaLabel: {
       control: "text",
       description: "Aria label for the action button",
+    },
+    className: {
+      control: "text",
+      description: "Custom CSS classes to apply to the toast",
+    },
+    onOpenChange: {
+      action: "onOpenChange",
+      description: "Callback fired when the toast open state changes",
     },
   },
   args: {

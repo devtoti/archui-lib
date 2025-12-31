@@ -15,10 +15,14 @@ export interface ToastVariantProps {
 /**
  * Toast component props
  * Extends Radix UI ToastProps with custom Toast props
+ * Note: onOpenChange and className are already included in ToastPrimitive.ToastProps,
+ * but we document them here for clarity
  */
 export interface ToastProps
   extends ToastVariantProps,
-    ToastPrimitive.ToastProps {
+    Omit<ToastPrimitive.ToastProps, 'onOpenChange' | 'className'> {
+  /** Function to handle the open state change */
+  onOpenChange?: (open: boolean) => void;
   /** Aria label for the toast action button */
   ariaLabel?: string;
   /** Icon for the toast */
@@ -35,5 +39,7 @@ export interface ToastProps
   actionButton?: React.ReactNode;
   /** Whether the toast is open */
   open?: boolean;
+  /** Class name for the toast - allows custom styling */
+  className?: string;
 }
 
