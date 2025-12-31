@@ -50,7 +50,7 @@ The _causa finis_ of this library is to offer a new robust and rigorous Design S
 
 - Granularity
 - Functionality
-- Attractiveness
+- Elegance
 
 ![Orders](./public/storybook-assets/archui-github-principles.png)
 

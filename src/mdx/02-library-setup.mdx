@@ -21,29 +21,19 @@ If you don't already have the required versions listed, you'll need to update or
 }`}
 />
 
-## **Step 2: Required Dependencies**
+## **Step 2: Tailwind Setup**
 
-If you don't have Tailwind and its `postcss` and `autoprefixer` dependencies installed, run the following command:
-
-<Source
-  dark
-  language="bash"
-  code={`npm install tailwindcss @tailwindcss/postcss autoprefixer`}
-/>
-
-## **Step 3: Tailwind Setup**
-
-Since ArchUI is built on top of Tailwind CSS, you'll need to have Tailwind set up in your project. There are two common ways to add Tailwind CSS:
+Since ArchUI is built on top of Tailwind CSS, you'll need to have Tailwind 4+ set up in your project. There are two common ways to add Tailwind CSS:
 
 #### **Option A:** Automatic Setup
 
-Create Tailwind CSS configuration files `tailwind.config.js` and `postcss.config.js` with the following command:
+Head over to [Tailwind CSS](https://tailwindcss.com/docs/installation) and follow the installation steps that apply to your React project. In this example, we will be using Vite, so the Vite plugin will be required.
 
-<Source dark language="bash" code={`npx tailwindcss init -p`} />
+<Source dark language="bash" code={`npm install @tailwindcss/vite`} />
 
 #### **Option B:** Manual Setup
 
-Add them manually by creating the following files: `tailwind.config.js`, `vite.config.ts`, and `postcss.config.js`, then paste the following code inside each file:
+You can also add set up Tailwind manually by creating the following files: `tailwind.config.js`, `postcss.config.js`, and `vite.config.ts` (or the build tool of your choice), then paste the following code inside each file:
 
 **tailwind.config.js**
 
@@ -64,10 +54,10 @@ export default {
 
 <Source dark language="ts" code={`import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import tailwindcss from "@tailwindcss/vite";
 
-// https://vite.dev/config/
 export default defineConfig({
-plugins: [react()],
+plugins: [react(), tailwindcss()],
 css: {
 postcss: "./postcss.config.js",
 },
@@ -86,13 +76,16 @@ postcss: "./postcss.config.js",
 };`}
 />
 
-## **Step 4: Install & Setup archUI**
+## **Step 3: Install ArchUI**
 
 Open up the CLI and install the ArchUI Library with the following command:
 
 <Source dark language="bash" code={`npm i @devtoti/archui-lib`} />
 
-Import the library's main CSS file directly inside `index.css`, so that your project can have access to archUI's design system:
+## **Step 4: Setup ArchUI into your project**
+
+Import the library's main CSS file directly inside `index.css`, so that your project can have access to ArchUI's design system.
+Make sure to import Tailwind CSS first, and then ArchUI's styles.
 
 <Source
   dark
@@ -101,9 +94,25 @@ Import the library's main CSS file directly inside `index.css`, so that your pro
 @import "@devtoti/archui-lib/styles";`}
 />
 
-## **Step 5: Import Your First Component**
+## **Step 5: Wrap your app in the ThemeProvider**
 
-Now that you have configured Tailwind and the ArchUI Library, you can start using your favorite components by importing them into your React files. Additionally, you can import the Component's Type Props and adapt them to your needs:
+Wrap your App in the ThemeProvider to ensure that your components will be styled correctly. You can also pass in the initial theme and theme type to the ThemeProvider:
+
+<Source
+  dark
+  language="tsx"
+  code={`import { ThemeProvider } from "@devtoti/archui-lib";
+
+return (
+  <ThemeProvider theme="ionic" themeType="light">
+    <App />
+  </ThemeProvider>
+);`}
+/>
+
+## **Step 6: Import Your First Component**
+
+Now that you have configured Tailwind, ArchUI and your ThemeProvider, you can start using your favorite components by importing them into your React files. Additionally, you can import the Component's Type Props and adapt them to your needs:
 
 <Source
   dark
@@ -111,21 +120,29 @@ Now that you have configured Tailwind and the ArchUI Library, you can start usin
   code={`import { Button } from "@devtoti/archui-lib";
 import type { ButtonProps } from "@devtoti/archui-lib";
 
-function CardComponent() {
+function App() {
 return (
-<Card>
-<Button
-        variant="primary"
-        size="md"
-        onClick={handleRegister}
-        label="Welcome to ArchUI!"
-      />
-</Card>
+  <AppContent>
+    <Button
+          variant="primary"
+          size="md"
+          onClick={handleRegister}
+          label="Welcome to ArchUI!"
+        />
+  </AppContent>
 );
 }
 `} />
 
-## **Step 6: Browse Our Components**
+## **Step 6: Delete default styles that might conflict with ArchUI**
+
+Delete default styles that might conflict with ArchUI. For example, if you are using Tailwind, you can delete the content of the following files:
+
+- `App.css`
+- `index.css`
+- `styles.css`
+
+## **Step 7: Browse Our Components**
 
 You can now start exploring our [_repertoire_](/docs/01-components-alert--docs) of components library, or use our experimental Drag-and-Drop Playground to get a better grasp of how things work.
 
