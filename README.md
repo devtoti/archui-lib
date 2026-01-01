@@ -89,11 +89,9 @@ We are committed to inclusive design and ensure ArchUI components conform to WCA
 ## Project Information
 
 **Architect:** @devtoti Antonio 'Toti' Ruiz
-**Collaborators** @hugoarchundia
 **Date:** December 2025
 **Technologies:** React, TypeScript, Tailwind, Storybook, Chromatic, ESLint, Prettier  
-**Location:** Mexico City, Mexico
-**Version** v1.0.9
+**Version** v1.1.1
 
 ---
 
