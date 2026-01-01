@@ -7,20 +7,20 @@ interface NavbarProps {
 
 export default function Navbar({ children }: NavbarProps) {
   return (
-    <div className="col-span-4 md:col-span-8 lg:col-span-12 w-screen relative left-1/2 right-1/2 -translate-x-1/2">
+    <div className="col-span-4 md:col-span-8 lg:col-span-12 w-full relative left-1/2 right-1/2 -translate-x-1/2">
       <div className="arc-body-1 text-white bg-[var(--orange-10)] px-sys-pd-lg px-sys-pd-sm w-full text-center">
         ArchUI v1.1.0 is an early release. Please note that many features are
         still in the experimental phase.
       </div>
-      <nav className="sticky top-0 z-50 bg-sys-surface-white px-4 w-full h-12 shadow-sm flex flex-row items-center justify-between gap-sys-sp-md shadow-lg dark:shadow-sys-brd-tertiary lg:pr-sys-pd-md">
-        <div className="desktop hidden md:flex gap-6 w-full">
+      <nav className="grainy bg-sys-surface-white grid grid-cols-4 gap-4 w-[calc(100%-16px)] h-12 w-full justify-between items-center py-2">
+        <div className="desktop hidden md:visible lg:contents">
           <svg
             width="98"
             height="24"
             viewBox="0 0 98 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 inline-block align-middle mr-auto text-sys-primary"
+            className="col-start-1 col-span-1 row-start-1 h-8 inline-block align-middle mr-auto text-sys-primary"
             aria-label="ArchUI Logo"
           >
             <path
@@ -53,46 +53,49 @@ export default function Navbar({ children }: NavbarProps) {
               fill="currentColor"
             />
           </svg>
-          <ErrorBoundary>
-            <ThemeTypeSwitcher />
-          </ErrorBoundary>
-          <a
-            href="https://github.com/devtoti"
-            className="arc-body-1 block w-max h-full text-sys-secondary my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open GitHub (opens in a new tab)"
-          >
-            GitHub <span className="sr-only">(opens in a new tab)</span>
-          </a>
-          <a
-            href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
-            className="arc-body-1 block w-max h-full text-sys-secondary my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Get Started documentation (opens in a new tab)"
-            tabIndex={0}
-          >
-            Docs <span className="sr-only">(opens in a new tab)</span>
-          </a>
-
-          <button
-            type="button"
-            className="flex items-center justify-center bg-sys-surface-primary h-8 w-max border-2 border-sys-brd-accent text-sys-primary uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-blue-100 hover:cursor-pointer hover:text-blue-800 hover:font-black hover:border-blue-700"
-            aria-label="Get Started (opens documentation in a new tab)"
-          >
+          <div className="col-span-2 -col-end-1 flex flex-row justify-end gap-4">
             <a
-              href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
-              className="arc-body-1 block w-full w-full decoration-none"
+              href="https://github.com/devtoti"
+              className="-col-end-3 arc-body-1 block w-max h-full text-sys-secondary my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open GitHub (opens in a new tab)"
+            >
+              github <span className="sr-only">(opens in a new tab)</span>
+            </a>
+            <a
+              href="https://www.npmjs.com/package/@devtoti/archui-lib"
+              className="w-24 -col-end-2 arc-body-1 block w-max h-full text-sys-secondary my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open Get Started documentation (opens in a new tab)"
+              tabIndex={0}
             >
-              Get Started <span className="sr-only">(opens in a new tab)</span>
+              npm <span className="sr-only">(opens in a new tab)</span>
             </a>
-          </button>
+
+            <button
+              type="button"
+              className="w-24 -col-end-1 flex items-center justify-center bg-sys-surface-primary h-8 w-max border-2 border-sys-brd-accent text-sys-primary uppercase font-bold text-xs py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-blue-100 hover:cursor-pointer hover:text-blue-800 hover:font-black hover:border-blue-700"
+              aria-label="Get Started (opens documentation in a new tab)"
+            >
+              <a
+                href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
+                className="arc-body-1 block w-full w-full decoration-none"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Get Started documentation (opens in a new tab)"
+              >
+                Get Started{' '}
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            </button>
+            <ErrorBoundary>
+              <ThemeTypeSwitcher />
+            </ErrorBoundary>
+          </div>
         </div>
-        <div className="mobile w-full px-sys-pd-lg grid grid-cols-3 items-center justify-between gap-sys-sp-md md:hidden">
+        <div className="mobile contents lg:hidden">
           <svg
             width="98"
             height="24"
@@ -135,9 +138,9 @@ export default function Navbar({ children }: NavbarProps) {
           <ErrorBoundary>
             <ThemeTypeSwitcher />
           </ErrorBoundary>
-          <button
+          {/* <button
             type="button"
-            className="flex items-center place-self-center justify-center text-sm font-bold h-8 w-max border-2 border-sys-brd-accent text-sys-primary uppercase py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-blue-100 hover:cursor-pointer hover:text-blue-800 hover:font-black hover:border-blue-700"
+            className="row-start-1 col-start-2 col-span-2 flex items-center place-self-center justify-center text-sm font-bold h-8 w-max border-2 border-sys-brd-accent text-sys-primary uppercase py-sys-pd-sm px-sys-pd-md rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent transition-colors hover:bg-blue-100 hover:cursor-pointer hover:text-blue-800 hover:font-black hover:border-blue-700"
             aria-label="Get Started (opens documentation in a new tab)"
           >
             <a
@@ -149,7 +152,7 @@ export default function Navbar({ children }: NavbarProps) {
             >
               Get Started <span className="sr-only">(opens in a new tab)</span>
             </a>
-          </button>
+          </button> */}
         </div>
       </nav>
       {children}
