@@ -2,8 +2,8 @@ import type { StorybookConfig } from '@storybook/react-vite';
 import tailwindcss from '@tailwindcss/postcss';
 import autoprefixer from 'autoprefixer';
 
-// Determine base path: use /archui-lib/ for GitHub Pages, / for Chromatic and local dev
-const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const isChromatic = process.env.CHROMATIC === 'true' || process.env.CHROMATIC_PROJECT_TOKEN;
+const isGitHubPages = !isChromatic && process.env.GITHUB_PAGES === 'true';
 const basePath = isGitHubPages ? '/archui-lib/' : '/';
 
 const config: StorybookConfig = {
