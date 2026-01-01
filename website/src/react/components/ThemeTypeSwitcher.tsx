@@ -15,7 +15,7 @@ export default function ThemeTypeSwitcher() {
       type="button"
       onClick={toggleThemeType}
       aria-label={`Switch to ${themeType === 'light' ? 'dark' : 'light'} mode`}
-      className="absolute top-2 right-4 md:left-24 md:top-2 flex  items-center justify-center w-8 h-8 rounded-md text-sys-secondary hover:text-sys-primary hover:bg-sys-surface-primary transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent"
+      className="-col-end-1 place-self-end md:col-span-1 md:-col-end-1 row-start-1 flex items-center justify-center w-8 h-8 rounded-md text-sys-secondary hover:text-sys-primary hover:bg-sys-surface-primary transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sys-brd-accent"
       title={`Current: ${themeType} mode. Click to switch to ${themeType === 'light' ? 'dark' : 'light'} mode.`}
     >
       {themeType === 'light' ? (

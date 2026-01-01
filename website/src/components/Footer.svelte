@@ -76,7 +76,7 @@
     </svg>
   </div>
 
-  <article class="nav-links px-4 md:gap-8 row-start-2 row-end-3">
+  <article class="nav-links px-4 gap-4 md:gap-8 row-start-2 row-end-3">
     <article
       class="navigation-left"
       role="navigation"
