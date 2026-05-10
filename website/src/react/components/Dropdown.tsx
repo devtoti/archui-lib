@@ -110,14 +110,14 @@ const Dropdown: React.FC = () => {
             className="navigation-menu relative md:absolute md:top-1/2 md:right-4 md:transform md:-translate-y-1/2 bg-sys-surface-white flex flex-col gap-sys-sp-sm items-start px-4 w-56 md:px-sys-pd-lg py-sys-pd-sm md:py-sys-pd-md rounded-lg shadow-md"
             onMouseLeave={handleDropdownHideWithDelay}
           >
-            <p className="arc-body-2 underline decoration-solid font-sans not-italic text-sys-gray-dark-2 text-left w-full">
+            <p className="arch-body-2 underline decoration-solid font-sans not-italic text-sys-gray-dark-2 text-left w-full">
               ArchUI Design System v1.0.0
             </p>
             <div
               className="flex items-center justify-between pl-sys-pd-xs pr-0 py-sys-pd-xs rounded-md w-full cursor-pointer hover:bg-sys-surface-secondary transition-colors"
               onMouseEnter={() => handleDropdownShow('colors')}
             >
-              <p className="arc-body-1 font-sans not-italic text-sys-blueprint whitespace-nowrap">
+              <p className="arch-body-1 font-sans not-italic text-sys-blueprint whitespace-nowrap">
                 Colors
               </p>
               <RxCaretRight className="text-sys-blueprint size-4 shrink-0" />
@@ -126,7 +126,7 @@ const Dropdown: React.FC = () => {
               className="bg-sys-blue-2 flex items-center justify-between pl-sys-pd-xs pr-0 py-sys-pd-xs rounded-md w-full cursor-pointer hover:bg-sys-surface-secondary transition-colors"
               onMouseEnter={() => handleDropdownShow('themes')}
             >
-              <p className="orders arc-body-1 font-sans not-italic text-sys-blueprint whitespace-nowrap">
+              <p className="orders arch-body-1 font-sans not-italic text-sys-blueprint whitespace-nowrap">
                 Themes (Orders)
               </p>
               <RxCaretRight className="text-sys-blueprint size-4 shrink-0" />
@@ -147,7 +147,7 @@ const Dropdown: React.FC = () => {
                 onClick={() => setTheme('doric')}
               >
                 <p
-                  className={`arc-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
+                  className={`arch-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
                 >
                   Doric
                 </p>
@@ -164,7 +164,7 @@ const Dropdown: React.FC = () => {
                 onClick={() => setTheme('ionic')}
               >
                 <p
-                  className={`arc-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
+                  className={`arch-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
                 >
                   Ionic
                 </p>
@@ -181,7 +181,7 @@ const Dropdown: React.FC = () => {
                 onClick={() => setTheme('corinthian')}
               >
                 <p
-                  className={`arc-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
+                  className={`arch-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
                 >
                   Corinthian
                 </p>
@@ -207,7 +207,7 @@ const Dropdown: React.FC = () => {
                 onClick={() => setColor('light')}
               >
                 <p
-                  className={`arc-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
+                  className={`arch-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
                 >
                   Light
                 </p>
@@ -224,7 +224,7 @@ const Dropdown: React.FC = () => {
                 onClick={() => setColor('dark')}
               >
                 <p
-                  className={`arc-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
+                  className={`arch-body-1 w-full text-start pl-1 rounded-sm font-sans not-italic whitespace-nowrap`}
                 >
                   Dark
                 </p>

@@ -70,25 +70,25 @@
   --color-arch-sem-srfc-success: var(--sem-bg-success);
   --color-arch-sem-srfc-info: var(--sem-bg-info);
   --color-arch-sem-srfc-warning: var(--sem-bg-warning);
-  --color-arch-sem-srfc-error: var(--sem-bg-error);
+  --color-arch-sem-srfc-danger: var(--sem-bg-danger);
 
   /* Semantic text colors */
   --color-arch-sem-chars-success: var(--sem-txt-success);
   --color-arch-sem-chars-info: var(--sem-txt-info);
   --color-arch-sem-chars-warning: var(--sem-txt-warning);
-  --color-arch-sem-chars-error: var(--sem-txt-error);
+  --color-arch-sem-chars-danger: var(--sem-txt-danger);
 
   /* Semantic border colors */
   --color-arch-sem-brd-success: var(--sem-brd-success);
   --color-arch-sem-brd-info: var(--sem-brd-info);
   --color-arch-sem-brd-warning: var(--sem-brd-warning);
-  --color-arch-sem-brd-error: var(--sem-brd-error);
+  --color-arch-sem-brd-danger: var(--sem-brd-danger);
 
   /* Semantic icon colors */
   --color-arch-sem-i-success: var(--sem-icons-success);
   --color-arch-sem-i-info: var(--sem-icons-info);
   --color-arch-sem-i-warning: var(--sem-icons-warning);
-  --color-arch-sem-i-error: var(--sem-icons-error);
+  --color-arch-sem-i-danger: var(--sem-icons-danger);
 
   /* Border colors */
   --color-arch-contour-primary: var(--brd-primary);
