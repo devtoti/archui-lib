@@ -4,48 +4,49 @@
 :root {
   /* Background */
   --sys-bg-white: #FFFFFF;
-  --sys-bg-primary: var(--gris-0);
-  --sys-bg-secondary: var(--gris-2);
-  --sys-bg-tertiary: var(--bleu-2);
-  --sys-bg-blueprint: var(--bleu-10);
+  --sys-bg-primary: var(--arch-gray-0);
+  --sys-bg-secondary: var(--arch-gray-2);
+  --sys-bg-tertiary: var(--arch-blue-2);
+  --sys-bg-blueprint: var(--arch-blue-10);
 
   /* Foreground */
-  --sys-fg-primary: var(--gris-1);
-  --sys-fg-secondary: var(--gris-2);
-  --sys-fg-tertiary: var(--gris-3);
-  --sys-fg-blueprint: var(--bleu-10);
+  --sys-fg-primary: var(--arch-gray-1);
+  --sys-fg-secondary: var(--arch-gray-2);
+  --sys-fg-tertiary: var(--arch-gray-3);
+  --sys-fg-blueprint: var(--arch-blue-10);
 
-  /* Text */
-  --sys-txt-primary: var(--bleu-9);
-  --sys-txt-secondary: var(--bleu-8);
-  --sys-txt-tertiary: var(--bleu-7);
-  --sys-txt-blueprint: var(--bleu-10);
-  --sys-txt-light: var(--bleu-2);
-  --sys-txt-dark: var(--bleu-11);
-  --sys-txt-gray-light: var(--gris-5);
-  --sys-txt-gray-dark: var(--gris-11);
-  --sys-txt-gray-light-2: var(--gris-5);
-  --sys-txt-gray-dark-2: var(--gris-11);
-  --sys-txt-gray-light-3: var(--gris-5);
-  --sys-txt-gray-dark-3: var(--gris-11);
+  /* Text — matched to Figma 🔹 System (Light mode) */
+  --sys-txt-primary: var(--arch-blue-8);
+  --sys-txt-secondary: var(--arch-blue-7);
+  --sys-txt-tertiary: var(--arch-blue-6);
+  --sys-txt-blueprint: var(--arch-blue-9);
+  --sys-txt-light: var(--arch-blue-1);
+  --sys-txt-dark: var(--arch-blue-10);
+  --sys-txt-gray-light: var(--arch-gray-4);
+  --sys-txt-gray-dark: var(--arch-gray-10);
+  /* TODO - Add these to Figma 🔹 System */
+  --sys-txt-gray-light-2: var(--arch-gray-4);
+  --sys-txt-gray-dark-2: var(--arch-gray-10);
+  --sys-txt-gray-light-3: var(--arch-gray-4);
+  --sys-txt-gray-dark-3: var(--arch-gray-10);
 
   /* Borders */
-  --sys-brd-primary: var(--bleu-7);
-  --sys-brd-secondary: var(--bleu-6);
-  --sys-brd-tertiary: var(--bleu-4);
-  --sys-brd-dark: var(--bleu-10);
-  --sys-brd-light: var(--bleu-1);
-  --sys-brd-gray-light: var(--gris-5);
-  --sys-brd-gray-dark: var(--gris-11);
+  --sys-brd-primary: var(--arch-blue-7);
+  --sys-brd-secondary: var(--arch-blue-6);
+  --sys-brd-tertiary: var(--arch-blue-4);
+  --sys-brd-dark: var(--arch-blue-10);
+  --sys-brd-light: var(--arch-blue-1);
+  --sys-brd-gray-light: var(--arch-gray-5);
+  --sys-brd-gray-dark: var(--arch-gray-11);
 
   /* Icons */
-  --sys-icon-primary: var(--bleu-9);
-  --sys-icon-secondary: var(--bleu-8);
-  --sys-icon-tertiary: var(--bleu-7);
-  --sys-icon-dark: var(--bleu-10);
-  --sys-icon-light: var(--bleu-1);
-  --sys-icon-gray-light: var(--gris-5);
-  --sys-icon-gray-dark: var(--gris-11);
+  --sys-icon-primary: var(--arch-blue-9);
+  --sys-icon-secondary: var(--arch-blue-8);
+  --sys-icon-tertiary: var(--arch-blue-7);
+  --sys-icon-dark: var(--arch-blue-10);
+  --sys-icon-light: var(--arch-blue-1);
+  --sys-icon-gray-light: var(--arch-gray-5);
+  --sys-icon-gray-dark: var(--arch-gray-11);
 
   /* Radii */
   --sys-rd-xs: 0;
@@ -69,7 +70,7 @@
   --sys-stroke-light: 1px;
   --sys-stroke-regular: 1.5px;
   --sys-stroke-bold: 2px;
-  --sys-stroke-extra-bold: 2px;
+  --sys-stroke-extra-bold: 4px;
 
   /* Spacing */
   --sys-sp-3xs: 0.0625rem;
@@ -84,51 +85,53 @@
   --sys-sp-4xl: 2.5rem;
   --sys-sp-5xl: 3rem;
   --sys-sp-6xl: 3.75rem;
+  --sys-sp-7xl: 5rem;
+  --sys-sp-8xl: 7rem;
 }
 
 .dark {
   /* Background */
   --sys-bg-white: #2C2C2C;
-  --sys-bg-primary: var(--gris-12);
-  --sys-bg-secondary: var(--gris-11);
-  --sys-bg-tertiary: var(--gris-10);
-  --sys-bg-blueprint: var(--bleu-6);
+  --sys-bg-primary: var(--arch-gray-12);
+  --sys-bg-secondary: var(--arch-gray-11);
+  --sys-bg-tertiary: var(--arch-gray-10);
+  --sys-bg-blueprint: var(--arch-blue-6);
 
   /* Foreground */
-  --sys-fg-primary: var(--gris-12);
-  --sys-fg-secondary: var(--gris-12);
-  --sys-fg-tertiary: var(--gris-12);
-  --sys-fg-blueprint: var(--bleu-6);
+  --sys-fg-primary: var(--arch-gray-12);
+  --sys-fg-secondary: var(--arch-gray-12);
+  --sys-fg-tertiary: var(--arch-gray-12);
+  --sys-fg-blueprint: var(--arch-blue-6);
 
-  /* Text */
-  --sys-txt-primary: var(--bleu-8);
-  --sys-txt-secondary: var(--bleu-7);
-  --sys-txt-tertiary: var(--bleu-6);
-  --sys-txt-blueprint: var(--bleu-2);
-  --sys-txt-light: var(--bleu-10);
-  --sys-txt-dark: var(--bleu-1);
-  --sys-txt-gray-light: var(--gris-11);
-  --sys-txt-gray-dark: var(--gris-4);
-  --sys-txt-gray-light-2: var(--gris-11);
-  --sys-txt-gray-dark-2: var(--gris-4);
-  --sys-txt-gray-light-3: var(--gris-11);
-  --sys-txt-gray-dark-3: var(--gris-4);
+  /* Text — matched to Figma 🔹 System (Dark mode) */
+  --sys-txt-primary: var(--arch-blue-9);
+  --sys-txt-secondary: var(--arch-blue-7);
+  --sys-txt-tertiary: var(--arch-blue-5);
+  --sys-txt-blueprint: var(--arch-blue-1);
+  --sys-txt-light: var(--arch-blue-10);
+  --sys-txt-dark: var(--arch-blue-1);
+  --sys-txt-gray-light: var(--arch-gray-11);
+  --sys-txt-gray-dark: var(--arch-gray-3);
+  --sys-txt-gray-light-2: var(--arch-gray-11);
+  --sys-txt-gray-dark-2: var(--arch-gray-3);
+  --sys-txt-gray-light-3: var(--arch-gray-11);
+  --sys-txt-gray-dark-3: var(--arch-gray-3);
 
   /* Borders */
-  --sys-brd-primary: var(--bleu-5);
-  --sys-brd-secondary: var(--bleu-4);
-  --sys-brd-tertiary: var(--bleu-10);
-  --sys-brd-dark: var(--bleu-1);
-  --sys-brd-light: var(--bleu-10);
-  --sys-brd-gray-light: var(--gris-11);
-  --sys-brd-gray-dark: var(--gris-4);
+  --sys-brd-primary: var(--arch-blue-5);
+  --sys-brd-secondary: var(--arch-blue-4);
+  --sys-brd-tertiary: var(--arch-blue-10);
+  --sys-brd-dark: var(--arch-blue-1);
+  --sys-brd-light: var(--arch-blue-10);
+  --sys-brd-gray-light: var(--arch-gray-11);
+  --sys-brd-gray-dark: var(--arch-gray-4);
 
   /* Icons */
-  --sys-icon-primary: var(--bleu-2);
-  --sys-icon-secondary: var(--bleu-4);
-  --sys-icon-tertiary: var(--bleu-6);
-  --sys-icon-dark: var(--bleu-1);
-  --sys-icon-light: var(--bleu-10);
-  --sys-icon-gray-light: var(--gris-11);
-  --sys-icon-gray-dark: var(--gris-4);
+  --sys-icon-primary: var(--arch-blue-2);
+  --sys-icon-secondary: var(--arch-blue-4);
+  --sys-icon-tertiary: var(--arch-blue-6);
+  --sys-icon-dark: var(--arch-blue-1);
+  --sys-icon-light: var(--arch-blue-10);
+  --sys-icon-gray-light: var(--arch-gray-11);
+  --sys-icon-gray-dark: var(--arch-gray-4);
 }
