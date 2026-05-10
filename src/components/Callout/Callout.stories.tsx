@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Callout } from "./Callout";
 import {
   BiBulb as IconInfo,
-  BiErrorAlt as IconError,
+  BiErrorAlt as IconDanger,
   BiCheckCircle as IconSuccess,
   BiBell as IconNeutral,
   BiCommentError as IconWarning,
@@ -19,8 +19,8 @@ const getIconByVariant = (variant?: string) => {
       return <IconInfo />;
     case "warning":
       return <IconWarning />;
-    case "error":
-      return <IconError />;
+    case "danger":
+      return <IconDanger />;
     default:
       return <IconNeutral />;
   }
@@ -49,7 +49,7 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["success", "info", "warning", "error", "neutral"],
+      options: ["success", "info", "warning", "danger", "neutral"],
       description: "Variant type",
     },
     size: {
@@ -153,10 +153,10 @@ export const AllVariants: Story = {
           />
           <Callout
             {...args}
-            variant="error"
-            title="Error"
-            label="This is an error message"
-            icon={showIcon ? <IconError /> : undefined}
+            variant="danger"
+            title="Danger"
+            label="This is a danger message"
+            icon={showIcon ? <IconDanger /> : undefined}
           />
           <Callout
             {...args}

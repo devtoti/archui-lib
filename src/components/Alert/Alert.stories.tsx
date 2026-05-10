@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Alert } from "./Alert";
 import {
   BiBulb as IconInfo,
-  BiErrorAlt as IconError,
+  BiErrorAlt as IconDanger,
   BiCheckCircle as IconSuccess,
   BiCommentError as IconWarning,
 } from "react-icons/bi";
@@ -18,8 +18,8 @@ const getIconByVariant = (variant?: string) => {
       return <IconInfo />;
     case "warning":
       return <IconWarning />;
-    case "error":
-      return <IconError />;
+    case "danger":
+      return <IconDanger />;
     default:
       return <IconInfo />;
   }
@@ -40,7 +40,7 @@ const meta = {
         "Communicate important messages or alerts that require user attention. Unlike callouts, Alerts are more prominent and are used for urgent or high-priority information.",
       description: {
         component:
-          "The `Alert` component provides a visually distinct way to display important messages. It supports multiple variants (success, info, warning, error), customizable icons, and content. Each alert includes semantic color coding to help users quickly understand the message type. Make sure to leverage the Alert designs by wrapping your components inside a `ThemeProvider` to apply the appropriate theme styling.",
+          "The `Alert` component provides a visually distinct way to display important messages. It supports multiple variants (success, info, warning, danger), customizable icons, and content. Each alert includes semantic color coding to help users quickly understand the message type. Make sure to leverage the Alert designs by wrapping your components inside a `ThemeProvider` to apply the appropriate theme styling.",
       },
       artwork: "/storybook-assets/alert.svg",
     },
@@ -48,7 +48,7 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["success", "info", "warning", "error"],
+      options: ["success", "info", "warning", "danger"],
       description: "Alert variant type",
     },
     size: {
@@ -128,9 +128,9 @@ export const AllVariants: Story = {
           />
           <Alert
             {...args}
-            variant="error"
-            label="An error occurred processing your request. Please try again or contact support."
-            icon={showIcon ? <IconError /> : undefined}
+            variant="danger"
+            label="A critical issue occurred processing your request. Please try again or contact support."
+            icon={showIcon ? <IconDanger /> : undefined}
           />
         </div>
       </ThemeSwitcher>
