@@ -49,44 +49,44 @@ export const darkTheme = create({
   brandTarget: '_self',
   
   // Color palette - using dark mode system tokens
-  // --sys-icon-primary = --bleu-2 = #D5EFFF
+  // --sys-icon-primary = --arch-blue-2 = #D5EFFF
   // colorPrimary: '#D5EFFF',
-  // --sys-icon-secondary = --bleu-4 = #ACD8FC
+  // --sys-icon-secondary = --arch-blue-4 = #ACD8FC
   // colorSecondary: '#ACD8FC',
   
   // UI colors - using dark mode system tokens
-  // --sys-bg-primary = --gris-12 = #202020
+  // --sys-bg-primary = --arch-gray-12 = #202020
   appBg: '#202020',
-  // --sys-bg-primary = --gris-12 = #202020
+  // --sys-bg-primary = --arch-gray-12 = #202020
   appContentBg: '#202020',
-  // --sys-bg-tertiary = --gris-11 = #242424
+  // --sys-bg-tertiary = --arch-gray-11 = #242424
   appPreviewBg: '#242424',
-  // --sys-brd-tertiary = --bleu-6 = #8EC8F6
+  // --sys-brd-tertiary = --arch-blue-6 = #8EC8F6
   appBorderColor: '#8EC8F6',
   appBorderRadius: 8,
   
   // Text colors - using dark mode system tokens
-  // --sys-txt-primary = --bleu-8 = #0090FF
+  // --sys-txt-primary = --arch-blue-8 = #0090FF
   // textColor: '#0090FF',
-  // --sys-txt-dark = --bleu-1 = #E6F4FE
+  // --sys-txt-dark = --arch-blue-1 = #E6F4FE
   // textInverseColor: '#E6F4FE',
-  // --sys-txt-gray-light = --gris-11 = #242424
+  // --sys-txt-gray-light = --arch-gray-11 = #242424
   // textMutedColor: '#ADBAD1',
   
   // Bar colors - using dark mode system tokens
-  // --sys-txt-gray-dark = --gris-4 = #ADBAD1
+  // --sys-txt-gray-dark = --arch-gray-4 = #ADBAD1
   // barTextColor: '#ADBAD1',
-  // --sys-icon-primary = --bleu-2 = #D5EFFF
+  // --sys-icon-primary = --arch-blue-2 = #D5EFFF
   barSelectedColor: '#D5EFFF',
-  // --sys-bg-primary = --gris-12 = #202020
+  // --sys-bg-primary = --arch-gray-12 = #202020
   barBg: '#202020',
   
   // Form colors - using dark mode system tokens
-  // --sys-bg-primary = --gris-12 = #202020
+  // --sys-bg-primary = --arch-gray-12 = #202020
   inputBg: '#202020',
-  // --sys-brd-secondary = --bleu-4 = #ACD8FC
+  // --sys-brd-secondary = --arch-blue-4 = #ACD8FC
   inputBorder: '#ACD8FC',
-  // --sys-txt-primary = --bleu-8 = #0090FF
+  // --sys-txt-primary = --arch-blue-8 = #0090FF
   inputTextColor: '#0090FF',
   inputBorderRadius: 6,
   
