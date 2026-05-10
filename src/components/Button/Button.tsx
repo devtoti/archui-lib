@@ -22,25 +22,25 @@ hover:brightness-95 hover:scale-[1.01] active:brightness-90 active:scale-[0.99] 
     variants: {
       variant: {
         primary:
-          "bg-arch-surface-accent border-arch-contour-accent text-arch-light",
+          "bg-arch-surface-accent border-arch-contour-accent text-arch-txt-light",
         secondary:
-          "bg-arch-surface-accent-light/50 border-arch-contour-accent-dark border-[length:var(--stroke-regular)] text-arch-accent-dark",
+          "bg-arch-surface-accent-light/50 border-arch-contour-accent-dark border-[length:var(--stroke-regular)] text-arch-txt-accent-dark",
         tertiary:
-          "bg-arch-surface-primary border-[length:var(--stroke-regular)] border-arch-contour-accent text-arch-accent-dark",
+          "bg-arch-surface-primary border-[length:var(--stroke-regular)] border-arch-contour-accent text-arch-txt-accent-dark",
         ghost:
-          "bg-transparent rounded-none border-b-[length:var(--stroke-regular)] text-arch-accent",
+          "bg-transparent rounded-none border-b-[length:var(--stroke-regular)] text-arch-txt-accent",
       },
       size: {
-        sm: "arc-body-2 text-sm px-arch-sm py-arch-2xs",
-        md: "arc-body-1 text-base px-arch-md py-arch-xs",
-        lg: "arc-body-0 text-lg px-arch-md py-arch-xs",
+        sm: "arch-body-2 text-sm px-arch-sm py-arch-2xs",
+        md: "arch-body-1 text-base px-arch-md py-arch-xs",
+        lg: "arch-body-0 text-lg px-arch-md py-arch-xs",
       },
     },
     defaultVariants: {
       variant: "primary",
       size: "md",
     },
-  }
+  },
 );
 
 export const Button: React.FC<ButtonProps> = ({
