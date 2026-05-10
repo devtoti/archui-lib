@@ -1,11 +1,11 @@
 /* Heading Styles */
-.arc-h0 {
+.arch-h0 {
   font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 800; /* ExtraBold */
   font-size: 64px;
   text-transform: uppercase;
 }
-.arc-h1 {
+.arch-h1 {
   font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 800; /* ExtraBold */
   font-size: 40px;
@@ -13,7 +13,7 @@
   text-transform: uppercase;
 }
 
-.arc-h2 {
+.arch-h2 {
   font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 800; /* ExtraBold */
   font-size: 32px;
@@ -21,7 +21,7 @@
   text-transform: uppercase;
 }
 
-.arc-h3 {
+.arch-h3 {
   font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700; /* Bold */
   font-size: 24px;
@@ -29,7 +29,7 @@
   text-transform: uppercase;
 }
 
-.arc-h4 {
+.arch-h4 {
   font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 800; /* ExtraBold */
   font-size: 16px;
@@ -37,7 +37,7 @@
   text-transform: uppercase;
 }
 
-.arc-h5 {
+.arch-h5 {
   font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 800; /* ExtraBold */
   font-size: 12px;
@@ -45,42 +45,47 @@
   text-transform: uppercase;
 }
 
-.arc-h6 {
+.arch-h6 {
   font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700; /* Bold */
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 10%;
   text-transform: uppercase;
 }
 
 /* Body Styles */
-.arc-body-1 {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.arch-body-0 {
+  font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 16px;
+}
+.arch-body-1 {
+  font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400; /* Regular */
   font-size: 14px;
 }
 
-.arc-body-2 {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.arch-body-2 {
+  font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400; /* Regular */
   font-size: 12px;
 }
 
-.arc-body-3 {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.arch-body-3 {
+  font-family: 'Gotham', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400; /* Regular */
-  font-size: 10px;
+  font-size: 11px;
 }
 
 /* List Item Style */
-.arc-mono {
+.arch-mono {
   font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
   font-weight: 400; /* Regular */
   font-size: 10px;
 }
 
 /* Input Style */
-.arc-input {
+.arch-input {
   font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700; /* Bold */
   font-size: 10px;
