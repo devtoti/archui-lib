@@ -1,7 +1,7 @@
 .ionic {
   font-family: 'Noto Sans', system-ui, -apple-system, sans-serif;
   --ionic-accent-primary: var(--blue-10);
-  --ionic-accent-dark: var(--blue-11);
+  --ionic-accent-dark: var(--blue-12);
   --ionic-accent-light: var(--blue-6);
 
   /* Background */
@@ -33,37 +33,31 @@
   --txt-light: #FFFFFF;
   --txt-accent-dark: var(--ionic-accent-dark);
   --txt-accent: var(--ionic-accent-primary);
-  --txt-accent-light: var(--indigo-7);
+  --txt-accent-light: var(--arch-indigo-7);
 
   /* Semantic Background */
   --sem-bg-success: #E9FFF0;
   --sem-bg-info: #EAF7FF;
   --sem-bg-warning: #FFFEF2;
-  --sem-bg-error: #FFEDED;
+  --sem-bg-danger: #FFEDED;
 
   /* Semantic Icons */
   --sem-icons-success: #30A46C;
   --sem-icons-info: #0090FF;
   --sem-icons-warning: #B78001;
-  --sem-icons-error: #E5484D;
+  --sem-icons-danger: #E5484D;
 
   /* Semantic Text */
   --sem-txt-success: #0D854B;
   --sem-txt-info: #09558F;
   --sem-txt-warning: #997012;
-  --sem-txt-error: #BF3539;
+  --sem-txt-danger: #BF3539;
 
   /* Semantic Border */
   --sem-brd-success: #62A379;
   --sem-brd-info: #8ABADD;
   --sem-brd-warning: #BEAA44;
-  --sem-brd-error: #B26466;
-
-  /* Brand */
-  --brand-primary: #FFBF49;
-  --brand-light: #F6D970;
-  --brand-dark: #F6B501;
-  --brand-accent: #CB3F42;
+  --sem-brd-danger: #B26466;
 
   /* Borders */
   --brd-primary: var(--slate-9);
@@ -71,7 +65,7 @@
   --brd-tertiary: var(--slate-6);
   --brd-accent-dark: var(--ionic-accent-dark);
   --brd-accent: var(--ionic-accent-primary);
-  --brd-accent-light: var(--indigo-7);
+  --brd-accent-light: var(--arch-indigo-7);
   --brd-light: var(--gold-3);
   --brd-dark: var(--gold-12);
 
@@ -92,6 +86,7 @@
   --icon-dark: #2D3341;
 
   /* Padding */
+  --pd-2xs: 0.25rem;
   --pd-xs: 0.5rem;
   --pd-sm: 0.75rem;
   --pd-md: 1rem;
@@ -120,6 +115,8 @@
   --sp-4xl: 2.5rem;
   --sp-5xl: 3rem;
   --sp-6xl: 3.75rem;
+  --sp-7xl: 5rem;
+  --sp-8xl: 7rem;
 
   /* Shadows - Most Notable */
   --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
@@ -167,31 +164,25 @@
   --sem-bg-success: #18251F; /* radix/green/dark/0 */
   --sem-bg-info: #1C222B;   /* radix/blue/dark/0 */
   --sem-bg-warning: #211C14; /* radix/yellow/dark/0 */
-  --sem-bg-error: #1D191A;  /* radix/red/dark/0 */
+  --sem-bg-danger: #1D191A;  /* radix/red/dark/0 */
 
   /* Semantic Icons - from JSON semantic.icons */
   --sem-icons-success: #30A46C;
   --sem-icons-info: #0090FF;
   --sem-icons-warning: #B78001;
-  --sem-icons-error: #E5484D;
+  --sem-icons-danger: #E5484D;
 
   /* Semantic Text - from JSON semantic.text */
   --sem-txt-success: #0D854B;
   --sem-txt-info: #09558F;
   --sem-txt-warning: #997012;
-  --sem-txt-error: #BF3539;
+  --sem-txt-danger: #BF3539;
 
   /* Semantic Border - from JSON semantic.border */
   --sem-brd-success: #62A379;
   --sem-brd-info: #8ABADD;
   --sem-brd-warning: #BEAA44;
-  --sem-brd-error: #B26466;
-
-  /* Brand - from JSON brand values */
-  --brand-primary: #FFBF49;
-  --brand-light: #F6D970;
-  --brand-dark: #F6B501;
-  --brand-accent: #CB3F42;
+  --sem-brd-danger: #B26466;
 
   /* Borders - from JSON borders values */
   --brd-primary: #8B8D98;
@@ -249,6 +240,8 @@
   --sp-4xl: 2.5rem;
   --sp-5xl: 3rem;
   --sp-6xl: 3.75rem;
+  --sp-7xl: 5rem;
+  --sp-8xl: 7rem;
 
   /* Shadows - more prominent for dark mode */
   --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);

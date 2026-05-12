@@ -3,25 +3,25 @@ import { create } from 'storybook/theming';
 // Color values from archui-system-tokens.css (dark mode)
 // These are the actual resolved values from the system tokens
 const darkColors = {
-  // From --sys-icon-primary = --bleu-2
+  // From --sys-icon-primary = --arch-blue-2
   iconPrimary: '#D5EFFF',
-  // From --sys-icon-secondary = --bleu-4
+  // From --sys-icon-secondary = --arch-blue-4
   iconSecondary: '#ACD8FC',
-  // From --sys-bg-primary = --gris-12
+  // From --sys-bg-primary = --arch-gray-12
   bgPrimary: '#202020',
-  // From --sys-bg-tertiary = --gris-11
+  // From --sys-bg-tertiary = --arch-gray-11
   bgTertiary: '#242424',
-  // From --sys-brd-tertiary = --bleu-6
+  // From --sys-brd-tertiary = --arch-blue-6
   brdTertiary: '#8EC8F6',
-  // From --sys-brd-primary = --bleu-5
+  // From --sys-brd-primary = --arch-blue-5
   brdPrimary: '#ACD8FC',
-  // From --sys-txt-primary = --bleu-8
+  // From --sys-txt-primary = --arch-blue-8
   txtPrimary: '#0090FF',
-  // From --sys-txt-light = --bleu-10
+  // From --sys-txt-light = --arch-blue-10
   txtLight: '#0D74CE',
-  // From --sys-txt-gray-light = --gris-11
+  // From --sys-txt-gray-light = --arch-gray-11
   txtGrayLight: '#242424',
-  // From --sys-txt-gray-dark = --gris-4
+  // From --sys-txt-gray-dark = --arch-gray-4
   txtGrayDark: '#ADBAD1',
 };
 

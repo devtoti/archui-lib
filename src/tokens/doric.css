@@ -38,31 +38,26 @@
   --sem-bg-success: var(--grass-1);
   --sem-bg-info: var(--cyan-1);
   --sem-bg-warning: var(--yellow-1);
-  --sem-bg-error: var(--red-1);
+  --sem-bg-danger: var(--red-1);
 
   /* Semantic Icons */
   --sem-icons-success: #30A46C;
   --sem-icons-info: #0090FF;
   --sem-icons-warning: #B78001;
-  --sem-icons-error: #E5484D;
+  --sem-icons-danger: #E5484D;
 
   /* Semantic Text */
   --sem-txt-success: #0D854B;
   --sem-txt-info: #09558F;
   --sem-txt-warning: #997012;
-  --sem-txt-error: #BF3539;
+  --sem-txt-danger: #BF3539;
 
   /* Semantic Border */
   --sem-brd-success: #62A379;
   --sem-brd-info: #8ABADD;
   --sem-brd-warning: #BEAA44;
-  --sem-brd-error: #B26466;
+  --sem-brd-danger: #B26466;
 
-  /* Brand */
-  --brand-primary: #AD3E28;
-  --brand-light: #E85639;
-  --brand-dark: #5A190C;
-  --brand-accent: #A15828;
 
   /* Borders */
   --brd-primary: var(--sand-11);
@@ -120,6 +115,8 @@
   --sp-4xl: 2.5rem;
   --sp-5xl: 3rem;
   --sp-6xl: 3.75rem;
+  --sp-7xl: 5rem;
+  --sp-8xl: 7rem;
 
   /* Shadows - Subtlest */
   --shadow-light: 0 1px 2px rgba(0, 0, 0, 0.02);
@@ -166,31 +163,25 @@
   --sem-bg-success: #18251F; /* Vert/0 - Dark green for success backgrounds in dark mode */
   --sem-bg-info: #1C262D; /* Indigo/0 - Dark blue for info backgrounds in dark mode */
   --sem-bg-warning: #211D15; /* Jaune/0 - Dark brown/yellow for warning backgrounds in dark mode */
-  --sem-bg-error: #251516; /* Rouge/0 - Dark red for error backgrounds in dark mode */
+  --sem-bg-danger: #251516; /* Rouge/0 - Dark red for danger backgrounds in dark mode */
 
   /* Semantic Icons - from JSON semantic.icons */
   --sem-icons-success: #30A46C;
   --sem-icons-info: #0090FF;
   --sem-icons-warning: #B78001;
-  --sem-icons-error: #E5484D;
+  --sem-icons-danger: #E5484D;
 
   /* Semantic Text - from JSON semantic.text */
   --sem-txt-success: #0D854B;
   --sem-txt-info: #09558F;
   --sem-txt-warning: #997012;
-  --sem-txt-error: #BF3539;
+  --sem-txt-danger: #BF3539;
 
   /* Semantic Border - from JSON semantic.border */
   --sem-brd-success: #62A379;
   --sem-brd-info: #8ABADD;
   --sem-brd-warning: #BEAA44;
-  --sem-brd-error: #B26466;
-
-  /* Brand - from JSON brand values */
-  --brand-primary: #AD3E28;
-  --brand-light: #E85639;
-  --brand-dark: #5A190C;
-  --brand-accent: #A15828;
+  --sem-brd-danger: #B26466;
 
   /* Borders - from JSON borders values */
   --brd-primary: #63635E;
@@ -219,6 +210,7 @@
   --icon-dark: #2D3341;
 
   /* Padding - same as light mode */
+  --pd-2xs: 0.125rem;
   --pd-xs: 0.25rem;
   --pd-sm: 0.5rem;
   --pd-md: 0.625rem;
@@ -247,6 +239,8 @@
   --sp-4xl: 2.5rem;
   --sp-5xl: 3rem;
   --sp-6xl: 3.75rem;
+  --sp-7xl: 5rem;
+  --sp-8xl: 7rem;
 
   /* Shadows - more prominent for dark mode */
   --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);

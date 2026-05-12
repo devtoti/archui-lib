@@ -8,7 +8,7 @@ interface NavbarProps {
 export default function Navbar({ children }: NavbarProps) {
   return (
     <div className="col-span-4 md:col-span-8 lg:col-span-12 w-full relative left-1/2 right-1/2 -translate-x-1/2">
-      <div className="arc-body-1 text-white bg-[var(--orange-10)] px-sys-pd-lg px-sys-pd-sm w-full text-center">
+      <div className="arch-body-1 text-white bg-[var(--orange-10)] px-sys-pd-lg px-sys-pd-sm w-full text-center">
         ArchUI v1.1.0 is an early release. Please note that many features are
         still in the experimental phase.
       </div>
@@ -56,7 +56,7 @@ export default function Navbar({ children }: NavbarProps) {
           <div className="col-span-2 -col-end-1 flex flex-row justify-end gap-4">
             <a
               href="https://github.com/devtoti"
-              className="-col-end-3 arc-body-1 block w-max h-full text-sys-secondary my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
+              className="-col-end-3 arch-body-1 block w-max h-full text-sys-secondary my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open GitHub (opens in a new tab)"
@@ -65,7 +65,7 @@ export default function Navbar({ children }: NavbarProps) {
             </a>
             <a
               href="https://www.npmjs.com/package/@devtoti/archui-lib"
-              className="w-24 -col-end-2 arc-body-1 block w-max h-full text-sys-secondary my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
+              className="w-24 -col-end-2 arch-body-1 block w-max h-full text-sys-secondary my-auto decoration-none transition-colors duration-150 hover:text-sys-blue-8 hover:underline focus:text-sys-blue-7 focus:underline active:text-sys-primary"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open Get Started documentation (opens in a new tab)"
@@ -81,7 +81,7 @@ export default function Navbar({ children }: NavbarProps) {
             >
               <a
                 href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
-                className="arc-body-1 block w-full w-full decoration-none"
+                className="arch-body-1 block w-full w-full decoration-none"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open Get Started documentation (opens in a new tab)"
@@ -145,7 +145,7 @@ export default function Navbar({ children }: NavbarProps) {
           >
             <a
               href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
-              className="arc-body-1 block w-full w-full decoration-none"
+              className="arch-body-1 block w-full w-full decoration-none"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open Get Started documentation (opens in a new tab)"

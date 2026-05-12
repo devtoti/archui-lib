@@ -16,14 +16,14 @@ import { BiBuildingHouse as IconArch } from "react-icons/bi";
  */
 
 const calloutVariants = cva(
-  "flex items-start gap-2 min-h-1 shadow-sm rounded-tr-arch-rd-sm rounded-br-arch-rd-sm text-arch-primary py-2 pl-arch-sm pr-arch-sm bg-arch-surface-secondary border-l-[length:var(--stroke-extra-bold)] border-solid max-w-96",
+  "flex items-start gap-2 min-h-1 shadow-sm rounded-tr-arch-rd-sm rounded-br-arch-rd-sm text-arch-txt-primary py-2 pl-arch-sm pr-arch-sm bg-arch-surface-secondary border-l-[length:var(--stroke-extra-bold)] border-solid max-w-96",
   {
     variants: {
       variant: {
-        success: "border-arch-sem-brd-success",
-        info: "border-arch-sem-brd-info",
-        warning: "border-arch-sem-brd-warning",
-        error: "border-arch-sem-brd-error",
+        success: "border-arch-success-brd",
+        info: "border-arch-info-brd",
+        warning: "border-arch-warning-brd",
+        danger: "border-arch-danger-brd",
         neutral: "border-arch-contour-primary",
       },
       size: {
@@ -42,13 +42,13 @@ const calloutVariants = cva(
 const getIconColorClass = (variant?: string): string => {
   switch (variant) {
     case "success":
-      return "text-arch-sem-i-success";
+      return "text-arch-success-icon";
     case "info":
-      return "text-arch-sem-i-info";
+      return "text-arch-info-icon";
     case "warning":
-      return "text-arch-sem-i-warning";
-    case "error":
-      return "text-arch-sem-i-error";
+      return "text-arch-warning-icon";
+    case "danger":
+      return "text-arch-danger-icon";
     default:
       return "";
   }

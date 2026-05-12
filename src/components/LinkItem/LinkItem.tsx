@@ -15,18 +15,18 @@ import type { LinkItemProps } from "../../types/components/LinkItem.types";
  */
 
 const linkItemVariants = cva(
-  "bg-arch-surface-primary rounded-arch-rd-md px-arch-sm py-arch-xs inline-flex items-center gap-arch-sm text-arch-secondary transition-colors duration-200 cursor-pointer hover:bg-arch-surface-tertiary hover:text-arch-accent hover:rounded-arch-rd-sm hover:underline hover:underline-offset-4",
+  "bg-arch-surface-primary rounded-arch-rd-md px-arch-sm py-arch-xs inline-flex items-center gap-arch-sm text-arch-txt-secondary transition-colors duration-200 cursor-pointer hover:bg-arch-surface-tertiary hover:text-arch-txt-accent hover:rounded-arch-rd-sm hover:underline hover:underline-offset-4",
   {
     variants: {
       variant: {
         default:
-          "text-arch-primary underline underline-offset-4 [&_svg]:text-arch-accent",
+          "text-arch-txt-primary underline underline-offset-4 [&_svg]:text-arch-txt-accent",
         hover:
-          "bg-arch-surface-tertiary text-arch-accent px-arch-sm py-arch-xs rounded-arch-rd-sm underline underline-offset-4",
+          "bg-arch-surface-tertiary text-arch-txt-accent px-arch-sm py-arch-xs rounded-arch-rd-sm underline underline-offset-4",
         active:
-          "text-arch-accent bg-arch-surface-secondary px-arch-sm py-arch-xs rounded-arch-rd-sm font-medium border-arch-accent border-[length:var(--stroke-regular)]",
+          "text-arch-txt-accent bg-arch-surface-secondary px-arch-sm py-arch-xs rounded-arch-rd-sm font-medium border-arch-contour-accent border-[length:var(--stroke-regular)]",
         minimal:
-          "text-arch-secondary bg-transparent hover:text-arch-accent underline underline-offset-4",
+          "text-arch-txt-secondary bg-transparent hover:text-arch-txt-accent underline underline-offset-4",
         visited:
           "text-violet-800 hover:text-violet-600 underline underline-offset-4 visited:text-violet-800 [&_svg]:text-violet-800",
       },

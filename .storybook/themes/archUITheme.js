@@ -3,23 +3,23 @@ import { create } from 'storybook/theming';
 // Color values from archui-system-tokens.css (light mode)
 // These are the actual resolved values from the system tokens
 const colors = {
-  // From --sys-icon-primary = --bleu-9
+  // From --sys-icon-primary = --arch-blue-9
   iconPrimary: '#102F6A',
-  // From --sys-icon-secondary = --bleu-8
+  // From --sys-icon-secondary = --arch-blue-8
   iconSecondary: '#173E88',
-  // From --sys-bg-primary = --gris-1
+  // From --sys-bg-primary = --arch-gray-1
   bgPrimary: '#F2F7FF',
-  // From --sys-bg-tertiary = --bleu-2
+  // From --sys-bg-tertiary = --arch-blue-2
   bgTertiary: '#C7D1EB',
-  // From --sys-brd-tertiary = --bleu-2
+  // From --sys-brd-tertiary = --arch-blue-2
   brdTertiary: '#C7D1EB',
-  // From --sys-brd-primary = --bleu-6
+  // From --sys-brd-primary = --arch-blue-6
   brdPrimary: '#3384FF',
-  // From --sys-txt-primary = --bleu-9
+  // From --sys-txt-primary = --arch-blue-9
   txtPrimary: '#102F6A',
-  // From --sys-txt-light = --bleu-2
+  // From --sys-txt-light = --arch-blue-2
   txtLight: '#C7D1EB',
-  // From --sys-txt-gray-light = --gris-5
+  // From --sys-txt-gray-light = --arch-gray-5
   txtGrayLight: '#C2D0EA',
 };
 

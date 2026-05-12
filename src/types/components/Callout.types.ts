@@ -6,7 +6,7 @@ import type React from "react";
  */
 export interface CalloutVariantProps {
   /** Visual intent of the callout */
-  variant?: "success" | "info" | "warning" | "error" | "neutral";
+  variant?: "success" | "info" | "warning" | "danger" | "neutral";
   /** Size of the callout */
   size?: "sm" | "md" | "lg";
 }

@@ -6,7 +6,7 @@ import type React from "react";
  */
 export interface AlertVariantProps {
   /** Visual intent of the alert */
-  variant?: "success" | "info" | "warning" | "error";
+  variant?: "success" | "info" | "warning" | "danger";
   /** Size of the alert */
   size?: "sm" | "md" | "lg";
 }

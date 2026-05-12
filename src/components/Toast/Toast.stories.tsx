@@ -157,10 +157,10 @@ export const CustomToast: Story = {
             className="bg-gray-100 border-2 border-gray-300"
           >
             <div className="flex flex-row items-center gap-4">
-              <h4 className="text-arch-primary underline italic font-bold">
+              <h4 className="text-arch-txt-primary underline italic font-bold">
                 Toast
               </h4>
-              <p className="text-arch-secondary italic">
+              <p className="text-arch-txt-secondary italic">
                 This is a custom toast. You can use this to display any content
                 you want.
               </p>

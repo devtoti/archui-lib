@@ -26,19 +26,19 @@ const TokensGrid: React.FC = () => {
     },
     {
       name: 'Text',
-      variable: '--color-arch-primary',
+      variable: '--color-arch-txt-primary',
       value: '#1C2024',
       type: 'color',
     },
     {
       name: 'Border (Success)',
-      variable: '--color-arch-sem-brd-success',
+      variable: '--color-arch-success-brd',
       value: '#62A379',
       type: 'color',
     },
     {
       name: 'Icon (Success)',
-      variable: '--color-arch-sem-i-success',
+      variable: '--color-arch-success-icon',
       value: '#30A46C',
       type: 'color',
     },

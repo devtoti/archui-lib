@@ -15,17 +15,17 @@ import type { AlertProps } from "../../types/components/Alert.types";
  */
 
 const alertVariants = cva(
-  "max-w-80 h-min flex items-start gap-arch-md shadow-sm rounded-tr-arch-rd-sm rounded-arch-rd-sm text-arch-primary p-arch-sm bg-arch-surface-primary border-arch-contour-accent border-solid border-[length:var(--stroke-regular)] shadow-arch-dark",
+  "max-w-80 h-min flex items-start gap-arch-md shadow-sm rounded-tr-arch-rd-sm rounded-arch-rd-sm text-arch-txt-primary p-arch-sm bg-arch-surface-primary border-arch-contour-accent border-solid border-[length:var(--stroke-regular)] shadow-arch-dark",
   {
     variants: {
       variant: {
         success:
-          "border-arch-sem-brd-success bg-arch-sem-srfc-success text-arch-sem-chars-success",
-        info: "border-arch-sem-brd-info bg-arch-sem-srfc-info text-arch-sem-chars-info",
+          "border-arch-success-brd bg-arch-success-bg text-arch-success-txt",
+        info: "border-arch-info-brd bg-arch-info-bg text-arch-info-txt",
         warning:
-          "border-arch-sem-brd-warning bg-arch-sem-srfc-warning text-arch-sem-chars-warning",
-        error:
-          "border-arch-sem-brd-error bg-arch-sem-srfc-error text-arch-sem-chars-error",
+          "border-arch-warning-brd bg-arch-warning-bg text-arch-warning-txt",
+        danger:
+          "border-arch-danger-brd bg-arch-danger-bg text-arch-danger-txt",
       },
       size: {
         sm: "text-sm",
@@ -44,13 +44,13 @@ const alertVariants = cva(
 const getIconColorClass = (variant?: string): string => {
   switch (variant) {
     case "success":
-      return "text-arch-sem-i-success";
+      return "text-arch-success-icon";
     case "info":
-      return "text-arch-sem-i-info";
+      return "text-arch-info-icon";
     case "warning":
-      return "text-arch-sem-i-warning";
-    case "error":
-      return "text-arch-sem-i-error";
+      return "text-arch-warning-icon";
+    case "danger":
+      return "text-arch-danger-icon";
     default:
       return "";
   }

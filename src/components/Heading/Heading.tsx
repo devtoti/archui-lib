@@ -17,12 +17,12 @@ import type { HeadingProps } from "../../types/components/Heading.types";
 const containerVariants = cva("flex flex-col", {
   variants: {
     variant: {
-      h6: "gap-[var(--sp-3xs)]",
-      h5: "gap-[var(--sp-2xs)]",
-      h4: "gap-[var(--sp-xs]",
-      h3: "gap-[var(--sp-md)]",
-      h2: "gap-[var(--sp-md)]",
-      h1: "gap-[var(--sp-md)]",
+      h6: "gap-arch-sp-3xs",
+      h5: "gap-arch-sp-2xs",
+      h4: "gap-arch-sp-xs",
+      h3: "gap-arch-sp-md",
+      h2: "gap-arch-sp-md",
+      h1: "gap-arch-sp-md",
     },
   },
   defaultVariants: {
@@ -30,7 +30,7 @@ const containerVariants = cva("flex flex-col", {
   },
 });
 
-const headingVariants = cva("text-arch-primary font-semibold", {
+const headingVariants = cva("text-arch-txt-primary font-semibold", {
   variants: {
     variant: {
       h1: "text-4xl font-bold",
@@ -52,7 +52,7 @@ const headingVariants = cva("text-arch-primary font-semibold", {
   },
 });
 
-const descriptionVariants = cva("text-arch-secondary mt-arch-sm pt-0 !mt-0", {
+const descriptionVariants = cva("text-arch-txt-secondary mt-arch-sm pt-0 !mt-0", {
   variants: {
     variant: {
       h1: "text-lg",
@@ -91,7 +91,7 @@ export const Heading: React.FC<HeadingProps> = ({
   const HeadingComponent = asChild ? Slot.Root : variant;
   const headingClasses = twMerge(
     headingVariants({ variant, align }),
-    className
+    className,
   );
   const content = children || text;
 

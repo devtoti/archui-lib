@@ -53,37 +53,37 @@
     --color-arch-raised-3: var(--fg-raised-3);
 
     /* Text colors */
-    --color-arch-primary: var(--txt-primary);
-    --color-arch-secondary: var(--txt-secondary);
-    --color-arch-tertiary: var(--txt-tertiary);
-    --color-arch-light: var(--txt-light);
-    --color-arch-accent-dark: var(--txt-accent-dark);
-    --color-arch-accent: var(--txt-accent);
-    --color-arch-accent-light: var(--txt-accent-light);
+    --color-arch-txt-primary: var(--txt-primary);
+    --color-arch-txt-secondary: var(--txt-secondary);
+    --color-arch-txt-tertiary: var(--txt-tertiary);
+    --color-arch-txt-light: var(--txt-light);
+    --color-arch-txt-accent-dark: var(--txt-accent-dark);
+    --color-arch-txt-accent: var(--txt-accent);
+    --color-arch-txt-accent-light: var(--txt-accent-light);
 
-    /* Semantic background colors */
-    --color-arch-sem-srfc-success: var(--sem-bg-success);
-    --color-arch-sem-srfc-info: var(--sem-bg-info);
-    --color-arch-sem-srfc-warning: var(--sem-bg-warning);
-    --color-arch-sem-srfc-error: var(--sem-bg-error);
+    /* Semantic colors — success */
+    --color-arch-success-bg: var(--sem-bg-success);
+    --color-arch-success-txt: var(--sem-txt-success);
+    --color-arch-success-brd: var(--sem-brd-success);
+    --color-arch-success-icon: var(--sem-icons-success);
 
-    /* Semantic text colors */
-    --color-arch-sem-chars-success: var(--sem-txt-success);
-    --color-arch-sem-chars-info: var(--sem-txt-info);
-    --color-arch-sem-chars-warning: var(--sem-txt-warning);
-    --color-arch-sem-chars-error: var(--sem-txt-error);
+    /* Semantic colors — info */
+    --color-arch-info-bg: var(--sem-bg-info);
+    --color-arch-info-txt: var(--sem-txt-info);
+    --color-arch-info-brd: var(--sem-brd-info);
+    --color-arch-info-icon: var(--sem-icons-info);
 
-    /* Semantic border colors */
-    --color-arch-sem-brd-success: var(--sem-brd-success);
-    --color-arch-sem-brd-info: var(--sem-brd-info);
-    --color-arch-sem-brd-warning: var(--sem-brd-warning);
-    --color-arch-sem-brd-error: var(--sem-brd-error);
+    /* Semantic colors — warning */
+    --color-arch-warning-bg: var(--sem-bg-warning);
+    --color-arch-warning-txt: var(--sem-txt-warning);
+    --color-arch-warning-brd: var(--sem-brd-warning);
+    --color-arch-warning-icon: var(--sem-icons-warning);
 
-    /* Semantic icon colors */
-    --color-arch-sem-i-success: var(--sem-icons-success);
-    --color-arch-sem-i-info: var(--sem-icons-info);
-    --color-arch-sem-i-warning: var(--sem-icons-warning);
-    --color-arch-sem-i-error: var(--sem-icons-error);
+    /* Semantic colors — danger */
+    --color-arch-danger-bg: var(--sem-bg-danger);
+    --color-arch-danger-txt: var(--sem-txt-danger);
+    --color-arch-danger-brd: var(--sem-brd-danger);
+    --color-arch-danger-icon: var(--sem-icons-danger);
 
     /* Border colors */
     --color-arch-contour-primary: var(--brd-primary);
@@ -113,6 +113,21 @@
     --spacing-arch-2xl: var(--pd-2xl);
     --spacing-arch-3xl: var(--pd-3xl);
 
+    /* Spacing */
+    --spacing-arch-sp-3xs: var(--sp-3xs);
+    --spacing-arch-sp-2xs: var(--sp-2xs);
+    --spacing-arch-sp-xs: var(--sp-xs);
+    --spacing-arch-sp-sm: var(--sp-sm);
+    --spacing-arch-sp-md: var(--sp-md);
+    --spacing-arch-sp-lg: var(--sp-lg);
+    --spacing-arch-sp-xl: var(--sp-xl);
+    --spacing-arch-sp-2xl: var(--sp-2xl);
+    --spacing-arch-sp-3xl: var(--sp-3xl);
+    --spacing-arch-sp-4xl: var(--sp-4xl);
+    --spacing-arch-sp-5xl: var(--sp-5xl);
+    --spacing-arch-sp-6xl: var(--sp-6xl);
+    --spacing-arch-sp-7xl: var(--sp-7xl);
+    --spacing-arch-sp-8xl: var(--sp-8xl);
 
     /* Border radius */
     --radius-arch-rd-xs: var(--rd-xs);

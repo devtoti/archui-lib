@@ -83,11 +83,11 @@
       aria-label="Primary navigation links"
     >
       <ul>
-        <h6 class="arc-h4">Contact</h6>
+        <h6 class="arch-h4">Contact</h6>
         <li>
           <a
             href="https://devtoti.github.io/archui-lib/?path=/docs/welcome-to-archui--introduction"
-            class="arc-body-1"
+            class="arch-body-1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Storybook (opens in a new tab)"
@@ -98,7 +98,7 @@
         <li>
           <a
             href="https://github.com/devtoti"
-            class="arc-body-1"
+            class="arch-body-1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open GitHub (opens in a new tab)"
@@ -109,7 +109,7 @@
         <li>
           <a
             href="https://dribbble.com/totisketches"
-            class="arc-body-1"
+            class="arch-body-1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Dribbble (opens in a new tab)"
@@ -120,7 +120,7 @@
         <li>
           <a
             href="https://www.linkedin.com/in/devtoti/"
-            class="arc-body-1"
+            class="arch-body-1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open LinkedIn (opens in a new tab)"
@@ -131,7 +131,7 @@
         <li>
           <a
             href="https://devtoti.com"
-            class="arc-body-1"
+            class="arch-body-1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Portfolio (opens in a new tab)"
@@ -147,11 +147,11 @@
       aria-label="Secondary navigation links"
     >
       <ul>
-        <h6 class="arc-h4">Documentation</h6>
+        <h6 class="arch-h4">Documentation</h6>
         <li>
           <a
             href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-why-archui--docs"
-            class="arc-body-1"
+            class="arch-body-1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Get Started documentation (opens in a new tab)"
@@ -162,7 +162,7 @@
         <li>
           <a
             href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-design-principles--docs"
-            class="arc-body-1"
+            class="arch-body-1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Design Principles documentation (opens in a new tab)"
@@ -173,7 +173,7 @@
         <li>
           <a
             href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-library-setup--docs"
-            class="arc-body-1"
+            class="arch-body-1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Setup documentation (opens in a new tab)"
@@ -184,7 +184,7 @@
         <li>
           <a
             href="https://devtoti.github.io/archui-lib/?path=/docs/00-getting-started-themes--docs"
-            class="arc-body-1"
+            class="arch-body-1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Themes documentation (opens in a new tab)"
@@ -195,7 +195,7 @@
         <li>
           <a
             href="mailto:toti.webdev@gmail.com"
-            class="arc-body-1"
+            class="arch-body-1"
             aria-label="Send email to toti.webdev@gmail.com"
           >
             Contact
@@ -208,63 +208,63 @@
     class="footer-container lg:w-full !mx-4 md:px-0 lg:w-3/5 mx-auto row-start-2 row-end-3 outline-6 outline-sys-primary"
   >
     <article class="plan-info techs">
-      <span class="arc-h5">Technologies</span>
-      <p class="arc-body-2">React / Tailwind /TypeScript</p>
+      <span class="arch-h5">Technologies</span>
+      <p class="arch-body-2">React / Tailwind /TypeScript</p>
     </article>
     <article class="plan-info proj">
-      <h6 class="arc-h5">Project</h6>
-      <p class="arc-body-2">ArchUI Component Library</p>
+      <h6 class="arch-h5">Project</h6>
+      <p class="arch-body-2">ArchUI Component Library</p>
     </article>
     <article class="plan-info loc">
-      <h6 class="arc-h5">Location</h6>
-      <p class="arc-body-2">Mexico City</p>
+      <h6 class="arch-h5">Location</h6>
+      <p class="arch-body-2">Mexico City</p>
     </article>
     <article class="plan-info scale">
-      <h6 class="arc-h5">Scale</h6>
+      <h6 class="arch-h5">Scale</h6>
       <div id="scale">
         <div class="scale-top">
-          <span class="arc-h5"></span>
-          <span class="arc-h5"></span>
-          <span class="arc-h5"></span>
-          <span class="arc-h5"></span>
-          <span class="arc-h5"></span>
+          <span class="arch-h5"></span>
+          <span class="arch-h5"></span>
+          <span class="arch-h5"></span>
+          <span class="arch-h5"></span>
+          <span class="arch-h5"></span>
         </div>
         <div class="scale-bottom">
-          <span class="arc-h5"></span>
-          <span class="arc-h5"></span>
-          <span class="arc-h5"></span>
-          <span class="arc-h5"></span>
-          <span class="arc-h5"></span>
+          <span class="arch-h5"></span>
+          <span class="arch-h5"></span>
+          <span class="arch-h5"></span>
+          <span class="arch-h5"></span>
+          <span class="arch-h5"></span>
         </div>
         <!-- <ul>
-          <li class="arc-h5">1</li>
-          <li class="arc-h5">2.5</li>
-          <li class="arc-h5">5</li>
-          <li class="arc-h5">10</li>
-          <li class="arc-h5">20</li>
+          <li class="arch-h5">1</li>
+          <li class="arch-h5">2.5</li>
+          <li class="arch-h5">5</li>
+          <li class="arch-h5">10</li>
+          <li class="arch-h5">20</li>
         </ul> -->
       </div>
     </article>
     <article class="plan-info rev">
-      <h6 class="arc-h5">Last Update</h6>
-      <p class="arc-body-2">December 28, 2025</p>
+      <h6 class="arch-h5">Last Update</h6>
+      <p class="arch-body-2">December 28, 2025</p>
     </article>
     <article class="plan-info collab">
-      <h6 class="arc-h5">Architect</h6>
-      <p class="arc-body-2">@devtoti</p>
+      <h6 class="arch-h5">Architect</h6>
+      <p class="arch-body-2">@devtoti</p>
     </article>
     <article class="plan-info author">
-      <h6 class="arc-h5">Description</h6>
-      <p class="arc-body-2">
+      <h6 class="arch-h5">Description</h6>
+      <p class="arch-body-2">
         A React 19+ and Tailwind component library designed with architectural
         blueprint precision.
       </p>
     </article>
     <article class="plan-info v">
-      <h4 class="arc-h3">V1.1.0</h4>
+      <h4 class="arch-h3">V1.1.0</h4>
     </article>
     <article class="plan-info id" id="clave">
-      <h5 class="arc-h1">A-1</h5>
+      <h5 class="arch-h1">A-1</h5>
     </article>
   </div>
 </footer>
