@@ -1,6 +1,7 @@
 ---
 name: screenshotting-changelog
 description: Generate a visual changelog or PR description by taking before/after screenshots of UI changes using Cursor's built-in browser. Use when preparing a PR with visual changes.
+disable-model-invocation: true
 ---
 
 # Screenshot Changelog

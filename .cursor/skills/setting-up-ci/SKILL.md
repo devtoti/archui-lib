@@ -1,6 +1,7 @@
 ---
 name: setting-up-ci
 description: Set up a GitHub Actions CI/CD pipeline with linting, testing, type-checking, and deployment steps.
+disable-model-invocation: true
 ---
 
 # Setup CI (GitHub Actions)
