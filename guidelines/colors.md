@@ -245,6 +245,167 @@ Remember: to customize a theme's accent, override only the three seed variables 
 // Resolves to: bg-arch-surface-primary text-arch-txt-primary
 ```
 
+## Figma-to-CSS variable name mapping
+
+This table maps every Figma variable name (as defined in the `✦ Orders` collection in Figma v1.1.0) to its corresponding CSS variable and Tailwind utility class. Figma Make **must** use this table to resolve the correct CSS class when reading component designs.
+
+> **Figma code output format:** When Figma generates code, variable paths are shortened into CSS custom property syntax — e.g. `background/primary` becomes `var(--bg/primary,…)`. The slash-based names in the code output are **not** valid CSS custom properties in the ArchUI codebase. Always translate them to the hyphen-based CSS variables and Tailwind classes listed below.
+
+### Surface (background) tokens
+
+| Figma variable | CSS variable | Tailwind class |
+|---|---|---|
+| `background/primary` | `--bg-primary` | `bg-arch-surface-primary` |
+| `background/secondary` | `--bg-secondary` | `bg-arch-surface-secondary` |
+| `background/tertiary` | `--bg-tertiary` | `bg-arch-surface-tertiary` |
+| `background/accent` | `--bg-accent` | `bg-arch-surface-accent` |
+| `background/accent-light` | `--bg-accent-light` | `bg-arch-surface-accent-light` |
+| `background/accent-dark` | `--bg-accent-dark` | `bg-arch-surface-accent-dark` |
+| `background/light` | `--bg-light` | `bg-arch-surface-light` |
+| `background/sunken-1` | `--bg-sunken-1` | `bg-arch-sunken-1` |
+| `background/sunken-2` | `--bg-sunken-2` | `bg-arch-sunken-2` |
+| `background/sunken-3` | `--bg-sunken-3` | `bg-arch-sunken-3` |
+| `background/sunken-4` | `--bg-sunken-4` | `bg-arch-sunken-4` |
+
+### Foreground (float/raised) tokens
+
+| Figma variable | CSS variable | Tailwind class |
+|---|---|---|
+| `foreground/primary` | `--fg-primary` | `bg-arch-float-primary` |
+| `foreground/secondary` | `--fg-secondary` | `bg-arch-float-secondary` |
+| `foreground/tertiary` | `--fg-tertiary` | `bg-arch-float-tertiary` |
+| `foreground/accent` | `--fg-accent` | `bg-arch-float-accent` |
+| `foreground/raised-1` | `--fg-raised-1` | `bg-arch-raised-1` |
+| `foreground/raised-2` | `--fg-raised-2` | `bg-arch-raised-2` |
+| `foreground/raised-3` | `--fg-raised-3` | `bg-arch-raised-3` |
+
+### Text tokens
+
+| Figma variable | CSS variable | Tailwind class |
+|---|---|---|
+| `text/primary` | `--txt-primary` | `text-arch-txt-primary` |
+| `text/secondary` | `--txt-secondary` | `text-arch-txt-secondary` |
+| `text/tertiary` | `--txt-tertiary` | `text-arch-txt-tertiary` |
+| `text/light` | `--txt-light` | `text-arch-txt-light` |
+| `text/accent` | `--txt-accent` | `text-arch-txt-accent` |
+| `text/accent-dark` | `--txt-accent-dark` | `text-arch-txt-accent-dark` |
+| `text/accent-light` | `--txt-accent-light` | `text-arch-txt-accent-light` |
+
+### Border tokens
+
+| Figma variable | CSS variable | Tailwind class |
+|---|---|---|
+| `borders/primary` | `--brd-primary` | `border-arch-contour-primary` |
+| `borders/secondary` | `--brd-secondary` | `border-arch-contour-secondary` |
+| `borders/tertiary` | `--brd-tertiary` | `border-arch-contour-tertiary` |
+| `borders/accent` | `--brd-accent` | `border-arch-contour-accent` |
+| `borders/accent-light` | `--brd-accent-light` | `border-arch-contour-accent-light` |
+| `borders/accent-dark` | `--brd-accent-dark` | `border-arch-contour-accent-dark` |
+| `borders/light` | `--brd-light` | `border-arch-contour-light` |
+| `borders/dark` | `--brd-dark` | `border-arch-contour-dark` |
+
+### Icon tokens
+
+| Figma variable | CSS variable | Tailwind class |
+|---|---|---|
+| `icons/accent` | `--icon-accent` | `text-arch-icon-accent` |
+| `icons/primary` | `--icon-primary` | `text-arch-icon-primary` |
+| `icons/secondary` | `--icon-secondary` | `text-arch-icon-secondary` |
+| `icons/tertiary` | `--icon-tertiary` | `text-arch-icon-tertiary` |
+
+> **Note:** The CSS token system also defines `--icon-light` (`text-arch-icon-light`) and `--icon-dark` (`text-arch-icon-dark`). In Figma v1.1.0 these are hidden variables (`icons/#light`, `icons/#dark`). Use the Tailwind classes above when you need light or dark icon fills in code.
+
+### Semantic tokens
+
+Figma v1.1.0 now uses `danger` consistently (previously `error`). The Figma and CSS naming is aligned — no translation is needed.
+
+| Figma variable | CSS variable | Tailwind class |
+|---|---|---|
+| `semantic/background/success` | `--sem-bg-success` | `bg-arch-success-bg` |
+| `semantic/background/info` | `--sem-bg-info` | `bg-arch-info-bg` |
+| `semantic/background/warning` | `--sem-bg-warning` | `bg-arch-warning-bg` |
+| `semantic/background/danger` | `--sem-bg-danger` | `bg-arch-danger-bg` |
+| `semantic/text/success` | `--sem-txt-success` | `text-arch-success-txt` |
+| `semantic/text/info` | `--sem-txt-info` | `text-arch-info-txt` |
+| `semantic/text/warning` | `--sem-txt-warning` | `text-arch-warning-txt` |
+| `semantic/text/danger` | `--sem-txt-danger` | `text-arch-danger-txt` |
+| `semantic/border/success` | `--sem-brd-success` | `border-arch-success-brd` |
+| `semantic/border/info` | `--sem-brd-info` | `border-arch-info-brd` |
+| `semantic/border/warning` | `--sem-brd-warning` | `border-arch-warning-brd` |
+| `semantic/border/danger` | `--sem-brd-danger` | `border-arch-danger-brd` |
+| `semantic/icons/success` | `--sem-icons-success` | `text-arch-success-icon` |
+| `semantic/icons/info` | `--sem-icons-info` | `text-arch-info-icon` |
+| `semantic/icons/warning` | `--sem-icons-warning` | `text-arch-warning-icon` |
+| `semantic/icons/danger` | `--sem-icons-danger` | `text-arch-danger-icon` |
+
+### Brand / accent primitives
+
+These Figma variables are used internally by the `✦ Orders` collection to resolve accent colors per theme. They do not map directly to Tailwind utility classes but are referenced by the accent tokens above.
+
+| Figma variable | Resolved to | Purpose |
+|---|---|---|
+| `brand/primary` | Theme accent seed color | Primary brand color |
+| `brand/light` | Theme accent light variant | Light brand tint |
+| `brand/dark` | Theme accent dark variant | Dark brand shade |
+| `brand/accent` | Theme-specific accent | Accent brand color |
+| `accent-doric` | `Colors/Orange/10` | Doric accent seed *(primitives collection)* |
+| `accent-doric-dark` | `Colors/Orange/11` | Doric dark accent *(primitives collection)* |
+| `accent-doric-light` | `Colors/Orange/8` | Doric light accent *(primitives collection)* |
+| `accent-ionic` | `Colors/Indigo/10` | Ionic accent seed *(primitives collection)* |
+| `accent-ionic-dark` | `Colors/Indigo/12` | Ionic dark accent *(primitives collection)* |
+| `accent-ionic-light` | `Colors/Indigo/8` | Ionic light accent *(primitives collection)* |
+| `accent-corinthian` | `Colors/Jade/10` | Corinthian accent seed *(primitives collection)* |
+| `accent-corinthian-dark` | `Colors/Jade/11` | Corinthian dark accent *(primitives collection)* |
+| `accent-corinthian-light` | `Colors/Jade/8` | Corinthian light accent *(primitives collection)* |
+
+### Radii tokens
+
+| Figma variable | CSS variable | Tailwind class |
+|---|---|---|
+| `radii/xs` | `--rd-xs` | `rounded-arch-rd-xs` |
+| `radii/sm` | `--rd-sm` | `rounded-arch-rd-sm` |
+| `radii/md` | `--rd-md` | `rounded-arch-rd-md` |
+| `radii/lg` | `--rd-lg` | `rounded-arch-rd-lg` |
+| `radii/xl` | `--rd-xl` | `rounded-arch-rd-xl` |
+| `radii/full` | `--rd-full` | `rounded-arch-rd-full` |
+
+### Padding tokens
+
+| Figma variable | CSS variable | Tailwind class |
+|---|---|---|
+| `padding/pad-xs` | `--pd-xs` | `p-arch-xs` |
+| `padding/pad-sm` | `--pd-sm` | `p-arch-sm` |
+| `padding/pad-md` | `--pd-md` | `p-arch-md` |
+| `padding/pad-lg` | `--pd-lg` | `p-arch-lg` |
+| `padding/pad-xl` | `--pd-xl` | `p-arch-xl` |
+| `padding/pad-2xl` | `--pd-2xl` | `p-arch-2xl` |
+| `padding/pad-3xl` | `--pd-3xl` | `p-arch-3xl` |
+
+> **Note:** Figma uses `pad-*` while CSS uses `pd-*`. Always translate `pad-` → `pd-` when mapping to CSS variables, or use the `p-arch-*` Tailwind class directly.
+
+### Stroke (border width) tokens
+
+| Figma variable | CSS variable | Tailwind class |
+|---|---|---|
+| `stroke/extra-light` | `--stroke-extra-light` | `border-arch-lw-extra-light` |
+| `stroke/light` | `--stroke-light` | `border-arch-lw-light` |
+| `stroke/regular` | `--stroke-regular` | `border-arch-lw-regular` |
+| `stroke/bold` | `--stroke-bold` | `border-arch-lw-bold` |
+| `stroke/extra-bold` | `--stroke-extra-bold` | `border-arch-lw-extra-bold` |
+
+### Shadow tokens
+
+Shadows are defined as **effect styles** in Figma (not variables). The style names map to CSS/Tailwind shadow tokens:
+
+| Figma effect style | CSS variable | Tailwind class |
+|---|---|---|
+| `shadow-1` | `--shadow-light` | `shadow-arch-light` |
+| `shadow-2` | `--shadow-regular` | `shadow-arch-regular` |
+| `shadow-3` | `--shadow-dark` | `shadow-arch-dark` |
+| `shadow-4` | — | — *(Figma-only, no CSS equivalent)* |
+| `shadow-5` | — | — *(Figma-only, no CSS equivalent)* |
+| `shadow-6` | — | — *(Figma-only, no CSS equivalent)* |
+
 ## Rules
 
 - Always use `arch-*` Tailwind classes — never hardcode hex values or reference primitive palette variables directly.
