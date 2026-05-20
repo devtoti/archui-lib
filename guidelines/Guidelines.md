@@ -29,16 +29,19 @@ ArchUI is a **React 19+ and Tailwind CSS 4** component library inspired by class
 
 All components are imported from `@devtoti/archui-lib`. Always use these over raw HTML elements.
 
-| Component | Purpose |
-|---|---|
-| `Button` | Primary, secondary, tertiary, ghost actions |
-| `Alert` | Status notifications (success, info, warning, danger) |
-| `Callout` | Inline callouts with left accent border |
-| `Toast` | Brief notifications with optional actions |
-| `Heading` | Semantic headings (h1–h6) with descriptions |
-| `LinkItem` | Styled anchor links with icon support |
-| `Switch` | Toggle controls |
-| `ThemeProvider` | Theme wrapper (required at app root) |
+| Component | Purpose | Guidelines |
+|---|---|---|
+| `Button` | Primary, secondary, tertiary, ghost actions | [Button.md](components/Button.md) |
+| `Alert` | Status notifications (success, info, warning, danger) | [Alert.md](components/Alert.md) |
+| `Avatar` | Profile image or initials with optional presence bead | [Avatar.md](components/Avatar.md) |
+| `Callout` | Inline callouts with left accent border | [Callout.md](components/Callout.md) |
+| `Toast` | Brief notifications with optional actions | [Toast.md](components/Toast.md) |
+| `Heading` | Semantic headings (h1–h6) with descriptions | [Heading.md](components/Heading.md) |
+| `Input` | Labeled fields; `Input.Text` / `Input.Password` | [Input.md](components/Input.md) |
+| `LinkItem` | Styled anchor links with icon support | [LinkItem.md](components/LinkItem.md) |
+| `Switch` | Toggle controls | [Switch.md](components/Switch.md) |
+| `RadioGroup` / `RadioItem` | Mutually exclusive choice lists | [Radio.md](components/Radio.md) |
+| `ThemeProvider` | Theme wrapper (required at app root) | [ThemeProvider.md](components/ThemeProvider.md) |
 
 ## Reading order
 
@@ -48,6 +51,8 @@ All components are imported from `@devtoti/archui-lib`. Always use these over ra
 3. `colors.md` — color token system, semantic colors, accent customization, dark mode
 4. `radii-spacing.md` — radii, padding, spacing, stroke tokens per theme
 5. `typography.md` — font families, type scale, font weights, a11y minimum sizes
+6. Component-focused notes — see `guidelines/components/` when you need usage, semantics, and API detail beyond Storybook:
+   - [Button.md](components/Button.md), [Alert.md](components/Alert.md), [Avatar.md](components/Avatar.md), [Callout.md](components/Callout.md), [Toast.md](components/Toast.md), [Heading.md](components/Heading.md), [Input.md](components/Input.md), [LinkItem.md](components/LinkItem.md), [Switch.md](components/Switch.md), [Radio.md](components/Radio.md), [ThemeProvider.md](components/ThemeProvider.md)
 
 ## Workflows
 
