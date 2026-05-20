@@ -27,6 +27,29 @@ ArchUI is a unique and modern React component library inspired by classical arch
 npm install @devtoti/archui-lib
 ```
 
+## Design guidelines (agents & design-to-code)
+
+This package ships the **`guidelines/`** folder on npm — the same markdown references used to build ArchUI. They are meant for **coding agents**, **Figma Make**, and other **design-to-code** workflows that need authoritative rules (tokens, themes, setup, per-component usage) without opening Storybook.
+
+After install, read them from your project:
+
+```text
+node_modules/@devtoti/archui-lib/guidelines/Guidelines.md
+```
+
+**Suggested entry path:** start at `guidelines/Guidelines.md`, then follow its reading order (`setup.md`, `colors.md`, `radii-spacing.md`, `typography.md`, and `guidelines/components/*.md` for component-specific API and semantics).
+
+| Path | Purpose |
+|------|---------|
+| `guidelines/Guidelines.md` | Product character, themes, component index, workflows |
+| `guidelines/setup.md` | `ThemeProvider`, CSS imports, build setup |
+| `guidelines/colors.md` | Semantic color tokens and accent customization |
+| `guidelines/radii-spacing.md` | Radii, spacing, strokes per theme |
+| `guidelines/typography.md` | Type scale and font families |
+| `guidelines/components/*.md` | Per-component deep dives — see table in `Guidelines.md` (Button, Alert, Avatar, Callout, Toast, Heading, Input, LinkItem, Switch, Radio, ThemeProvider) |
+
+Point your agent skill, MCP, or Figma Make context at these files so generated UI uses ArchUI components and tokens instead of ad-hoc HTML or hardcoded values.
+
 ## Usage
 
 ```tsx
@@ -79,7 +102,8 @@ We are committed to inclusive design and ensure ArchUI components conform to WCA
 ## Resources
 
 - [Figma UI Kit](https://www.figma.com/community/file/1585101937198168427)
-- [Documentation](https://devtoti.github.io/archui-lib/)
+- [Documentation](https://devtoti.github.io/archui-lib/) (Storybook)
+- **Package guidelines** — `node_modules/@devtoti/archui-lib/guidelines/` (see [Design guidelines](#design-guidelines-agents--design-to-code))
 - [Storybook](https://69407e8add389895667a46fe-dltggumnte.chromatic.com)
 - Sandbox (coming soon)
 - Examples (coming soon)
