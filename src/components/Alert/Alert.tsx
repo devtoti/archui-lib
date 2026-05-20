@@ -75,12 +75,13 @@ export const Alert: React.FC<AlertProps> = ({
 
   return (
     <AlertComponent
-      className={twMerge(alertVariants({ variant, size }), className)}
+      className={twMerge("archui-alert", alertVariants({ variant, size }), className)}
       {...props}
     >
       {icon && (
         <span
           className={twMerge(
+            "archui-alert-icon",
             "inline-flex align-middle mt-1",
             getIconColorClass(variant)
           )}
@@ -88,7 +89,7 @@ export const Alert: React.FC<AlertProps> = ({
           {icon}
         </span>
       )}
-      <p className="inline">{content}</p>
+      <p className="archui-alert-body inline">{content}</p>
     </AlertComponent>
   );
 };

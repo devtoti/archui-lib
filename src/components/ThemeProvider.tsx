@@ -67,13 +67,16 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({
   themeType,
   setThemeType,
 }) => (
-  <div className="archui-theme-toggle">
+  <div className="archui-theme-provider-toggle">
     {themeOptions.map((th) => (
       <button
         key={th}
         aria-label={`Switch theme to ${th}`}
         onClick={() => setTheme(th)}
-        className={twMerge("archui-theme-btn", theme === th ? "selected" : "")}
+        className={twMerge(
+          "archui-theme-provider-btn",
+          theme === th ? "selected" : "",
+        )}
       >
         {th === "doric" && (
           <img src={doricIcon} alt="Doric Theme" aria-label="Doric Theme" />
@@ -90,15 +93,15 @@ const ThemeToggler: React.FC<ThemeTogglerProps> = ({
         )}
       </button>
     ))}
-    <span aria-hidden="true" className="archui-theme-toggle-separator" />
+    <span aria-hidden="true" className="archui-theme-provider-toggle-separator" />
     {themeTypeOptions.map((opt) => (
       <button
         key={opt}
         aria-label={`Switch theme type to ${opt}`}
         onClick={() => setThemeType(opt)}
         className={twMerge(
-          "archui-theme-btn",
-          themeType === opt ? "selected" : ""
+          "archui-theme-provider-btn",
+          themeType === opt ? "selected" : "",
         )}
       >
         {themeTypeIcons[opt]}
@@ -171,7 +174,7 @@ export const ThemeProvider: React.FC<{
         hasToggler,
       }}
     >
-      <div className={twMerge(baseClasses, className)} style={wrapperStyle}>
+      <div className={twMerge("archui-theme-provider", baseClasses, className)} style={wrapperStyle}>
         {hasToggler && (
           <ThemeToggler
             theme={theme}

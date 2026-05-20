@@ -82,19 +82,20 @@ export const Callout: React.FC<CalloutProps> = ({
   const IconElement = icon !== undefined ? icon : <IconArch />;
   return (
     <Component
-      className={twMerge(calloutVariants({ variant, size }), className)}
+      className={twMerge("archui-callout", calloutVariants({ variant, size }), className)}
       {...props}
     >
       <span
         className={twMerge(
+          "archui-callout-icon",
           "mt-1 inline-flex align-middle",
           getIconColorClass(variant)
         )}
       >
         {IconElement}
       </span>
-      {title && <h4 className="font-medium inline">{title}:</h4>}
-      <p className="inline"> {content}</p>
+      {title && <h4 className="archui-callout-title font-medium inline">{title}:</h4>}
+      <p className="archui-callout-body inline"> {content}</p>
     </Component>
   );
 };

@@ -1,6 +1,6 @@
 /* ArchUI Theme Toggle Styles */
 
-.archui-theme-toggle {
+.archui-theme-provider-toggle {
   display: flex;
   flex-direction: row;
   gap: var(--sys-sp-xs, 0.25rem);
@@ -14,12 +14,12 @@
   justify-content: flex-start;
 }
 
-.dark .archui-theme-toggle {
+.dark .archui-theme-provider-toggle {
   background-color: var(--sys-bg-secondary, var(--arch-gray-12));
   border-color: var(--sys-brd-secondary, var(--arch-blue-4));
 }
 
-.archui-theme-btn {
+.archui-theme-provider-btn {
   padding: var(--sys-pd-xs, 0.25rem) var(--sys-pd-sm, 0.5rem);
   font-size: 0.875rem;
   font-weight: 500;
@@ -34,44 +34,44 @@
   font-family: system-ui, -apple-system, sans-serif;
 }
 
-.archui-theme-btn:hover {
+.archui-theme-provider-btn:hover {
   background-color: var(--sys-bg-tertiary, var(--arch-blue-2));
   color: var(--sys-txt-primary, var(--arch-blue-9));
   border-color: var(--sys-brd-tertiary, var(--arch-blue-4));
 }
 
-.dark .archui-theme-btn {
+.dark .archui-theme-provider-btn {
   color: var(--sys-txt-secondary, var(--arch-blue-7));
 }
 
-.dark .archui-theme-btn:hover {
+.dark .archui-theme-provider-btn:hover {
   background-color: var(--sys-bg-tertiary, var(--arch-gray-11));
   color: var(--sys-txt-primary, var(--arch-blue-8));
   border-color: var(--sys-brd-tertiary, var(--arch-blue-6));
 }
 
-.archui-theme-btn.selected {
+.archui-theme-provider-btn.selected {
   background-color: var(--bg-accent, var(--arch-blue-9));
   color: var(--txt-light, var(--arch-blue-2));
   border-color: var(--brd-accent, var(--arch-blue-9));
   font-weight: 600;
 }
 
-.dark .archui-theme-btn.selected {
+.dark .archui-theme-provider-btn.selected {
   background-color: var(--bg-accent, var(--arch-blue-6));
   color: var(--txt-light, var(--arch-blue-2));
   border-color: var(--brd-accent, var(--arch-blue-6));
 }
 
-.archui-theme-btn:focus-visible {
+.archui-theme-provider-btn:focus-visible {
   outline: 2px solid var(--icon-accent, var(--arch-blue-9));
   outline-offset: 2px;
 }
 
-.dark .archui-theme-btn:focus-visible {
+.dark .archui-theme-provider-btn:focus-visible {
   outline-color: var(--icon-accent, var(--arch-blue-4));
 }
 
-.archui-theme-btn:active {
+.archui-theme-provider-btn:active {
   transform: scale(0.98);
 }

@@ -57,7 +57,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <Button
-      className={twMerge(buttonVariants({ variant, size }), className)}
+      className={twMerge("archui-button", buttonVariants({ variant, size }), className)}
       {...props}
     >
       {content}
