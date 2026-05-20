@@ -6,12 +6,13 @@ export function VariantsList() {
     const resolved = useOf("meta", ["meta"]);
     const argTypes = resolved.preparedMeta.argTypes || {};
 
-    // Find the variant prop (could be 'variant', 'intent', etc.)
-    const variantKey = Object.keys(argTypes).find((key) => {
+    // Prefer variant/intent; fall back to size (e.g. RadioItem density)
+    const variantKey = ["variant", "intent", "size"].find((key) => {
       const argType = argTypes[key];
-      if (key === "variant" || key === "intent") return true;
+      if (!argType?.options?.length) return false;
+      if (key === "variant" || key === "intent" || key === "size") return true;
       if (
-        argType?.control &&
+        argType.control &&
         typeof argType.control === "object" &&
         "type" in argType.control
       ) {
