@@ -24,13 +24,19 @@ export const ThemeSwitcher: React.FC<{
         setThemeType: () => {},
       }}
     >
-      <div className={twMerge("theme-switcher flex flex-col gap-6", className)}>
-        <div className="flex flex-row rounded-md border-[1px] border-gray-400 items-center w-min ml-auto overflow-hidden justify-end">
+      <div
+        className={twMerge(
+          "archui-theme-switcher",
+          "flex flex-col gap-6 theme-switcher",
+          className,
+        )}
+      >
+        <div className="archui-theme-switcher-toolbar flex flex-row rounded-md border-[1px] border-gray-400 items-center w-min ml-auto overflow-hidden justify-end">
           {themes.map((th) => (
             <button
               key={th}
               onClick={() => handleThemeChange(th)}
-              className={`w-8 h-8 text-sm font-medium transition-colors cursor-pointer ${
+              className={`archui-theme-switcher-option w-8 h-8 text-sm font-medium transition-colors cursor-pointer ${
                 selectedTheme === th
                   ? "bg-white text-white"
                   : "bg-gray-300 opacity-40 text-gray-700 hover:bg-gray-300"
@@ -63,7 +69,7 @@ export const ThemeSwitcher: React.FC<{
             </button>
           ))}
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="archui-theme-switcher-content flex flex-row gap-4">
           <div className={`${selectedTheme} contents`}>{children}</div>
         </div>
       </div>

@@ -90,18 +90,26 @@ export const Heading: React.FC<HeadingProps> = ({
 }) => {
   const HeadingComponent = asChild ? Slot.Root : variant;
   const headingClasses = twMerge(
+    "archui-heading-title",
     headingVariants({ variant, align }),
     className,
   );
   const content = children || text;
 
   return (
-    <div className={containerVariants({ variant })}>
+    <div className={twMerge("archui-heading", containerVariants({ variant }))}>
       <HeadingComponent className={headingClasses} {...props}>
         {content}
       </HeadingComponent>
       {description && (
-        <p className={descriptionVariants({ variant, align })}>{description}</p>
+        <p
+          className={twMerge(
+            "archui-heading-description",
+            descriptionVariants({ variant, align }),
+          )}
+        >
+          {description}
+        </p>
       )}
     </div>
   );

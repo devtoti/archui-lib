@@ -68,11 +68,16 @@ export const Switch: React.FC<SwitchProps> = ({
 
   return (
     <SwitchPrimitive.Root
-      className={twMerge(switchVariants({ variant, size }), className)}
+      className={twMerge("archui-switch", switchVariants({ variant, size }), className)}
       disabled={isDisabled}
       {...props}
     >
-      <SwitchPrimitive.Thumb className={switchThumbVariants({ size })} />
+      <SwitchPrimitive.Thumb
+        className={twMerge(
+          "archui-switch-thumb",
+          switchThumbVariants({ size }),
+        )}
+      />
     </SwitchPrimitive.Root>
   );
 };

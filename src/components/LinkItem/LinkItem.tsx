@@ -110,17 +110,23 @@ export const LinkItem: React.FC<LinkItemProps> = ({
 
   return (
     <LinkComponent
-      className={twMerge(linkItemVariants({ variant }), className)}
+      className={twMerge(
+        "archui-link-item",
+        linkItemVariants({ variant }),
+        className,
+      )}
       {...finalProps}
     >
       {leftIcon && (
-        <span className="inline-flex items-center" aria-hidden="true">
+        <span className="archui-link-item-leading inline-flex items-center" aria-hidden="true">
           {leftIcon}
         </span>
       )}
-      {content && <span>{content}</span>}
+      {content && (
+        <span className="archui-link-item-body">{content}</span>
+      )}
       {rightIcon && (
-        <span className="inline-flex items-center" aria-hidden="true">
+        <span className="archui-link-item-trailing inline-flex items-center" aria-hidden="true">
           {rightIcon}
         </span>
       )}

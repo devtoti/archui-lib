@@ -85,7 +85,7 @@ export const Toast = React.forwardRef<
         open={open}
         onOpenChange={onOpenChange}
         className={twMerge(
-          "archui-toast-root",
+          "archui-toast",
           toastVariants({ variant, size }),
           shadow,
           className,
@@ -93,30 +93,30 @@ export const Toast = React.forwardRef<
         {...props}
       >
         {icon && (
-          <span className="inline-block align-middle mt-1 mb-auto text-arch-txt-accent-dark">
+          <span className="archui-toast-icon inline-block align-middle mt-1 mb-auto text-arch-txt-accent-dark">
             {icon}
           </span>
         )}
-        <div className="flex flex-col items-start justify-between">
+        <div className="archui-toast-body flex flex-col items-start justify-between">
           {title && !children && (
-            <ToastPrimitive.Title className="text-arch-txt-primary font-medium">
+            <ToastPrimitive.Title className="archui-toast-title text-arch-txt-primary font-medium">
               {title}
             </ToastPrimitive.Title>
           )}
           {description && !children && (
-            <ToastPrimitive.Description className="text-arch-txt-secondary">
+            <ToastPrimitive.Description className="archui-toast-description text-arch-txt-secondary">
               {description}
             </ToastPrimitive.Description>
           )}
           {children}
         </div>
         {hasDivider && (
-          <div className="w-[1px] min-h-20 h-full bg-arch-contour-tertiary" />
+          <div className="archui-toast-divider w-[1px] min-h-20 h-full bg-arch-contour-tertiary" />
         )}
         {variant === "minimal" && (
           <ToastPrimitive.Close
             aria-label="Close"
-            className="h-full mb-auto cursor-pointer"
+            className="archui-toast-close h-full mb-auto cursor-pointer"
           >
             <span aria-hidden className="text-arch-txt-tertiary">
               <RxCross1 className="text-arch-txt-tertiary" />
@@ -127,7 +127,7 @@ export const Toast = React.forwardRef<
           <ToastPrimitive.Action
             altText={ariaLabel}
             asChild
-            className="mb-auto"
+            className={twMerge("archui-toast-action", "mb-auto")}
           >
             {actionButton}
           </ToastPrimitive.Action>
@@ -144,6 +144,7 @@ export const ToastViewport: React.FC<
   return (
     <ToastPrimitive.Viewport
       className={twMerge(
+        "archui-toast-viewport",
         "fixed bottom-0 right-0 z-[2147483647] m-0 flex w-full max-w-[420px] flex-col gap-2 p-[var(--viewport-padding)] outline-none [--viewport-padding:_25px]",
         className,
       )}

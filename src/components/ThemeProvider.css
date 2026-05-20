@@ -1,7 +1,7 @@
 /* ArchUI ThemeProvider Styles */
 
 /* Theme Toggle Container */
-.archui-theme-toggle {
+.archui-theme-provider-toggle {
   display: flex;
   flex-direction: row;
   gap: 0;
@@ -10,7 +10,7 @@
 }
 
 /* Theme Button Base Styles */
-.archui-theme-btn {
+.archui-theme-provider-btn {
   padding: 0;
   width: 2rem; /* w-8 */
   height: 2rem; /* h-8 */
@@ -26,14 +26,14 @@
 }
 
 /* Theme Button Hover State */
-.archui-theme-btn:hover {
+.archui-theme-provider-btn:hover {
   background-color: var(--color-arch-surface-tertiary, var(--bg-tertiary));
   color: var(--color-arch-primary, var(--txt-primary));
   border-color: var(--color-arch-contour-tertiary, var(--brd-tertiary));
 }
 
 /* Theme Button Selected State */
-.archui-theme-btn.selected {
+.archui-theme-provider-btn.selected {
   background-color: var(--color-arch-surface-accent, var(--bg-accent));
   color: var(--color-arch-light, var(--txt-light));
   border-color: var(--color-arch-contour-accent, var(--brd-accent));
@@ -42,7 +42,7 @@
 }
 
 /* Theme Toggle Separator */
-.archui-theme-toggle-separator {
+.archui-theme-provider-toggle-separator {
   margin: 0 0.5rem; /* mx-2 */
   width: 1px;
   height: 1.5rem; /* h-6 */
@@ -158,7 +158,7 @@
 }
 
 /* Icon Styles */
-.archui-theme-btn img {
+.archui-theme-provider-btn img {
   display: inline-block;
   width: 1.25rem; /* w-5 */
   height: 1.25rem; /* h-5 */
@@ -166,30 +166,30 @@
 }
 
 /* Dark Mode Support */
-.dark .archui-theme-btn {
+.dark .archui-theme-provider-btn {
   color: var(--color-arch-secondary, var(--txt-secondary));
 }
 
-.dark .archui-theme-btn:hover {
+.dark .archui-theme-provider-btn:hover {
   background-color: var(--color-arch-surface-tertiary, var(--bg-tertiary));
   color: var(--color-arch-primary, var(--txt-primary));
   border-color: var(--color-arch-contour-tertiary, var(--brd-tertiary));
 }
 
-.dark .archui-theme-btn.selected {
+.dark .archui-theme-provider-btn.selected {
   background-color: var(--color-arch-surface-accent, var(--bg-accent));
   color: var(--color-arch-light, var(--txt-light));
   border-color: var(--color-arch-contour-accent, var(--brd-accent));
 }
 
 /* Focus States */
-.archui-theme-btn:focus-visible {
+.archui-theme-provider-btn:focus-visible {
   outline: 2px solid var(--color-arch-icon-accent, var(--icon-accent));
   outline-offset: 2px;
 }
 
 /* Active State */
-.archui-theme-btn:active {
+.archui-theme-provider-btn:active {
   transform: scale(0.98);
 }
 
