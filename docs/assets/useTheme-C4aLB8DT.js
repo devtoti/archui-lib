@@ -1,0 +1,1 @@
+import{r as t}from"./iframe-DKOW0GoP.js";import{a as r}from"./ThemeSwitcher-Dp1Us8qn.js";const m=()=>{const e=t.useContext(r);if(!e)throw new Error("useTheme must be used within a ThemeProvider");return e};export{m as u};
