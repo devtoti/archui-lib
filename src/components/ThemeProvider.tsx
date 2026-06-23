@@ -7,9 +7,9 @@ import {
 
 import { twMerge } from "tailwind-merge";
 
-import doricIcon from "../../public/icons/doric.svg?url";
-import ionicIcon from "../../public/icons/ionic.svg?url";
-import corinthianIcon from "../../public/icons/corinthian.svg?url";
+import doricIcon from "/icons/doric.svg?url";
+import ionicIcon from "/icons/ionic.svg?url";
+import corinthianIcon from "/icons/corinthian.svg?url";
 import "./ThemeProvider.css";
 
 const themeOptions: Theme[] = ["doric", "ionic", "corinthian"];
