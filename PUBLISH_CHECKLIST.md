@@ -28,7 +28,7 @@ npm run build:lib
 
 ### 4. Check Version
 
-Current version: **1.0.7**
+Current version: **1.2.0**
 
 To bump version, choose one:
 
